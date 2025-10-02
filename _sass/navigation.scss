@@ -45,10 +45,9 @@ nav {
 
 		&.nav-toggle {
 			display: inline;
-			float: left; /*انا اضفته*/
 			position: absolute;
-			right: 10px;
-			top: -7px;
+			left: 10px; /*كانت right للانجليزي*/
+			top: -7px; 
 			font-size: 1.9em;
 			border: 0;
 			text-shadow: 0;
