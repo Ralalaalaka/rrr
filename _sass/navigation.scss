@@ -45,6 +45,7 @@ nav {
 
 		&.nav-toggle {
 			display: inline;
+			float: left; /*انا اضفته*/
 			position: absolute;
 			right: 10px;
 			top: -7px;
