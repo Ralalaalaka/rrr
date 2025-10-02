@@ -1,6 +1,6 @@
 .hero {
 	color: #ffffff;
-	text-align: center; /*تغيير اتجاه الخط للنصوص بداية كل صفحة*/
+	text-align: center;
 	height: 100vh;
 	min-height: 550px;
 	background-color: #333;
@@ -24,7 +24,7 @@
 
 	.inner-hero {
 		display: flex;
-		align-items: center;
+		align-items: Right; /*تغيير اتجاه الخط للنصوص بداية كل صفحة*/
 		height: 100%;
 
 	}
