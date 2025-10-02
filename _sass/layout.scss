@@ -86,7 +86,6 @@ header {
 		font-size: 1.7em;
 		display: inline-block;
 
-
 		img {
 			height: 20px; /*it was 30*/
 			width: auto;
@@ -185,6 +184,7 @@ blockquote:before {
 		}
 	}
 	.arrow {
+		color: #0db6bd;
 		font-size: .6em;
 	}
 }
