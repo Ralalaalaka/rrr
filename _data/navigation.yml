@@ -1,6 +1,8 @@
-- name: Blog
+- name: الخدمات
   link: /blog/
-- name: About
+- name: الأسعار
   link: /about/
-- name: Contact
+- name: تواصل معنا
+  link: /contact/
+- name: اطلب نسختك التجريبية
   link: /contact/
