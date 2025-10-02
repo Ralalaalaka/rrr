@@ -24,14 +24,14 @@
 
 	.inner-hero {
 		display: flex;
-		align-items: Right; /*تغيير اتجاه الخط للنصوص بداية كل صفحة*/
+		align-items: center;
 		height: 100%;
 
 	}
 
 	.hero-text-container {
 		width: 600px;
-		text-align: center;
+		text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
 
 		h1, h2, p, .button {
 			text-shadow: 1px 1px 1px rgba(0,0,0,.8);
