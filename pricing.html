@@ -91,47 +91,48 @@ faq:
 </section>
 -->
 
-<div class="pricing-controls">
-  <label for="employees">عدد الموظفين:</label>
-  <select id="employees">
-    <option value="1">1-4</option>
-    <option value="5">5-10</option>
-    <option value="11">11-20</option>
-  </select>
-</div>
+<section class="pad">
+  <div class="pricing-controls">
+    <label for="employees">عدد الموظفين:</label>
+    <select id="employees">
+      <option value="1">1-4</option>
+      <option value="5">5-10</option>
+      <option value="11">11-20</option>
+    </select>
+  </div>
 
-<div class="plans">
-  {% for plan in page.pricing_table %}
-    <ul class="plan" data-base="{{ plan.base_price }}">
-      <li style="background: {{ plan.color }}">
-        <h3>{{ plan.name }}</h3>
-      </li>
-      <li class="price"> <span class="plan-price">{{ plan.base_price }}</span> ريال / شهري</li>
-
-      {% for feature in plan.features %}
-        <li class="feature {% if feature.highlight %}highlighted{% endif %}">
-          <button class="toggle">{{ feature.text }} ▾</button>
-          {% if feature.sub %}
-            <ul class="sub-services">
-              {% for sub in feature.sub %}
-                <li>{{ sub }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
+  <div class="plans">
+    {% for plan in page.pricing_table %}
+      <ul class="plan" data-base="{{ plan.base_price }}">
+        <li style="background: {{ plan.color }}">
+          <h3>{{ plan.name }}</h3>
         </li>
-      {% endfor %}
+        <li class="price"> <span class="plan-price">{{ plan.base_price }}</span> ريال / شهري</li>
 
-      <li class="pricing-cta">
-        <div class="button">
-          <a style="background: {{ plan.color }}" href="#">تواصل معنا الآن</a>
-        </div>
-      </li>
-    </ul>
-  {% endfor %}
-</div>
+        {% for feature in plan.features %}
+          <li class="feature {% if feature.highlight %}highlighted{% endif %}">
+            <button class="toggle">{{ feature.text }} ▾</button>
+            {% if feature.sub %}
+              <ul class="sub-services">
+                {% for sub in feature.sub %}
+                  <li>{{ sub }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+
+        <li class="pricing-cta">
+          <div class="button">
+            <a style="background: {{ plan.color }}" href="#">تواصل معنا الآن</a>
+          </div>
+        </li>
+      </ul>
+    {% endfor %}
+  </div>
 
 
-<script>
+  <script>
   // Toggle sub-services
   document.querySelectorAll('.toggle').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -149,5 +150,6 @@ faq:
       priceElement.textContent = base * num;
     });
   });
-</script>
+  </script>
+</section>
 
