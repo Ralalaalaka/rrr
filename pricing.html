@@ -13,22 +13,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 	</div>
 </section>
 
-<!--
-<section class="pad">
-	<div class="container">
-		<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Manage Staff Members</a></p>
-		<ul class="staff">
-			{% for person in site.staff_members %}
-				<li>
-					<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
-					<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
-					<div class="position">{{ person.position }}</div>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
-</section>
--->
 
 <section class="pad">
   <!-- Dropdown لاختيار عدد الموظفين -->
@@ -43,6 +27,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
   <!-- الباقات -->
+  <div class="plans">
   <ul class="plans">
   {% for plan in site.data.pricing %}
   <li class="plan" style="border-top: 5px solid {{ plan.color }}">
@@ -70,7 +55,38 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </li>
   {% endfor %}
 </ul>
+</div>
 </section>
+
+
+<!-- <ul class="plans">
+  {% for plan in site.data.pricing %}
+  <li class="plan" style="border-top: 5px solid {{ plan.color }}">
+    <div class="plan-header" style="background: {{ plan.color }}">
+      <h3>{{ plan.name }}</h3>
+    </div>
+    <div class="highlighted">
+      السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
+    </div>
+    <ul class="plan-features">
+      {% for feature in plan.features %}
+      <li class="feature">
+        <button class="toggle-sub">▶</button>
+        {{ feature.text }}
+        {% if feature.sub %}
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+          <li>{{ sub }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
+</section> -->
 
 <script>
   // حساب السعر حسب عدد الموظفين
