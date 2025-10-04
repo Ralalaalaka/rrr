@@ -41,7 +41,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 				  <li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
 			  {% endif %} <!-- الى هنا -->
       </ul>
-	  {% endfor %}
+	  <!-- {% endfor %} هذا السطر احطه نهاية الـ Loop لكل باقة-->
 
 
         <div class="highlighted">
@@ -63,6 +63,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% endfor %}
     </ul>
   </li>
+  {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة-->
 </div>
 </section>
 
