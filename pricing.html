@@ -25,77 +25,51 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </select>
   </div>
 
+
+
   <!-- الباقات -->
-  <div class="plans">
-    {% for plan in site.data.pricing %}
-      <ul class="plans">
-			  <li style="background: {{ plan.color }}">
+  <div class="plans card">
+  {% for plan in site.data.pricing %}
+              <li style="background: {{ plan.color }}">
           <h3>{{ plan.name }}</h3>
         </li>
 
-        <div class="highlighted">
-        <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
-        </div>
-
+        <!--<div class="highlighted"> -->
+        <div class="total"><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال </div>
+        <!--</div>-->
         {% for feature in plan.features %}
-          <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
-			  {% endfor %}
-
-        {% if plan.call_to_action %} <!-- يمكن هذي الجزئية ما احتاجها -->
-				  <li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
-			  {% endif %} <!-- الى هنا -->
-      </ul> <!--الى هنا خلص كود القديم-->
-
+          <li class="highlighted">خدمة اساسية</li>
+          {% endfor %}
+          
+<!-- {% if plan.call_to_action %} يمكن هذي الجزئية ما احتاجها
+<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+{% endif %} -->
+     
+     <!--</li> الى هنا خلص كود القديم-->
 
     <ul class="plan-features">
-      {% for feature in plan.features %}
+    {% for feature in plan.features %}
       <li class="feature">
         <button class="toggle-sub">▶</button>
         {{ feature.text }}
         {% if feature.sub %}
         <ul class="sub-features">
-          {% for sub in feature.sub %}
-          <li>{{ sub }}</li>
+                  {% for sub in feature.sub %}
+            <li>{{ sub }}</li>
           {% endfor %}
         </ul>
         {% endif %}
       </li>
       {% endfor %}
     </ul>
-  </li>
-  {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة-->
+    <!--   </li>  -->
+  {% endfor %}
 </div>
 </section>
 
 
-<!-- <ul class="plans">
-  {% for plan in site.data.pricing %}
-  <li class="plan" style="border-top: 5px solid {{ plan.color }}">
-    <div class="plan-header" style="background: {{ plan.color }}">
-      <h3>{{ plan.name }}</h3>
-    </div>
-    <div class="highlighted">
-      السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
-    </div>
-    <ul class="plan-features">
-      {% for feature in plan.features %}
-      <li class="feature">
-        <button class="toggle-sub">▶</button>
-        {{ feature.text }}
-        {% if feature.sub %}
-        <ul class="sub-features">
-          {% for sub in feature.sub %}
-          <li>{{ sub }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </li>
-  {% endfor %}
-</ul>
-</section> -->
+
+
 
 <script>
   // حساب السعر حسب عدد الموظفين
@@ -114,14 +88,24 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   updatePrices();
 
   // فتح/إغلاق الخدمات الفرعية
-  document.querySelectorAll(".toggle-sub").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const sub = btn.nextElementSibling.nextElementSibling;
-      if (sub) {
-        sub.classList.toggle("open");
-        btn.textContent = sub.classList.contains("open") ? "▼" : "▶";
-      }
-    });
-  });
-</script>
+document.addEventListener('DOMContentLoaded', function() {
+  // debug: كم زر وجد السكربت
+  console.log('toggle-sub count =', document.querySelectorAll('.toggle-sub').length);
 
+  // تفويض أحداث: يدعم أزرار مضافة ديناميكياً ويعمل في كل الحالات
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.toggle-sub');
+    if (!btn) return; // لو النقر مو على زر التوسيع نتجاهل
+
+    // نأمن الهيكلية: نأخذ أقرب li/feature، ثم نبحث عن الـ sub list داخله
+    const featureEl = btn.closest('.feature') || btn.parentElement;
+    if (!featureEl) return;
+
+    const subList = featureEl.querySelector('.sub-features');
+    if (!subList) return;
+
+    subList.classList.toggle('open');
+    btn.textContent = subList.classList.contains('open') ? '▼' : '▶';
+  });
+});
+</script>

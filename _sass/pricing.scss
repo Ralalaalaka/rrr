@@ -3,23 +3,27 @@
 	@include flex-flow(wrap);
 	padding: 50px 0 30px 0;
 
+}
 	.card {
 		list-style: none;
 		padding: 0;
-		margin: 0 10px 50px 10px;
+		margin: 0 0 50px 0; /*margin: 0 10px 50px 10px;*/
 		text-align: center;
 		border: 1px solid #eee;
 		border-radius: 5px;
 		box-shadow: 0px 0px 10px #eee;
-		width: 100%;
+        
+        
 
+}
 
-		.highlighted {
+		/*.highlighted {
 			font-size: 1.2em
-		}
+		} */
 
-		.pricing-cta {
+		/* .pricing-cta {
 			padding: 0;
+            }
 
 			a {
 				display: block;
@@ -27,8 +31,7 @@
 				padding: 20px 0;
 				border-radius: 0 0 2px 2px;
 				border: 0;
-			}
-		}
+		} */
 
 		@media #{$desktop} {
 			-webkit-flex: 1;
@@ -39,77 +42,51 @@
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
 			padding: 20px 0;
+            list-style-type: none;
+            
 			h3 {
 				padding: 0;
 				margin: 0;
 				color: #fff;
-				font-weight: normal;
+				font-weight: bold;
 			}
-		}
-	}
+         }   
+         
+           .total {
+          		padding: 20px 0 0 0;
+				color: #0db6bd;
+				font-weight: bold;
+                font-size: 1.2em;       
+
 }
 
+           .toggle-sub {
+           	color: #0db6bd;
+			text-decoration: none;
+			border: 0px;
+			transition: .2s ease-in-out;
+			display: inline-block;
+			background: #fff;
+            position: relative;
+            z-index: 2; /* لو في عناصر تغطيه */
+            padding: 0 6px;
 
-
-/*.plans {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 0 30px 0;
-
-  .plan {
-    list-style: none;
-    margin: 0 10px 30px 10px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #eee;
-    width: 300px;
-    text-align: center;
-    background: #fff;
-    overflow: hidden;
-
-   		.plan-header {
- 	    	padding: 15px;
-  			color: #fff;
- 	  	}
-
-    	.highlighted {
-      		font-size: 1.1em;
-    		margin: 15px 0;
-    	}
-
-    	.plan-features {
-    		text-align: left;
-    		margin: 0;
-    		padding: 0;
-    		list-style: none;
-
-    			.feature {
-        			padding: 10px;
-        			border-top: 1px solid #eee;
-        			position: relative;
-
-        				.toggle-sub {
-          					background: none;
-							border: none;
-							font-size: 14px;
-							cursor: pointer;
-							margin-right: 5px;
-					}
-
-						.sub-features {
-							display: none;
-							margin-top: 5px;
-							margin-left: 20px;
-							list-style: disc;
-							color: #555;
-					}
-
-						.sub-features.open {
-							display: block;
-					}
+           }
+           
+           .toggle-sub:hover {
+			background: #fff;
+			color: #bcebed;
+			cursor: pointer;
 			}
-		}
-  	}
-}
-*/
+            
+            /* إظهار القائمة الفرعية عندما تُضاف الكلاس open */
+			.sub-features {
+  			display: none;
+            margin: 6px 0 0 18px;
+            padding: 0;
+            list-style: disc;
+          }
+          
+			.sub-features.open {
+			display: block;
+            }
