@@ -34,6 +34,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <h3>{{ plan.name }}</h3>
         </li>
         {% for feature in plan.features %} <!--هنا المشكلة-->
+          <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
+			  {% endfor %}<!--هنا المشكلة-->
         <div class="highlighted">
       السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
     </div>
