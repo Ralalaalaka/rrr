@@ -1,61 +1,61 @@
-body {
-  font-family: 'Cairo', sans-serif;
-  background: #f9f9f9;
-  margin: 0;
-  padding: 20px;
-}
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0 30px 0;
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-  align-items: start;
-}
+  .plan {
+    list-style: none;
+    margin: 0 10px 30px 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #eee;
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
 
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  border-top: 6px solid #3b82f6; /* اللون العلوي */
-  padding: 20px;
-}
+    .plan-header {
+      padding: 15px;
+      color: #fff;
+    }
 
-.card.basic {
-  border-top-color: #3b82f6; /* أزرق */
-}
+    .highlighted {
+      font-size: 1.1em;
+      margin: 15px 0;
+    }
 
-.card.advanced {
-  border-top-color: #22c55e; /* أخضر */
-}
+    .plan-features {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-.card h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  color: #1e293b;
-}
+      .feature {
+        padding: 10px;
+        border-top: 1px solid #eee;
+        position: relative;
 
-.card p.price {
-  font-size: 1.1rem;
-  color: #374151;
-  font-weight: 600;
-}
+        .toggle-sub {
+          background: none;
+          border: none;
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 5px;
+        }
 
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
+        .sub-features {
+          display: none;
+          margin-top: 5px;
+          margin-left: 20px;
+          list-style: disc;
+          color: #555;
+        }
 
-.card ul li {
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
-  color: #333;
-}
-
-.card select {
-  margin-top: 10px;
-  padding: 6px 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+        .sub-features.open {
+          display: block;
+        }
+      }
+    }
+  }
 }
