@@ -3,11 +3,13 @@
   base_price: 2200
   features:
     - text: الخدمات الأساسية
+      highlight: true
       sub:
         - علاقات الموظفين
         - الإجازات
         - الرواتب
     - text: دعم العملاء
+      highlight: false
       sub:
         - استفسارات
         - شكاوي
@@ -17,10 +19,12 @@
   base_price: 3500
   features:
     - text: إدارة الأداء
+      highlight: true
       sub:
         - تقييم الموظفين
         - متابعة الأهداف
     - text: التدريب والتطوير
+      highlight: true
       sub:
         - خطط تدريب
         - تقارير متابعة
@@ -30,10 +34,12 @@
   base_price: 5000
   features:
     - text: الاستشارات المتخصصة
+      highlight: true
       sub:
         - قانون العمل
         - إدارة التغيير
     - text: تقارير مخصصة
+      highlight: true
       sub:
         - إحصائيات شهرية
         - تقارير تنبؤية
