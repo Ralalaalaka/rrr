@@ -1,31 +1,61 @@
-.feature {
-  position: relative;
-  .toggle {
-    cursor: pointer;
-    background: none;
-    border: none;
-    font: inherit;
-    text-align: right;
-    width: 100%;
-  }
-  .sub-services {
-    display: none;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    background: #f9f9f9;
-    border-radius: 4px;
-    li {
-      padding: 5px 0;
-    }
-    &.active {
-      display: block;
-    }
-  }
-}
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0 30px 0;
 
-.price {
-  font-size: 1.3em;
-  font-weight: bold;
-  margin: 10px 0;
+  .plan {
+    list-style: none;
+    margin: 0 10px 30px 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #eee;
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+
+    .plan-header {
+      padding: 15px;
+      color: #fff;
+    }
+
+    .highlighted {
+      font-size: 1.1em;
+      margin: 15px 0;
+    }
+
+    .plan-features {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .feature {
+        padding: 10px;
+        border-top: 1px solid #eee;
+        position: relative;
+
+        .toggle-sub {
+          background: none;
+          border: none;
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 5px;
+        }
+
+        .sub-features {
+          display: none;
+          margin-top: 5px;
+          margin-left: 20px;
+          list-style: disc;
+          color: #555;
+        }
+
+        .sub-features.open {
+          display: block;
+        }
+      }
+    }
+  }
 }
