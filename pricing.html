@@ -26,49 +26,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
   <!-- الباقات -->
-  <div class="plans card">
-    {% for plan in site.data.pricing %}
-      <ul class="plans card">
-			  <li style="background: {{ plan.color }}">
-          <h3>{{ plan.name }}</h3>
-        </li>
-
-        <div class="plan highlighted">
-        <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
-        </div>
-
-        {% for feature in plan.features %}
-          <li {% if feature.highlight %} class="plan highlighted"{% endif %}>{{ feature.text }}</li>
-			  {% endfor %}
-
-        {% if plan.call_to_action %} <!-- يمكن هذي الجزئية ما احتاجها -->
-				  <li class="plan pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
-			  {% endif %} <!-- الى هنا -->
-      </ul> <!--الى هنا خلص كود القديم-->
-
-
-    <ul class="plan plan-features">
-      {% for feature in plan.features %}
-      <li class="plan feature">
-        <button class="plan toggle-sub">▶</button>
-        {{ feature.text }}
-        {% if feature.sub %}
-        <ul class="plan sub-features">
-          {% for sub in feature.sub %}
-          <li>{{ sub }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </li>
-  {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة-->
-</div>
-</section>
-
-
-<!-- <div class="plans">
+  <div class="plans">
     {% for plan in site.data.pricing %}
       <ul class="plans">
 			  <li style="background: {{ plan.color }}">
@@ -83,10 +41,10 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
 			  {% endfor %}
 
-        {% if plan.call_to_action %} <!-- يمكن هذي الجزئية ما احتاجها 
+        {% if plan.call_to_action %} <!-- يمكن هذي الجزئية ما احتاجها -->
 				  <li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
-			  {% endif %} <!-- الى هنا
-      </ul> <!--الى هنا خلص كود القديم
+			  {% endif %} <!-- الى هنا -->
+      </ul> <!--الى هنا خلص كود القديم-->
 
 
     <ul class="plan-features">
@@ -105,8 +63,38 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% endfor %}
     </ul>
   </li>
-  {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة
+  {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة-->
 </div>
+</section>
+
+
+<!-- <ul class="plans">
+  {% for plan in site.data.pricing %}
+  <li class="plan" style="border-top: 5px solid {{ plan.color }}">
+    <div class="plan-header" style="background: {{ plan.color }}">
+      <h3>{{ plan.name }}</h3>
+    </div>
+    <div class="highlighted">
+      السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
+    </div>
+    <ul class="plan-features">
+      {% for feature in plan.features %}
+      <li class="feature">
+        <button class="toggle-sub">▶</button>
+        {{ feature.text }}
+        {% if feature.sub %}
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+          <li>{{ sub }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
 </section> -->
 
 <script>
