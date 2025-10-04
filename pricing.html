@@ -33,27 +33,27 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <h3>{{ plan.name }}</h3>
         </li>
 
-        <div class="highlighted">
+        <div class="plan highlighted">
         <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
         </div>
 
         {% for feature in plan.features %}
-          <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
+          <li {% if feature.highlight %} class="plan highlighted"{% endif %}>{{ feature.text }}</li>
 			  {% endfor %}
 
         {% if plan.call_to_action %} <!-- يمكن هذي الجزئية ما احتاجها -->
-				  <li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+				  <li class="plan pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
 			  {% endif %} <!-- الى هنا -->
       </ul> <!--الى هنا خلص كود القديم-->
 
 
-    <ul class="plan-features">
+    <ul class="plan plan-features">
       {% for feature in plan.features %}
-      <li class="feature">
-        <button class="toggle-sub">▶</button>
+      <li class="plan feature">
+        <button class="plan toggle-sub">▶</button>
         {{ feature.text }}
         {% if feature.sub %}
-        <ul class="sub-features">
+        <ul class="plan sub-features">
           {% for sub in feature.sub %}
           <li>{{ sub }}</li>
           {% endfor %}
