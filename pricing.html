@@ -42,11 +42,11 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 			  {% endif %} <!-- الى هنا -->
       </ul>
 	  <!-- {% endfor %} هذا السطر احطه نهاية الـ Loop لكل باقة-->
-
-
+    </div>
         <div class="highlighted">
       السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
     </div>
+    
     <ul class="plan-features">
       {% for feature in plan.features %}
       <li class="feature">
@@ -64,7 +64,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </ul>
   </li>
   {% endfor %} <!-- هذا السطر احطه نهاية الـ Loop لكل باقة-->
-</div>
 </section>
 
 
