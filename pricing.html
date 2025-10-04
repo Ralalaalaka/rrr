@@ -52,8 +52,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
         <h3>{{ plan.name }}</h3>
       </li>
       {% for feature in plan.features %} <!--هذي كانت تحت وحطيتها هنا-->
-        <!-- <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li> انا اضفتها -->
-        <li class="feature">
+        <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li> <!-- انا اضفتها -->
+        <!--   <li class="feature">
           <button class="toggle-sub">▶</button>
           {{ feature.text }}
           {% if feature.sub %}
@@ -63,7 +63,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
               {% endfor %}
             </ul>
           {% endif %}
-        </li>
+        </li> -->
       {% endfor %} <!-- انا اضفتها -->
 
 		</ul>
@@ -74,7 +74,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       السعر الأساسي: <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
     </div>
     <ul class="plan-features">
-      <!-- {% for feature in plan.features %} هذي انحطت فوق
+      {% for feature in plan.features %} هذي انحطت فوق
       <li class="feature">
         <button class="toggle-sub">▶</button>
         {{ feature.text }}
