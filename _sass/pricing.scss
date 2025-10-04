@@ -1,0 +1,31 @@
+.feature {
+  position: relative;
+  .toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    text-align: right;
+    width: 100%;
+  }
+  .sub-services {
+    display: none;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background: #f9f9f9;
+    border-radius: 4px;
+    li {
+      padding: 5px 0;
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.price {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0;
+}

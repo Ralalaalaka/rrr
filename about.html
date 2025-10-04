@@ -1,7 +1,68 @@
 ---
-title: About
+title: Pricing
 description: We've built an amazing team of developers, marketers, designers and sales people.
 image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
+
+<!--Chatgpt انا اضفته-->
+heading: خطط خبراء الموارد البشرية
+description: اختر مدة الدفع وعدد الموظفين وشاهد السعر المبدئي لكل باقة. يمكنك اختيار الخدمات المطلوبة ثم طلب عرض سعر.
+pricing_table:
+  - name: الباقة الأساسية
+    color: "#4a90e2"
+    base_price: 2200
+    features:
+      - text: الخدمات الأساسية
+        highlight: true
+        sub:
+          - علاقات الموظفين
+          - الإجازات
+          - الحضور
+          - الرواتب
+          - نهاية الخدمة
+      - text: التوظيف الإلكتروني ✖
+      - text: الحكومة الإلكترونية ✖
+  - name: الباقة الذهبية
+    color: "#f5a623"
+    base_price: 8800
+    features:
+      - text: الخدمات الأساسية
+        highlight: true
+        sub:
+          - علاقات الموظفين
+          - الإجازات
+          - الحضور
+          - الرواتب
+          - نهاية الخدمة
+      - text: التوظيف الإلكتروني
+        sub:
+          - إعلان وظائف
+          - فرز المرشحين
+          - مقابلات
+      - text: الحكومة الإلكترونية
+        sub:
+          - التأمينات
+          - الزكاة والضريبة
+      - text: إدارة الأداء
+        sub:
+          - تقييمات
+          - خطط تطوير
+  - name: الباقة المخصصة
+    color: "#7b8d93"
+    base_price: 2200
+    features:
+      - text: الخدمات الأساسية
+        sub:
+          - اختر ما تحتاجه
+      - text: إدارة الأداء
+        sub:
+          - تقييمات
+          - خطط تطوير
+      - text: دعم العمليات ✖
+faq:
+  - question: هل يمكنني تغيير خطتي لاحقًا؟
+    answer: نعم، يمكنك الترقية أو التخفيض في أي وقت.
+  - question: كيف يتم احتساب السعر؟
+    answer: يعتمد السعر على عدد الموظفين والخدمات المضافة.
 ---
 
 <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
@@ -13,6 +74,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 	</div>
 </section>
 
+<!--
 <section class="pad">
 	<div class="container">
 		<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Manage Staff Members</a></p>
@@ -27,3 +89,65 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 		</ul>
 	</div>
 </section>
+-->
+
+<div class="pricing-controls">
+  <label for="employees">عدد الموظفين:</label>
+  <select id="employees">
+    <option value="1">1-4</option>
+    <option value="5">5-10</option>
+    <option value="11">11-20</option>
+  </select>
+</div>
+
+<div class="plans">
+  {% for plan in page.pricing_table %}
+    <ul class="plan" data-base="{{ plan.base_price }}">
+      <li style="background: {{ plan.color }}">
+        <h3>{{ plan.name }}</h3>
+      </li>
+      <li class="price"> <span class="plan-price">{{ plan.base_price }}</span> ريال / شهري</li>
+
+      {% for feature in plan.features %}
+        <li class="feature {% if feature.highlight %}highlighted{% endif %}">
+          <button class="toggle">{{ feature.text }} ▾</button>
+          {% if feature.sub %}
+            <ul class="sub-services">
+              {% for sub in feature.sub %}
+                <li>{{ sub }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+
+      <li class="pricing-cta">
+        <div class="button">
+          <a style="background: {{ plan.color }}" href="#">تواصل معنا الآن</a>
+        </div>
+      </li>
+    </ul>
+  {% endfor %}
+</div>
+
+
+<script>
+  // Toggle sub-services
+  document.querySelectorAll('.toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.nextElementSibling?.classList.toggle('active');
+    });
+  });
+
+  // Price calculation
+  const employeesSelect = document.getElementById('employees');
+  employeesSelect.addEventListener('change', () => {
+    const num = parseInt(employeesSelect.value);
+    document.querySelectorAll('.plan').forEach(plan => {
+      const base = parseInt(plan.dataset.base);
+      const priceElement = plan.querySelector('.plan-price');
+      priceElement.textContent = base * num;
+    });
+  });
+</script>
+
