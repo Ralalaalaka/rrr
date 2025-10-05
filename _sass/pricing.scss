@@ -1,7 +1,4 @@
 
-*{
-  box-sizing: border-box;
-}
 .plans {
 	@extend %flexbox;
 	@include flex-flow(wrap);

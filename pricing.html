@@ -26,7 +26,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
 
-
   <!-- الباقات -->
   <div class="plans">
     <div class="card">
@@ -39,12 +38,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
         <div class="total"><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال </div>
         <!--</div>-->
           
-<!-- {% if plan.call_to_action %} يمكن هذي الجزئية ما احتاجها
-<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
-{% endif %} -->
-     
-     <!--</li> الى هنا خلص كود القديم-->
-
     <ul class="plan-features">
     {% for feature in plan.features %}
       <li class="feature">
