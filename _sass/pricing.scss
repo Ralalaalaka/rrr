@@ -1,7 +1,9 @@
 .plans {
 	@extend %flexbox;
-	@include flex-flow(row wrap);
 	padding: 50px 0 30px 0;
+	  @include flex-flow(row wrap);
+  @include justify-content(center);
+  gap: 20px;
 }
 
 .card {
@@ -13,6 +15,10 @@
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #eee;
 	width: 100%;
+	  @include flex(1 1 auto);
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
 }
 
 @media #{$desktop} {
