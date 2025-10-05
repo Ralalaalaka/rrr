@@ -25,18 +25,15 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </select>
   </div>
 
-
   <!-- الباقات -->
   <div class="plans">
+      {% for plan in site.data.pricing %}
     <div class="card">
-  {% for plan in site.data.pricing %}
-              <li style="background: {{ plan.color }}">
+        <li style="background: {{ plan.color }}">
           <h3>{{ plan.name }}</h3>
         </li>
 
-        <!--<div class="highlighted"> -->
         <div class="total"><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال </div>
-        <!--</div>-->
           
     <ul class="plan-features">
     {% for feature in plan.features %}
