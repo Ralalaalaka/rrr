@@ -2,6 +2,7 @@
 	@extend %flexbox;
 	@include flex-flow(wrap);
 	padding: 50px 0 30px 0;
+	display: flex;
 
 }
 
@@ -13,7 +14,6 @@
 	border: 1px solid #eee;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #eee;
-	display: flex;
 }
 
 @media #{$desktop} {
