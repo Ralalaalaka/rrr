@@ -1,9 +1,8 @@
 .plans {
 	@extend %flexbox;
+	@include flex-flow(wrap);
 	padding: 50px 0 30px 0;
-	  @include flex-flow(row wrap);
-  @include justify-content(center);
-  gap: 20px;
+	display: inline-block
 }
 
 .card {
@@ -14,11 +13,6 @@
 	border: 1px solid #eee;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #eee;
-	width: 100%;
-	  @include flex(1 1 auto);
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
 }
 
 @media #{$desktop} {
