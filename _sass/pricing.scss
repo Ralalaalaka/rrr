@@ -13,7 +13,7 @@
 	border: 1px solid #eee;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #eee;
-	@include flex(1 1 auto);
+	@include flex(3 1 auto);
 	min-width: 0;   // prevents overflowing children
 	width: auto;    // override any other width:100% that may exist
 	box-sizing: border-box;
