@@ -13,7 +13,10 @@
 	border: 1px solid #eee;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #eee;
+
+	.card.container {
 	display: flex;
+	}
 }
 
 @media #{$desktop} {
