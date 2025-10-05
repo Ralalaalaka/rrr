@@ -1,5 +1,5 @@
 - name: الباقة الأساسية
-  color: "#4a90e2"
+  color: "#0e385b"
   base_price: 2200
   features:
     - text: الخدمات الأساسية
@@ -15,7 +15,7 @@
         - شكاوي
 
 - name: الباقة المتقدمة
-  color: "#50c878"
+  color: "#0e385b"
   base_price: 3500
   features:
     - text: إدارة الأداء
@@ -30,7 +30,7 @@
         - تقارير متابعة
 
 - name: الباقة المميزة
-  color: "#e67e22"
+  color: "#0e385b"
   base_price: 5000
   features:
     - text: الاستشارات المتخصصة
@@ -39,6 +39,12 @@
         - قانون العمل
         - إدارة التغيير
     - text: تقارير مخصصة
+      highlight: true
+      sub:
+        - إحصائيات شهرية
+        - تقارير تنبؤية
+
+    - text: تقارير اضافية
       highlight: true
       sub:
         - إحصائيات شهرية
