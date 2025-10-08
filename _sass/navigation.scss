@@ -50,7 +50,7 @@ nav {
 			top: 2px; /*It was -7*/
 			font-size: 1.9em;
 			border: 0;
-			text-shadow: 0;
+			text-shadow: none; /* it was 0 */
 			padding: 0 !important;
 			@media #{$mid-point} {
 				display: none;
