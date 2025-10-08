@@ -3,7 +3,7 @@
 	text-align: center;
 	height: 100vh;
 	min-height: 550px;
-	background-color: linear-gradient(115deg,rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(13, 182, 189, 1) 100%); /*it was #333*/
+	background-color: linear-gradient(115deg, rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(13, 182, 189, 1) 100%);  /*it was #333 then #022C4E;*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -11,7 +11,7 @@
 	&:before {
 		content: "";
 		/*background: linear-gradient(to bottom,rgba(0,0,0,.65) 0,rgba(0, 0, 0, 0) 100%);*/ /*خلفية قديمة رمادي غامق*/
-		background: linear-gradient(115deg,rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(13, 182, 189, 1) 100%);
+		/*background: linear-gradient(to bottom, rgba(2, 44, 78, 1) 0%,rgba(2, 44, 78, 0.65) 50%,rgba(14, 101, 126, 0) 100%);*/
 		position: absolute;
 		top: 0;
 		left: 0;
