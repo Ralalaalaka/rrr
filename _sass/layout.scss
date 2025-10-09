@@ -248,18 +248,19 @@ blockquote:before {
   justify-content: space-between;
   background: #f6f7f8;
   border-radius: 0 150px 150px 0;
-  width: 80%;
-  max-width: 1100px;
+  width: 100%;
   padding: 60px 80px;
   z-index: 2;
   gap: 50px;
 }
 
-/* Reverse layout + background for alternating sections */
+/* Even sections: rounded on the left, aligned right */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
   border-radius: 150px 0 0 150px;
+  justify-content: space-between;
 }
+
 
 /* Text and image */
 .info .text {
@@ -327,6 +328,7 @@ blockquote:before {
     max-width: 100%;
   }
 }
+
 
 
 /*الى هنا*/
