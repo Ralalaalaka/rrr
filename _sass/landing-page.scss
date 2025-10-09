@@ -3,14 +3,19 @@
   color: #fff;
   height: 100vh;
   min-height: 550px;
-  overflow: hidden;
+  overflow: visible; // show "learn-more"
   direction: rtl;
   text-align: right;
 
-  // Background layers: pattern behind gradient
+  // ✅ Pattern behind gradient (now visible)
   background:
-    url("images/Pattern.svg") center center / cover no-repeat,
-    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
+    linear-gradient(
+      60deg,
+      rgba(13,182,189,0.9) 0%,
+      rgba(14,101,126,0.9) 50%,
+      rgba(2,44,78,0.9) 100%
+    ),
+    url("images/Pattern.svg") center center / cover no-repeat;
 
   display: flex;
   align-items: center;
@@ -29,7 +34,8 @@
   }
 
   .hero-text-container {
-    flex: 1 1 55%;
+    flex: 1 1 50%;
+    max-width: 55%;
     text-align: right;
 
     h1, h2, p, .button {
@@ -37,8 +43,9 @@
       z-index: 1;
     }
 
+    // ✅ Responsive text that scales naturally
     h1 {
-      font-size: 2.2rem;
+      font-size: clamp(1.8rem, 2.5vw, 2.8rem);
       line-height: 1.6;
       margin-bottom: 20px;
     }
@@ -66,72 +73,9 @@
 
   .cover-image {
     flex: 1 1 40%;
+    max-width: 45%;
     display: flex;
     justify-content: center;
 
     img {
-      height: 60vh; // scales with screen height
-      width: auto;
-      object-fit: contain;
-    }
-  }
-
-  /* ✅ Responsive adjustments */
-  @media (max-width: 900px) {
-    .inner-hero {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .hero-text-container {
-      flex: 1 1 100%;
-
-      h1 {
-        font-size: 1.5rem; // smaller for small screens
-      }
-
-      .button {
-        margin-top: 10px;
-      }
-    }
-
-    .cover-image img {
-      height: 40vh;
-    }
-  }
-}
-
-/* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
-.image {
-  text-align: center;
-}
-
-.bottom-cta {
-  text-align: center;
-
-  h2 {
-    margin-bottom: 12px;
-  }
-}
-
-/* Desktop flex helper — leave it since it’s used for other layout sections */
-@media #{$desktop} {
-  .flex {
-    @include flexbox;
-    align-items: center;
-    flex-direction: row;
-
-    .text, .image {
-      -webkit-flex: 1;
-      flex: 1;
-      padding: 0 20px;
-    }
-  }
-
-  .content section:nth-child(even) .flex {
-    flex-direction: row-reverse;
-  }
-}
+      height: 6
