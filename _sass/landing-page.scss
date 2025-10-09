@@ -2,15 +2,15 @@
 	height: 100vh;
 	min-height: 550px;
 	background-color: #0E657E;  /*it was #333*/
-	/*background: linear-gradient(60deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); للعربي*/
+	background: linear-gradient(60deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); /*للعربي*/
 	background-image: url("images/Workhub program.png"), url("images/Pattern.svg");
 	background-size: 40vh, cover;
 	background-repeat: no-repeat;
 	background-position: left, left;
 	display: flex;
-	justify-content: : center;
+	justify-content: center;
 	align-items: center;
-
+}
 	p { 
 		color: #fff;
 		z-index: 1;
@@ -56,8 +56,8 @@
 		float: left; /*انا اضفته */
 		left: 0; /*انا اضفته */
 	}
-}
 
+	
 .image {
 	text-align: center;
 }
