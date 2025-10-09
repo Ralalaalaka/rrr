@@ -32,6 +32,9 @@
 		align-items: center;
 		height: 100%;
 		z-index: 1;
+		position: relative;
+		padding: 0 60px;
+		flex-wrap: wrap; /* allow wrapping when small */
 
 	}
 
