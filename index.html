@@ -19,34 +19,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 
-
-<!--انا اضفته من chatgpt-->
-<div class="content">
-{% for service in site.data.services.services %}
-<section class="feature {% cycle 'feature-left', 'feature-right' %}">
-  <div class="feature-bg"></div>
-  <div class="feature-content">
-    <div class="feature-image">
-      <img src="{{ service.image }}" alt="{{ service.title }}">
-    </div>
-    <div class="feature-text">
-      <h3>{{ service.title }}</h3>
-      <p>{{ service.description }}</p>
-      <ul>
-        {% for item in service.sub_services %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</section>
-{% endfor %}
-</div>
-<!--الى هنا-->
-
-
-
-
 <!--انا بجرب-->
 
 <div class="content">
@@ -54,7 +26,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 		<!-- هو من نفسه يبدل بين يمين ويسار لكل خدمة-->
 		<div class="container flex">
 			<!-- الخدمة 1 -->
-			<div class="feature-bg"></div>
 			<div class="text">
 				<h2 class="editable">1. إدارة الموظفين</h2>
 				<p class="editable">قاعدة بيانات موحّدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها.</p>
@@ -68,7 +39,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 		<!-- الخدمة 2 -->
 	<section class="info">
 		<div class="container flex">
-			<div class="feature-bg"></div>
 			<div class="text">
 				<h2 class="editable">2. الحضور والانصراف</h2>
 				<p class="editable">تسجيل ومتابعة أوقات الدخول والخروج للموظف بدقة مع نظام ذكي يوفّر تقارير لحظية ويعزز الانضباط في العمل.</p>
