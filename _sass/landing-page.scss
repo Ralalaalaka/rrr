@@ -1,15 +1,18 @@
 .hero {
 	height: 100vh;
 	min-height: 550px;
-	background-image: url("images/Workhub program.png"), url("images/Pattern.svg");
-	background-color: #0E657E;  /*it was #333*/
-	background: linear-gradient(60deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); /*للعربي*/
-	background-size: 40vh, cover;
-	background-repeat: no-repeat;
-	background-position: left, left;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	background-image:
+		linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
+		url("images/Pattern.svg"),
+		url("images/Workhub program.png");
+
+	background-size: cover, cover, 40vh;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: center, left, left;
 }
 	p { 
 		color: #fff;
