@@ -1,127 +1,137 @@
 .hero {
-    color: #ffffff;
-    text-align: center;
-    height: 100vh;
-    min-height: 550px;
-    background-color: #0E657E;  /*it was #333*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  position: relative;
+  color: #fff;
+  height: 100vh;
+  min-height: 550px;
+  overflow: hidden;
+  direction: rtl;
+  text-align: right;
 
+  // Background layers: pattern behind gradient
+  background:
+    url("images/Pattern.svg") center center / cover no-repeat,
+    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
 
-   
-    &:before {
-        content: "";
-        /*background: linear-gradient(to bottom,rgba(0,0,0,.65) 0,rgba(0, 0, 0, 0) 100%); خلفية قديمة رمادي غامق*/
-        /*background: linear-gradient(115deg,rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 30%, rgba(13, 182, 189, 1) 100%); للإنجليزي */
-        background-image: url("images/Pattern.svg");
-        background: linear-gradient(60deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); /*للعربي*/
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh; /*it was 300px, if I want it fixed size then I put 300px, 100vh means that it will fill what ever screen there is, so for the subpages I put 300px (already tested)*/
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-    p {
-        color: #fff;
-        z-index: 1;
-    }
-
-
-    .inner-hero {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        z-index: 1;
-        flex-wrap: wrap; /* انا اضفته */
-
-
-    }
-
-
-    .hero .inner-hero {
+  .inner-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
-    z-index: 1;
-    position: relative;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
     padding: 0 60px;
-    flex-wrap: wrap; /* allow wrapping when small */
-}
+    flex-wrap: wrap;
+    z-index: 2;
+  }
 
+  .hero-text-container {
+    flex: 1 1 55%;
+    text-align: right;
 
-/* Responsive: stack items when screen is small */
-@media (max-width: 900px) {
-    .hero .inner-hero {
-        flex-direction: column;   /* move image below text */
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+    h1, h2, p, .button {
+      text-shadow: none;
+      z-index: 1;
     }
-}
 
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-    .hero-text-container { /*USED*/
-        width: 1000px; /*it was 600 عرض صندوق النص*/
-        text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
-        /*float:right; انا اضفته */
+    .button {
+      margin-top: 20px;
+      display: inline-block;
 
+      a {
+        background: #fff;
+        color: #0E657E;
+        padding: 10px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
 
-        h1, h2, p, .button {
-            text-shadow: none; /*it was 1px 1px 1px rgba(0,0,0,.8)*/
-            z-index: 1;
+        &:hover {
+          background: #0E657E;
+          color: #fff;
         }
+      }
+    }
+  }
+
+  .cover-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 60vh; // scales with screen height
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  /* ✅ Responsive adjustments */
+  @media (max-width: 900px) {
+    .inner-hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding: 20px;
     }
 
+    .hero-text-container {
+      flex: 1 1 100%;
 
-    .hero-text-right {
-        position: absolute;
-        right: 0;
+      h1 {
+        font-size: 1.5rem; // smaller for small screens
+      }
+
+      .button {
+        margin-top: 10px;
+      }
     }
 
-
-    .cover-image { /* انا اضفته */
-        float: left; /*انا اضفته */
-        left: 0; /*انا اضفته */
+    .cover-image img {
+      height: 40vh;
     }
+  }
 }
 
-
+/* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
-    text-align: center;
+  text-align: center;
 }
-
 
 .bottom-cta {
-    text-align: center;
+  text-align: center;
 
-
-    h2 {
-        margin-bottom: 12px;
-    }
+  h2 {
+    margin-bottom: 12px;
+  }
 }
 
-
+/* Desktop flex helper — leave it since it’s used for other layout sections */
 @media #{$desktop} {
-    .flex {
-        @include flexbox;
-        align-items: center;
-        flex-direction: row;
+  .flex {
+    @include flexbox;
+    align-items: center;
+    flex-direction: row;
 
-
-        .text, .image {
-            -webkit-flex: 1;
-            flex: 1;
-            padding: 0 20px;
-        }
+    .text, .image {
+      -webkit-flex: 1;
+      flex: 1;
+      padding: 0 20px;
     }
+  }
 
-
-    .content section:nth-child(even) .flex {
-        flex-direction: row-reverse;
-    }
+  .content section:nth-child(even) .flex {
+    flex-direction: row-reverse;
+  }
 }
