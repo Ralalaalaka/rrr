@@ -7,15 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-	
-	display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    z-index: 1;
-    position: relative;
-    padding: 0 60px;
-    flex-wrap: wrap; /* allow wrapping when small */
 
 
    
@@ -46,17 +37,21 @@
         height: 100%;
         z-index: 1;
         flex-wrap: wrap; /* انا اضفته */
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: 100%;
-		z-index: 1;
-		position: relative;
-		padding: 0 60px;
-		flex-wrap: wrap; /* allow wrapping when small */
 
 
     }
+
+
+    .hero .inner-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 0 60px;
+    flex-wrap: wrap; /* allow wrapping when small */
+}
 
 
 /* Responsive: stack items when screen is small */
