@@ -6,12 +6,14 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 ---
 
 <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
-	<div class="inner-hero text-container">
-		<div class="hero-text-container">
+	<div class="info"> <!--it was inner-hero text-container-->
+		<div class="container flex"> <!--it was hero-text-container-->
+			<div class="text"> <!--انا اضفته عشان اجرب زي الخدمات-->
 			<h1 class="editable">حل متكامل يجمع كل ما تحتاجه الأنشطة التجارية لإدارة مواردها البشرية بكفاءة في نظام  <strong>واحد موحّد</strong></h1>
 			<!-- <p class="subtext editable">Frisco helps you find new friends with common interests. Search for a new Tennis partner, find a baking side-kick or befriend a new drinking buddy.</p> -->
 			<div class="cta button alt"><a href="#">اطلب نسختك التجريبية</a></div>
-			<div class="cover-image"><img src="images/Workhub program.png" alt="Workhub Program" height="350"></div>
+			<div class="image"><img class="editable" src="images/Workhub program.png" alt="Screenshot"/></div> <!--انا اضفته بدال اللي تحت-->
+			<!-- <div class="cover-image"><img src="images/Workhub program.png" alt="Workhub Program" height="350"></div> -->
 		</div>
 	</div>
 	<div class="learn-more"><a href="#learn-more"> خدماتنا <span class="arrow">&#x25BC;</span></a></div>
@@ -44,6 +46,46 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 </div>
 <!--الى هنا-->
 
+
+
+
+<!--انا بجرب-->
+
+<div class="content">
+	<section class="info" id="learn-more"> <!--هنا فيه id عشان نعرف وين يروح لو ضغط على السهم فوق--> 
+		<!-- هو من نفسه يبدل بين يمين ويسار لكل خدمة-->
+		<div class="container flex">
+			<!-- الخدمة 1 -->
+			<div class="feature-bg"></div>
+			<div class="text">
+				<h2 class="editable">1. إدارة الموظفين</h2>
+				<p class="editable">قاعدة بيانات موحّدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها.</p>
+			</div>
+			<div class="image">
+				<img class="editable" src="images/Workhub program.png" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+		<!-- الخدمة 2 -->
+	<section class="info">
+		<div class="container flex">
+			<div class="feature-bg"></div>
+			<div class="text">
+				<h2 class="editable">2. الحضور والانصراف</h2>
+				<p class="editable">تسجيل ومتابعة أوقات الدخول والخروج للموظف بدقة مع نظام ذكي يوفّر تقارير لحظية ويعزز الانضباط في العمل.</p>
+			</div>
+			<div class="image">
+				<img class="editable" src="images/Workhub program.png" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+
+	<!--القديم من هنا وتحت-->
 
 
 <div class="content">
