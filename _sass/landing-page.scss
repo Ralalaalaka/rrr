@@ -38,6 +38,7 @@
 	.hero-text-container { /*USED*/
 		width: 600px; /*عرض صندوق النص*/
 		text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
+		float:right; /* انا اضفته */
 
 		h1, h2, p, .button {
 			text-shadow: none; /*it was 1px 1px 1px rgba(0,0,0,.8)*/
@@ -45,13 +46,13 @@
 		}
 	}
 
-	.hero-text-right {
+	.hero-text-right { 
 		position: absolute;
 		right: 0;
 	}
 
-	.cover-image {
-		float: left;
+	.cover-image { /* انا اضفته */
+		float: left; /* انا اضفته */
 	}
 }
 
