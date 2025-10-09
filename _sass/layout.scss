@@ -223,36 +223,97 @@ blockquote:before {
 
 
 
-
 /*انا اضفته من chatgpt*/
 
-<section class="feature feature-left">
-  <div class="feature-bg"></div>
-  <div class="feature-content">
-    <div class="feature-image">
-      <img src="your-image-1.png" alt="Feature image">
-    </div>
-    <div class="feature-text">
-      <h3>إدارة الموظفين</h3>
-      <p>قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها.</p>
-      <a href="#" class="feature-btn">المزيد ...</a>
-    </div>
-  </div>
-</section>
 
-<section class="feature feature-right">
-  <div class="feature-bg"></div>
-  <div class="feature-content">
-    <div class="feature-text">
-      <h3>إدارة الموظفين</h3>
-      <p>قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها.</p>
-      <a href="#" class="feature-btn">المزيد ...</a>
-    </div>
-    <div class="feature-image">
-      <img src="your-image-2.png" alt="Feature image">
-    </div>
-  </div>
-</section>
+.feature {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin: 60px 0;
+  overflow: hidden;
+}
+
+.feature-bg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 80%;
+  background: #f6f7f8;
+  border-radius: 0 150px 150px 0;
+  z-index: 1;
+}
+
+.feature-right .feature-bg {
+  left: auto;
+  right: 0;
+  border-radius: 150px 0 0 150px;
+}
+
+.feature-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.feature-image img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-text {
+  max-width: 450px;
+}
+
+.feature-text h3 {
+  color: #012d50;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.feature-text p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.feature-btn {
+  color: #012d50;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #012d50;
+  padding-bottom: 2px;
+  transition: 0.3s;
+}
+
+.feature-btn:hover {
+  color: #000;
+  border-color: #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .feature-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-bg {
+    width: 100%;
+    border-radius: 0;
+  }
+}
 
 
 /*الى هنا*/
