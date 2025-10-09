@@ -32,14 +32,12 @@
 		align-items: center;
 		height: 100%;
 		z-index: 1;
-		position: relative;
-		padding: 0 60px;
-		flex-wrap: wrap; /* allow wrapping when small */
+		flex-wrap: wrap; /* انا اضفته */
 
 	}
 
 	.hero-text-container { /*USED*/
-		width: 900px; /*it was 600 عرض صندوق النص*/
+		width: 1000px; /*it was 600 عرض صندوق النص*/
 		text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
 		/*float:right; انا اضفته */
 
