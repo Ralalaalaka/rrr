@@ -14,19 +14,21 @@
 	cursor: pointer;
 }
 
-.button.alt a { /*white clear button*/
+.button.alt a { /*white clear button USED*/
 	border-radius: 100px;
 	background: rgba(255, 255, 255, 0.30);
-	border: 0.5px solid rgba(255, 255, 255, 1);
+	border: 0.2px solid rgba(255, 255, 255, 1);
 	color: #fff;
+	font-weight: bold;
 
 }
 
-.button.alt a:hover {
+.button.alt a:hover { /*white clear button USED*/
 	border-radius: 100px;
 	background: rgba(255, 255, 255, 0.50); /*it was #fff*/
 	color: #fff; /*it was $brand-color*/
 	text-shadow: none;
+	font-weight: bold;
 }
 
 textarea, input, button, select { font-family: inherit; font-size: inherit; }
