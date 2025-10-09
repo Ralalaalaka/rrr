@@ -36,6 +36,27 @@
 
 	}
 
+	.hero .inner-hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	z-index: 1;
+	position: relative;
+	padding: 0 60px;
+	flex-wrap: wrap; /* allow wrapping when small */
+}
+
+/* Responsive: stack items when screen is small */
+@media (max-width: 900px) {
+	.hero .inner-hero {
+		flex-direction: column;   /* move image below text */
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
+}
+
 	.hero-text-container { /*USED*/
 		width: 1000px; /*it was 600 عرض صندوق النص*/
 		text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
