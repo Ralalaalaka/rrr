@@ -22,10 +22,9 @@ nav {
 	/* font-size: .8em; font test*/
 	width: 100%;
 	position: relative;
-	top: -7px;
+	top: -10px; /*يوسط القائمة بنص السطر الأبيض*/
 	text-shadow: none;
 	} /*انا اضفته*/
-
 	@media #{$mid-point} {
 		padding: 0 20px;
 		display: inline;
@@ -34,7 +33,7 @@ nav {
 
 	a {
 		margin: 0 3px;
-		padding: 14px 14px; /*14px 10px;*/
+		padding: 14px 10px;
 		border: 0;
 		display: none;
 
