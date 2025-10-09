@@ -17,14 +17,13 @@
 }
 
 nav {
-	p {
 	text-transform: uppercase;
-	/* font-size: .8em; font test*/
+	font-size: .8em;
 	width: 100%;
 	position: relative;
-	top: -10px; /*يوسط القائمة بنص السطر الأبيض*/
+	top: -7px;
 	text-shadow: none;
-	} /*انا اضفته*/
+	
 	@media #{$mid-point} {
 		padding: 0 20px;
 		display: inline;
