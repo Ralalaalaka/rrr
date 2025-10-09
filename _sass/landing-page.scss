@@ -7,6 +7,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+	
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 0 60px;
+    flex-wrap: wrap; /* allow wrapping when small */
 
 
    
@@ -14,9 +23,8 @@
         content: "";
         /*background: linear-gradient(to bottom,rgba(0,0,0,.65) 0,rgba(0, 0, 0, 0) 100%); خلفية قديمة رمادي غامق*/
         /*background: linear-gradient(115deg,rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 30%, rgba(13, 182, 189, 1) 100%); للإنجليزي */
-        background-image: 
-			url("images/Pattern.svg"),
-       		linear-gradient(60deg,rgba(13, 182, 189, 0.8) 0%, rgba(14, 101, 126, 0.8) 50%, rgba(2, 44, 78, 0.8) 100%); /*للعربي*/
+        background-image: url("images/Pattern.svg");
+        background: linear-gradient(60deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); /*للعربي*/
         position: absolute;
         z-index: 0;
         top: 0;
@@ -38,21 +46,17 @@
         height: 100%;
         z-index: 1;
         flex-wrap: wrap; /* انا اضفته */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		z-index: 1;
+		position: relative;
+		padding: 0 60px;
+		flex-wrap: wrap; /* allow wrapping when small */
 
 
     }
-
-
-    .hero .inner-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    z-index: 1;
-    position: relative;
-    padding: 0 60px;
-    flex-wrap: wrap; /* allow wrapping when small */
-}
 
 
 /* Responsive: stack items when screen is small */
