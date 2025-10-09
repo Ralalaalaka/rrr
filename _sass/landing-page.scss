@@ -14,6 +14,7 @@
 		/* background: linear-gradient(115deg,rgba(2, 44, 78, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(13, 182, 189, 1) 100%); للإنجليزي */
 		background:url("images/Pattern.svg") no-repeat left 30% center / cover, linear-gradient(115deg,rgba(13, 182, 189, 1) 0%, rgba(14, 101, 126, 1) 50%, rgba(2, 44, 78, 1) 100%); /*للعربي*/
 		position: absolute;
+		inset: 0; /*انا اضفته*/
 		top: 0;
 		left: 0;
 		right: 0;
