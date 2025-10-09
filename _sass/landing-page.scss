@@ -38,7 +38,7 @@
 	.hero-text-container { /*USED*/
 		width: 600px; /*عرض صندوق النص*/
 		text-align: right; /*تغيير اتجاه النصوص بداية كل صفحة*/
-		float:right; /* انا اضفته */
+		/*float:right; انا اضفته */
 
 		h1, h2, p, .button {
 			text-shadow: none; /*it was 1px 1px 1px rgba(0,0,0,.8)*/
@@ -52,7 +52,8 @@
 	}
 
 	.cover-image { /* انا اضفته */
-		float: left; /* انا اضفته */
+		float: left; /*انا اضفته */
+		left: 0; /*انا اضفته */
 	}
 }
 
