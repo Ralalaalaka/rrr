@@ -252,6 +252,7 @@ blockquote:before {
   padding: 60px 80px;
   z-index: 2;
   gap: 20px; /*50px*/
+  right: 0;
 }
 
 /* Even sections: rounded on the left, aligned right */
@@ -259,6 +260,7 @@ blockquote:before {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
+  left: 0;
 }
 
 
