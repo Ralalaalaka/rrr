@@ -249,10 +249,10 @@ blockquote:before {
   background: #fafafb;
   border-radius: 0 1000px 1000px 0;
   width: 100%;
-  padding: 30px 10px; /*it was 60px 80px*/
+  padding: 10px 0; /*it was 60px 80px*/
   z-index: 2;
-  gap: 20px; /*50px*/
-  right: 0; /*انا اضفته*/
+  gap: 30px; /*50px*/
+  /*right: 0; انا اضفته*/
 }
 
 /* Even sections: rounded on the left, aligned right */
@@ -260,7 +260,7 @@ blockquote:before {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
-  left: 0; /*انا اضفته*/
+  /*left: 0; انا اضفته*/
 }
 
 
