@@ -145,41 +145,80 @@
 
 /* ✅ Reusable banner style (for top sections like "ابدأ معنا") */
 .banner {
+  position: relative;
   background: linear-gradient(90deg, #022c4e, #0e657e);
   color: #fff;
-  padding: 80px 10%;
+  padding: 100px 10% 80px;
   direction: rtl;
-  text-align: right;
+  text-align: center;
+  overflow: hidden;
 
   .inner-banner {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    z-index: 2;
   }
 
   .banner-text {
-    flex: 1 1 45%;
+    max-width: 600px;
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .button.alt a {
+      background: #fff;
+      color: #022c4e;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #0e657e;
+        color: #fff;
+      }
     }
   }
 
   .banner-image {
-    flex: 1 1 45%;
-    text-align: center;
+    position: absolute;
+    top: -60px; /* moves it above the banner */
+    left: 50%;
+    transform: translateX(-50%) rotate(-8deg);
+    z-index: 1;
 
     img {
-      max-width: 260px;
-      width: 100%;
+      width: 260px;
       height: auto;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 120px 20px 60px;
+
+    .banner-image {
+      top: -40px;
+      transform: translateX(-50%) rotate(-6deg);
+
+      img {
+        width: 180px;
+      }
+    }
+
+    .banner-text h2 {
+      font-size: 1.8rem;
+    }
+  }
+
 
   /* ✅ Responsive (mobile layout) */
   @media (max-width: 768px) {
