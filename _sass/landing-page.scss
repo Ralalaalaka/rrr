@@ -123,3 +123,119 @@
     flex-direction: row-reverse;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================= */
+/* === Banner & Benefits Section حق المزايا === */
+/* ========================================================= */
+
+/* ✅ Reusable banner style (for top sections like "ابدأ معنا") */
+.banner {
+  background: linear-gradient(90deg, #022c4e, #0e657e);
+  color: #fff;
+  padding: 80px 10%;
+  direction: rtl;
+  text-align: right;
+
+  .inner-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .banner-text {
+    flex: 1 1 45%;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .banner-image {
+    flex: 1 1 45%;
+    text-align: center;
+
+    img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* ✅ Responsive (mobile layout) */
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+    text-align: center;
+
+    .inner-banner {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .banner-image img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* ✅ Light gray background with icons/text grid */
+.benefits {
+  background: #f7f7f7;
+  padding: 60px 10%;
+  text-align: center;
+
+  .benefits-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .benefit {
+    text-align: center;
+
+    img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #022c4e;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+
+  /* ✅ For small screens: 2 per row */
+  @media (max-width: 768px) {
+    .benefits-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
