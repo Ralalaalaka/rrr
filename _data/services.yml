@@ -1,7 +1,7 @@
 services:
   - title: "إدارة الموظفين"
     description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/service 1.png"
+    image: "images/services/Service 1.png"
     sub_services:
       - "إضافة وتعديل بيانات الموظفين"
       - "تتبع الأداء وساعات العمل"
@@ -10,7 +10,7 @@ services:
 
   - title: "إدارة المشاريع"
     description: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
-    image: "images/service 1.png"
+    image: "images/services/Service 1.png"
     sub_services:
       - "إنشاء المهام وجدولتها"
       - "تعيين المسؤوليات بين الفرق"
@@ -19,7 +19,7 @@ services:
 
   - title: "إدارة العملاء"
     description: "قاعدة بيانات مخصصة لتتبع تفاعل العملاء وتحليل البيانات لتحسين تجربة المستخدم."
-    image: "images/service 1.png"
+    image: "images/services/Service 1.png"
     sub_services:
       - "تتبع استفسارات العملاء"
       - "إدارة الملاحظات والشكاوى"
