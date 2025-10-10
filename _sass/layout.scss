@@ -242,17 +242,17 @@ blockquote:before {
 
 /* Light gray background behind content */
 .info .container {
-  position: sticky;  /*it was relative*/
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fafafb;
   border-radius: 0 1000px 1000px 0;
   width: 100%;
-  padding: 20px 80px; /*it was 60px 80px*/
+  padding: 20px 80px; /*it was 60px 80px من هنا اتحكم بالبوكس الرمادي*/
   z-index: 2;
   gap: 50px;
-  right: 0; /*انا اضفته*/
+  float: right; /*انا اضفته*/
 }
 
 /* Even sections: rounded on the left, aligned right */
@@ -260,7 +260,7 @@ blockquote:before {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
-  left: 0; /*انا اضفته*/
+  float: left; /*انا اضفته*/
 }
 
 
