@@ -246,18 +246,18 @@ blockquote:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f6f7f8;
-  border-radius: 0 150px 150px 0;
+  background: #fafafb;
+  border-radius: 0 1000px 1000px 0;
   width: 100%;
   padding: 60px 80px;
   z-index: 2;
-  gap: 50px;
+  gap: 20px; /*50px*/
 }
 
 /* Even sections: rounded on the left, aligned right */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
-  border-radius: 150px 0 0 150px;
+  border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
 }
 
@@ -292,7 +292,7 @@ blockquote:before {
 .info .image img {
   max-width: 50vh; /*it was 70%*/
   border-radius: 12px;
-  /*box-shadow: 0 6px 20px rgba(0,0,0,0.1);*/
+  /*box-shadow: 0 6px 20px rgba(0,0,0,0.1);*/ /*ظل لصور الخدمات*/
 }
 
 /* Button styling */
