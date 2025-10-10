@@ -242,16 +242,16 @@ blockquote:before {
 
 /* Light gray background behind content */
 .info .container {
-  position: relative;
+  position: left;  /*it was relative*/
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fafafb;
   border-radius: 0 1000px 1000px 0;
   width: 100%;
-  padding: 60px 80px; /*it was 60px 80px*/
+  padding: 60px 80px;
   z-index: 2;
-  gap: 50px; /*50px*/
+  gap: 50px;
   right: 0; /*انا اضفته*/
 }
 
