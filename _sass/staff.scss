@@ -11,11 +11,11 @@
 		width: 100%;
 
 		@media #{$tablet} {
-			@include flex(1, 1, 50%);
+			@include flex(1, 1, 30%); /*it was 50%*/
 		}
 
 		@media #{$desktop} {
-			@include flex(1, 1, 33%);
+			@include flex(1, 1, 25%); /*it was 33%*/
 		}
 
 	}

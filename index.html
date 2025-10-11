@@ -71,8 +71,8 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 				<ul class="staff">
 					{% for benefits in site.data.benefits.benefits %}
 						<li>
-							<div class="square-image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div>
-							<div class="name">>{{ benefits.title }}</div>
+							<div class="image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div> <!--it was square-image instead of image-->
+							<div class="name">{{ benefits.title }}</div>
 							<div class="position">{{ benefits.description }}</div>
 						</li>
 					{% endfor %}
