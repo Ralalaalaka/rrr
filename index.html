@@ -69,7 +69,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 		<!-- <section class="pad"> -->
 			<!--<div class="container">-->
 				<ul class="staff">
-					{% for person in site.staff_members %}
+					{% for benefits in site.data.benefits.benefits %}
 						<li>
 							<div class="square-image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div>
 							<div class="name">>{{ benefits.title }}</div>
