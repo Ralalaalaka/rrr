@@ -144,81 +144,47 @@
 /* ========================================================= */
 
 /* ✅ Reusable banner style (for top sections like "ابدأ معنا") */
+/* ========================================================= */
+/* === Banner & Benefits Section === */
+/* ========================================================= */
+
+/* ✅ Reusable banner style (for top sections like "ابدأ معنا") */
 .banner {
-  position: relative;
   background: linear-gradient(90deg, #022c4e, #0e657e);
   color: #fff;
-  padding: 100px 10% 80px;
+  padding: 80px 10%;
   direction: rtl;
-  text-align: center;
-  overflow: hidden;
+  text-align: right;
 
   .inner-banner {
-    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 40px;
-    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .banner-text {
-    max-width: 600px;
+    flex: 1 1 45%;
 
     h2 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .button.alt a {
-      background: #fff;
-      color: #022c4e;
-      padding: 12px 28px;
-      border-radius: 30px;
-      font-weight: bold;
-      display: inline-block;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: #0e657e;
-        color: #fff;
-      }
     }
   }
 
   .banner-image {
-    position: absolute;
-    top: -60px; /* moves it above the banner */
-    left: 50%;
-    transform: translateX(-50%) rotate(-8deg);
-    z-index: 1;
+    flex: 1 1 45%;
+    text-align: center;
 
     img {
-      width: 260px;
+      max-width: 260px;
+      width: 100%;
       height: auto;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     }
   }
-
-  @media (max-width: 768px) {
-    padding: 120px 20px 60px;
-
-    .banner-image {
-      top: -60px;
-      transform: translateX(-50%) rotate(-6deg);
-
-      img {
-        width: 180px;
-      }
-    }
-
-    .banner-text h2 {
-      font-size: 1.8rem;
-    }
-  }
-}
 
   /* ✅ Responsive (mobile layout) */
   @media (max-width: 768px) {
