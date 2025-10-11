@@ -192,7 +192,6 @@
     position: absolute;
     top: -60px; /* moves it above the banner */
     left: 50%;
-    transform: translateX(-50%) rotate(-8deg);
     z-index: 1;
 
     img {
@@ -206,7 +205,7 @@
     padding: 120px 20px 60px;
 
     .banner-image {
-      top: -40px;
+      top: -60px;
       transform: translateX(-50%) rotate(-6deg);
 
       img {
@@ -218,7 +217,7 @@
       font-size: 1.8rem;
     }
   }
-
+}
 
   /* ✅ Responsive (mobile layout) */
   @media (max-width: 768px) {
