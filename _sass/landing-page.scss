@@ -192,6 +192,7 @@
     position: absolute;
     top: -60px; /* moves it above the banner */
     left: 50%;
+    transform: translateX(-50%) rotate(-8deg);
     z-index: 1;
 
     img {

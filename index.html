@@ -67,21 +67,21 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   <div class="benefits-container">
     <!-- 🔹 Replace with your own benefit items -->
     <div class="benefit">
-      	
-		<!--<section class="pad"> -->
-			<!-- <div class="container"> -->
-			<ul class="staff">
-				{% for person in site.staff_members %}
-					<li>
-						<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
-						<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
-						<div class="position">{{ person.position }}</div>
-					</li>
-				{% endfor %}
-			</ul>
-			<!-- </div> -->
-		<!-- </section> -->
- 	</div>
+			
+		<section class="pad">
+			<div class="container">
+				<ul class="staff">
+					{% for person in site.staff_members %}
+						<li>
+							<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+							<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
+							<div class="position">{{ person.position }}</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
+  	</div>
 </section>
 
 
