@@ -43,15 +43,15 @@
 		a {
 			color: #000;
 			text-decoration: none;
-			font-weight: normal;
-			font-size: 1.3em;
+			/*font-weight: normal;*/
+			/*font-size: 1.3em;*/
 		}
 	}
 
 	h2 {
 		text-align: left;
-		font-size: 2.6em;
-		margin: 0;
+		/*font-size: 2.6em;
+		margin: 0; */
 	}
 
 	.post-details {
@@ -102,10 +102,10 @@
 	text-align: center;
 	a {
 		background: #eee;
-    padding: 3px 5px;
-    font-size: .8em;
-    border-radius: 5px;
-    color: #888;
+		padding: 3px 5px;
+		font-size: .8em;
+		border-radius: 5px;
+		color: #888;
 		transition: .2s ease-in-out;
 
 		&:hover {
