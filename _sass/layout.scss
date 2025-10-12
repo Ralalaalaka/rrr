@@ -236,11 +236,11 @@ blockquote:before {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 50px 0; /*it was 80px*/
+  padding: 50px 0;
   overflow: hidden;
 }
 
-/* Light gray background behind content */
+/* Base container */
 .info .container {
   position: relative;
   display: flex;
@@ -248,23 +248,23 @@ blockquote:before {
   justify-content: space-between;
   background: #fafafb;
   border-radius: 0 1000px 1000px 0;
-  width: 100%;
-  padding: 15px 80px; /*it was 60px 80px من هنا اتحكم بالبوكس الرمادي*/
+  width: 95%; /* leave small side gap */
+  margin-right: 0;
+  margin-left: auto;
+  padding: 40px 70px;
   z-index: 2;
   gap: 50px;
-  float: right; /*انا اضفته*/
 }
 
-/* Even sections: rounded on the left, aligned right */
+/* Even sections alternate */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
-  justify-content: space-between;
-  float: left; /*انا اضفته*/
+  margin-left: 0;
+  margin-right: auto;
 }
 
-
-/* Text and image */
+/* Text */
 .info .text {
   flex: 1;
   color: #012d50;
@@ -272,18 +272,16 @@ blockquote:before {
 }
 
 .info .text h2 {
-  /*font-size: 24px;*/
   margin-bottom: 15px;
   color: #012d50;
 }
 
 .info .text p {
-  /*font-size: 16px;*/
   color: #555;
-  /*line-height: 1.8;*/
   margin-bottom: 20px;
 }
 
+/* Image */
 .info .image {
   flex: 1;
   display: flex;
@@ -292,42 +290,32 @@ blockquote:before {
 }
 
 .info .image img {
-  max-width: 50vh; /*it was 70%*/
+  max-width: 50vh;
   border-radius: 12px;
-  /*box-shadow: 0 6px 20px rgba(0,0,0,0.1);*/ /*ظل لصور الخدمات*/
 }
 
-/* Button styling */
-.info-btn {
-  display: inline-block;
-  color: #012d50;
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 1px solid #012d50;
-  transition: 0.3s;
-}
-
-.info-btn:hover {
-  color: #000;
-  border-color: #000;
-}
-
-/* Responsive */
+/* Responsive fix */
 @media (max-width: 900px) {
   .info {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 
   .info .container {
     flex-direction: column !important;
     text-align: center;
-    border-radius: 30px;
-    padding: 40px 30px;
+    border-radius: 25px;
+    width: 90%;
+    padding: 30px 20px;
+    margin: 0 auto;
   }
 
-  .info .text, 
+  .info .text,
   .info .image {
     max-width: 100%;
+  }
+
+  .info .image img {
+    max-width: 80%;
   }
 }
 
