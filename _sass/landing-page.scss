@@ -143,7 +143,7 @@
 .banner {
   background: linear-gradient(49deg,rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
   color: #fff;
-  padding: 20px 10%; /*80px 10%*/
+  padding: 80px 10%;
   direction: rtl;
   text-align: right;
 
@@ -247,7 +247,8 @@
   flex-wrap: wrap;
   background: linear-gradient(90deg, #00b3b3, #003f61);
   border-radius: 1000px;
-  padding: 20px 80px;
+  padding: 20px;
+  margin: 50px 30px; /*انا اضفته*/
   gap: 20px;
   color: white;
   text-align: center;
