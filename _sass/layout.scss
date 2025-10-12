@@ -229,6 +229,9 @@ blockquote:before {
 /* ============================= */
 /* --- Services Section Fix --- */
 /* ============================= */
+/* ============================= */
+/* --- Services Section (Final Improved) --- */
+/* ============================= */
 
 .info {
   position: relative;
@@ -240,17 +243,17 @@ blockquote:before {
   overflow: hidden;
 }
 
-/* Base container */
+/* Base container — first section starts from LEFT */
 .info .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fafafb;
-  border-radius: 0 1000px 1000px 0;
-  width: 95%; /* leave small side gap */
-  margin-right: 0;
-  margin-left: auto;
+  border-radius: 1000px 0 0 1000px; /* rounded on LEFT side */
+  width: 90vw; /* always leave white gap on both sides */
+  margin-left: 0;
+  margin-right: auto;
   padding: 40px 70px;
   z-index: 2;
   gap: 50px;
@@ -259,9 +262,9 @@ blockquote:before {
 /* Even sections alternate */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
-  border-radius: 1000px 0 0 1000px;
-  margin-left: 0;
-  margin-right: auto;
+  border-radius: 0 1000px 1000px 0; /* rounded on RIGHT side */
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Text */
@@ -294,7 +297,7 @@ blockquote:before {
   border-radius: 12px;
 }
 
-/* Responsive fix */
+/* Responsive (mobile/tablet) */
 @media (max-width: 900px) {
   .info {
     padding: 40px 0;
@@ -303,10 +306,10 @@ blockquote:before {
   .info .container {
     flex-direction: column !important;
     text-align: center;
-    border-radius: 25px;
-    width: 90%;
-    padding: 30px 20px;
+    border-radius: 40px;
+    width: 85vw; /* still keeps white gap */
     margin: 0 auto;
+    padding: 30px 25px;
   }
 
   .info .text,
