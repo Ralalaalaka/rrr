@@ -25,7 +25,7 @@ img {
 }
 
 strong { /*h1 strong, h2 strong*/
-	font-weight: bold;
+	font-weight: 500;
 }
 
 h1 {
@@ -35,11 +35,11 @@ h1 {
 
     font-size: clamp(1.8rem, 2.5vw, 2.8rem); // smaller for small screens
 	line-height: 1.6em;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 h2 {
-	font-weight: normal;
+	font-weight: 300;
 	/*font-size: 2.3em; it was 3*/
 	font-size: clamp(1.45rem, 2vw, 2.25rem);
 	margin: 0 0 30px 0;
@@ -50,7 +50,7 @@ h3 {
 	margin: 20px 0 10px 0;
 	/*font-size: 1.8em; انا اضضفته*/
 	font-size: clamp(1.1rem, 1.6vw, 1.75rem);
-	font-weight: normal;
+	font-weight: 300;
 }
 
 h2 a {
@@ -65,7 +65,7 @@ p, address, ul {
 	/*font-size: 1.38em;*/
 	font-size: clamp(0.9rem, 1.2vw, 1.4rem);
 	margin-bottom: 20px;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: 1.6em;
 	font-family: 'Almarai', Tajawal;
 }
@@ -74,5 +74,5 @@ p, address, ul {
 h5 {
   font-size: clamp(0.8rem, 1vw, 1.25rem);
   line-height: 1.5em;
-  font-weight: normal;
+  font-weight: 300;
 }
