@@ -16,9 +16,9 @@
 	}
 }
 
-nav h5{
+nav {
 	text-transform: uppercase;
-	/*font-size: .8em;*/
+	font-size: .8em;
 	width: 100%;
 	position: relative;
 	top: -7px;
@@ -30,7 +30,7 @@ nav h5{
 	}
 
 
-	a h5 {
+	a {
 		margin: 0 3px;
 		padding: 14px 10px;
 		border: 0;
@@ -48,7 +48,7 @@ nav h5{
 			position: absolute;
 			left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
 			top: 2px; /*It was -7*/
-			/*font-size: 1.9em;*/
+			font-size: 1.9em;
 			border: 0;
 			text-shadow: none; /* it was 0 */
 			padding: 0 !important;
