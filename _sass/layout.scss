@@ -233,58 +233,52 @@ blockquote:before {
 /* --- Services Section (Final Improved) --- */
 /* ============================= */
 
+/* ============================= */
+/* --- Services Section Override --- */
+/* ============================= */
+
 .info {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 50px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
-/* Base container — first section starts from LEFT */
-.info .container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fafafb;
-  border-radius: 1000px 0 0 1000px; /* rounded on LEFT side */
-  width: 90vw; /* always leave white gap on both sides */
-  margin-left: 0;
-  margin-right: auto;
-  padding: 40px 70px;
+/* Force new layout */
+.info > .container {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #fafafb !important;
+  border-radius: 1000px 0 0 1000px !important;
+  width: 90vw !important; /* keeps white gap */
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  padding: 40px 70px !important;
   z-index: 2;
   gap: 50px;
+  max-width: none !important;
 }
 
-/* Even sections alternate */
-.info:nth-child(even) .container {
-  flex-direction: row-reverse;
-  border-radius: 0 1000px 1000px 0; /* rounded on RIGHT side */
-  margin-left: auto;
-  margin-right: 0;
+/* Alternate sections */
+.info:nth-child(even) > .container {
+  flex-direction: row-reverse !important;
+  border-radius: 0 1000px 1000px 0 !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
 }
 
-/* Text */
+/* Text and image adjustments */
 .info .text {
   flex: 1;
-  color: #012d50;
   text-align: right;
-}
-
-.info .text h2 {
-  margin-bottom: 15px;
   color: #012d50;
 }
 
-.info .text p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-/* Image */
 .info .image {
   flex: 1;
   display: flex;
@@ -297,30 +291,22 @@ blockquote:before {
   border-radius: 12px;
 }
 
-/* Responsive (mobile/tablet) */
+/* Responsive fix */
 @media (max-width: 900px) {
-  .info {
-    padding: 40px 0;
-  }
-
-  .info .container {
+  .info > .container {
     flex-direction: column !important;
     text-align: center;
-    border-radius: 40px;
-    width: 85vw; /* still keeps white gap */
-    margin: 0 auto;
-    padding: 30px 25px;
-  }
-
-  .info .text,
-  .info .image {
-    max-width: 100%;
+    border-radius: 40px !important;
+    width: 85vw !important;
+    margin: 0 auto !important;
+    padding: 30px 25px !important;
   }
 
   .info .image img {
     max-width: 80%;
   }
 }
+
 
 
 
