@@ -251,7 +251,7 @@ blockquote:before {
   justify-content: space-between;
   background: #fafafb;
   border-radius: 0 1000px 1000px 0;
-  width: 95%; /* leave small side gap */
+  width: 95vw; /* leave small side gap */
   margin-right: 0;
   margin-left: auto;
   padding: 40px 70px;
@@ -307,7 +307,7 @@ blockquote:before {
     flex-direction: column !important;
     text-align: center;
     border-radius: 25px;
-    width: 90%;
+    width: 90vw;
     padding: 30px 20px;
     margin: 0 auto;
   }
