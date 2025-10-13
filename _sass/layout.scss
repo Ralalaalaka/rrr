@@ -250,7 +250,7 @@ blockquote:before {
   align-items: center;
   justify-content: space-between;
   background: #fafafb;
-  border-radius: 0 1000px 1000px 0;
+  border-radius: 1000px 0 0 1000px;
   width: 95vw; /* leave small side gap */
   margin-right: 0;
   margin-left: auto;
@@ -262,7 +262,7 @@ blockquote:before {
 /* Even sections alternate */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
-  border-radius: 1000px 0 0 1000px;
+  border-radius: 0 1000px 1000px 0;
   margin-left: 0;
   margin-right: auto;
 }
@@ -304,17 +304,17 @@ blockquote:before {
   }
 
   .info .container {
-    flex-direction: column !important;
+    flex-direction: column;
     text-align: center;
-    border-radius: 25px;
-    width: 90vw;
+    border-radius: 1000px 0 0 1000px; /*it was 25px*/
+    width: 85vw;
     padding: 30px 20px;
     margin: 0 auto;
   }
 
   .info .text,
   .info .image {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .info .image img {
