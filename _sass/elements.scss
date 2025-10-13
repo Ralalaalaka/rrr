@@ -25,7 +25,7 @@ img {
 }
 
 strong { /*h1 strong, h2 strong*/
-	font-weight: 600;
+	font-weight: 700;
 }
 
 h1 {
@@ -68,7 +68,7 @@ p, address, ul {
 	/*font-size: 1.38em;*/
 	font-size: clamp(0.9rem, 1.1vw, 1.20rem);
 	margin-bottom: 20px;
-	font-weight: 400;
+	font-weight: 370;
 	line-height: 1.6em;
 	font-family: 'Almarai', Tajawal;
 }
@@ -77,5 +77,5 @@ p, address, ul {
 h5 {
   font-size: clamp(0.8em, 1vw, 1rem);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 370;
 }
