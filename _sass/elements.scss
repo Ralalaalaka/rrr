@@ -33,24 +33,25 @@ h1 {
 	font-size: 2.7em;
 	margin: 0;*/
 
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem); // smaller for small screens
-	line-height: 1.6em;
+    font-size: clamp(1.45rem, 2vw, 2.25rem); // smaller for small screens
+	line-height: 1.2em;
 	font-weight: 300;
 }
 
 h2 {
 	font-weight: 300;
 	/*font-size: 2.3em; it was 3*/
-	font-size: clamp(1.45rem, 2vw, 2.25rem);
+	font-size: clamp(1.1rem, 1.6vw, 1.75rem);
 	margin: 0 0 30px 0;
 	line-height: 1.2em;
 }
 
-h3 {
+h3 { 
 	margin: 20px 0 10px 0;
 	/*font-size: 1.8em; انا اضضفته*/
-	font-size: clamp(1.1rem, 1.6vw, 1.75rem);
+	font-size: clamp(0.9rem, 1.2vw, 1.4rem);
 	font-weight: 300;
+	line-height: 1.6em;
 }
 
 h2 a {
@@ -63,7 +64,7 @@ h2 a {
 
 p, address, ul {
 	/*font-size: 1.38em;*/
-	font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+	font-size: clamp(0.85rem, 1.1vw, 1.25rem);
 	margin-bottom: 20px;
 	font-weight: 300;
 	line-height: 1.6em;
