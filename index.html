@@ -25,7 +25,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   <section class="info" id="learn-more">
     <div class="container flex">
       <div class="text">
-        <h2><strong>{{ forloop.index }}. {{ service.title }}</strong></h2>
+        <h3><strong>{{ forloop.index }}. {{ service.title }}</strong></h3>
         <p>{{ service.description }}</p>
         {% if service.sub_services %}
         <!-- <ul>
@@ -72,7 +72,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 					{% for benefits in site.data.benefits.benefits %}
 						<li>
 							<div><img class="image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div> <!--it was square-image instead of image-->
-							<div class="name">{{ benefits.title }}</div>
+							<div class="name"><h3>{{ benefits.title }}</h3></div>
 							<div class="position"><p>{{ benefits.description }}</p></div>
 						</li>
 					{% endfor %}
@@ -125,7 +125,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 
-
+<!-- Test fonts
 <section class="typography-test" style="max-width: 700px; margin: 50px auto; text-align: right; font-family: 'Almarai', 'Tajawal', sans-serif;">
   <h1> h1 عنوان رئيسي - هذا مثال للنص العربي</h1>
   <p> p هذا نص تجريبي لاختبار حجم الخطوط العربية في التصميم. يمكنك استخدامه لمعرفة التناسب بين العناوين والفقرات وتناسق المسافات. الهدف هو التأكد من وضوح النص وجاذبيته على مختلف الأجهزة.</p>
@@ -153,6 +153,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   <h5>Tiny Heading Example h5</h5>
   <p>This small paragraph helps verify text hierarchy at the smallest font sizes.</p>
 </section>
+-->
 
 
 
