@@ -21,7 +21,7 @@ nav {
 	font-size: 1.1em; /*it was 0.8*/
 	width: 100%;
 	position: relative;
-	top: -7px;
+	top: -4px; /*it was -7*/
 	text-shadow: none;
 	
 	@media #{$mid-point} {
