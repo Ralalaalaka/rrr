@@ -125,7 +125,70 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 
+<section class="roles-section">
+  <h2>وورك هب يخدم الجميع</h2>
+  <p>كل دور يستحق تجربة أسهل</p>
 
+  <div class="carousel">
+    <div class="card active">
+      <img src="/images/beneficiary/beneficiary 1.png" alt="المدير المباشر">
+      <div class="info">
+        <h3>المدير المباشر</h3>
+        <p>متابعة أداء الموظفين، ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/beneficiary/beneficiary 2.png" alt="الموظف">
+      <div class="info">
+        <h3>الموظف</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/beneficiary/beneficiary 3.png" alt="الإدارة العليا">
+      <div class="info">
+        <h3>الإدارة العليا</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+
+<script>
+const cards = document.querySelectorAll('.card');
+const dots = document.querySelectorAll('.dot');
+let index = 0;
+
+function showCard(i) {
+  cards.forEach(c => c.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  cards[i].classList.add('active');
+  dots[i].classList.add('active');
+}
+
+dots.forEach((dot, i) => dot.addEventListener('click', () => {
+  index = i;
+  showCard(index);
+}));
+
+cards.forEach((card, i) => card.addEventListener('click', () => {
+  index = i;
+  showCard(index);
+}));
+
+setInterval(() => {
+  index = (index + 1) % cards.length;
+  showCard(index);
+}, 1500);
+</script>
 
 
 
