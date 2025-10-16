@@ -1,0 +1,20 @@
+beneficiary:
+  - name: "الإدارة العليا"
+    description: ""
+    image: "images/beneficiary/beneficiary 1.png"
+
+  - name: "المدير المباشر"
+    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
+    image: "images/beneficiary/beneficiary 2.png"
+
+  - name: "الموظف"
+    description: ""
+    image: "images/beneficiary/beneficiary 3.png"
+
+  - name: "قسم الموارد البشرية"
+    description: ""
+    image: "/images/employees/hr.jpg"
+
+  - name: "الدعم الفني"
+    description: ""
+    image: "/images/employees/support.jpg"

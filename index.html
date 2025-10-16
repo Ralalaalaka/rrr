@@ -191,6 +191,88 @@ setInterval(() => {
 </script>
 
 
+<!--------------------------------- new -->
+
+<section class="roles-section">
+  <h2>وورك هب يخدم الجميع</h2>
+  <p>كل دور يستحق تجربة أسهل</p>
+
+  <div class="carousel">
+    {% for employee in site.data.employees.employees %}
+    <div class="card" data-index="{{ forloop.index0 }}">
+      <img src="{{ employee.image }}" alt="{{ employee.name }}">
+      <div class="info">
+        <h3>{{ employee.name }}</h3>
+        {% if employee.description %}
+        <p>{{ employee.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="dots">
+    {% for employee in site.data.employees.employees %}
+    <span class="dot" data-index="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+  const dots = document.querySelectorAll(".dot");
+  let total = cards.length;
+  let current = Math.floor(total / 2); // start with the middle
+
+  function updateCards() {
+    cards.forEach(c => c.className = "card"); // reset
+    dots.forEach(d => d.classList.remove("active"));
+
+    const left = (current - 1 + total) % total;
+    const right = (current + 1) % total;
+
+    cards[current].classList.add("active");
+    cards[left].classList.add("left");
+    cards[right].classList.add("right");
+
+    dots[current].classList.add("active");
+  }
+
+  function next() {
+    current = (current + 1) % total;
+    updateCards();
+  }
+
+  function prev() {
+    current = (current - 1 + total) % total;
+    updateCards();
+  }
+
+  // Auto rotate every 1.5s
+  let timer = setInterval(next, 1500);
+
+  // Hover or click to pause and move
+  cards.forEach((card, i) => {
+    card.addEventListener("mouseenter", () => clearInterval(timer));
+    card.addEventListener("mouseleave", () => timer = setInterval(next, 1500));
+    card.addEventListener("click", () => {
+      current = i;
+      updateCards();
+    });
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      current = i;
+      updateCards();
+    });
+  });
+
+  updateCards(); // initialize
+});
+</script>
 
 
 
