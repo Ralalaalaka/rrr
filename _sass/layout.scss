@@ -499,28 +499,23 @@ blockquote:before {
   background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
 }
 
-/* Only show name for side cards */
-/* Hide everything by default */
+/* Hide all text by default */
+.card .info h3,
 .card .info p {
   display: none;
 }
 
-/* Always show the name (the one that contains <strong>) */
-.card .info p strong {
-  display: inline;
-}
-
-/* Show both name and description for active (center) card */
-.card.active .info p {
+/* Always show name (h3) for left, right, and active cards */
+.card.left .info h3,
+.card.right .info h3,
+.card.active .info h3 {
   display: block;
 }
 
-/* Hide description text (not name) for side cards */
-.card.left .info p:not(:has(strong)),
-.card.right .info p:not(:has(strong)) {
-  display: none;
+/* Show description (p) only for active card */
+.card.active .info p {
+  display: block;
 }
-
 
 /* Dots below */
 .dots {
