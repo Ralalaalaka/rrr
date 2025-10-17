@@ -197,7 +197,7 @@ setInterval(() => {
   <p>كل دور يستحق تجربة أسهل</p>
 
   <div class="carousel">
-    {% for employee in site.data.beneficiary.beneficiary %}
+    {% for beneficiary in site.data.beneficiary.beneficiary %}
     <div class="card" data-index="{{ forloop.index0 }}">
       <img src="{{ beneficiary.image }}" alt="{{ beneficiary.name }}">
       <div class="info">
