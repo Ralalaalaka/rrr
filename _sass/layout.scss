@@ -428,25 +428,26 @@ blockquote:before {
 }
 
 .carousel {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  gap: 20px;
-  transition: all 0.5s ease;
+  height: 380px;
 }
 
+/* Basic card style */
 .card {
   position: absolute;
-  width: 220px;
-  height: 320px;
+  width: 260px;
+  height: 340px;
   border-radius: 16px;
   overflow: hidden;
-  filter: grayscale(100%);
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: all 0.8s ease;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.6;
+  transform: scale(0.85);
+  transition: all 0.7s ease;
   cursor: pointer;
+  z-index: 1;
 }
 
 .card img {
@@ -455,31 +456,62 @@ blockquote:before {
   object-fit: cover;
 }
 
+/* Middle card (active/focused) */
 .card.active {
-  z-index: 3;
+  filter: none;
   transform: scale(1.05);
-  filter: grayscale(0);
   opacity: 1;
+  z-index: 3;
 }
 
+/* Left and right cards */
 .card.left {
-  transform: translateX(-250px) scale(0.9);
+  transform: translateX(-320px) scale(0.9);
+  z-index: 2;
 }
 
 .card.right {
-  transform: translateX(250px) scale(0.9);
+  transform: translateX(320px) scale(0.9);
+  z-index: 2;
 }
 
+/* Hide other cards (not visible behind) */
+.card.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Info box */
 .card .info {
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding: 12px;
+  text-align: center;
   background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
-  padding: 10px;
+  transition: opacity 0.4s;
+}
+
+/* Show description only on center card */
+.card:not(.active) .info p {
+  display: none;
+}
+
+/* Title above description */
+.card .info h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.card .info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .dots {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .dot {
@@ -490,8 +522,10 @@ blockquote:before {
   background: #ccc;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .dot.active {
   background: #0E657E;
+  transform: scale(1.2);
 }
