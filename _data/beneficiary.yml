@@ -1,6 +1,6 @@
 beneficiary:
   - name: "الإدارة العليا"
-    description: ""
+    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
     image: "images/beneficiary/beneficiary 1.png"
 
   - name: "المدير المباشر"
@@ -8,13 +8,13 @@ beneficiary:
     image: "images/beneficiary/beneficiary 2.png"
 
   - name: "الموظف"
-    description: ""
+    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
     image: "images/beneficiary/beneficiary 3.png"
 
   - name: "قسم الموارد البشرية"
-    description: ""
-    image: "/images/employees/hr.jpg"
+    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
+    image: "images/beneficiary/beneficiary 3.png"
 
   - name: "الدعم الفني"
-    description: ""
-    image: "/images/employees/support.jpg"
+    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
+    image: "images/beneficiary/beneficiary 3.png"
