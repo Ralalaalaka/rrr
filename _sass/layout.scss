@@ -478,8 +478,10 @@ blockquote:before {
 /* Hide other cards (not visible behind) */
 .card.hidden {
   opacity: 0;
+  transform: scale(0.8);
   pointer-events: none;
   z-index: 0;
+  transition: opacity 1s ease, transform 0.8s ease; /*added for left card motion*/
 }
 
 /* Info box */
