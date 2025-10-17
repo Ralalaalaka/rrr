@@ -500,24 +500,27 @@ blockquote:before {
 }
 
 /* Only show name for side cards */
-.card.left .info p,
-.card.right .info p {
-  display: none;
-}
-
-/* Hide description by default */
+/* Hide everything by default */
 .card .info p {
   display: none;
 }
 
-.card .info p strong { /*من هنا يبين اذا العنوان طالع ولا لا*/
+/* Always show the name (the one that contains <strong>) */
+.card .info p strong {
   display: inline;
 }
 
-/* Show description only for active card */
+/* Show both name and description for active (center) card */
 .card.active .info p {
   display: block;
 }
+
+/* Hide description text (not name) for side cards */
+.card.left .info p:not(:has(strong)),
+.card.right .info p:not(:has(strong)) {
+  display: none;
+}
+
 
 /* Dots below */
 .dots {
