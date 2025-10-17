@@ -193,7 +193,6 @@ setInterval(() => {
 
 
 <!-- المستفيدين -->
-
 <section class="roles-section">
   <h2>وورك هب يخدم الجميع</h2>
   <p>كل دور يستحق تجربة أسهل</p>
@@ -203,7 +202,7 @@ setInterval(() => {
     <div class="card" data-index="{{ forloop.index0 }}">
       <img src="{{ beneficiary.image }}" alt="{{ beneficiary.name }}">
       <div class="info">
-        <p><strong>{{ beneficiary.name }}<strong></strong></p>
+        <h3>{{ beneficiary.name }}</h3>
         <p>{{ beneficiary.description }}</p>
       </div>
     </div>
@@ -216,8 +215,6 @@ setInterval(() => {
     {% endfor %}
   </div>
 </section>
-
-
 
 
 
