@@ -510,6 +510,10 @@ blockquote:before {
   display: none;
 }
 
+.card .info p strong { /*من هنا يبين اذا العنوان طالع ولا لا*/
+  display: inline;
+}
+
 /* Show description only for active card */
 .card.active .info p {
   display: block;
