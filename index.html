@@ -203,7 +203,7 @@ setInterval(() => {
     <div class="card" data-index="{{ forloop.index0 }}">
       <img src="{{ beneficiary.image }}" alt="{{ beneficiary.name }}">
       <div class="info">
-        <p><strong>{{ beneficiary.name }}</strong></p>
+        <p><strong>{{ beneficiary.name }}<strong></strong></p>
         <p>{{ beneficiary.description }}</p>
       </div>
     </div>
@@ -220,82 +220,38 @@ setInterval(() => {
 
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = Array.from(document.querySelectorAll(".card"));
-  const dots = Array.from(document.querySelectorAll(".dot"));
+  const cards = document.querySelectorAll(".card");
+  const dots = document.querySelectorAll(".dot");
   const total = cards.length;
-  if (!total) return;
+  let current = 0; // start from the FIRST card
+  let timer;
+  let pauseTimeout;
 
-  let current = 0; // start from FIRST card (you requested this)
-  let rotationTimer = null;
-  let pauseTimer = null;
-
-  // >>> Change this to control auto-rotate interval (milliseconds)
-  const rotationSpeed = 3000; // 3000ms = 3 seconds per card
-
-  // spacing will be computed from card width (keeps it responsive)
-  function getSpacing() {
-    const card = cards[0];
-    const cardW = card ? card.offsetWidth : 260;
-    return Math.max(220, Math.round(cardW * 1.2)); // e.g., ~1.2x card width
-  }
-
-  // normalize circular distance into range (-n/2 .. n/2)
-  function circularDelta(i, center) {
-    let delta = i - center;
-    if (delta > total / 2) delta -= total;
-    if (delta <= -total / 2) delta += total;
-    return delta;
-  }
+  // 👉 You can change this value to control rotation speed (milliseconds)
+  const rotationSpeed = 3000; // 3000 = 3 seconds per card
 
   function updateCards() {
-    const spacing = getSpacing();
+    cards.forEach(c => c.className = "card");
+    dots.forEach(d => d.classList.remove("active"));
 
-    cards.forEach((card, i) => {
-      const delta = circularDelta(i, current);
+    const left = (current - 1 + total) % total;
+    const right = (current + 1) % total;
 
-      // remove positional classes first
-      card.classList.remove("left", "right", "active", "hidden");
+    cards[current].classList.add("active");
+    cards[left].classList.add("left");
+    cards[right].classList.add("right");
 
-      // set transforms/opacity/z-index according to distance to center
-      if (delta === 0) {
-        // center
-        card.style.transform = `translateX(0px) scale(1.05)`;
-        card.style.opacity = "1";
-        card.style.zIndex = 30;
-        card.classList.add("active");
-      } else if (delta === -1) {
-        // left (one before center)
-        card.style.transform = `translateX(${-spacing}px) scale(0.92)`;
-        card.style.opacity = "0.85";
-        card.style.zIndex = 20;
-        card.classList.add("left");
-      } else if (delta === 1) {
-        // right (one after center)
-        card.style.transform = `translateX(${spacing}px) scale(0.92)`;
-        card.style.opacity = "0.85";
-        card.style.zIndex = 20;
-        card.classList.add("right");
-      } else {
-        // hidden (any other card) — place them off to the side smoothly
-        // choose a position proportional to delta so movement is smooth around the circle
-        card.style.transform = `translateX(${delta * spacing}px) scale(0.8)`;
-        card.style.opacity = "0";
-        card.style.zIndex = 5;
-        card.classList.add("hidden");
+    // hide others
+    cards.forEach((c, i) => {
+      if (![current, left, right].includes(i)) {
+        c.classList.add("hidden");
       }
-
-      // content behavior: only active card shows the description (handled by CSS)
-      card.querySelectorAll(".info p").forEach(p => {
-        // keep the <p> present, CSS will show only on .active; this is just safety
-        // no action needed here unless you want to remove nodes
-      });
     });
 
-    // update dots
-    dots.forEach(d => d.classList.remove("active"));
-    if (dots[current]) dots[current].classList.add("active");
+    dots[current].classList.add("active");
   }
 
   function next() {
@@ -304,62 +260,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startRotation() {
-    stopRotation();
-    rotationTimer = setInterval(next, rotationSpeed);
+    clearInterval(timer);
+    timer = setInterval(next, rotationSpeed);
   }
 
   function stopRotation() {
-    if (rotationTimer) {
-      clearInterval(rotationTimer);
-      rotationTimer = null;
-    }
+    clearInterval(timer);
   }
 
-  function pauseAfterClick() {
-    // pause rotation for 10s after click, then resume
-    stopRotation();
-    if (pauseTimer) clearTimeout(pauseTimer);
-    pauseTimer = setTimeout(() => {
-      startRotation();
-      pauseTimer = null;
-    }, 10000); // 10 seconds
-  }
-
-  // attach events
   cards.forEach((card, i) => {
-    // hover: stop/resume (but don't override click-initiated 10s pause)
-    card.addEventListener("mouseenter", () => {
-      stopRotation();
-    });
-    card.addEventListener("mouseleave", () => {
-      if (!pauseTimer) startRotation();
-    });
-
-    // click: make clicked card center and pause 10s
+    card.addEventListener("mouseenter", stopRotation);
+    card.addEventListener("mouseleave", startRotation);
     card.addEventListener("click", () => {
+      stopRotation();
       current = i;
       updateCards();
-      pauseAfterClick();
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(startRotation, 10000); // pause 10s
     });
   });
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
+      stopRotation();
       current = i;
       updateCards();
-      pauseAfterClick();
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(startRotation, 10000);
     });
-    dot.addEventListener("mouseenter", () => stopRotation());
-    dot.addEventListener("mouseleave", () => { if (!pauseTimer) startRotation(); });
   });
 
-  // handle window resize so spacing recalculates and movement remains smooth
-  window.addEventListener("resize", () => {
-    // keep current positions consistent by reapplying transforms using new spacing
-    requestAnimationFrame(updateCards);
-  });
-
-  // initial render & start
   updateCards();
   startRotation();
 });
