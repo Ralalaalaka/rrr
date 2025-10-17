@@ -191,6 +191,9 @@ setInterval(() => {
 
 -->
 
+
+<!-- المستفيدين -->
+
 <section class="roles-section">
   <h2>وورك هب يخدم الجميع</h2>
   <p>كل دور يستحق تجربة أسهل</p>
@@ -200,10 +203,8 @@ setInterval(() => {
     <div class="card" data-index="{{ forloop.index0 }}">
       <img src="{{ beneficiary.image }}" alt="{{ beneficiary.name }}">
       <div class="info">
-        <p><strong>{{ beneficiary.name }}</strong></p>
-        {% if beneficiary.description %}
+        <h3>{{ beneficiary.name }}</h3>
         <p>{{ beneficiary.description }}</p>
-        {% endif %}
       </div>
     </div>
     {% endfor %}
@@ -217,98 +218,85 @@ setInterval(() => {
 </section>
 
 
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = Array.from(document.querySelectorAll(".card"));
-  const dots = Array.from(document.querySelectorAll(".dot"));
+  const cards = document.querySelectorAll(".card");
+  const dots = document.querySelectorAll(".dot");
   const total = cards.length;
-  if (total === 0) return;
+  let current = 0; // start from the FIRST card
+  let timer;
+  let pauseTimeout;
 
-  let current = Math.floor(total / 2); // start with middle one
-  let rotationTimer = null;
-  let pauseTimer = null;
-
-  // >>> Change rotationSpeed below to adjust auto-rotate interval (ms)
-  const rotationSpeed = 3000; // 3000 ms = 3 seconds per card
+  // 👉 You can change this value to control rotation speed (milliseconds)
+  const rotationSpeed = 3000; // 3000 = 3 seconds per card
 
   function updateCards() {
-    // reset all
-    cards.forEach(c => {
-      c.classList.remove("left","right","active","hidden");
-      // ensure base class remains 'card' (we don't wipe it out)
-    });
+    cards.forEach(c => c.className = "card");
     dots.forEach(d => d.classList.remove("active"));
 
-    // compute indices according to your rule:
-    // left = current - 1, right = current + 1 (wrapped)
     const left = (current - 1 + total) % total;
     const right = (current + 1) % total;
 
-    // assign classes
     cards[current].classList.add("active");
     cards[left].classList.add("left");
     cards[right].classList.add("right");
 
-    // everything else -> hidden (will fade out)
+    // hide others
     cards.forEach((c, i) => {
-      if (![current, left, right].includes(i)) c.classList.add("hidden");
+      if (![current, left, right].includes(i)) {
+        c.classList.add("hidden");
+      }
     });
 
-    // update dots
-    if (dots[current]) dots[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function next() {
+    current = (current + 1) % total;
+    updateCards();
   }
 
   function startRotation() {
-    stopRotation();
-    rotationTimer = setInterval(() => {
-      // move to next: according to your rotation direction "to the right"
-      // we want the item on the right to become center, i.e. decrement index
-      current = (current - 1 + total) % total;
-      updateCards();
-    }, rotationSpeed);
+    clearInterval(timer);
+    timer = setInterval(next, rotationSpeed);
   }
 
   function stopRotation() {
-    if (rotationTimer) { clearInterval(rotationTimer); rotationTimer = null; }
+    clearInterval(timer);
   }
 
-  function pauseAfterClick() {
-    // on click, stop rotation and resume after 10s
-    stopRotation();
-    if (pauseTimer) clearTimeout(pauseTimer);
-    pauseTimer = setTimeout(() => {
-      startRotation();
-      pauseTimer = null;
-    }, 10000); // 10 seconds pause
-  }
-
-  // hook events
   cards.forEach((card, i) => {
-    card.addEventListener("mouseenter", () => { stopRotation(); });
-    card.addEventListener("mouseleave", () => { if (!pauseTimer) startRotation(); });
-
+    card.addEventListener("mouseenter", stopRotation);
+    card.addEventListener("mouseleave", startRotation);
     card.addEventListener("click", () => {
+      stopRotation();
       current = i;
       updateCards();
-      pauseAfterClick();
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(startRotation, 10000); // pause 10s
     });
   });
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
+      stopRotation();
       current = i;
       updateCards();
-      pauseAfterClick();
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(startRotation, 10000);
     });
-    dot.addEventListener("mouseenter", () => { stopRotation(); });
-    dot.addEventListener("mouseleave", () => { if (!pauseTimer) startRotation(); });
   });
 
-  // init
   updateCards();
   startRotation();
 });
 </script>
+
+
+
 
 
 <!-- Test fonts
