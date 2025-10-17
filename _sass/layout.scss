@@ -421,6 +421,7 @@ blockquote:before {
 } */
 
 /*rotating cards new*/
+/* container */
 .roles-section {
   text-align: center;
   padding: 40px 20px;
@@ -435,17 +436,19 @@ blockquote:before {
   height: 380px;
 }
 
-/* Basic card style */
+/* card base */
 .card {
   position: absolute;
+  left: 50%;
+  top: 0;
   width: 260px;
   height: 340px;
   border-radius: 16px;
   overflow: hidden;
   filter: grayscale(100%) brightness(0.8);
   opacity: 0.6;
-  transform: scale(0.85);
-  transition: all 0.7s ease;
+  transform: translateX(-50%) scale(0.85); /* base center transform */
+  transition: opacity 0.9s ease; /* only opacity animates */
   cursor: pointer;
   z-index: 1;
 }
@@ -456,78 +459,82 @@ blockquote:before {
   object-fit: cover;
 }
 
-/* Middle card (active/focused) */
+/* active / center */
 .card.active {
   filter: none;
-  transform: scale(1.05);
+  transform: translateX(-50%) scale(1.05); /* instant switch to center */
   opacity: 1;
-  z-index: 3;
+  z-index: 30;
 }
 
-/* Left and right cards */
+/* left & right visible positions
+   Note: transform changes are instant (no animation) because only opacity animates.
+*/
 .card.left {
-  transform: translateX(-320px) scale(0.9);
-  z-index: 2;
+  transform: translateX(calc(-50% - 320px)) scale(0.92);
+  z-index: 20;
+  opacity: 0.85;
+  filter: grayscale(100%) brightness(0.75);
 }
 
 .card.right {
-  transform: translateX(320px) scale(0.9);
-  z-index: 2;
+  transform: translateX(calc(-50% + 320px)) scale(0.92);
+  z-index: 20;
+  opacity: 0.85;
+  filter: grayscale(100%) brightness(0.75);
 }
 
-/* Hide other cards (not visible behind) */
+/* hidden (not among visible three) — fade out (opacity animates) */
 .card.hidden {
   opacity: 0;
-  transform: scale(0.8);
   pointer-events: none;
   z-index: 0;
-  transition: opacity 1s ease, transform 0.8s ease; /*added for left card motion*/
 }
 
-/* Info box */
+/* info box (title above description).
+   Only the active card will display the <p> description — all other cards hide it.
+*/
 .card .info {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   padding: 12px;
-  text-align: center;
+  border-radius: 12px;
   background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
-  transition: opacity 0.4s;
+  text-align: center;
 }
 
-/* Show description only on center card */
+/* hide descriptions for non-active cards */
 .card:not(.active) .info p {
   display: none;
 }
 
-/* Title above description */
+/* title style */
 .card .info h3 {
-  margin-bottom: 6px;
-  font-size: 1.1rem;
+  margin: 0 0 6px;
+  font-size: 1.05rem;
 }
 
+/* description style (only visible on .active) */
 .card .info p {
-  font-size: 0.9rem;
-  line-height: 1.4;
   margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
-.dots {
-  margin-top: 25px;
-}
-
+/* dots */
+.dots { margin-top: 20px; }
 .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  display:inline-block; width:10px; height:10px; margin:0 6px;
+  background:#ccc; border-radius:50%; cursor:pointer;
+  transition: transform .25s, background .25s;
 }
+.dot.active { background:#0E657E; transform: scale(1.15); }
 
-.dot.active {
-  background: #0E657E;
-  transform: scale(1.2);
+/* responsive tweaks */
+@media (max-width: 820px) {
+  .card { width: 220px; height: 300px; }
+  .card.left { transform: translateX(calc(-50% - 220px)) scale(0.9); }
+  .card.right { transform: translateX(calc(-50% + 220px)) scale(0.9); }
 }

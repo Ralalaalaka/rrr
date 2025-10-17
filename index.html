@@ -217,83 +217,98 @@ setInterval(() => {
 </section>
 
 
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  const dots = document.querySelectorAll(".dot");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const dots = Array.from(document.querySelectorAll(".dot"));
   const total = cards.length;
-  let current = Math.floor(total / 2); // middle one
-  let timer; // for auto rotation
-  let pauseTimeout; // for 10s pause after click
+  if (total === 0) return;
 
-  // >>> You can change this value to control rotation speed (in milliseconds)
-  const rotationSpeed = 3000; // 3000ms = 3 seconds per card
+  let current = Math.floor(total / 2); // start with middle one
+  let rotationTimer = null;
+  let pauseTimer = null;
+
+  // >>> Change rotationSpeed below to adjust auto-rotate interval (ms)
+  const rotationSpeed = 3000; // 3000 ms = 3 seconds per card
 
   function updateCards() {
-    cards.forEach(c => c.className = "card");
+    // reset all
+    cards.forEach(c => {
+      c.classList.remove("left","right","active","hidden");
+      // ensure base class remains 'card' (we don't wipe it out)
+    });
     dots.forEach(d => d.classList.remove("active"));
 
+    // compute indices according to your rule:
+    // left = current - 1, right = current + 1 (wrapped)
     const left = (current - 1 + total) % total;
     const right = (current + 1) % total;
 
+    // assign classes
     cards[current].classList.add("active");
     cards[left].classList.add("left");
     cards[right].classList.add("right");
 
-    // Hide everything else
+    // everything else -> hidden (will fade out)
     cards.forEach((c, i) => {
-      if (![left, right, current].includes(i)) c.classList.add("hidden");
+      if (![current, left, right].includes(i)) c.classList.add("hidden");
     });
 
-    dots[current].classList.add("active");
-  }
-
-  function next() {
-    current = (current + 1) % total;
-    updateCards();
+    // update dots
+    if (dots[current]) dots[current].classList.add("active");
   }
 
   function startRotation() {
-    clearInterval(timer);
-    timer = setInterval(next, rotationSpeed);
+    stopRotation();
+    rotationTimer = setInterval(() => {
+      // move to next: according to your rotation direction "to the right"
+      // we want the item on the right to become center, i.e. decrement index
+      current = (current - 1 + total) % total;
+      updateCards();
+    }, rotationSpeed);
   }
 
   function stopRotation() {
-    clearInterval(timer);
+    if (rotationTimer) { clearInterval(rotationTimer); rotationTimer = null; }
   }
 
+  function pauseAfterClick() {
+    // on click, stop rotation and resume after 10s
+    stopRotation();
+    if (pauseTimer) clearTimeout(pauseTimer);
+    pauseTimer = setTimeout(() => {
+      startRotation();
+      pauseTimer = null;
+    }, 10000); // 10 seconds pause
+  }
+
+  // hook events
   cards.forEach((card, i) => {
-    card.addEventListener("mouseenter", stopRotation);
-    card.addEventListener("mouseleave", startRotation);
+    card.addEventListener("mouseenter", () => { stopRotation(); });
+    card.addEventListener("mouseleave", () => { if (!pauseTimer) startRotation(); });
 
     card.addEventListener("click", () => {
-      stopRotation();
       current = i;
       updateCards();
-
-      // Pause for 10 seconds, then resume rotation
-      clearTimeout(pauseTimeout);
-      pauseTimeout = setTimeout(startRotation, 10000);
+      pauseAfterClick();
     });
   });
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-      stopRotation();
       current = i;
       updateCards();
-      clearTimeout(pauseTimeout);
-      pauseTimeout = setTimeout(startRotation, 10000);
+      pauseAfterClick();
     });
+    dot.addEventListener("mouseenter", () => { stopRotation(); });
+    dot.addEventListener("mouseleave", () => { if (!pauseTimer) startRotation(); });
   });
 
+  // init
   updateCards();
   startRotation();
 });
 </script>
-
-
 
 
 <!-- Test fonts
