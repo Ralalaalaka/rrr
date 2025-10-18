@@ -632,12 +632,12 @@ blockquote:before {
 
 /* left & right visible */
 .card.left {
-  transform: translateX(-320px) scale(0.9);
+  transform: translateX(-200px) scale(0.9); /*it was -320px*/
   opacity: 0.9;
   z-index: 2;
 }
 .card.right {
-  transform: translateX(320px) scale(0.9);
+  transform: translateX(200px) scale(0.9); /*it was 320px*/
   opacity: 0.9;
   z-index: 2;
 }
@@ -663,7 +663,7 @@ blockquote:before {
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
   z-index: 4; 
     /* ADD THESE */
-  display: flex;
+  /*display: flex;*/
   flex-direction: column; /* stack h3 above p */
   justify-content: center;
   align-items: center;
