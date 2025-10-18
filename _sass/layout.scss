@@ -361,9 +361,9 @@ blockquote:before {
   .banner-text {
     flex: 1 1 45%;
 
-    h2 {
-      /*font-size: 2.2rem;*/
+    h1 {
       margin-bottom: 20px;
+	  text-align: center;
     }
   }
 
@@ -675,10 +675,9 @@ blockquote:before {
      color: #0db6bd;
 	 margin: 0; 
 
-
-.card.active .info h3 { 
-	margin: 15px 0 0 0; 
-}
+    .card.active & {
+      margin: 15px 0 0 0;
+    }
 }
 
 .info p {
