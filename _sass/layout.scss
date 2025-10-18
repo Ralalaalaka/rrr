@@ -678,3 +678,28 @@ blockquote:before {
 .card.right .info h3,
 .card.active .info h3 { display: block; }
 .card.active .info p { display: block; }
+
+
+/* Dots navigation */
+.dots {
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 5; /* ensures dots appear above other layers */
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background: #d3d7da; /* gray color */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.dot.active {
+  background: #0e385b; /* dark blue active color */
+  transform: scale(1.3);
+}
