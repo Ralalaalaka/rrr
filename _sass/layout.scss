@@ -654,28 +654,34 @@ blockquote:before {
 .card .info {
   position: absolute;
   bottom: 0;
-  bottom: 15px; /* it was 0 */
-  left: 15px; /* نا اضفته */
-  right: 15px; /* نا اضفته */
-  /*width: 100%;*/
-  padding: 10px; /* it was 12px */
+  bottom: 15px;
+  left: 15px;
+  right: 15px; 
+  padding: 10px; 
   text-align: center;
-  border-radius: 16px; /* نا اضفته */
+  border-radius: 16px;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
-  z-index: 4; /* make sure it's above the image */
-/*}*/
+  z-index: 4; 
 
-/*.info*/ h3 {
+
+    /* ADD THESE */
+  display: flex;
+  flex-direction: column; /* stack h3 above p */
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* space between blue and navy text */
+
+  
+}
+
+.info h3 {
      color: #0db6bd;
 	 margin: 0;
-	 display: block;
 }
 
-/*.info*/ p {
+.info p {
      color: #022c4e;
 	 text-align: right;
-	 display: block;
-}
 }
 
 
