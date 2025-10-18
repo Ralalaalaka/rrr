@@ -471,6 +471,7 @@ blockquote:before {
   width: 120px;
   height: 120px;
   border-radius: 10px;
+  gap: 10px; /*انا اضفته*/
 }
 
 /* Small screens */
@@ -672,7 +673,8 @@ blockquote:before {
 .info h3 {
      color: #0db6bd;
 	 margin: 0;
-	 padding: 0;
+	 line-height: normal;
+	 
 }
 
 .info p {
