@@ -8,3 +8,18 @@
   link: /contact/
 - name: تسجيل الدخول  
   link: /contact/
+
+
+
+# Extra left buttons
+- name: Sign Up
+  link: /signup
+  class: white
+- name: Demo
+  link: /demo
+  class: white
+
+# Language button
+- name: EN
+  link: /language
+  class: lang
