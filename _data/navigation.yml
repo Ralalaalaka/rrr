@@ -1,7 +1,9 @@
+# Main navigation
 - name: الخدمات
   link: /blog/
 - name: الأسعار
   link: /pricing/
+  highlight: true
 - name: تواصل معنا
   link: /contact/
 - name: اطلب نسختك التجريبية
@@ -9,17 +11,15 @@
 - name: تسجيل الدخول  
   link: /contact/
 
-
-
-# Extra left buttons
+# Left buttons
 - name: Sign Up
   link: /signup
-  class: white
+  position: left
 - name: Demo
   link: /demo
-  class: white
+  position: left
 
-# Language button
+# Right button (language)
 - name: EN
   link: /language
-  class: lang
+  position: right
