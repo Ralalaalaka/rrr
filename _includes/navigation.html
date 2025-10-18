@@ -1,5 +1,11 @@
 <nav>
-	<a class="nav-toggle" id="open-nav" href="#" style="top: -1px;">&#9776;</a> <!-- &#9776; هذي هي علامة المنيو بالجوال burger -->
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!-- &#9776; هذي هي علامة المنيو بالجوال burger -->
+	    <!-- Left extra buttons -->
+    <a href="/signup" class="white">Sign Up</a> <!--انا اضفته-->
+    <a href="/demo" class="white">Demo</a> <!--انا اضفته-->
+	
+	
+	
 	{% for link in site.data.navigation %}
 		{% assign class = "" %}
 		{% if link.highlight %}
