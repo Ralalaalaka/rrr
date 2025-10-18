@@ -669,8 +669,8 @@ blockquote:before {
 /* Info box */
 .card .info {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  /*bottom: 0;*/
+  width: 70%;
   padding: 12px;
   text-align: center;
   background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
@@ -705,13 +705,13 @@ blockquote:before {
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background: #ccc;
+  background: #e4e6ea;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s, background 0.3s;
 }
 
 .dot.active {
-  background: #0E657E;
+  background: #0e385b;
   transform: scale(1.2);
 }
