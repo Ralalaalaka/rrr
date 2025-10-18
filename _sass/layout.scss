@@ -639,6 +639,8 @@ blockquote:before {
   transform: scale(1.05);
   filter: none;
   z-index: 3;
+  background: #022C4E; /*انا اضفته*/
+  background: linear-gradient(180deg,rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%); /*انا اضفته*/
 }
 
 /* Left and right cards */
@@ -648,6 +650,8 @@ blockquote:before {
   filter: grayscale(100%) brightness(0.9);
   transform: scale(0.9);
   z-index: 2;
+  background: #022C4E; /*انا اضفته*/
+  background: linear-gradient(180deg,rgba(2, 44, 78, 0.54) 0%, rgba(14, 56, 91, 0.54) 50%, rgba(33, 87, 132, 0.54) 100%); /*انا اضفته*/
 }
 
 .card.left {
