@@ -199,16 +199,17 @@ setInterval(() => {
 
   <div class="carousel">
     {% for beneficiary in site.data.beneficiary.beneficiary %}
-    <div class="card" data-index="{{ forloop.index0 }}"> 
-        data-active="{{ beneficiary.image_active }}"
-        data-idle="{{ beneficiary.image_idle }}"
-        src="{{ beneficiary.image_idle }}"
-        alt="{{ beneficiary.name }}">
-      <div class="info">
-        <h3><strong>{{ beneficiary.name }}</strong></h3>
-        <p>{{ beneficiary.description }}</p>
-      </div>
-    </div>
+        <div class="card" data-index="{{ forloop.index0 }}">
+          <img
+            data-active="{{ beneficiary.image_active }}"
+            data-idle="{{ beneficiary.image_idle }}"
+            src="{{ beneficiary.image_idle }}"
+            alt="{{ beneficiary.name }}">
+          <div class="info">
+            <h3><strong>{{ beneficiary.name }}</strong></h3>
+            <p>{{ beneficiary.description }}</p>
+          </div>
+        </div>
     {% endfor %}
   </div>
 
