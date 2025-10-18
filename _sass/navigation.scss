@@ -61,21 +61,21 @@ nav {
 			}
 		}
 
-			/*.white {
+			.white {
 				border-radius: 100px;
 				background: rgba(255, 255, 255, 0.30);
 				border: 0.05px solid rgba(255, 255, 255, 1);
 				color: #fff;
 				font-weight: bold;
-				padding: 10px 60px; انا حذفته
+				/*padding: 10px 60px; انا حذفته*/
 
 					&:hover { 
 						background: rgba(255, 255, 255, 0.50);
 					}
-				} */
+				}
 		}
 
 			a.active {
-				border-bottom: 3px solid #0db6bd; /*it was 5px solid #ffa74d*/
+				border-bottom: 3px solid #0db6bd;
 			}
 }
