@@ -628,6 +628,7 @@ blockquote:before {
   opacity: 1;
   transform: scale(1.05);
   z-index: 3;
+  box-shadow: 0px 0px 10px #eee;
 }
 
 /* left & right visible */
@@ -654,10 +655,14 @@ blockquote:before {
 .card .info {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 12px;
+  bottom: 15px; /* it was 0 */
+  left: 15px; /* نا اضفته */
+  right: 15px; /* نا اضفته */
+  /*width: 100%;*/
+  padding: 18px 20px; /* it was 12px */
   text-align: center;
-  background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
+  border-radius: 16px; /* نا اضفته */
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
   z-index: 4; /* make sure it's above the image */
 }
 
