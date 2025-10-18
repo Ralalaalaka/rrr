@@ -663,19 +663,19 @@ blockquote:before {
   border-radius: 16px; /* نا اضفته */
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
   z-index: 4; /* make sure it's above the image */
-}
+/*}*/
 
-.info h3 {
+/*.info*/ h3 {
      color: #0db6bd;
 	 margin: 0;
 	 display: block;
 }
 
-.info p {
+/*.info*/ p {
      color: #022c4e;
-	 text-align: justify;
 	 text-align: right;
 	 display: block;
+}
 }
 
 
