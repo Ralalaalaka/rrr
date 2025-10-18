@@ -605,9 +605,9 @@ blockquote:before {
 /* Base card */
 .card {
   position: absolute;
-  width: 260px;
-  height: 340px;
-  border-radius: 16px;
+  width: 280px;   /* was 260px */
+  height: 360px;  /* was 340px */
+  border-radius: 20px;
   overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
@@ -659,7 +659,7 @@ blockquote:before {
   right: 15px; 
   padding: 5px; 
   text-align: center;
-  border-radius: 16px;
+  border-radius: 20px;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
   z-index: 4; 
     /* ADD THESE */
