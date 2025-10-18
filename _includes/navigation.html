@@ -2,9 +2,9 @@
 	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!-- &#9776; هذي هي علامة المنيو بالجوال burger -->
 	    <!-- Left extra buttons -->
 	<div class="left-buttons">
-		<a href="/demo/" class="white">طلب النسخة التجريبية</a>
-		<a href="/register/" class="white">تسجيل</a>
-		<a href="/en/" class="lang">EN</a>
+		<a href="/contact/" class="white">اطلب النسخة التجريبية</a>
+		<a href="/contact/" class="white">تسجيل الدخول</a>
+		<a href="/en/" class="lang">EN</a> 
 	</div>
 
 	{% for link in site.data.navigation %}
@@ -18,7 +18,4 @@
 		{% endif %}
 		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
 	{% endfor %}
-
-	<a class="white" href="/signup">Sign Up</a> <!--انا اضفته-->
-    <a class="white" href="/demo">Demo</a> <!--انا اضفته-->
 </nav>
