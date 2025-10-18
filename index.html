@@ -194,8 +194,8 @@ setInterval(() => {
 
 <!-- المستفيدين -->
 <section class="roles-section">
-  <h2 style="color:#0e385b; margin:0;"><strong>وورك هب يخدم الجميع</strong></h2>
-  <h3 style="color:#6d767d; margin:0 0 10vh 0;"><strong>كل دور يستحق تجربة أسهل</strong></h3>
+  <h2 style="color:#0e385b; margin:10px;"><strong>وورك هب يخدم الجميع</strong></h2>
+  <h3 style="color:#6d767d; margin:0 0 20px 0;"><strong>كل دور يستحق تجربة أسهل</strong></h3>
 
   <div class="carousel">
     {% for beneficiary in site.data.beneficiary.beneficiary %}
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let pauseTimeout;
 
   // 👉 You can change this value to control rotation speed (milliseconds)
-  const rotationSpeed = 3000; // 3000 = 3 seconds per card
+  const rotationSpeed = 5000; // 3000 = 3 seconds per card
 
   function updateCards() {
     cards.forEach(c => c.className = "card");
