@@ -1,38 +1,5 @@
 <nav>
-    <!-- Burger menu -->
-    <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
-
-    <div class="nav-inner">
-        {% for link in site.data.navigation %}
-            {% assign classes = "" %}
-
-            {% if link.position == "left" %}
-                {% assign classes = classes | append: "white" %}
-            {% elsif link.position == "right" %}
-                {% assign classes = classes | append: "lang" %}
-            {% endif %}
-
-            {% if link.highlight %}
-                {% assign classes = classes | append: " highlight" %}
-            {% endif %}
-
-            {% if link.link == page.url %}
-                {% assign classes = classes | append: " active" %}
-            {% endif %}
-
-            <a href="{{ link.link }}" class="{{ classes }}">{{ link.name }}</a>
-        {% endfor %}
-    </div>
-</nav>
-
-
-
-
-
-
-
-<!-- <nav>
-	<a class="nav-toggle" id="open-nav" href="#" style="top: -1px;">&#9776;</a>  &#9776; هذي هي علامة المنيو بالجوال burger 
+	<a class="nav-toggle" id="open-nav" href="#" style="top: -1px;">&#9776;</a> <!-- &#9776; هذي هي علامة المنيو بالجوال burger -->
 	{% for link in site.data.navigation %}
 		{% assign class = "" %}
 		{% if link.highlight %}
@@ -44,4 +11,4 @@
 		{% endif %}
 		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
 	{% endfor %}
-</nav> -->
+</nav>

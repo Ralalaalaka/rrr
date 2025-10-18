@@ -1,25 +1,10 @@
-# Main navigation
 - name: الخدمات
   link: /blog/
 - name: الأسعار
   link: /pricing/
-  highlight: true
 - name: تواصل معنا
   link: /contact/
 - name: اطلب نسختك التجريبية
   link: /contact/
 - name: تسجيل الدخول  
   link: /contact/
-
-# Left buttons
-- name: Sign Up
-  link: /signup
-  position: left
-- name: Demo
-  link: /demo
-  position: left
-
-# Right button (language)
-- name: EN
-  link: /language
-  position: right
