@@ -401,12 +401,6 @@ blockquote:before {
   padding: 60px 10%;
   text-align: center;
 
-  /*.benefits-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    justify-items: center;
-  }*/
 
   .benefit {
     text-align: center;
@@ -418,14 +412,10 @@ blockquote:before {
 
     h3 {
       color: #022c4e;
-      /*font-size: 1.2rem;*/
-      /*margin-bottom: 10px;*/
     }
 
     p {
       color: #555;
-      /*font-size: 0.95rem;*/
-      /*line-height: 1.6;*/
     }
   }
 
@@ -670,6 +660,15 @@ blockquote:before {
   background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
   z-index: 4; /* make sure it's above the image */
 }
+
+.info h3 {
+     color: #0db6bd;
+}
+
+.info p {
+     color: #022c4e;
+}
+
 
 /* show name + description rules unchanged */
 .card .info h3,
