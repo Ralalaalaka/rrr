@@ -623,8 +623,35 @@ blockquote:before {
   transform: scale(0.8);
   filter: grayscale(100%) brightness(0.8);
   transition: all 0.8s ease;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
+
+
+/*jjjjjjjjjjjjjjjjjjjjjjjjj*/
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px; /* match card */
+  pointer-events: none; /* so text/clicks still work */
+  z-index: 1; /* behind text but above image */
+  background: linear-gradient(180deg, rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%);
+  transition: background 0.8s ease;
+}
+
+.card.left .overlay,
+.card.right .overlay {
+  background: linear-gradient(180deg, rgba(2, 44, 78, 0.54) 0%, rgba(14, 56, 91, 0.54) 50%, rgba(33, 87, 132, 0.54) 100%);
+}
+
+.card.active .overlay {
+  background: linear-gradient(180deg, rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%);
+}
+/*jjjjjjjjjjjjjjjjjjjjjjjjj*/
+
 
 /* Images */
 .card img {
@@ -677,6 +704,7 @@ blockquote:before {
   width: 100%;
   padding: 12px;
   text-align: center;
+  z-index: 2; /*انا اضفته*/
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);;
 }
 
@@ -706,8 +734,8 @@ blockquote:before {
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin: 0 5px;
   background: #e4e6ea;
   border-radius: 50%;
