@@ -1,20 +1,25 @@
 beneficiary:
   - name: "الإدارة العليا"
     description: "رؤية شاملة ومباشرة لبيانات القوى العاملة عبر تقارير ولوحات تحليلية دقيقة تدعم اتخاذ القرارات الاستراتيجية بثقة."
-    image: "images/beneficiary/beneficiary 1.png"
+    image_active: "images/beneficiary/beneficiary-active 1.png"
+    image_idle: "images/beneficiary/beneficiary-idle 1.png"
 
   - name: "المدير المباشر"
     description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
-    image: "images/beneficiary/beneficiary 2.png"
+    image_active: "images/beneficiary/beneficiary-active 2.png"
+    image_idle: "images/beneficiary/beneficiary-idle 2.png"
 
   - name: "مسؤول الموارد البشرية"
     description: "إدارة رحلة الموظف بالكامل وأتمتة العمليات والإجراءات اليومية والحضور والانصراف لتعزيز الكفاءة وسرعة الإنجاز."
-    image: "images/beneficiary/beneficiary 3.png"
+    image_active: "images/beneficiary/beneficiary-active 3.png"
+    image_idle: "images/beneficiary/beneficiary-idle 3.png"
 
   - name: "مسؤول المالية"
     description: "إدارة الرواتب بدقة ومرونة، من احتساب الأجور إلى اعتماد الكشوف وإصدار التقارير المالية."
-    image: "images/beneficiary/beneficiary 4.png"
+    image_active: "images/beneficiary/beneficiary-active 4.png"
+    image_idle: "images/beneficiary/beneficiary-idle 4.png"
 
   - name: "الموظف"
     description: "كل ما تحتاجه في مكان واحد، من تقديم ومتابعة طلبات الموارد البشرية إلى متابعة الإجازات والرواتب بسهولة ووضوح."
-    image: "images/beneficiary/beneficiary 5.png"
+    image_active: "images/beneficiary/beneficiary-active 5.png"
+    image_idle: "images/beneficiary/beneficiary-idle 5.png"

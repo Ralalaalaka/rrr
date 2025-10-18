@@ -621,129 +621,60 @@ blockquote:before {
   overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
-  filter: grayscale(100%) brightness(0.8);
-  transition: all 0.8s ease;
-  /*cursor: pointer;*/
+  /* removed filter line */
+  transition: transform 0.6s cubic-bezier(.2,.9,.2,1), opacity 0.6s cubic-bezier(.2,.9,.2,1);
+  cursor: pointer;
 }
 
-
-/*jjjjjjjjjjjjjjjjjjjjjjjjj*/
-
-.card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px; /* match card */
-  pointer-events: none; /* so text/clicks still work */
-  z-index: 1; /* behind text but above image */
-  background: linear-gradient(180deg, rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%);
-  transition: background 0.8s ease;
-}
-
-.card.left .overlay,
-.card.right .overlay {
-  background: linear-gradient(180deg, rgba(2, 44, 78, 0.54) 0%, rgba(14, 56, 91, 0.54) 50%, rgba(33, 87, 132, 0.54) 100%);
-}
-
-.card.active .overlay {
-  background: linear-gradient(180deg, rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%);
-}
-/*jjjjjjjjjjjjjjjjjjjjjjjjj*/
-
-
-/* Images */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Active (center) card */
+/* active center */
 .card.active {
   opacity: 1;
   transform: scale(1.05);
-  filter: none;
   z-index: 3;
-  background: #022C4E; /*انا اضفته*/
-  background: linear-gradient(180deg,rgba(2, 44, 78, 0.15) 0%, rgba(14, 101, 126, 0.15) 100%); /*انا اضفته*/
 }
 
-/* Left and right cards */
-.card.left,
-.card.right {
-  opacity: 0.8;
-  filter: grayscale(100%) brightness(0.9);
-  transform: scale(0.9);
-  z-index: 2;
-  background: #022C4E; /*انا اضفته*/
-  background: linear-gradient(180deg,rgba(2, 44, 78, 0.54) 0%, rgba(14, 56, 91, 0.54) 50%, rgba(33, 87, 132, 0.54) 100%); /*انا اضفته*/
-}
-
+/* left & right visible */
 .card.left {
   transform: translateX(-320px) scale(0.9);
+  opacity: 0.9;
+  z-index: 2;
 }
-
 .card.right {
   transform: translateX(320px) scale(0.9);
+  opacity: 0.9;
+  z-index: 2;
 }
 
-/* Hidden cards (not visible) */
+/* hidden */
 .card.hidden {
   opacity: 0;
-  pointer-events: none;
   transform: scale(0.8);
+  pointer-events: none;
   z-index: 1;
 }
 
-/* Info box */
+/* info box stays the same */
 .card .info {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 12px;
   text-align: center;
-  z-index: 2; /*انا اضفته*/
-  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
+  background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
+  z-index: 4; /* make sure it's above the image */
 }
 
-/* Hide all text by default */
+/* show name + description rules unchanged */
 .card .info h3,
-.card .info p {
-  display: none;
-}
-
-/* Always show name (h3) for left, right, and active cards */
+.card .info p { display: none; }
 .card.left .info h3,
 .card.right .info h3,
-.card.active .info h3 {
-  display: block;
-  color: #0db6bd;
-}
-
-/* Show description (p) only for active card */
-.card.active .info p {
-  display: block;
-}
-
-/* Dots below */
-.dots {
-  margin-top: 25px;
-}
-
-.dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 5px;
-  background: #e4e6ea;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.dot.active {
-  background: #0e385b;
-  transform: scale(1.2);
-}
+.card.active .info h3 { display: block; }
+.card.active .info p { display: block; }

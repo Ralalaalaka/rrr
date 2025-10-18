@@ -199,9 +199,11 @@ setInterval(() => {
 
   <div class="carousel">
     {% for beneficiary in site.data.beneficiary.beneficiary %}
-    <div class="card" data-index="{{ forloop.index0 }}">
-      <img src="{{ beneficiary.image }}" alt="{{ beneficiary.name }}">
-        <div class="overlay"></div> <!-- gradient overlay -->
+    <div class="card" data-index="{{ forloop.index0 }}"> 
+        data-active="{{ beneficiary.image_active }}"
+        data-idle="{{ beneficiary.image_idle }}"
+        src="{{ beneficiary.image_idle }}"
+        alt="{{ beneficiary.name }}">
       <div class="info">
         <h3><strong>{{ beneficiary.name }}</strong></h3>
         <p>{{ beneficiary.description }}</p>
@@ -231,26 +233,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // 👉 You can change this value to control rotation speed (milliseconds)
   const rotationSpeed = 5000; // 3000 = 3 seconds per card
 
-  function updateCards() {
-    cards.forEach(c => c.className = "card");
-    dots.forEach(d => d.classList.remove("active"));
+function updateCards() {
+  // reset classes on cards and dots
+  cards.forEach(c => {
+    c.className = "card";
+  });
+  dots.forEach(d => d.classList.remove("active"));
 
-    const left = (current - 1 + total) % total;
-    const right = (current + 1) % total;
+  const left = (current - 1 + total) % total;
+  const right = (current + 1) % total;
 
-    cards[current].classList.add("active");
-    cards[left].classList.add("left");
-    cards[right].classList.add("right");
+  // set positional classes
+  cards[current].classList.add("active");
+  cards[left].classList.add("left");
+  cards[right].classList.add("right");
 
-    // hide others
-    cards.forEach((c, i) => {
-      if (![current, left, right].includes(i)) {
-        c.classList.add("hidden");
-      }
-    });
+  // hide others
+  cards.forEach((c, i) => {
+    if (![current, left, right].includes(i)) {
+      c.classList.add("hidden");
+    }
+  });
 
-    dots[current].classList.add("active");
-  }
+  // swap images: active uses data-active, others use data-idle
+  cards.forEach((card, i) => {
+    const img = card.querySelector('img');
+    if (!img) return;
+    const activeSrc = img.getAttribute('data-active');
+    const idleSrc = img.getAttribute('data-idle');
+
+    if (i === current) {
+      if (activeSrc) img.src = activeSrc;
+    } else {
+      if (idleSrc) img.src = idleSrc;
+    }
+  });
+
+  // update dots
+  dots[current].classList.add("active");
+}
 
   function next() {
     current = (current + 1) % total;
