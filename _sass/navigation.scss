@@ -1,127 +1,162 @@
+/* ---------- NAV (replace existing nav and .nav-open nav sections with this) ---------- */
+
+/* Mobile-open menu rules */
 .nav-open nav {
-	border-bottom: 1px dotted rgba(255, 255, 255, .2);
-	padding: 10px 0;
-	top: -7px;
+  border-bottom: 1px dotted rgba(255, 255, 255, .2);
+  padding: 10px 0;
+  top: -7px;
 
-	a {
-		display: block;
-		padding: 30px 0;
-	}
+  a {
+    display: block;
+    padding: 30px 0;
+  }
 
-	@media #{$mid-point} {
-		border: 0;
-		padding: 0 20px;
+  @media #{$mid-point} {
+    border: 0;
+    padding: 0 20px;
 
-		a {
-			display: inline;
-		}
-	}
+    a {
+      display: inline;
+    }
+  }
 }
 
 nav {
-	text-transform: uppercase;
-	font-size: 1.1em;
-	width: 100%;
-	position: relative;
-	top: -4px;
-	text-shadow: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  width: 100%;
+  position: relative;
+  top: -4px;
+  text-shadow: none;
+  clear: both;
+  /* keep header flow as inline-block so nav sits beside logo */
+  @media #{$mid-point} {
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+  }
 
-	@media #{$mid-point} {
-		padding: 0 20px;
-		display: inline-block; /* ✅ back to your original flow */
-		vertical-align: middle;
-	}
+  /* ----- groups ----- */
+  /* hide groups on mobile by default; show on desktop */
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
 
-	/* ✅ LEFT and RIGHT button groups */
-	.nav-left {
-		float: right; /* ✅ because site is RTL */
-		width: auto;
-	}
+  @media #{$mid-point} {
+    .nav-left {
+      display: block;
+      float: left;      /* left group on left side (desktop) */
+      margin-left: 0;
+    }
 
-	.nav-right {
-		float: left; /* ✅ because site is RTL */
-		width: auto;
-	}
+    .nav-right {
+      display: block;
+      float: right;     /* right group on right side (desktop) */
+      margin-right: 0;
+    }
+  }
 
-	a {
-		margin: 0 3px;
-		padding: 14px 10px;
-		border: 0;
-		display: none;
+  /* ensure inline links on desktop */
+  a {
+    margin: 0 3px;
+    padding: 14px 10px;
+    border: 0;
+    display: none;
 
-		@media #{$mid-point} {
-			display: inline;
-			border-bottom: 1px solid rgba(255,255,255,0);
-			color: rgba(255,255,255,.8);
-		}
+    @media #{$mid-point} {
+      display: inline;
+      border-bottom: 1px solid rgba(255,255,255,0);
+      color: rgba(255,255,255,.8);
+    }
 
-		&.nav-toggle {
-			display: inline;
-			position: absolute;
-			left: 10px; /* ✅ burger stays on left for Arabic */
-			top: 2px;
-			font-size: 1.9em;
-			border: 0;
-			text-shadow: none;
-			padding: 0 !important;
+    &.nav-toggle {
+      display: inline;
+      position: absolute;
+      left: 10px; /* burger on left for your layout */
+      top: 2px;
+      font-size: 1.9em;
+      border: 0;
+      text-shadow: none;
+      padding: 0 !important;
 
-			@media #{$mid-point} {
-				display: none;
-			}
+      @media #{$mid-point} {
+        display: none; /* hide burger on desktop */
+      }
 
-			&:hover {
-				border: 0;
-			}
-		}
-	}
+      &:hover {
+        border: 0;
+      }
+    }
+  }
 
-	/* ✅ Mobile: show buttons when menu opens */
-	body.nav-open & .nav-left,
-	body.nav-open & .nav-right {
-		float: none;
-		display: block;
-		text-align: center;
-	}
+  /* show groups and stack links when menu is open (mobile) */
+  body.nav-open & .nav-left,
+  body.nav-open & .nav-right {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-	body.nav-open & a {
-		display: block;
-		text-align: center;
-		padding: 15px 0;
-	}
+  body.nav-open & a {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 12px !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
 
-	/* ✅ White button styling (fixed selector) */
-	a.white {
-		border-radius: 100px;
-		background: rgba(255, 255, 255, 0.30);
-		border: 0.05px solid rgba(255, 255, 255, 1);
-		color: #fff;
-		font-weight: bold;
-		display: inline-block;
+  /* ----- white button styling ----- */
+  /* put selector at top-level so it matches <a class="white"> exactly */
+  a.white {
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.30);
+    border: 0.05px solid rgba(255, 255, 255, 1);
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+  }
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.50);
-		}
-	}
+  /* hide white on mobile until menu is opened */
+  @media (max-width:  #{strip-unit($mid-point) - 1}px) {
+    a.white {
+      display: none !important;
+    }
 
-	/* ✅ Dark mode (when header gains .header-background) */
-	header.header-background a.white {
-		background: rgba(0,0,0,0.1);
-		border-color: rgba(0,0,0,0.3);
-		color: #333;
+    body.nav-open & a.white {
+      display: block !important;
+    }
+  }
 
-		&:hover {
-			background: rgba(0,0,0,0.2);
-		}
-	}
+  /* dark mode on scroll (header.header-background toggled by your JS) */
+  header.header-background a.white,
+  header.header-background nav a.white {
+    background: rgba(0,0,0,0.1) !important;
+    border-color: rgba(0,0,0,0.3) !important;
+    color: #333 !important;
+  }
 
-	a.active {
-		border-bottom: 3px solid #0db6bd;
-	}
+  a.active {
+    border-bottom: 3px solid #0db6bd;
+  }
 
-	/* ✅ Clear floats */
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
+  /* clearfix */
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
+
+
+
+
