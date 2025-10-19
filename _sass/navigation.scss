@@ -58,7 +58,7 @@ nav {
 		
 
 		body.nav-open & { /*انا اضفته*/
-		display: block; /*انا اضفته*/
+		display: inline-block; /*انا اضفته*/
 		text-align: center; /*انا اضفته*/
 		padding: 15px 0; /*انا اضفته*/
 	} /*انا اضفته*/
@@ -71,7 +71,7 @@ nav {
 
 
 		&.nav-toggle {
-			display: none;
+			display: inline;
 			position: absolute;
 			left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
 			top: 2px; /*It was -7*/
@@ -138,11 +138,11 @@ header .company-name {
 
 /* Desktop: keep left/right groups separated using floats (apply only at desktop breakpoint) */
 @media #{$mid-point} {
-  nav {
-    /* make sure nav is full width but respects floats inside */
+  /*nav {
+    // make sure nav is full width but respects floats inside
     display: block !important;
     overflow: visible;
-  }
+  }*/
 
   nav .nav-left {
     float: left !important;
@@ -157,22 +157,18 @@ header .company-name {
   }
 
   /* ensure links are inline on desktop and don't break floats */
-  nav a {
+/*  nav a {
     display: inline-block !important;
     width: auto !important;
     box-sizing: border-box;
   }
-}
+} */
 
 /* MOBILE (burger open) - stack groups and links vertically */
 body.nav-open nav {
   display: block !important;
   width: 100% !important;
   position: relative !important; /* keep it inside header flow */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9998;
 }
 
 /* Make left/right groups stack vertically when menu open */
