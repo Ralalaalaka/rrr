@@ -150,6 +150,9 @@ nav {
 // ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) فيه اشياء override اللي فوق  ----------
 
 // Ensure nav sits alongside logo and doesn't overlap (fallback if .container/other rules changed)
+// ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) ----------
+
+// Ensure nav sits alongside logo and doesn't overlap (fallback if .container/other rules changed)
 header #mainHeader .container,
 header .container {
   /* do not force flex here: keep original flow, only ensure enough stacking context */
@@ -164,111 +167,13 @@ header .company-name {
   z-index: 1000;
 }
 
-/* Desktop: keep left/right groups separated using floats (apply only at desktop breakpoint) */
-@media #{$mid-point} {
-  nav {
-    /* make sure nav is full width but respects floats inside */
-    display: block !important;
-    overflow: visible;
-  }
-
-  nav .nav-left {
-    float: left !important;
-    display: block !important;
-    max-width: 60%; /* allow right group room; adjust if you need more/less */
-  }
-
-  nav .nav-right {
-    float: right !important;
-    display: block !important;
-    max-width: 60%;
-  }
-
-  /* ensure links are inline on desktop and don't break floats */
-  nav a {
-    display: inline-block !important;
-    width: auto !important;
-    box-sizing: border-box;
-  }
-}
-
-/* MOBILE (burger open) - stack groups and links vertically */
-body.nav-open nav {
-  display: block !important;
-  width: 100% !important;
-  position: relative !important; /* keep it inside header flow */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9998;
-}
-
-/* Make left/right groups stack vertically when menu open */
-body.nav-open nav .nav-left,
-body.nav-open nav .nav-right {
-  display: block !important;
-  float: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-}
-
-/* Make every link full width and centered in open mobile menu */
-body.nav-open nav a {
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-  padding: 14px 12px !important;
-  margin: 0 !important;
-  box-sizing: border-box;
-}
-
-/* If nav-toggle is absolute, ensure it sits above stacked menu (no overlap) */
-.nav-toggle {
-  z-index: 10001;
-}
-
-/* .white buttons: remove float, keep pill style, and adapt to mobile */
-nav a.white {
-  float: none !important;           /* remove floating conflicts */
-  display: inline-block !important;
-  vertical-align: middle;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.30);
-  border: 0.05px solid rgba(255,255,255,1);
-  padding: 6px 14px;
-  font-weight: 700;
-  color: #fff;
-  box-sizing: border-box;
-}
-
-/* dark mode on scroll (keep your earlier behavior but make it specific) */
-header.header-background nav a.white,
-header.header-background a.white {
-  background: rgba(0,0,0,0.08) !important;
-  border-color: rgba(0,0,0,0.2) !important;
-  color: #333 !important;
-}
-
-/* Safety: clear floats after nav to avoid layout collapse */
-nav:after {
-  content: "" ;
-  display: block ;
-  clear: both ;
-}
-
-/* tiny visual padding so menu doesn't overlap logo on small widths */
-@media (max-width: 480px) {
-  header .company-name { margin-right: 0; }
-  body.nav-open header { padding-bottom: 6px; } /* ensure space for opened menu */
-}
 
  
 
 
+
+
 /* ---------- FINAL FIX: Desktop alignment + mobile visibility فيه اشياء override اللي فوق ---------- */
-/* ---------- FINAL FIX v2: Proper left/right nav alignment ---------- */
 
 /* Desktop view */
 @media #{$mid-point} {
