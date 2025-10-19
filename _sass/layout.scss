@@ -45,12 +45,27 @@ header {
 
 		a {
 			color: #333;
+      
 			@media #{$mid-point} {
 				&:hover {
 					border-bottom-color: rgba(80, 80, 80,.3);
 					border-bottom-width: 3px; /*nav hover*/
 				}
+        
 			}
+
+      /*انا اضفته*/
+      .white {
+        background: rgba(0,0,0,0.1);
+        border-color: rgba(0,0,0,0.3);
+        color: #333;
+
+        &:hover {
+          background: rgba(0,0,0,0.2);
+        }
+      }
+      /*الى هنا*/
+      
 		}
 
 		.dark-logo {
@@ -80,6 +95,22 @@ header {
 		&:hover {
 			text-decoration: none;
 		}
+
+    /*انا اضفته*/
+      .white {
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.30);
+        border: 0.05px solid rgba(255, 255, 255, 1);
+        color: #fff;
+        font-weight: bold;
+        /*display: inline-block;*/
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.50);
+        }
+      }
+      /*الى هنا*/
+
 	}
 
 	.company-name {
