@@ -272,7 +272,7 @@ nav:after {
 /* 1️⃣ Desktop — logo + nav on same line, hide burger */
 @media #{$mid-point} {
   header {
-    display: flex !important;
+    display: inline-block !important;
     align-items: center !important;
     justify-content: space-between !important;
   }
