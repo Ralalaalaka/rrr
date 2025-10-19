@@ -1,14 +1,5 @@
 <!--<nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> &#9776; هذي هي علامة المنيو بالجوال burger -->
-	    <!-- Left extra buttons
-	<div class="left-buttons">
-		<a href="/contact.html" class="white">اطلب النسخة التجريبية</a>
-		<a href="/contact.html" class="white">تسجيل الدخول</a>
-		<a href="/en/" class="lang">EN</a> 
-	</div> -->
-
-
-<!--
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> &#9776; هذي هي علامة المنيو بالجوال burger 
 	{% for link in site.data.navigation %}
 		{% assign class = "" %}
 		{% if link.highlight %}
@@ -28,7 +19,7 @@
 	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
 
 	<!-- ✅ LEFT buttons -->
-	<div class="nav-left">
+	<div class="nav nav-left">
 	{% for link in site.data.navigation %}
 		{% if link.side == "left" %}
 			{% assign classes = link.style %}
@@ -41,7 +32,7 @@
 	</div>
 
 	<!-- ✅ RIGHT buttons -->
-	<div class="nav-right">
+	<div class="nav nav-right">
 	{% for link in site.data.navigation %}
 		{% if link.side == "right" %}
 			{% assign classes = link.style %}
