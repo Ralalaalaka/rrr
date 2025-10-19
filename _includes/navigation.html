@@ -27,11 +27,29 @@
 <nav>
 	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
 
-{% for link in site.data.navigation %}
-  {% assign classes = link.style %}
-  {% if link.side %}{% assign classes = classes | append: " " | append: link.side %}{% endif %}
-  {% if link.link == page.url %}{% assign classes = classes | append: " active" %}{% endif %}
-  <a href="{{ link.link }}" class="{{ classes }}">{{ link.name }}</a>
-{% endfor %}
+	<!-- ✅ LEFT buttons -->
+	<div class="nav-left">
+	{% for link in site.data.navigation %}
+		{% if link.side == "left" %}
+			{% assign classes = link.style %}
+			{% if link.link == page.url %}
+				{% assign classes = classes | append: " active" %}
+			{% endif %}
+			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+		{% endif %}
+	{% endfor %}
+	</div>
+
+	<!-- ✅ RIGHT buttons -->
+	<div class="nav-right">
+	{% for link in site.data.navigation %}
+		{% if link.side == "right" %}
+			{% assign classes = link.style %}
+			{% if link.link == page.url %}
+				{% assign classes = classes | append: " active" %}
+			{% endif %}
+			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+		{% endif %}
+	{% endfor %}
 	</div>
 </nav>

@@ -32,19 +32,18 @@ nav {
 
 
 	/*انا اضفته*/
-		nav a.left {
-		float: left;       /* keep left items on left side */
-		margin-right: 6px; /* small spacing */
-		}
+	.nav-left, .nav-right {
+	display: inline;
+	}
 
-		nav a.right {
-		float: right;      /* right items on right side */
-		margin-left: 6px;
-		}
+	.nav-left {
+		float: left;
+	}
 
-		nav a.white {
-		float: none;       /* prevent float conflict inside nav */
-		}
+	.nav-right {
+		float: right;
+	}
+
 	/*الى هنا*/
 
 
