@@ -17,9 +17,6 @@
 }
 
 nav {
-	display: flex; /*انا اضفته*/
-	justify-content: space-between; /*انا اضفته*/
-	align-items: center; /*انا اضفته*/
 	text-transform: uppercase;
 	font-size: 1.1em; /*it was 0.8*/
 	width: 100%;
@@ -29,28 +26,25 @@ nav {
 	
 	@media #{$mid-point} {
 		padding: 0 20px;
-		display: flex; /*انا اضفته it was inline*/
-		flex-wrap: nowrap; /*انا اضفته*/
+		display: inline;
 	}
 
 
 
 	/*انا اضفته*/
-	.nav-left, .nav-right {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	}
+		nav a.left {
+		float: left;       /* keep left items on left side */
+		margin-right: 6px; /* small spacing */
+		}
 
-	.nav-left {
-		order: 1;
-	}
+		nav a.right {
+		float: right;      /* right items on right side */
+		margin-left: 6px;
+		}
 
-	.nav-right {
-		order: 2;
-		margin-right: 0;
-	}
-
+		nav a.white {
+		float: none;       /* prevent float conflict inside nav */
+		}
 	/*الى هنا*/
 
 
@@ -104,7 +98,7 @@ nav {
 						background: rgba(255, 255, 255, 0.50);
 					}
 				}
-
+				
 				/*اضفته هذا*/
 			header.header-background .white {
 				background: rgba(0, 0, 0, 0.1);
