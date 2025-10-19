@@ -3,7 +3,7 @@ nav {
 	text-transform: uppercase;
 	font-size: 1.1em;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	top: -4px;
 	text-shadow: none;
 	display: flex;
@@ -74,6 +74,8 @@ nav {
 	body.nav-open & {
 		flex-direction: column;
 		align-items: center;
+		display: none;
+
 		
 
 		border-bottom: 1px dotted rgba(255, 255, 255, .2);
