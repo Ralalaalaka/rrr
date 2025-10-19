@@ -268,11 +268,12 @@ nav:after {
 
 
 /* ---------- FINAL FIX: Desktop alignment + mobile visibility فيه اشياء override اللي فوق ---------- */
+/* ---------- FINAL FIX v2: Proper left/right nav alignment ---------- */
 
-/* 1️⃣ Desktop — logo + nav on same line, hide burger */
+/* Desktop view */
 @media #{$mid-point} {
   header {
-    display: inline-block !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
   }
@@ -285,10 +286,22 @@ nav:after {
   }
 
   nav {
-    display: inline-block !important;
-    width: auto !important;
-    flex-grow: 1;
-    text-align: right;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  nav .nav-left {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex: 1;
+  }
+
+  nav .nav-right {
+    display: flex !important;
+    justify-content: flex-end !important;
+    flex: 1;
   }
 
   /* Hide burger icon on large screens */
@@ -297,8 +310,18 @@ nav:after {
   }
 }
 
-/* 2️⃣ Mobile — hide white buttons until menu is opened */
+/* Mobile view */
 @media (max-width: 767px) {
+  nav {
+    display: block !important;
+  }
+
+  .nav-left, .nav-right {
+    float: none !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
   nav a.white {
     display: none !important;
   }
