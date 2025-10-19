@@ -94,47 +94,22 @@ nav {
 				border: 0.05px solid rgba(255, 255, 255, 1);
 				color: #fff;
 				font-weight: bold;
-				/*padding: 10px 60px; انا حذفته*/
+				float: none;
+				display: inline-block;
+				vertical-align: middle;
+				
 
 					&:hover { 
 						background: rgba(255, 255, 255, 0.50);
 					}
 				}
 				
-				/*اضفته هذا*/
-			header.header-background .white {
-				background: rgba(0, 0, 0, 0.1);
-				border-color: rgba(0, 0, 0, 0.3);
-				color: #333;
-
-					&:hover {
-						background: rgba(0, 0, 0, 0.2);
-					}
-				}
-				/* الى هنا */
 		}
 
 			a.active {
 				border-bottom: 3px solid #0db6bd;
 			}
 }
-
-/* ✅ Left buttons layout */ /*انا اضفته
-.left-buttons {
-	display: none;
-	float: left;
-
-	@media #{$mid-point} {
-		display: inline-block;
-		margin-left: 20px;
-
-		a {
-			margin-left: 8px;
-		}
-	}
-} */
-
-
 
 
 
@@ -227,8 +202,8 @@ body.nav-open nav .nav-right {
 } */
 
 /* .white buttons: remove float, keep pill style, and adapt to mobile */
-nav a.white {
-  float: none !important;           /* remove floating conflicts */
+/*nav a.white {
+  float: none !important;
   display: inline-block !important;
   vertical-align: middle;
   border-radius: 100px;
@@ -238,7 +213,7 @@ nav a.white {
   font-weight: 700;
   color: #fff;
   box-sizing: border-box;
-}
+} */
 
 /*احطه مع الثانيات حق تغيير الالوان*/
 /* dark mode on scroll (keep your earlier behavior but make it specific) */
