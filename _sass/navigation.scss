@@ -40,11 +40,26 @@ nav {
 	.nav-left {
 		float: left;
 		width: auto;
+
+		  @media #{$mid-point} {
+			float: left !important;
+			display: block !important;
+			max-width: 60%; /* allow right group room; adjust if you need more/less */
+  		}
+	}
+
 	}
 
 	.nav-right {
 		float: right;
 		width: auto;
+
+		@media #{$mid-point} {
+			float: right !important;
+			display: block !important;
+			max-width: 60%;
+  }
+}
 	}
 
 	/*الى هنا*/
@@ -97,9 +112,8 @@ nav {
 				color: #fff;
 				font-weight: bold;
 
-				
-					nav a. {
-						@media #{$mid-point
+		
+				@media #{$mid-point} {
 					float: none;
 					display: inline-block;
 					vertical-align: middle;
@@ -111,12 +125,12 @@ nav {
 					color: #fff;
 					box-sizing: border-box;
 					}
-				}
 
 
 					&:hover { 
 						background: rgba(255, 255, 255, 0.50);
 					}
+				}
 
 
 					/*احطه مع الثانيات حق تغيير الالوان*/
@@ -170,17 +184,17 @@ header .company-name {
     overflow: visible;
   }*/
 
-  nav .nav-left {
+  /*nav .nav-left {
     float: left !important;
     display: block !important;
-    max-width: 60%; /* allow right group room; adjust if you need more/less */
+    max-width: 60%; 
   }
 
   nav .nav-right {
     float: right !important;
     display: block !important;
     max-width: 60%;
-  }
+  }*/
 
   /* ensure links are inline on desktop and don't break floats */
 /*  nav a {
