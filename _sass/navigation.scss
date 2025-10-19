@@ -288,7 +288,7 @@ nav:after {
   nav {
     display: flex !important;
     justify-content: space-between !important;
-    align-items: center !important;
+    /*align-items: center !important;*/
     width: 100% !important;
   }
 
@@ -296,12 +296,16 @@ nav:after {
     display: flex !important;
     justify-content: flex-start !important;
     flex: 1;
+	float: left !important;
+    max-width: 60%;
   }
 
   nav .nav-right {
     display: flex !important;
     justify-content: flex-end !important;
     flex: 1;
+	float: right !important;
+    max-width: 60%;
   }
 
   /* Hide burger icon on large screens */

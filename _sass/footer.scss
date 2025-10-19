@@ -98,14 +98,13 @@ footer {
 	}
 }
 
-.copyright {
+h5.copyright {
 	margin: 15px auto;
-	float: left;
-	/*text-decoration: none; انا اضفته عشان هوفر الفوتر*/
+	float: center; /*it was left*/
 
-	/*a {
+	 {
 		color: #999;
-	}*/
+	}
 
 	@media #{$desktop} {
 		text-align: center;
