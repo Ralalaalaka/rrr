@@ -14,14 +14,14 @@ nav {
 		display: flex;
 		align-items: center;
 		/*gap: 10px;*/
-		flex-direction: row; /* ✅ for Arabic: flip left group */
+		flex-direction: row-reverse; /* ✅ for Arabic: flip left group */
 	}
 
 	.nav-right {
 		display: flex;
 		align-items: center;
 		/*gap: 10px;*/
-		flex-direction: row-reverse; /* ✅ keeps right side natural */
+		flex-direction: row; /* ✅ keeps right side natural */
 	}
 
 	a {
@@ -92,33 +92,4 @@ nav {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
