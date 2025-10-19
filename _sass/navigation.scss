@@ -1,6 +1,8 @@
 .nav-open nav {
 	border-bottom: 1px dotted rgba(255, 255, 255, .2);
 	padding: 10px 0;
+	top: -7px;
+
 	a {
 		display: block;
 		padding: 30px 0;
@@ -18,63 +20,43 @@
 
 nav {
 	text-transform: uppercase;
-	font-size: 1.1em; /*it was 0.8*/
+	font-size: 1.1em;
 	width: 100%;
 	position: relative;
-	top: -4px; /*it was -7*/
+	top: -4px;
 	text-shadow: none;
-	
+	clear: both;
+
 	@media #{$mid-point} {
 		padding: 0 20px;
-		display: inline;
+		display: inline-block;
+		width: 100%;
 	}
 
-
-
-	/*انا اضفته*/
-	.nav-left, .nav-right {
-	display: inline;
-
-	}
-
+	/* --- Added Left & Right Sections --- */
 	.nav-left {
 		float: left;
-		width: auto;
-
-		  @media #{$mid-point} {
-			float: left !important;
-			display: block !important;
-			max-width: 60%; /* allow right group room; adjust if you need more/less */
-  		}
+		display: inline-block;
 	}
-
 
 	.nav-right {
 		float: right;
-		width: auto;
-
-		@media #{$mid-point} {
-			float: right !important;
-			display: block !important;
-			max-width: 60%;
- 	 }
+		display: inline-block;
 	}
 
-	/*الى هنا*/
-
+	/* clear floats */
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	/* ------------------------------------ */
 
 	a {
 		margin: 0 3px;
 		padding: 14px 10px;
 		border: 0;
 		display: none;
-		
-	/*انا اضفته*/
-		body.nav-open & { 
-		display: inline-block; 
-		text-align: center; 
-		padding: 15px 0; 
-	} /*الى هنا*/
 
 		@media #{$mid-point} {
 			display: inline;
@@ -82,17 +64,15 @@ nav {
 			color: rgba(255,255,255,.8);
 		}
 
-
 		&.nav-toggle {
 			display: inline;
 			position: absolute;
-			left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-			top: 2px; /*It was -7*/
+			left: 10px;
+			top: 2px;
 			font-size: 1.9em;
 			border: 0;
-			text-shadow: none; /* it was 0 */
+			text-shadow: none;
 			padding: 0 !important;
-
 
 			@media #{$mid-point} {
 				display: none;
@@ -103,160 +83,20 @@ nav {
 			}
 		}
 
-			.white {
-				border-radius: 100px;
-				background: rgba(255, 255, 255, 0.30);
-				border: 0.05px solid rgba(255, 255, 255, 1);
-				color: #fff;
-				font-weight: bold;
+		.white {
+			border-radius: 100px;
+			background: rgba(255, 255, 255, 0.30);
+			border: 0.05px solid rgba(255, 255, 255, 1);
+			color: #fff;
+			font-weight: bold;
 
-
-					&:hover { 
-						background: rgba(255, 255, 255, 0.50);
-					}
-
-					/*احطه مع الثانيات حق تغيير الالوان*/
-					/* dark mode on scroll (keep your earlier behavior but make it specific) */
-
-					header.header-background nav a.white,
-					header.header-background a.white {
-					background: rgba(0,0,0,0.08);
-					border-color: rgba(0,0,0,0.2);
-					color: #333;
-					}
+			&:hover { 
+				background: rgba(255, 255, 255, 0.50);
 			}
-			
 		}
+	}
 
-			a.active {
-				border-bottom: 3px solid #0db6bd;
-			}
-
-		:after {
-			content: "" ;
-			display: block ;
-			clear: both ;
-		}
+	a.active {
+		border-bottom: 3px solid #0db6bd;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-// ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) ----------
-
-// Ensure nav sits alongside logo and doesn't overlap (fallback if .container/other rules changed)
-/*header #mainHeader .container,
-header .container {
-  position: relative;
-  z-index: 9999;
-}
-
-header .company-name {
-  display: inline-block;
-  margin-right: 18px;
-  z-index: 1000;
-} */
-
-/* Desktop: keep left/right groups separated using floats (apply only at desktop breakpoint) */
-@media #{$mid-point} {
-  /*nav {
-    // make sure nav is full width but respects floats inside
-    display: block !important;
-    overflow: visible;
-  }*/
-
-  /*nav .nav-left {
-    float: left !important;
-    display: block !important;
-    max-width: 60%; 
-  }
-
-  nav .nav-right {
-    float: right !important;
-    display: block !important;
-    max-width: 60%;
-  }*/
-
-  /* ensure links are inline on desktop and don't break floats */
-/*  nav a {
-    display: inline-block !important;
-    width: auto !important;
-    box-sizing: border-box;
-  }*/
-} 
-
-/* MOBILE (burger open) - stack groups and links vertically */
-body.nav-open nav {
-  display: block !important;
-  width: 100% !important;
-  position: relative !important; /* keep it inside header flow */
-}
-
-/* Make left/right groups stack vertically when menu open */
-body.nav-open nav .nav-left,
-body.nav-open nav .nav-right {
-  display: block !important;
-  float: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-}
-
-/* Make every link full width and centered in open mobile menu */
-/*body.nav-open nav a {
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-  padding: 14px 12px !important;
-  margin: 0 !important;
-  box-sizing: border-box;
-}*/ /*موجود فوق*/
-
-/* If nav-toggle is absolute, ensure it sits above stacked menu (no overlap) */
-/* .nav-toggle {
-  display: none;
-} */
-
-/* .white buttons: remove float, keep pill style, and adapt to mobile */
-/*nav a.white {
-  float: none !important;
-  display: inline-block !important;
-  vertical-align: middle;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.30);
-  border: 0.05px solid rgba(255,255,255,1);
-  padding: 6px 14px;
-  font-weight: 700;
-  color: #fff;
-  box-sizing: border-box;
-} */
-
-/*احطه مع الثانيات حق تغيير الالوان*/
-/* dark mode on scroll (keep your earlier behavior but make it specific) */
-/*header.header-background nav a.white,
-header.header-background a.white {
-  background: rgba(0,0,0,0.08) !important;
-  border-color: rgba(0,0,0,0.2) !important;
-  color: #333 !important;
-} */
-
-/* Safety: clear floats after nav to avoid layout collapse */
-/*nav:after {
-  content: "" ;
-  display: block ;
-  clear: both ;
-}*/
-
-/* tiny visual padding so menu doesn't overlap logo on small widths */
-/*@media (max-width: 480px) {
-  header .company-name { margin-right: 0; }
-  body.nav-open header { padding-bottom: 6px; }
-} */
