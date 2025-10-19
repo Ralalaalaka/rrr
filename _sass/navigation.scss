@@ -146,8 +146,7 @@ nav {
 
 
 
-
-// ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) فيه اشياء override اللي فوق  ----------
+// ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) ----------
 
 // Ensure nav sits alongside logo and doesn't overlap (fallback if .container/other rules changed)
 header #mainHeader .container,
@@ -262,48 +261,4 @@ nav:after {
 @media (max-width: 480px) {
   header .company-name { margin-right: 0; }
   body.nav-open header { padding-bottom: 6px; } /* ensure space for opened menu */
-}
-
- 
-
-
-/* ---------- FINAL FIX: Desktop alignment + mobile visibility فيه اشياء override اللي فوق ---------- */
-
-/* 1️⃣ Desktop — logo + nav on same line, hide burger */
-@media #{$mid-point} {
-  header {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-
-  header .company-name {
-    display: inline-block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-shrink: 0;
-  }
-
-  nav {
-    display: inline-block !important;
-    width: auto !important;
-    flex-grow: 1;
-    text-align: right;
-  }
-
-  /* Hide burger icon on large screens */
-  .nav-toggle {
-    display: none !important;
-  }
-}
-
-/* 2️⃣ Mobile — hide white buttons until menu is opened */
-@media (max-width: 767px) {
-  nav a.white {
-    display: none !important;
-  }
-
-  body.nav-open nav a.white {
-    display: block !important;
-  }
 }
