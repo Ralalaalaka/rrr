@@ -18,10 +18,10 @@
 <nav>
 	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
 
-	<!-- ✅ LEFT buttons -->
-	<div class="nav-left">
+	<!-- ✅ right buttons -->
+	<div class="nav-right">
 	{% for link in site.data.navigation %}
-		{% if link.side == "left" %}
+		{% if link.side == "right" %}
 			{% assign classes = link.style %}
 			{% if link.link == page.url %}
 				{% assign classes = classes | append: " active" %}
@@ -31,10 +31,10 @@
 	{% endfor %}
 	</div>
 
-	<!-- ✅ RIGHT buttons -->
-	<div class="nav-right">
+	<!-- ✅ left buttons -->
+	<div class="nav-left">
 	{% for link in site.data.navigation %}
-		{% if link.side == "right" %}
+		{% if link.side == "left" %}
 			{% assign classes = link.style %}
 			{% if link.link == page.url %}
 				{% assign classes = classes | append: " active" %}
