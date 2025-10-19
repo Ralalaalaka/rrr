@@ -97,10 +97,22 @@ nav {
 				float: none;
 				display: inline-block;
 				vertical-align: middle;
-				
+				box-sizing: border-box;
+				padding: 6px 14px;
 
 					&:hover { 
 						background: rgba(255, 255, 255, 0.50);
+					}
+
+
+					/*احطه مع الثانيات حق تغيير الالوان*/
+					/* dark mode on scroll (keep your earlier behavior but make it specific) */
+
+					header.header-background nav a.white,
+					header.header-background a.white {
+					background: rgba(0,0,0,0.08) !important;
+					border-color: rgba(0,0,0,0.2) !important;
+					color: #333 !important;
 					}
 				}
 				
@@ -213,12 +225,12 @@ body.nav-open nav .nav-right {
 
 /*احطه مع الثانيات حق تغيير الالوان*/
 /* dark mode on scroll (keep your earlier behavior but make it specific) */
-header.header-background nav a.white,
+/*header.header-background nav a.white,
 header.header-background a.white {
   background: rgba(0,0,0,0.08) !important;
   border-color: rgba(0,0,0,0.2) !important;
   color: #333 !important;
-}
+} */
 
 /* Safety: clear floats after nav to avoid layout collapse */
 nav:after {
