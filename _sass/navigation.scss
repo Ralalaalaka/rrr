@@ -30,15 +30,33 @@ nav {
 	}
 
 
+
+	/*انا اضفته*/
+	.nav-left, .nav-right {
+	display: inline;
+	}
+
+	.nav-left {
+		float: left;
+	}
+
+	.nav-right {
+		float: right;
+	}
+
+	/*الى هنا*/
+
+
 	a {
 		margin: 0 3px;
 		padding: 14px 10px;
 		border: 0;
 		display: none;
 
-		.nav-open & { /*انا اضفته*/
+		body.nav-open & { /*انا اضفته*/
 		display: block; /*انا اضفته*/
 		text-align: center; /*انا اضفته*/
+		padding: 15px 0; /*انا اضفته*/
 	} /*انا اضفته*/
 
 		@media #{$mid-point} {
@@ -79,7 +97,8 @@ nav {
 						background: rgba(255, 255, 255, 0.50);
 					}
 				}
-
+				
+				/*اضفته هذا*/
 			header.header-background .white {
 				background: rgba(0, 0, 0, 0.1);
 				border-color: rgba(0, 0, 0, 0.3);
@@ -89,7 +108,7 @@ nav {
 						background: rgba(0, 0, 0, 0.2);
 					}
 				}
-
+				/* الى هنا */
 		}
 
 			a.active {
@@ -97,7 +116,7 @@ nav {
 			}
 }
 
-/* ✅ Left buttons layout */ /*انا اضفته*/
+/* ✅ Left buttons layout */ /*انا اضفته
 .left-buttons {
 	display: none;
 	float: left;
@@ -110,4 +129,4 @@ nav {
 			margin-left: 8px;
 		}
 	}
-}
+} */

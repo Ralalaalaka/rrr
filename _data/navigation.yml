@@ -1,6 +1,39 @@
+#- name: الخدمات
+  #link: /blog/
+#- name: الأسعار
+  #link: /pricing/
+#- name: تواصل معنا
+  #link: /contact/
+
+
+# LEFT SIDE BUTTONS
+- name: طلب النسخة التجريبية
+  link: /demo/
+  side: left
+  style: white
+
+- name: تسجيل الدخول
+  link: /register/
+  side: left
+  style: white
+
+- name: EN
+  link: /en/
+  side: left
+  style: regular
+
+# RIGHT SIDE BUTTONS
 - name: الخدمات
   link: /blog/
+  side: right
+  style: regular
+
 - name: الأسعار
   link: /pricing/
+  side: right
+  style: regular
+
 - name: تواصل معنا
   link: /contact/
+  side: right
+  style: regular

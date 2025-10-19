@@ -1,12 +1,14 @@
-<nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!-- &#9776; هذي هي علامة المنيو بالجوال burger -->
-	    <!-- Left extra buttons -->
+<!--<nav>
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> &#9776; هذي هي علامة المنيو بالجوال burger -->
+	    <!-- Left extra buttons
 	<div class="left-buttons">
 		<a href="/contact.html" class="white">اطلب النسخة التجريبية</a>
 		<a href="/contact.html" class="white">تسجيل الدخول</a>
 		<a href="/en/" class="lang">EN</a> 
-	</div>
+	</div> -->
 
+
+<!--
 	{% for link in site.data.navigation %}
 		{% assign class = "" %}
 		{% if link.highlight %}
@@ -18,4 +20,36 @@
 		{% endif %}
 		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
 	{% endfor %}
+</nav> -->
+
+
+
+<nav>
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+
+	<!-- ✅ LEFT buttons -->
+	<div class="nav-left">
+	{% for link in site.data.navigation %}
+		{% if link.side == "left" %}
+			{% assign classes = link.style %}
+			{% if link.link == page.url %}
+				{% assign classes = classes | append: " active" %}
+			{% endif %}
+			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+		{% endif %}
+	{% endfor %}
+	</div>
+
+	<!-- ✅ RIGHT buttons -->
+	<div class="nav-right">
+	{% for link in site.data.navigation %}
+		{% if link.side == "right" %}
+			{% assign classes = link.style %}
+			{% if link.link == page.url %}
+				{% assign classes = classes | append: " active" %}
+			{% endif %}
+			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+		{% endif %}
+	{% endfor %}
+	</div>
 </nav>
