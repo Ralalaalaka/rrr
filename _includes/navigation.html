@@ -19,7 +19,7 @@
 	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
 
 	<!-- ✅ LEFT buttons -->
-	<div class="nav nav-left">
+	<div class="nav-left">
 	{% for link in site.data.navigation %}
 		{% if link.side == "left" %}
 			{% assign classes = link.style %}
@@ -32,7 +32,7 @@
 	</div>
 
 	<!-- ✅ RIGHT buttons -->
-	<div class="nav nav-right">
+	<div class="nav-right">
 	{% for link in site.data.navigation %}
 		{% if link.side == "right" %}
 			{% assign classes = link.style %}
