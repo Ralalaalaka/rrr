@@ -32,19 +32,13 @@ nav {
 
 
 	/*انا اضفته*/
-	.nav-left, .nav-right {
-	display: inline;
-	}
-
-	.nav-left {
-		float: left;
-		width: auto;
-	}
-
-	.nav-right {
-		float: right;
-		width: auto;
-	}
+		body.nav-open nav .nav-left,
+		body.nav-open nav .nav-right {
+			display: block !important;
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
 
 	/*الى هنا*/
 
@@ -56,12 +50,11 @@ nav {
 		display: none;
 		
 
-		/* انا اضفته */
-		body.nav-open & {
-		display: block; 
-		text-align: center;
-		padding: 15px 0; 
-	} /* انا اضفته*/
+		body.nav-open & { /*انا اضفته*/
+		display: block; /*انا اضفته*/
+		text-align: center; /*انا اضفته*/
+		padding: 15px 0; /*انا اضفته*/
+	} /*انا اضفته*/
 
 		@media #{$mid-point} {
 			display: inline;
@@ -94,12 +87,15 @@ nav {
 				border: 0.05px solid rgba(255, 255, 255, 1);
 				color: #fff;
 				font-weight: bold;
-				/*padding: 10px 60px; انا حذفته*/
+				display: inline-block;
+				float: none; /* remove float conflict */
+				vertical-align: middle;
 
-					&:hover { 
-						background: rgba(255, 255, 255, 0.50);
-					}
+				&:hover { 
+					background: rgba(255, 255, 255, 0.50);
 				}
+			}
+
 				
 				/*اضفته هذا*/
 			header.header-background .white {
@@ -118,6 +114,19 @@ nav {
 				border-bottom: 3px solid #0db6bd;
 			}
 }
+
+
+@media #{$mid-point} {
+	nav .nav-left {
+		float: left;
+	}
+
+	nav .nav-right {
+		float: right;
+	}
+}
+
+
 
 /* ✅ Left buttons layout */ /*انا اضفته
 .left-buttons {
