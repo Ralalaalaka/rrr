@@ -10,18 +10,19 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 
+
+		.nav-right {
+		display: flex;
+		align-items: center;
+		/*gap: 10px;*/
+		flex-direction: row; /* ✅ keeps right side natural */
+	}
+
 	.nav-left {
 		display: flex;
 		align-items: center;
 		/*gap: 10px;*/
 		flex-direction: row-reverse; /* ✅ for Arabic: flip left group */
-	}
-
-	.nav-right {
-		display: flex;
-		align-items: center;
-		/*gap: 10px;*/
-		flex-direction: row; /* ✅ keeps right side natural */
 	}
 
 	a {
