@@ -149,19 +149,17 @@ nav {
 // ---------- NAV OVERRIDES (paste at the VERY END of navigation.scss) ----------
 
 // Ensure nav sits alongside logo and doesn't overlap (fallback if .container/other rules changed)
-header #mainHeader .container,
+/*header #mainHeader .container,
 header .container {
-  /* do not force flex here: keep original flow, only ensure enough stacking context */
   position: relative;
   z-index: 9999;
 }
 
-/* Make sure company-name reserves space from nav */
 header .company-name {
   display: inline-block;
   margin-right: 18px;
   z-index: 1000;
-}
+} */
 
 /* Desktop: keep left/right groups separated using floats (apply only at desktop breakpoint) */
 @media #{$mid-point} {
