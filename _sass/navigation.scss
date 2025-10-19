@@ -10,11 +10,6 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 
-	@media #{$mid-point} {
-		padding: 0 20px;
-		display: inline;
-	}
-
 	.nav-left {
 		display: flex;
 		align-items: center;
@@ -96,16 +91,5 @@ nav {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
