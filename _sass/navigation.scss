@@ -88,21 +88,21 @@ nav {
 		padding: 15px 0;
 	} */
 
-	// ✅ White button styling (fixed selector)
-	/* a.white {
+	/* ✅ White button styling (fixed selector) */
+	a.white {
 		border-radius: 100px;
 		background: rgba(255, 255, 255, 0.30);
 		border: 0.05px solid rgba(255, 255, 255, 1);
 		color: #fff;
 		font-weight: bold;
+		/*display: inline-block;*/
 
 		&:hover {
 			background: rgba(255, 255, 255, 0.50);
 		}
-	}  */
+	}
 
-	//✅ Dark mode (when header gains .header-background)
-	 /*
+	/* ✅ Dark mode (when header gains .header-background) */
 	header.header-background a.white {
 		background: rgba(0,0,0,0.1);
 		border-color: rgba(0,0,0,0.3);
@@ -111,7 +111,7 @@ nav {
 		&:hover {
 			background: rgba(0,0,0,0.2);
 		}
-	}  */
+	}
 
 	a.active {
 		border-bottom: 3px solid #0db6bd;
@@ -124,4 +124,5 @@ nav {
 		clear: both;
 	}
 }
+
 
