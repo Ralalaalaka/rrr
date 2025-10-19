@@ -101,10 +101,8 @@ footer {
 h5.copyright {
 	margin: 15px auto;
 	float: center; /*it was left*/
-
-	 {
 		color: #999;
-	}
+
 
 	@media #{$desktop} {
 		text-align: center;
