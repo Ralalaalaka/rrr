@@ -48,7 +48,6 @@ nav {
   		}
 	}
 
-	}
 
 	.nav-right {
 		float: right;
@@ -58,8 +57,7 @@ nav {
 			float: right !important;
 			display: block !important;
 			max-width: 60%;
-  }
-}
+ 	 }
 	}
 
 	/*الى هنا*/
@@ -112,26 +110,10 @@ nav {
 				color: #fff;
 				font-weight: bold;
 
-		
-				@media #{$mid-point} {
-					float: none;
-					display: inline-block;
-					vertical-align: middle;
-					border-radius: 100px;
-					background: rgba(255,255,255,0.30);
-					border: 0.05px solid rgba(255,255,255,1);
-					padding: 6px 14px;
-					font-weight: 700;
-					color: #fff;
-					box-sizing: border-box;
-					}
-
 
 					&:hover { 
 						background: rgba(255, 255, 255, 0.50);
 					}
-				}
-
 
 					/*احطه مع الثانيات حق تغيير الالوان*/
 					/* dark mode on scroll (keep your earlier behavior but make it specific) */
@@ -142,13 +124,19 @@ nav {
 					border-color: rgba(0,0,0,0.2);
 					color: #333;
 					}
-				}
-				
+			}
+			
 		}
 
 			a.active {
 				border-bottom: 3px solid #0db6bd;
 			}
+
+		:after {
+			content: "" ;
+			display: block ;
+			clear: both ;
+		}
 }
 
 
@@ -261,14 +249,14 @@ header.header-background a.white {
 } */
 
 /* Safety: clear floats after nav to avoid layout collapse */
-nav:after {
+/*nav:after {
   content: "" ;
   display: block ;
   clear: both ;
-}
+}*/
 
 /* tiny visual padding so menu doesn't overlap logo on small widths */
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   header .company-name { margin-right: 0; }
-  body.nav-open header { padding-bottom: 6px; } /* ensure space for opened menu */
-}
+  body.nav-open header { padding-bottom: 6px; }
+} */
