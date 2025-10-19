@@ -212,19 +212,19 @@ body.nav-open nav .nav-right {
 }
 
 /* Make every link full width and centered in open mobile menu */
-body.nav-open nav a {
+/*body.nav-open nav a {
   display: block !important;
   width: 100% !important;
   text-align: center !important;
   padding: 14px 12px !important;
   margin: 0 !important;
   box-sizing: border-box;
-}
+}*/ /*موجود فوق*/
 
 /* If nav-toggle is absolute, ensure it sits above stacked menu (no overlap) */
-.nav-toggle {
-  z-index: 10001;
-}
+/* .nav-toggle {
+  display: none;
+} */
 
 /* .white buttons: remove float, keep pill style, and adapt to mobile */
 nav a.white {
@@ -240,6 +240,7 @@ nav a.white {
   box-sizing: border-box;
 }
 
+/*احطه مع الثانيات حق تغيير الالوان*/
 /* dark mode on scroll (keep your earlier behavior but make it specific) */
 header.header-background nav a.white,
 header.header-background a.white {
