@@ -28,11 +28,12 @@ nav {
 		padding: 0 20px;
 		display: inline;
 	}
-	
+
+
 
 	/*انا اضفته*/
 	.nav-left, .nav-right {
-	display: none;
+	display: inline;
 	}
 
 	.nav-left {
@@ -54,12 +55,13 @@ nav {
 		border: 0;
 		display: none;
 		
-/* انا اضفته */
+
+		/* انا اضفته */
 		body.nav-open & {
 		display: block; 
 		text-align: center;
 		padding: 15px 0; 
-	} /*الى هنا */
+	} /* انا اضفته*/
 
 		@media #{$mid-point} {
 			display: inline;
@@ -72,10 +74,10 @@ nav {
 			display: inline;
 			position: absolute;
 			left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-			top: -7px; /*It was -7*/ /*2*/
-			font-size: 1.1em; /*It was 1.9*/
+			top: 2px; /*It was -7*/
+			font-size: 1.9em;
 			border: 0;
-			text-shadow: 0; /* it was 0 */
+			text-shadow: none; /* it was 0 */
 			padding: 0 !important;
 			@media #{$mid-point} {
 				display: none;
