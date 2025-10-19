@@ -32,8 +32,12 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
+	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&.header-background {
@@ -45,6 +49,7 @@ header {
 
 		a {
 			color: #333;
+
 			@media #{$mid-point} {
 				&:hover {
 					border-bottom-color: rgba(80, 80, 80,.3);
@@ -53,23 +58,25 @@ header {
 			}
 		}
 
-		.dark-logo {
-			display: inline;
+		/* ✅ White buttons switch to dark mode */
+		a.white {
+			background: rgba(0,0,0,0.1);
+			border-color: rgba(0,0,0,0.3);
+			color: #333;
+
+			&:hover {
+				background: rgba(0,0,0,0.2);
+			}
 		}
 
-		.light-logo {
-			display: none;
-		}
+		.dark-logo { display: inline; }
+		.light-logo { display: none; }
 	}
 
 	a {
 		color: #fff;
 		text-decoration: none;
-		z-index: 1;
 		position: relative;
-		@media #{$mid-point} {
-			height: 100%;
-		}
 		display: block;
 
 		span {
@@ -87,11 +94,12 @@ header {
 		display: inline-block;
 
 		img {
-			height: 20px; /*it was 30*/
+			height: 20px;
 			width: auto;
 		}
 	}
 }
+
 
 .content {
 	background: #fff;
