@@ -176,18 +176,13 @@ header .company-name {
 /* ---------- FINAL FIX: Desktop alignment + mobile visibility فيه اشياء override اللي فوق ---------- */
 
 /* Desktop view */
-@media #{$mid-point} {
-  header {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
+/* ---------- FINAL FIX: Desktop alignment + mobile visibility ---------- */
 
-  header .company-name {
-    display: inline-block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-shrink: 0;
+/* Desktop view */
+@media #{$mid-point} {
+  /* Keep the header’s old layout */
+  header {
+    display: block !important;
   }
 
   nav {
@@ -197,19 +192,19 @@ header .company-name {
     width: 100% !important;
   }
 
-  nav .nav-left {
+  .nav-left {
     display: flex !important;
     justify-content: flex-start !important;
     flex: 1;
   }
 
-  nav .nav-right {
+  .nav-right {
     display: flex !important;
     justify-content: flex-end !important;
     flex: 1;
   }
 
-  /* Hide burger icon on large screens */
+  /* Hide burger icon */
   .nav-toggle {
     display: none !important;
   }
