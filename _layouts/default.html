@@ -48,28 +48,28 @@
 				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
 				<ul class="footer-left-links">
 					{% for link in site.data.footer.left_links %}
-						<li>
+						<h5> <!--it was <li>-->
 							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
 								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
 								{{ link.name }}
 							</a>
-						</li>
+						</h5> <!--it was <li>-->
 					{% endfor %}
 				</ul>
 				<ul class="footer-right-links">
 					{% for link in site.data.footer.right_links %}
-						<li>
+						<h5> <!--it was <li>-->
 							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
 								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
 								{{ link.name }}
 							</a>
-						</li>
+						</h5> <!--it was <li>-->
 					{% endfor %}
 				</ul>
 				<p class="copyright">
-					<a>
-						صنع في السعودية &#10084;
-					</a>
+					<h5>
+						صنع في السعودية <br> &#10084;
+					</h5>
 				</p>
 			</div>
 		</footer>
