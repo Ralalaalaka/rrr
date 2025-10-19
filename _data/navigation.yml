@@ -37,19 +37,3 @@
   link: /contact/
   side: right
   style: regular
-
-- name: الخدمات
-  link: /blog/
-  side: right
-  style: regular
-
-- name: الأسعار
-  link: /pricing/
-  side: right
-  style: regular
-
-- name: تواصل معنا
-  link: /contact/
-  side: right
-  style: regular
-
