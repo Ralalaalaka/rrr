@@ -1,97 +1,95 @@
-nav {
-  text-transform: uppercase;
-  font-size: 1.1em;
-  width: 100%;
-  position: relative;
-  top: -4px;
-  text-shadow: none;
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  padding: 15px 20px;
 
-  .nav-left {
+  .company-name {
+    display: inline-block;
+    flex-shrink: 0; /* logo doesn't shrink */
+  }
+
+  nav {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex-direction: row-reverse; /* ✅ left group flipped for Arabic */
-  }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-direction: row; /* ✅ right group normal */
-  }
-
-  a {
-    margin: 0 3px;
-    padding: 14px 10px;
-    border: 0;
-    display: none;
-
-    @media #{$mid-point} {
-      display: inline;
-      border-bottom: 1px solid rgba(255,255,255,0);
-      color: rgba(255,255,255,.8);
-    }
-
-    &.nav-toggle {
-      display: inline-block;
-      position: absolute;
-      left: 10px; /* burger on left for Arabic */
-      top: 2px;
-      font-size: 1.9em;
-      border: 0;
-      text-shadow: none;
-      padding: 0 !important;
-
-      @media #{$mid-point} {
-        display: none;
-      }
-    }
-
-    &.white {
-      border-radius: 100px;
-      background: rgba(255,255,255,0.3);
-      border: 0.05px solid #fff;
-      color: #fff;
-      font-weight: bold;
-      padding: 8px 20px;
-      text-decoration: none;
-
-      &:hover {
-        background: rgba(255,255,255,0.5);
-      }
-    }
-  }
-
-  a.active {
-    border-bottom: 3px solid #0db6bd;
-  }
-
-  /* ---------- MOBILE ---------- */
-  body.nav-open & {
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px dotted rgba(255, 255, 255, .2);
-    padding: 10px 0;
-    top: -7px;
-
+    justify-content: space-between;
+    width: auto; /* do not take full width */
+    
     .nav-left,
     .nav-right {
-      flex-direction: column;
+      display: flex;
       align-items: center;
-      width: 100%;
-      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .nav-left {
+      flex-direction: row-reverse; /* Arabic left group */
+    }
+
+    .nav-right {
+      flex-direction: row;
     }
 
     a {
-      display: block !important;
-      width: 100%;
-      text-align: center;
-      padding: 15px 0;
+      margin: 0 3px;
+      padding: 14px 10px;
+      display: none;
+
+      @media #{$mid-point} {
+        display: inline;
+      }
+
+      &.white {
+        border-radius: 100px;
+        background: rgba(255,255,255,0.3);
+        border: 0.05px solid #fff;
+        color: #fff;
+        font-weight: bold;
+        padding: 8px 20px;
+
+        &:hover {
+          background: rgba(255,255,255,0.5);
+        }
+      }
+
+      &.nav-toggle {
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 2px;
+        font-size: 1.9em;
+
+        @media #{$mid-point} {
+          display: none;
+        }
+      }
     }
 
-    /* keep logo outside the menu by keeping header structure intact */
+    a.active {
+      border-bottom: 3px solid #0db6bd;
+    }
+  }
+
+  /* ---------- MOBILE MENU ---------- */
+  body.nav-open nav {
+    flex-direction: column; /* only affects nav links */
+    align-items: center;
+  }
+
+  body.nav-open nav .nav-left,
+  body.nav-open nav .nav-right {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  body.nav-open nav a {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
   }
 }
