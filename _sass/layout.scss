@@ -77,6 +77,11 @@ header {
 		color: #fff;
 		text-decoration: none;
 		position: relative;
+    
+        @media #{$mid-point} { // انا اضفته
+          height: 100%; // انا اضفته
+        } // انا اضفته
+
 		display: block;
 
 		span {
