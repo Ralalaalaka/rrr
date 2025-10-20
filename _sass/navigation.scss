@@ -62,7 +62,7 @@ nav {
     &.nav-toggle { //The burger icon before clicking it
       display: inline;
       position: absolute;
-      left: 10px;
+      left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
       top: 1px; // it was 8
       font-size: 1.7em; // it was 1.1
       border: 0;
@@ -128,12 +128,18 @@ nav {
 
     a.nav-toggle { //the burger icon when open
       position: absolute;
-      top: 1px; /* keep burger in header area */
+      top: 2px; /* keep burger in header area */
 
       
       //left: 10px; // انا اضفته
       font-size: 1.7em; // انا اضفته
       padding: 0 !important; // انا اضفته
+
+
+
+      display: inline; // انا اضفته
+			left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
+			border: 0;
     }
   }
 }
