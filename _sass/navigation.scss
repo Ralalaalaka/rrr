@@ -56,16 +56,15 @@ nav {
       display: inline;
     }
 
-    &.nav-toggle { //The burger icon?
+    &.nav-toggle { //The burger icon before clicking it
       display: inline;
       position: absolute;
       left: 10px;
-      top: 2px; // it was 8
+      top: 1.3px; // it was 8
       font-size: 1.7em; // it was 1.1
       border: 0;
       background: none;
       cursor: pointer;
-      //color: white;
       padding: 0 !important; // انا اضفته
 
 
@@ -94,7 +93,7 @@ nav {
 }
 
 /* ✅ Dropdown full-width menu on mobile */
-@media (max-width: 768px) {
+@media (max-width: 768px) { //when the burger is open
   body.nav-open nav {
     flex-direction: column;
     align-items: stretch;
@@ -102,10 +101,11 @@ nav {
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
     top: 100%; /* below the fixed header */
-    left: 0;
+    //left: 0;
     width: 100%;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    //padding: 20px 0;
+    padding: 0 !important; // انا اضفته
+    //border-top: 1px solid rgba(255, 255, 255, 0.2);
 
     .nav-left,
     .nav-right {
@@ -119,13 +119,19 @@ nav {
       display: block !important;
       text-align: center;
       font-size: 1.1em;
-      padding: 10px 0;
-      color: rgb(0, 0, 0);
+      //padding: 10px 0;
+      //color: rgb(0, 0, 0);
     }
 
     a.nav-toggle {
       position: absolute;
       top: 8px; /* keep burger in header area */
+
+      
+      left: 10px; // انا اضفته
+      top: 1.3px; // انا اضفته
+      font-size: 1.7em; // انا اضفته
+      padding: 0 !important; // انا اضفته
     }
   }
 }
