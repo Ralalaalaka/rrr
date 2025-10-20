@@ -60,7 +60,7 @@ nav {
       display: inline;
       position: absolute;
       left: 10px;
-      top: 1.3px; // it was 8
+      top: 1px; // it was 8
       font-size: 1.7em; // it was 1.1
       border: 0;
       background: none;
@@ -119,17 +119,16 @@ nav {
       display: block !important;
       text-align: center;
       font-size: 1.1em;
-      //padding: 10px 0;
+      padding: 20px 0;
       //color: rgb(0, 0, 0);
     }
 
-    a.nav-toggle {
+    a.nav-toggle { //the burger icon when open
       position: absolute;
-      top: 8px; /* keep burger in header area */
+      top: 1px; /* keep burger in header area */
 
       
-      left: 10px; // انا اضفته
-      top: 1.3px; // انا اضفته
+      //left: 10px; // انا اضفته
       font-size: 1.7em; // انا اضفته
       padding: 0 !important; // انا اضفته
     }
