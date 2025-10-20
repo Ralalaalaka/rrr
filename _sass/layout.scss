@@ -35,7 +35,7 @@ header {
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
-		//display: flex;
+		display: flex;
 		//align-items: center;
 		//justify-content: space-between;
 	}
@@ -161,15 +161,6 @@ blockquote:before {
 	vertical-align: -0.4em;
 }
 
-/*.square-image { 
-	width: 200px;
-	height: 200px;
-	border-radius: 200px;
-	background-size:cover;
- 	background-repeat:no-repeat;
-	margin: 0 auto;
-} */
-
 .page {
 	margin-bottom: 0;
 	padding-bottom: 80px;
@@ -198,7 +189,7 @@ blockquote:before {
 	}
 	.arrow {
 		color: #0db6bd;
-		font-size: .6em;
+		font-size: .5em;
 	}
 }
 
