@@ -74,21 +74,20 @@ nav {
 		position: static;
 		flex-direction: column;
 		align-items: center;
-		background: rgba(0,0,0,0.9);
+		background: rgba(255, 255, 255, 0.9);
 		padding: 20px 0;
 
 		a {
 			display: block !important;
 			text-align: center;
 			padding: 15px 0;
-			color: #fff;
+			color: #000000;
 		}
 
 		.nav-left,
 		.nav-right {
 			flex-direction: column;
 			align-items: center;
-			gap: 10px;
 		}
 	}
 }
