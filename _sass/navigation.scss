@@ -71,7 +71,7 @@ nav {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     position: absolute;
     top: 100%; /* below the fixed header */
     left: 0;
@@ -92,7 +92,7 @@ nav {
       text-align: center;
       font-size: 1.1em;
       padding: 10px 0;
-      color: white;
+      color: rgb(0, 0, 0);
     }
 
     a.nav-toggle {
