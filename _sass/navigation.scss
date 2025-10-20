@@ -92,3 +92,56 @@ nav {
 		}
 	}
 }
+
+
+
+
+/* -------------------------- */
+/* MOBILE MENU DROPDOWN FIXED */
+/* -------------------------- */
+
+/* Hide menu by default on small screens */
+@media (max-width: 900px) {
+  nav {
+    position: relative;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+    position: absolute;
+    top: 100%; /* dropdown starts below header */
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.98);
+    text-align: center;
+    flex-direction: column;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* when burger clicked (body.nav-open added by site’s JS) */
+  body.nav-open .nav-left,
+  body.nav-open .nav-right {
+    display: flex;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #333;
+  }
+
+  .nav-left a:last-child,
+  .nav-right a:last-child {
+    border-bottom: none;
+  }
+
+  /* keep burger in place */
+  .nav-toggle {
+    position: relative;
+    z-index: 10000;
+  }
+}
+
