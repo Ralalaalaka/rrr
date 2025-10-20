@@ -18,6 +18,7 @@
 }
 
 
+
 nav {
   text-transform: uppercase;
   font-size: 1em;
@@ -26,6 +27,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  	@media #{$mid-point} { // انا اضفته
+		padding: 0 20px; // انا اضفته
+		display: inline; // انا اضفته
+	} // انا اضفته
 
   .nav-left,
   .nav-right {
@@ -50,16 +56,18 @@ nav {
       display: inline;
     }
 
-    &.nav-toggle {
+    &.nav-toggle { //The burger icon?
       display: inline;
       position: absolute;
       left: 10px;
-      top: 8px;
-      font-size: 1.1em;
+      top: 2px; // it was 8
+      font-size: 1.7em; // it was 1.1
       border: 0;
       background: none;
       cursor: pointer;
-      color: white;
+      //color: white;
+      padding: 0 !important; // انا اضفته
+
 
       @media #{$mid-point} {
         display: none;
