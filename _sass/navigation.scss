@@ -1,27 +1,25 @@
-
 nav {
 	text-transform: uppercase;
 	font-size: 1em;
 	width: 100%;
 	position: relative;
-	top: -7px;
 	text-shadow: none;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
-	.nav-left {
-		display: flex;
-		align-items: center;
-		/*gap: 10px;*/
-		flex-direction: row; /* ✅ for Arabic: flip left group */
-	}
-
+	/* ✅ Right buttons (default group) */
 	.nav-right {
 		display: flex;
 		align-items: center;
-		/*gap: 10px;*/
-		flex-direction: row; /* ✅ keeps right side natural */
+		gap: 10px;
+	}
+
+	/* ✅ Left buttons (e.g. demo, login) */
+	.nav-left {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 	}
 
 	a {
@@ -39,12 +37,13 @@ nav {
 		&.nav-toggle {
 			display: inline;
 			position: absolute;
-			left: 10px; /* ✅ keep burger on left */
-			top: 2px;
-			font-size: 1em;
+			left: 10px;
+			top: 8px;
+			font-size: 1.8em;
 			border: 0;
 			text-shadow: none;
 			padding: 0 !important;
+			background: none;
 
 			@media #{$mid-point} {
 				display: none;
@@ -52,14 +51,14 @@ nav {
 		}
 	}
 
-	/* ✅ White buttons */
+	/* ✅ White button style */
 	a.white {
 		border-radius: 100px;
 		background: rgba(255, 255, 255, 0.30);
 		border: 0.05px solid rgba(255, 255, 255, 1);
 		color: #fff;
+		font-weight: bold;
 		padding: 8px 20px;
-		text-decoration: none;
 
 		&:hover {
 			background: rgba(255, 255, 255, 0.50);
@@ -70,30 +69,26 @@ nav {
 		border-bottom: 3px solid #0db6bd;
 	}
 
-	/* ✅ Mobile behavior */
+	/* ✅ Mobile dropdown */
 	body.nav-open & {
+		position: static;
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
-		background-color: rgba(0,0,0,0.9);
+		background: rgba(0,0,0,0.9);
 		padding: 20px 0;
-		position: absolute;
-		top: 100%; /* dropdown below header */
-		left: 0;
 
 		a {
 			display: block !important;
 			text-align: center;
 			padding: 15px 0;
-			width: 100%;
+			color: #fff;
 		}
 
 		.nav-left,
 		.nav-right {
 			flex-direction: column;
 			align-items: center;
-			width: 100%;
+			gap: 10px;
 		}
 	}
 }
-
