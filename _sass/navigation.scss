@@ -35,7 +35,7 @@ nav {
       position: absolute;
       left: 10px;
       top: 8px;
-      font-size: 1.8em;
+      font-size: 1.1em;
       border: 0;
       background: none;
       cursor: pointer;
@@ -66,40 +66,38 @@ nav {
 }
 
 /* ✅ Dropdown full-width menu on mobile */
-/* --- simple mobile nav fix --- */
-@media (max-width: 900px) {
-  nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  body.nav-open .nav-left,
-  body.nav-open .nav-right {
-    display: flex;
+@media (max-width: 768px) {
+  body.nav-open nav {
     flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 100%;
+    top: 100%; /* below the fixed header */
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.9);
-    text-align: center;
     padding: 20px 0;
-    gap: 10px;
-  }
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 
-  .nav-toggle {
-    cursor: pointer;
-    z-index: 1001;
-  }
+    .nav-left,
+    .nav-right {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 15px;
+    }
 
-  .company-name img {
-    height: 36px;
+    a {
+      display: block !important;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 10px 0;
+      color: rgb(0, 0, 0);
+    }
+
+    a.nav-toggle {
+      position: absolute;
+      top: 8px; /* keep burger in header area */
+    }
   }
 }
