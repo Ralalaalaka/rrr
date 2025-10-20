@@ -1,29 +1,32 @@
-
 nav {
 	text-transform: uppercase;
-	font-size: 1em;
-	width: 100%;
-	position: relative;
-	top: -7px;
-	text-shadow: none;
+	font-size: 1.1em;
+	width: auto; /* not full width since header already uses flex */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 15px;
+	position: relative;
+	top: -4px;
+	text-shadow: none;
 
-	.nav-left {
-		display: flex;
-		align-items: center;
-		/*gap: 10px;*/
-		flex-direction: row; /* ✅ for Arabic: flip left group */
-	}
-
+	/* Left + Right groups */
+	.nav-left,
 	.nav-right {
 		display: flex;
 		align-items: center;
-		/*gap: 10px;*/
-		flex-direction: row; /* ✅ keeps right side natural */
+		gap: 10px;
 	}
 
+	/* Arabic layout fix */
+	.nav-left {
+		flex-direction: row; /* ✅ stays on the left (normal) */
+	}
+	.nav-right {
+		flex-direction: row-reverse; /* ✅ moves to right visually for Arabic */
+	}
+
+	/* Navigation links */
 	a {
 		margin: 0 3px;
 		padding: 14px 10px;
@@ -39,9 +42,9 @@ nav {
 		&.nav-toggle {
 			display: inline;
 			position: absolute;
-			left: 10px; /* ✅ keep burger on left */
+			left: 10px;
 			top: 2px;
-			font-size: 1em;
+			font-size: 1.9em;
 			border: 0;
 			text-shadow: none;
 			padding: 0 !important;
@@ -52,12 +55,13 @@ nav {
 		}
 	}
 
-	/* ✅ White buttons */
+	/* White buttons styling */
 	a.white {
 		border-radius: 100px;
 		background: rgba(255, 255, 255, 0.30);
 		border: 0.05px solid rgba(255, 255, 255, 1);
 		color: #fff;
+		font-weight: bold;
 		padding: 8px 20px;
 		text-decoration: none;
 
@@ -70,26 +74,29 @@ nav {
 		border-bottom: 3px solid #0db6bd;
 	}
 
-	/* ✅ Mobile behavior */
+	/* ========== MOBILE DROPDOWN ========== */
 	body.nav-open & {
 		flex-direction: column;
 		align-items: center;
-
-		border-bottom: 1px dotted rgba(255, 255, 255, .2);
-		padding: 10px 0;
-		top: -7px; /*it was -7*/
+		width: 100%;
+		background-color: rgba(0,0,0,0.9);
+		padding: 20px 0;
+		position: absolute;
+		top: 100%; /* dropdown below header */
+		left: 0;
 
 		a {
 			display: block !important;
+			text-align: center;
 			padding: 15px 0;
+			width: 100%;
 		}
 
-		.nav-right,
-		.nav-left {
+		.nav-left,
+		.nav-right {
 			flex-direction: column;
-			align-items: center
+			align-items: center;
+			width: 100%;
 		}
 	}
 }
-
-
