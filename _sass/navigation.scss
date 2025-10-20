@@ -19,6 +19,7 @@
 */
 
 
+
 nav {
   text-transform: uppercase;
   font-size: 1em;
@@ -28,10 +29,12 @@ nav {
   align-items: center;
   justify-content: space-between;
 
-  	@media #{$mid-point} { // انا اضفته
+  /*
+    @media #{$mid-point} { // انا اضفته
 		padding: 0 20px; // انا اضفته
 		display: inline; // انا اضفته
 	} // انا اضفته
+  */
 
   .nav-left,
   .nav-right {
