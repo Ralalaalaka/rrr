@@ -322,7 +322,7 @@ blockquote:before {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media #{$phone} {
   .info {
     padding: 40px 20px;
   }
@@ -388,7 +388,7 @@ blockquote:before {
   }
 
   /* ✅ Responsive (mobile layout) */
-  @media (max-width: 768px) {
+  @media #{$phone} {
     padding: 60px 20px;
     text-align: center;
 
@@ -429,7 +429,7 @@ blockquote:before {
   }
 
   /* ✅ For small screens: 2 per row */
-  @media (max-width: 768px) {
+  @media #{$phone} {
     .benefits-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -484,7 +484,7 @@ blockquote:before {
 }
 
 /* Small screens */
-@media (max-width: 768px) {
+@media #{$phone} {
   .contact-card {
     flex-direction: column;
     background: linear-gradient(180deg, #00b3b3, #003f61);

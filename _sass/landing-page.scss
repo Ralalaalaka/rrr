@@ -57,7 +57,7 @@
   }
 
   /* ✅ Responsive adjustments */
-  @media (max-width: 900px) {
+  @media #{$phone} {
     .inner-hero {
       flex-direction: column;
       align-items: center;
