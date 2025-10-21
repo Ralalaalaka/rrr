@@ -103,8 +103,8 @@ nav {
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 110%; /* below the fixed header */
-    left: 10;
+    top: 2px; /* below the fixed header */
+    left: 0;
     width: 100%;
     padding: 20px 0;
     padding: 0 !important; // انا اضفته
@@ -128,16 +128,27 @@ nav {
 
     a.nav-toggle { //the burger icon when open //يمكن ما يحتاج احطها لانه بياخذ على اللي فوق
       
-      display: none; // انا اضفته
+      /*display: inline; // انا اضفته
       
       position: absolute;
       
-      left: 0; // انا اضفته
+      left: 50px; // انا اضفته
       font-size: 1.7em; // انا اضفته
       padding: 0 !important; // انا اضفته
       top: 2px; // انا اضفته
       //display: inline; // انا اضفته
-			border: 0;
+			border: 0; */
+
+
+      display: inline;
+      position: absolute;
+      left: 8px; /*it was "right" in english v. this changes the menu icon in phone*/
+      top: -5px; // it was 8
+      font-size: 1.7em; // it was 1.1
+      border: 0;
+      background: none;
+      cursor: pointer;
+      padding: 0 !important;
     }
   }
 }
