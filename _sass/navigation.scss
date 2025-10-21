@@ -4,10 +4,19 @@
 	border-bottom: 1px dotted rgba(255, 255, 255, .2);
 	padding: 10px 0;
 	top: -7px; 
+
+//////***********
+    flex-direction: column; /////////*********
+    align-items: stretch; /////////*********
+    position: absolute; /////////*********
+    width: 100%; /////////*********
+
+
+
 	a {
 		display: block;
 		padding: 30px 0;
-    text-align: center;  /////////*****
+    text-align: center;  /////////did nothing
 	}
 
 	@media #{$mid-point} {
