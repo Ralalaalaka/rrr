@@ -63,7 +63,7 @@ nav {
       display: inline;
       position: absolute;
       left: 8px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: -5px; // it was 8
+      top: -7px;
       font-size: 1.7em; // it was 1.1
       border: 0;
       background: none;
@@ -97,13 +97,13 @@ nav {
 
 /* ✅ Dropdown full-width menu on mobile */
 @media #{$phone} { //when the burger is open
-  body.nav-open nav {
+  header.nav-open nav { //it was body
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 2px; /* below the fixed header */
+    top: 100%; /* below the fixed header */
     left: 0;
     width: 100%;
     padding: 20px 0;

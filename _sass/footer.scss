@@ -34,14 +34,18 @@ footer {
 		margin: 0;
 
 		&.footer-right-links {
-			float: left;
+			float: left; 
 			@media #{$phone} {
-				float: right;
+				float: right; //للانجليزي نحط left
 			}
 		}
 
 		&.footer-left-links {
 			float: left;
+			
+			@media #{$phone} {
+				float: right; //للانجليزي نحط left
+			}
 		}
 
 		h5 { /*it was li*/
