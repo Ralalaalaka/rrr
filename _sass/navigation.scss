@@ -10,14 +10,14 @@
     text-align: center;  /////////*****
 	}
 
-	@media #{$phone} {
+	@media #{$mid-point} {
 		border: 0;
 		padding: 0 20px;
 
-    flex-direction: column; /////////*****
-    align-items: stretch; /////////*****
-    justify-content: flex-start; /////////*****
-    position: absolute; /////////*****
+    flex-direction: column; /////////did nothing
+    align-items: stretch; /////////did nothing
+    justify-content: flex-start; /////////*******
+    position: absolute; /////////did nothing
     width: 100%; /////////did nothing
 
 		a {
