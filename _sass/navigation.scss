@@ -1,4 +1,4 @@
-.nav-open nav {
+/*.nav-open nav {
 	border-bottom: 1px dotted rgba(255, 255, 255, .2);
 	padding: 10px 0;
 	top: -7px; 
@@ -15,7 +15,7 @@
 			display: none;
 		}
 	}
-}
+} */
 
 
 
@@ -98,17 +98,15 @@ nav {
 /* ✅ Dropdown full-width menu on mobile */
 @media #{$phone} { //when the burger is open
   body.nav-open nav {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    background: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 110%; /* below the fixed header */
+    position: absolute; // relative to header
+    top: 100%;           // exactly below header
     left: 0;
     width: 100%;
-    padding: 40px 0;
-    padding: 0 !important; // انا اضفته
-    //border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 9998; // below header z-index
 
     .nav-left,
     .nav-right {
