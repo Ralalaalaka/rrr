@@ -46,7 +46,7 @@ header {
 
         @media #{$phone} { //////////********
           display: block; //////////*******
-
+          position: absolute; /////*****
           //position: relative; //////////********
         } //////////********
 	}
