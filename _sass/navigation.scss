@@ -97,12 +97,12 @@ nav {
 
 /* ✅ Dropdown full-width menu on mobile */
 @media #{$phone} { //when the burger is open
-  .nav-open nav { //it was body
+  body.nav-open nav {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
-    position: absolute;
+    position: fixed; //it was absolute
     top: 100%; /* below the fixed header */
     left: 0;
     width: 100%;
