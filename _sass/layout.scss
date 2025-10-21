@@ -35,7 +35,7 @@ header {
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
-		display: flex;
+		//display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -95,12 +95,12 @@ header {
 	}
 
 	.company-name {
-		//font-size: 1em;
+		font-size: 1em;
 		display: inline-block;
 
 		img {
 			height: 20px;
-			//width: auto;
+			width: auto;
 		}
 	}
 }
