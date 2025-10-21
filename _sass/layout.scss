@@ -39,10 +39,9 @@ header {
 		align-items: center;
 		justify-content: space-between;
 
-        @media #{$mid-point} { // انا اضفته
+        @media #{$phone} { // انا اضفته
           display: block; // انا اضفته
         } // انا اضفته
-
 
 	}
 

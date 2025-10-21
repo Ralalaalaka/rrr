@@ -35,7 +35,7 @@ footer {
 
 		&.footer-right-links {
 			float: left;
-			@media #{$tablet} {
+			@media #{$phone} {
 				float: right;
 			}
 		}
