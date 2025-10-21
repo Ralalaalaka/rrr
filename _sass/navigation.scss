@@ -1,7 +1,7 @@
 /* .nav-toggle = burger button; .nav-open = body class toggled by JS to show the menu */
 
 body.nav-open nav { //phone when the user presses the burger icon
-	border-bottom: 1px dotted rgba(255, 255, 255, .2);
+	border-bottom: 1px dotted rgb(255, 0, 0);
 	padding: 10px 0;
 	top: -7px; 
 
@@ -19,11 +19,13 @@ body.nav-open nav { //phone when the user presses the burger icon
     align-items: stretch; /////////did nothing
     position: absolute; /////////did nothing
     width: 100%; /////////did nothing
-        justify-content: flex-start;
+    justify-content: flex-start; /////////did nothing
 
 
 		a {
-			display: none;
+			//display: none; *********
+      display: block !important; ////////********
+      text-align: center; ////////********
 		}
 
     .nav-left, /////////
