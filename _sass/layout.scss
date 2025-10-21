@@ -41,6 +41,8 @@ header {
 
         @media #{$phone} { // انا اضفته
           display: block; // انا اضفته
+
+          position: relative;
         } // انا اضفته
 
 	}
