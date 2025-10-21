@@ -7,7 +7,7 @@
 		padding: 30px 0;
 	}
 
-	@media #{$mid-point} {
+	@media #{$phone} {
 		border: 0;
 		padding: 0 20px;
 
@@ -25,13 +25,13 @@ nav {
   font-size: 1em;
   width: 100%;
   position: relative;
-  display: flex; //////////// *****
-  align-items: center; //////////// *****
-  justify-content: space-between; //////////// *****
+  //display: flex; ////////////
+  //align-items: center; ///////////
+  //justify-content: space-between; /////////
   top: -4px; /*it was -7*/ //////////
 	text-shadow: none; //////////////
 
-    @media #{$mid-point} { // انا اضفته /////////
+    @media #{$phone} { // انا اضفته /////////
 		padding: 0 20px; // انا اضفته ///////////
 		display: inline; // انا اضفته ////////
 	} // انا اضفت /////////
@@ -55,7 +55,7 @@ nav {
     //text-decoration: none; ///////////
     //color: rgba(255, 255, 255, 0.8); ///////
 
-    @media #{$mid-point} {
+    @media #{$phone} {
       display: inline;
       border-bottom: 1px solid rgba(255,255,255,0); //////////
 			color: rgba(255,255,255,.8); /////////
@@ -73,7 +73,7 @@ nav {
       padding: 0 !important; // انا اضفته
 			text-shadow: none; /* it was 0 */ /////////
 
-      @media #{$mid-point} {
+      @media #{$phone} {
         display: none;
       }
     }
