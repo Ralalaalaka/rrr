@@ -25,16 +25,16 @@ nav {
   font-size: 1em;
   width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  //display: flex; ////////////
+  //align-items: center; ///////////
+  //justify-content: space-between; /////////
+  top: -4px; /*it was -7*/ //////////
+	text-shadow: none; //////////////
 
-  /*
-    @media #{$mid-point} { // انا اضفته
-		padding: 0 20px; // انا اضفته
-		display: inline; // انا اضفته
-	} // انا اضفته
-  */
+    @media #{$mid-point} { // انا اضفته /////////
+		padding: 0 20px; // انا اضفته ///////////
+		display: inline; // انا اضفته ////////
+	} // انا اضفت /////////
 
   .nav-left,
   .nav-right {
@@ -52,24 +52,26 @@ nav {
     padding: 14px 10px;
     border: 0;
     display: none;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    //text-decoration: none; ///////////
+    //color: rgba(255, 255, 255, 0.8); ///////
 
     @media #{$mid-point} {
       display: inline;
+      border-bottom: 1px solid rgba(255,255,255,0); //////////
+			color: rgba(255,255,255,.8); /////////
     }
 
     &.nav-toggle { //The burger icon before clicking it
       display: inline;
       position: absolute;
-      left: 8px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: -7px;
+      left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
+      top: 2px;
       font-size: 1.7em; // it was 1.1
       border: 0;
-      background: none;
-      cursor: pointer;
+      //background: none; ////////
+      //cursor: pointer; ///////
       padding: 0 !important; // انا اضفته
-
+			text-shadow: none; /* it was 0 */ /////////
 
       @media #{$mid-point} {
         display: none;
@@ -95,7 +97,7 @@ nav {
   }
 }
 
-/* ✅ Dropdown full-width menu on mobile */
+/* ✅ Dropdown full-width menu on mobile
 @media #{$phone} { //when the burger is open
 
   body.nav-open nav {
@@ -104,7 +106,7 @@ nav {
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 100%; /* below the fixed header */
+    top: 100%; /* below the fixed header 
     left: 0;
     width: 100%;
     padding: 40px 0;
@@ -138,12 +140,12 @@ nav {
       padding: 0 !important; // انا اضفته
       top: 2px; // انا اضفته
       //display: inline; // انا اضفته
-			border: 0; */
+			border: 0; 
 
 
       display: inline;
       position: absolute;
-      left: 8px; /*it was "right" in english v. this changes the menu icon in phone*/
+      left: 8px; /*it was "right" in english v. this changes the menu icon in phone
       top: -5px; // it was 8
       font-size: 1.7em; // it was 1.1
       border: 0;
@@ -152,4 +154,6 @@ nav {
       padding: 0 !important;
     }
   }
-}
+} */
+
+
