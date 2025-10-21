@@ -40,14 +40,12 @@ header {
 		justify-content: space-between;
 
         @media #{$phone} { // انا اضفته
-          //display: block; // انا اضفته
+          display: block; // انا اضفته
 
           //جدييييييييييييييييييييييد
           flex-direction: column;
-          display: flex;
-          flex-direction: column; /* stack logo + nav */
-          align-items: flex-start;
-          width: 100%;
+          //display: flex;
+          //flex-direction: column; /* stack logo + nav */
 
         } // انا اضفته
 
