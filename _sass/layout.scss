@@ -32,22 +32,9 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
-  @media #{$phone} {
-    position: relative;
-  }
-
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-        @media #{$phone} { // انا اضفته
-          display: block; // انا اضفته
-
-          position: relative;
-        } // انا اضفته
 
 	}
 
@@ -60,7 +47,6 @@ header {
 
 		a {
 			color: #333;
-
 			@media #{$mid-point} {
 				&:hover {
 					border-bottom-color: rgba(80, 80, 80,.3);
@@ -87,6 +73,7 @@ header {
 	a {
 		color: #fff;
 		text-decoration: none;
+    z-index: 1;
 		position: relative;
     
         @media #{$mid-point} { // انا اضفته
@@ -734,3 +721,7 @@ blockquote:before {
   background: #0e385b;
   transform: scale(1.2);
 }
+
+
+
+
