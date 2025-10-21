@@ -19,6 +19,8 @@ body.nav-open nav { //phone when the user presses the burger icon
     align-items: stretch; /////////did nothing
     position: absolute; /////////did nothing
     width: 100%; /////////did nothing
+        justify-content: flex-start;
+
 
 		a {
 			display: none;
