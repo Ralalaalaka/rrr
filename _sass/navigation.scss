@@ -103,8 +103,8 @@ nav {
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 100%; /* below the fixed header */
-    left: 0;
+    top: 110%; /* below the fixed header */
+    left: 10;
     width: 100%;
     padding: 20px 0;
     padding: 0 !important; // انا اضفته
@@ -132,7 +132,7 @@ nav {
       
       position: absolute;
       
-      left: 10; // انا اضفته
+      left: 0; // انا اضفته
       font-size: 1.7em; // انا اضفته
       padding: 0 !important; // انا اضفته
       top: 2px; // انا اضفته
