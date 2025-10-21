@@ -97,6 +97,17 @@ nav {
 
 /* ✅ Dropdown full-width menu on mobile */
 @media #{$phone} { //when the burger is open
+
+//جدييييييييييييييد
+header .container {
+    display: flex;
+    flex-direction: column; /* stack logo + nav */
+    align-items: flex-start;
+    width: 100%;
+  }
+
+
+
   body.nav-open nav {
     flex-direction: column;
     align-items: stretch;

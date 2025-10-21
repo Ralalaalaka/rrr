@@ -41,12 +41,6 @@ header {
 
         @media #{$phone} { // انا اضفته
           display: block; // انا اضفته
-
-          //جدييييييييييييييييييييييد
-          flex-direction: column;
-          //display: flex;
-          //flex-direction: column; /* stack logo + nav */
-
         } // انا اضفته
 
 	}
