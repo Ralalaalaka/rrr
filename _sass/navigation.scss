@@ -102,7 +102,7 @@ nav {
     align-items: stretch;
     justify-content: flex-start;
     background: rgba(255, 255, 255, 0.9);
-    position: fixed; //it was absolute
+    position: relative; //it was absolute
     top: 100%; /* below the fixed header */
     left: 0;
     width: 100%;
