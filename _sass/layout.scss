@@ -32,10 +32,10 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
-    //@media #{$phone} { //////////
-    //position: relative; //////////
-  //} //////////
-
+  @media #{$mid-point} { //////////******
+  position: relative; //////////*****
+ } //////////*****
+ 
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
