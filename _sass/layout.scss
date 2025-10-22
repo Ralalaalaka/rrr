@@ -40,15 +40,14 @@ header {
 	.container {
 		line-height: 0;
 
-    display: flex; //////////********
-		align-items: center; //////////********
-		justify-content: space-between; //////////********
+    display: flex; //////////
+		align-items: center; //////////
+		justify-content: space-between; //////////
 
-        @media #{$phone} { //////////********
-          display: block; //////////*******
-          // انا اضفته position: absolute; /////*****
-          position: relative; //////////********
-        } //////////********
+        @media #{$mid-point} { //////////****
+          display: block; //////////
+          position: relative; //////////
+        } //////////
 	}
 
 	&.header-background {
