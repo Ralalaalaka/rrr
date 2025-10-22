@@ -32,9 +32,9 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
-  @media #{$mid-point} { ////////// حوسة
-  position: relative; ////////// حوسة
- } ////////// حوسة
+  //@media #{$mid-point} { ////////// حوسة
+  //position: relative; ////////// حوسة
+// } ////////// حوسة
  
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {

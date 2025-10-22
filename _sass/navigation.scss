@@ -1,12 +1,12 @@
 /* .nav-toggle = burger button; .nav-open = body class toggled by JS to show the menu */
 
 body.nav-open nav { //phone when the user presses the burger icon
-	border-bottom: 1px dotted rgb(0, 255, 76);
+	border-bottom: 1px dotted rgb(8, 0, 255);
 	padding: 10px 0;
 	top: -7px; 
 
-  //flex-direction: column; /////// حوسة
-  //align-items: center; /////// حوسة
+  //flex-direction: column; /////// ************
+  //align-items: center; /////// ********
 
 	a {
 		display: block;
