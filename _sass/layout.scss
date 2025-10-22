@@ -40,11 +40,11 @@ header {
 	.container {
 		line-height: 0;
 
-    display: flex; //////////
-		align-items: center; //////////
-		justify-content: space-between; //////////
+    //display: flex; ////////// ****
+		//align-items: center; ////////// ****
+		//justify-content: space-between; ////////// ****
 
-        @media #{$mid-point} { //////////****
+        @media #{$mid-point} { //////////
           display: block; //////////
           position: relative; //////////
         } //////////
