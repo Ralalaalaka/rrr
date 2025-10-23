@@ -1,5 +1,5 @@
 html {
-	background: #022c4e; /*it was #2b2b40*/
+	background: #022c4e;
 }
 
 html, body {
@@ -11,14 +11,14 @@ body {
 	font-family: 'Almarai', Tajawal;
 }
 
-a {
-	color: #0db6bd; 
-	text-decoration: none;
-}
+//a {
+//	color: #0db6bd; 
+//	text-decoration: none;
+//}
 
-a:hover {
-	text-decoration: underline;
-}
+//a:hover {
+//	text-decoration: underline;
+//}
 
 img {
 	max-width: 100%;
@@ -58,7 +58,7 @@ a {
 	}
 }
 
-p, address, ul {
+p, address, ul { /*افصلهم عن بعض*/
 	font-size: clamp(0.9rem, 1.1vw, 1.20rem);
 	margin-bottom: 20px;
 	font-weight: 370;
