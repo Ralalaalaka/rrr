@@ -74,9 +74,8 @@ header {
 
 			@media #{$mid-point} { // *********
 				&:hover { // *********
-					border-bottom-color: none; // *********
-					border-bottom-width: 0; //nav hover // *********
-          background: rgba(13, 182, 189, 0.1); // *********
+					border-bottom-color: inherit; // *********
+          background: rgba(13, 182, 189, 0.3); // *********
 				} //*********
 
 			//&:hover { //*********
