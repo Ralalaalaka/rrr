@@ -1,34 +1,34 @@
 /* .nav-toggle = burger button; .nav-open = body class toggled by JS to show the menu */
 
 body.nav-open nav { //phone when the user presses the burger icon
-	border-bottom: 1px dotted rgb(255, 0, 166);
+	border-bottom: 1px dotted rgb(0, 255, 0);
 	padding: 10px 0;
 	top: -7px; 
 
-  flex-direction: column; /////////did nothing
-  align-items: center; /////////did nothing
+  //flex-direction: column; /////////did nothing
+  //align-items: center; /////////did nothing
 
 	a {
 		display: block;
 		padding: 30px 0;
-    text-align: center;  /////////did nothing
+    //text-align: center;  /////////did nothing
 	}
 
 	@media #{$mid-point} {
 		border: 0;
 		padding: 0 20px;
 
-    flex-direction: column; /////////did nothing
-    align-items: stretch; /////////did nothing
-    position: absolute; /////////did nothing
-    width: 100%; /////////did nothing
-    justify-content: flex-start; /////////did nothing
+    //flex-direction: column; /////////did nothing
+    //align-items: stretch; /////////did nothing
+    //position: absolute; /////////did nothing
+    //width: 100%; /////////did nothing
+    //justify-content: flex-start; /////////did nothing
 
 
 		a {
-			display: none; 
-      display: block !important; /////////did nothing
-      text-align: center; /////////did nothing
+			display: inline; ////////// it was none, both of them make the same result
+      //display: block !important; /////////did nothing
+      //text-align: center; /////////did nothing
 		}
 
     .nav-left, /////////
@@ -41,8 +41,6 @@ body.nav-open nav { //phone when the user presses the burger icon
 
 	}
 }
-
-
 
 
 nav {
