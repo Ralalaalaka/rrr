@@ -72,17 +72,10 @@ header {
       border: 0.05px solid rgba(13, 182, 189, 0.50);
 			color: #0e385b; // #333
 
-			@media #{$mid-point} { // *********
-				&:hover { // *********
-					border-bottom-color: inherit; // *********
-          background: rgba(13, 182, 189, 0.3); // *********
-				} //*********
-
-			//&:hover { //*********
-			//	background: rgba(13, 182, 189, 0.1); //*********
-			//}
+			&:hover { //*********
+			  background: rgba(13, 182, 189, 0.1); //*********
+			}
 		}
-  }
 
 		.dark-logo { display: inline; }
 		.light-logo { display: none; }
