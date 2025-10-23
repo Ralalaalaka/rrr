@@ -2,7 +2,7 @@
 /* anything under inside $mid-point, it will show on wide screens.*/
 
 body.nav-open nav { //phone when the user presses the burger icon
-	border-bottom: 1px dotted rgb(164, 209, 0);
+	border-bottom: 1px dotted rgb(0, 17, 209);
 	padding: 10px 0;
 	top: -7px; 
 
@@ -27,10 +27,10 @@ body.nav-open nav { //phone when the user presses the burger icon
       gap: 15px; 
     }  
 
-    .nav-right { //////
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2); //////
-      padding-bottom: 10px; /////////
-      margin-bottom: 10px; ///////
+    .nav-left { //////
+      border-top: 1px solid rgba(0, 0, 0, 0.2); //////
+      padding-top: 10px; /////////
+      margin-top: 10px; ///////
     } ////////
 
 	}
