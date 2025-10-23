@@ -3,7 +3,7 @@
 
 body.nav-open nav { //phone when the user presses the burger icon
 	//border-bottom: 1px dotted rgb(0, 17, 209); ******************
-	padding: 30px 0;
+	padding: 10px 0;
 	//top: -7px;  ******************
 
 	a {
@@ -38,7 +38,7 @@ nav {
   font-size: 1em;
   width: 100%;
   position: relative;
-  top: 0px; //it was -7 **********
+  top: 0px; //it was -7
 	text-shadow: none;
 
     @media #{$mid-point} {
@@ -86,7 +86,7 @@ nav {
       display: inline;
       position: absolute;
       left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: 2px;
+      top: -7px; // it was 2 *********************
       font-size: 1.7em;
       border: 0;
       padding: 0 !important;
