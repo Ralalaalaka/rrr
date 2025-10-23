@@ -1,13 +1,5 @@
-#- name: الخدمات
-  #link: /blog/
-#- name: الأسعار
-  #link: /pricing/
-#- name: تواصل معنا
-  #link: /contact/
-
-
 # LEFT SIDE BUTTONS
-- name: طلب النسخة التجريبية
+- name: اطلب نسختك التجريبية
   link: /demo/
   side: left
   style: white
