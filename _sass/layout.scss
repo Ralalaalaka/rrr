@@ -40,13 +40,14 @@ header {
 	.container {
 		line-height: 0;
 
-    display: flex; ////////// حوسة ************
-		align-items: center; ////////// حوسة ************
-		justify-content: space-between; ////////// حوسة ************
+    display: block; ////////// حوسة ************
+
 
         @media #{$mid-point} { //////////
-          display: block; //////////
-          position: relative; //////////
+          display: flex; ////////// ************
+          //position: relative; ////////// ************
+          align-items: center; ////////// حوسة ************
+		      justify-content: space-between; ////////// حوسة ************
         } //////////
 	}
 
