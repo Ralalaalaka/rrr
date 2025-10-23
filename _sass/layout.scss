@@ -67,9 +67,9 @@ header {
 
 		/* ✅ White buttons switch to dark mode */
 		a.white {
-			background: rgba(0,0,0,0.1);
-			border-color: rgba(0,0,0,0.3);
-			color: #333;
+			background: #f4fcfc; // rgba(0,0,0,0.1) *************
+			//border-color: rgba(0,0,0,0.3); // rgba(0,0,0,0.3) ************
+			color: #0db6bd; // #333 ****************
 
 			&:hover {
 				background: rgba(0,0,0,0.2);

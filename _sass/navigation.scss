@@ -9,12 +9,10 @@ body.nav-open nav { //phone when the user presses the burger icon
 		padding: 30px 10px; // it was 30px 0
     gap: 15px; //******************
 
-    .white {
-      background-color: none;
-      border-color: none;
-    }
-
-    }
+      .white { //////////*************
+        background-color: none; /////////////*********
+        border-color: none; /////////////*********
+      } //////////*************
 	}
 
 	@media #{$mid-point} {
@@ -112,7 +110,6 @@ nav {
     &:hover {
       background: rgba(255, 255, 255, 0.5);
     }
-    
   }
 
   a.active {
