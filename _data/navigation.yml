@@ -1,16 +1,16 @@
 # LEFT SIDE BUTTONS
 - name: اطلب نسختك التجريبية
-  link: /demo/
+  link: /pricing/
   side: left
   style: white
 
 - name: تسجيل الدخول
-  link: /register/
+  link: /pricing/
   side: left
   style: white
 
 - name: EN
-  link: /en/
+  link: /pricing/
   side: left
   style: regular
 
