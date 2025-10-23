@@ -71,8 +71,6 @@ header {
 			//border-color: rgba(0,0,0,0.3); //********** 
       border: 0.05px solid rgba(13, 182, 189, 0.50);
 			color: #0e385b; // #333
-      padding: 4px 20px; //it was 8px 20px ******************
-      border-radius: 100px; // **************
 
 			@media #{$mid-point} { // *********
 				&:hover { // *********
