@@ -39,13 +39,11 @@ header {
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
-
-    display: block; ////////// حوسة ************
-
+    //display: block; ////////// حوسة ************
 
         @media #{$mid-point} { //////////
           display: flex; ////////// ************
-          //position: relative; ////////// ************
+          position: relative; ////////// ************
           align-items: center; ////////// حوسة ************
 		      justify-content: space-between; ////////// حوسة ************
         } //////////
