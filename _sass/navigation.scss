@@ -2,14 +2,19 @@
 /* anything inside $mid-point, it will show on wide screens (laptops/desktops).*/
 
 body.nav-open nav { //phone when the user presses the burger icon
-	//border-bottom: 1px dotted rgb(0, 17, 209); ******************
 	padding: 10px 0;
-	//top: -7px;  ******************
 
 	a {
 		display: block;
-		padding: 30px 10px; // it was 30px 0;******************
-    gap: 20px; //******************
+		padding: 30px 10px; // it was 30px 0
+    gap: 15px; //******************
+
+    .white {
+      background-color: none;
+      border-color: none;
+    }
+
+    }
 	}
 
 	@media #{$mid-point} {
@@ -85,7 +90,7 @@ nav {
       display: inline;
       position: absolute;
       left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: -7px; // it was 2 *********************
+      top: -8px; // it was 2 *********************
       font-size: 1.7em;
       border: 0;
       padding: 0 !important;
@@ -107,6 +112,7 @@ nav {
     &:hover {
       background: rgba(255, 255, 255, 0.5);
     }
+    
   }
 
   a.active {
