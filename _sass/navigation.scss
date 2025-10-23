@@ -10,7 +10,7 @@ body.nav-open nav { //phone when the user presses the burger icon
 		display: block;
 		padding: 10px 10px; // it was 30px 0;******************
     //right: 3px; //انا اضفته ****************** صار البرجر مايل بعد
-    gap: 5px; //******************
+    gap: 20px; //******************
 	}
 
 	@media #{$mid-point} {
