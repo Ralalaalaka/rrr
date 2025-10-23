@@ -24,6 +24,9 @@ section {
 	padding: 60px 0;
 }
 
+
+/*Nav Bar*/
+
 header {
 	color: #fff;
 	padding: 15px 0;
@@ -32,21 +35,17 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
-  //@media #{$mid-point} { ////////// حوسة *********
-  //position: relative; ////////// حوسة *********
-//} ////////// حوسة ************
- 
+
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
-    //display: block; ////////// حوسة ************
 
-        @media #{$mid-point} { //////////
-          display: flex; ////////// ************
-          position: relative; ////////// ************
-          align-items: center; ////////// حوسة ************
-		      justify-content: space-between; ////////// حوسة ************
-        } //////////
+        @media #{$mid-point} { 
+          display: flex;
+          position: relative;
+          align-items: center;
+		      justify-content: space-between;
+        } 
 	}
 
 	&.header-background {
@@ -87,9 +86,9 @@ header {
     z-index: 1;
 		position: relative;
     
-        @media #{$mid-point} { // انا اضفته
-          height: 100%; // انا اضفته
-        } // انا اضفته
+        @media #{$mid-point} {
+          height: 100%;
+        }
 
 		display: block;
 
@@ -113,6 +112,8 @@ header {
 		}
 	}
 }
+
+/*End of Nav Bar*/
 
 
 .content {

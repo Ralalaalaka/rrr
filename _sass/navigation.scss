@@ -5,39 +5,26 @@ body.nav-open nav { //phone when the user presses the burger icon
 	padding: 10px 0;
 	top: -7px; 
 
-  //flex-direction: column; /////////did nothing
-  //align-items: center; /////////did nothing
-
 	a {
 		display: block;
 		padding: 30px 0;
-    //text-align: center;  /////////did nothing
 	}
 
 	@media #{$mid-point} {
 		border: 0;
 		padding: 0 20px;
 
-    //flex-direction: column; /////////did nothing
-    //align-items: stretch; /////////did nothing
-    //position: absolute; /////////did nothing
-    //width: 100%; /////////did nothing
-    //justify-content: flex-start; /////////did nothing
-
-
 		a {
-			display: inline; ////////// it was none, both of them make the same result
-      //display: block !important; /////////did nothing
-      //text-align: center; /////////did nothing
+			display: inline; 
 		}
 
-    .nav-left, /////////
-    .nav-right { /////////
-      flex-direction: column; /////////
-      align-items: center; /////////
-      width: 100%; /////////
-      gap: 15px; /////////
-    } ///////// 
+    .nav-left, 
+    .nav-right { 
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%; 
+      gap: 15px; 
+    }  
 
 	}
 }
@@ -48,16 +35,13 @@ nav {
   font-size: 1em;
   width: 100%;
   position: relative;
-  //display: flex; ////////////
-  //align-items: center; ///////////
-  //justify-content: space-between; /////////
-  top: -4px; /*it was -7*/ //////////
-	text-shadow: none; //////////////
+  top: -4px; /*it was -7*/ 
+	text-shadow: none;
 
-    @media #{$mid-point} { // انا اضفته /////////
-		padding: 0 20px; // انا اضفته ///////////
-		display: inline; // انا اضفته ////////
-	} // انا اضفت /////////
+    @media #{$mid-point} {
+		padding: 0 20px;
+		display: inline;
+	}
 
   .nav-left,
   .nav-right {
@@ -68,9 +52,6 @@ nav {
   }
 
   /* Flip for Arabic: left group on the left, right group on the right */
-  //.nav-left { flex-direction: row; } ///////****
-  //.nav-right { flex-direction: row; } ////////////*****
-/////////////////////////////////////////
   .nav-left { 
     display: inline;
     @media #{$mid-point} {
@@ -84,32 +65,29 @@ nav {
     flex-direction: row; 
     }
   }
-//////////////////////////////////////////////
+
+  
   a {
     margin: 0 3px;
     padding: 14px 10px;
     border: 0;
     display: none;
-    //text-decoration: none; ///////////
-    //color: rgba(255, 255, 255, 0.8); ///////
 
     @media #{$mid-point} {
       display: inline;
-      border-bottom: 1px solid rgba(255,255,255,0); //////////
-			color: rgba(255,255,255,.8); /////////
+      border-bottom: 1px solid rgba(255,255,255,0);
+			color: rgba(255,255,255,.8);
     }
 
-    &.nav-toggle { //The burger icon before clicking it
+    &.nav-toggle {
       display: inline;
       position: absolute;
       left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
       top: 2px;
-      font-size: 1.7em; // it was 1.1
+      font-size: 1.7em;
       border: 0;
-      //background: none; ////////
-      //cursor: pointer; ///////
       padding: 0 !important;
-			text-shadow: none; /* it was 0 */ /////////
+			text-shadow: none; /* it was 0 */
 
       @media #{$mid-point} {
         display: none;
@@ -134,69 +112,3 @@ nav {
     border-bottom: 3px solid #0db6bd;
   }
 }
-
-
-
-
-
-/* ✅ Dropdown full-width menu on mobile
-@media #{$phone} { //when the burger is open
-
-  body.nav-open nav {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    background: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 100%; /* below the fixed header 
-    left: 0;
-    width: 100%;
-    padding: 0 !important; // انا اضفته
-    //border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-    .nav-left,
-    .nav-right {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      gap: 15px;
-    }
-
-    a {
-      display: block !important;
-      text-align: center;
-      font-size: 1.1em;
-      padding: 20px 0;
-      //color: rgb(0, 0, 0);
-    }
-
-    a.nav-toggle { //the burger icon when open //يمكن ما يحتاج احطها لانه بياخذ على اللي فوق
-      
-      /*display: inline; // انا اضفته
-      
-      position: absolute;
-      
-      left: 50px; // انا اضفته
-      font-size: 1.7em; // انا اضفته
-      padding: 0 !important; // انا اضفته
-      top: 2px; // انا اضفته
-      //display: inline; // انا اضفته
-			border: 0; 
-
-
-      display: inline;
-      position: absolute;
-      left: 8px; /*it was "right" in english v. this changes the menu icon in phone
-      top: -5px; // it was 8
-      font-size: 1.7em; // it was 1.1
-      border: 0;
-      background: none;
-      cursor: pointer;
-      padding: 0 !important;
-    }
-  }
-} */
-
-
-
-
