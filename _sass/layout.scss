@@ -67,14 +67,15 @@ header {
 
 		/* ✅ White buttons switch to dark mode */
 		a.white {
-			background: #f4fcfc; // rgba(0,0,0,0.1)
-			//border-color: rgba(0,0,0,0.3); // rgba(0,0,0,0.3) 
-			color: #0db6bd; // #333
+			background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+			//border-color: rgba(0,0,0,0.3); //********** 
+      border: 0.05px solid rgba(13, 182, 189, 0.50);
+			color: #0e385b; // #333
 
 			@media #{$mid-point} { //*********
 				&:hover { //*********
-					border-bottom-color: none; //*********
-					border-bottom-width: none; /*nav hover*/ //*********
+					//border-bottom-color: none; //*********
+					border-bottom-width: 0; /*nav hover*/ //*********
           background: rgba(0,0,0,0.2); //*********
 				} //*********
 
