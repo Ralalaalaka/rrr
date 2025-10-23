@@ -61,6 +61,7 @@ nav {
   }
   .nav-right { 
     display: inline;
+    border-bottom: 1px dotted rgb(164, 209, 0); //////////*********
     @media #{$mid-point} {
     flex-direction: row; 
     }
