@@ -40,9 +40,9 @@ header {
 	.container {
 		line-height: 0;
 
-    //display: flex; ////////// حوسة ************
-		//align-items: center; ////////// حوسة ************
-		//justify-content: space-between; ////////// حوسة ************
+    display: flex; ////////// حوسة ************
+		align-items: center; ////////// حوسة ************
+		justify-content: space-between; ////////// حوسة ************
 
         @media #{$mid-point} { //////////
           display: block; //////////
