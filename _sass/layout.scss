@@ -32,17 +32,17 @@ header {
 	z-index: 9999;
 	line-height: 0;
 
-  @media #{$mid-point} { ////////// حوسة *****************
-  position: relative; ////////// حوسة *****************
- } ////////// حوسة *****************
+  //@media #{$mid-point} { ////////// حوسة
+  //position: relative; ////////// حوسة
+// } ////////// حوسة
  
 	/* ✅ Make header container flex so nav sits next to logo */
 	.container {
 		line-height: 0;
 
-    display: flex; ////////// حوسة *****************
-		align-items: center; ////////// حوسة *****************
-		justify-content: space-between; ////////// حوسة ////////// *****************
+    //display: flex; ////////// حوسة
+		//align-items: center; ////////// حوسة
+		//justify-content: space-between; ////////// حوسة
 
         @media #{$mid-point} { //////////
           display: block; //////////
@@ -85,7 +85,7 @@ header {
 	a {
 		color: #fff;
 		text-decoration: none;
-    //z-index: 1; ///////////// ********
+    z-index: 1;
 		position: relative;
     
         @media #{$mid-point} { // انا اضفته
