@@ -127,7 +127,7 @@ nav {
 
 
 //////////////////**********************
-@media #{$midpoint} { //when the burger is open
+@media #{$mid-point} { //when the burger is open
     body.nav-open nav {
     flex-direction: column;
     align-items: stretch;
