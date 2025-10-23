@@ -73,14 +73,14 @@ header {
 			color: #0e385b; // #333
 
 			@media #{$mid-point} { //*********
-				&:hover { //*********
+				/*&:hover { //*********
 					//border-bottom-color: none; //*********
-					border-bottom-width: 0; /*nav hover*/ //*********
+					border-bottom-width: 0; /*nav hover //*********
           background: rgba(0,0,0,0.2); //*********
-				} //*********
+				} //********* */
 
-			//&:hover { //*********
-				//background: rgba(0,0,0,0.2); //*********
+			&:hover { //*********
+				background: rgba(13, 182, 189, 0.1); //*********
 			}
 		}
 
