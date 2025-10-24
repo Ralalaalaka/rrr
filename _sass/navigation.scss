@@ -100,17 +100,17 @@ nav {
     }
   }
 
-  a.white {
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 0.05px solid rgba(255, 255, 255, 1);
-    color: #fff;
+  a.button.alt {
+    //border-radius: 100px;
+    //background: rgba(255, 255, 255, 0.3);
+    //border: 0.05px solid rgba(255, 255, 255, 1);
+    //color: #fff;
     padding: 4px 20px; //it was 8px 20px
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.5);
+    //&:hover {
+      //background: rgba(255, 255, 255, 0.5);
       //color: #fff;
-    }
+    //}
   }
 
   a.active {

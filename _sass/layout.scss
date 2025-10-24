@@ -82,9 +82,9 @@ header {
 		.light-logo { display: none; }
 
 
-      a.white.active { /////////
-      border-bottom: rgb(217, 0, 0); ///////
-    } ////////
+     // a.white.active { /////////
+     // border-bottom: rgb(217, 0, 0); ///////
+    //} ////////
 
 	} /*end of when the user scrolls*/
 
@@ -111,7 +111,7 @@ header {
 		}
 
     a.white.active { /////////
-      border-bottom: white; ///////
+      border-bottom: rgb(255, 0, 0); ///////
     } ////////
 
 	} /*end of before the user scrolls*/
