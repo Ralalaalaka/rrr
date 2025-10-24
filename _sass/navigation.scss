@@ -97,9 +97,9 @@ nav {
 
   a.white {
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 0.05px solid rgba(255, 255, 255, 1);
-    color: #fff;
+    //background: rgba(255, 255, 255, 0.3);
+    //border: 0.05px solid rgba(255, 255, 255, 1);
+    //color: #fff;
     padding: 4px 20px; //it was 8px 20px ******************
 
     &:hover {
@@ -108,11 +108,12 @@ nav {
   }
 
   a.active {
-    border-bottom: 3px solid #0db6bd;
+    //border-bottom: 3px solid #0db6bd; //////////**********8
+    color: #0db6bd; ////************
   }
 
-  a.white.active { /////////******
-  border-bottom: 0.05px solid rgba(13, 182, 189, 0.50); ///////****
-} //////******
+  //a.white.active { /////////******
+  //border-bottom: 0.05px solid rgba(13, 182, 189, 0.50); ///////****
+//} //////******
 
 }
