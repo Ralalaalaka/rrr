@@ -33,17 +33,17 @@ footer {
 		margin: 0;
 
 		&.footer-right-links {
-			float: left; 
+			float: right; //للانجليزي نحط left
 			@media #{$mid-point} {
-				float: right; //للانجليزي نحط left
+				float: right;
 			}
 		}
 
 		&.footer-left-links {
-			float: left;
+			float: right; //للانجليزي نحط left
 			
 			@media #{$mid-point} {
-				float: right; //للانجليزي نحط left
+				float: left; 
 			}
 		}
 
