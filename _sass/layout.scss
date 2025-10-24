@@ -110,7 +110,7 @@ header {
 		display: inline-block;
 
 		img {
-			height: 25px; /*logo size on phone - it was 20*/
+			height: 20px; /*logo size on phone - it was 20*/
 			width: auto;
 
       &:hover { ///////////////***********
@@ -118,7 +118,7 @@ header {
       } ///////////////***********
 
         @media #{$mid-point} {
-          height: 20px; /*logo size on pc - it was 20*/ /////////////////**********
+          height: 25px; /*logo size on pc - it was 20*/ /////////////////**********
           //width: auto; ///////////**********
         }
 		}
