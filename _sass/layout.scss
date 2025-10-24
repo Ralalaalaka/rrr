@@ -73,7 +73,9 @@ header {
 			color: #0e385b; // #333
 
 			&:hover { //*********
-			  background: rgba(13, 182, 189, 0.1); //*********
+			  background: rgba(13, 182, 189, 0.3); //*********
+        border: 0.05px solid rgba(13, 182, 189, 0.70); //*********
+        color: inherit; //***********
 			}
 		}
 

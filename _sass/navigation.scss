@@ -7,7 +7,7 @@ body.nav-open nav { //phone when the user presses the burger icon
 	a {
 		display: block;
 		padding: 30px 10px; // it was 30px 0
-    gap: 10px; //******************
+    gap: 5px; //******************
 	}
 
 	@media #{$mid-point} {
@@ -83,7 +83,7 @@ nav {
       display: inline;
       position: absolute;
       left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: -8px; // it was 2 *********************
+      top: -8px; // it was 2
       font-size: 1.7em;
       border: 0;
       padding: 0 !important;
@@ -97,10 +97,10 @@ nav {
 
   a.white {
     border-radius: 100px;
-    //background: rgba(255, 255, 255, 0.3);
-    //border: 0.05px solid rgba(255, 255, 255, 1);
-    //color: #fff;
-    padding: 4px 20px; //it was 8px 20px ******************
+    background: rgba(255, 255, 255, 0.3);
+    border: 0.05px solid rgba(255, 255, 255, 1);
+    color: #fff;
+    padding: 4px 20px; //it was 8px 20px
 
     &:hover {
       background: rgba(255, 255, 255, 0.5);
@@ -108,12 +108,12 @@ nav {
   }
 
   a.active {
-    //border-bottom: 3px solid #0db6bd; //////////**********8
-    color: #0db6bd; ////************
+    //border-bottom: 3px solid #0db6bd; //////////
+    color: #0db6bd;
   }
 
-  //a.white.active { /////////******
-  //border-bottom: 0.05px solid rgba(13, 182, 189, 0.50); ///////****
-//} //////******
+  //a.white.active { /////////
+  //border-bottom: 0.05px solid rgba(13, 182, 189, 0.50); ///////
+//} //////
 
 }
