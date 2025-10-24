@@ -53,9 +53,9 @@ a {
 	text-decoration: none; 
 	transition: opacity 0.2s ease;
 
-	&:hover {
-		opacity: 0.8;
-	}
+	//&:hover { ******
+	//	opacity: 0.8; ******
+	//} *****
 }
 
 p, address, ul { /*افصلهم عن بعض*/
