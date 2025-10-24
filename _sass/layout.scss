@@ -80,6 +80,12 @@ header {
 
 		.dark-logo { display: inline; }
 		.light-logo { display: none; }
+
+
+      a.white.active { /////////
+      border-bottom: rgb(217, 0, 0); ///////
+    } ////////
+
 	} /*end of when the user scrolls*/
 
 	a { /*before the user scrolls*/
@@ -103,6 +109,11 @@ header {
 			text-decoration: none;
       opacity: 0.8;
 		}
+
+    a.white.active { /////////
+      border-bottom: white; ///////
+    } ////////
+
 	} /*end of before the user scrolls*/
 
 	.company-name {
@@ -114,7 +125,7 @@ header {
 			width: auto;
 
       &:hover { ///////////////***********
-        opacity: 100%; ///////////////***********
+        opacity: 1; ///////////////***********
       } ///////////////***********
 
         @media #{$mid-point} {
