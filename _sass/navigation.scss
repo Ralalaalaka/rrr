@@ -113,12 +113,7 @@ nav {
   }
 
   a.active {
-    display: none; ///////////////////////////////////////
     border-bottom: 3px solid #0db6bd; /////////////
-    @media #{$mid-point} {
-    border-bottom: inherit; //////////
-    //color: #0db6bd;
-    }
     }
 
   a.white.active { /////////
