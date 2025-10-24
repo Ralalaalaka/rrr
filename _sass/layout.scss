@@ -65,7 +65,7 @@ header {
 			}
 		}
 
-		/* ✅ White buttons switch to dark mode */
+		/* ✅ White buttons switch to light mode */
     	a.white {
         background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
         border: 0.05px solid rgba(13, 182, 189, 0.50);
@@ -103,7 +103,7 @@ header {
 
 		&:hover {
 			text-decoration: none;
-      opacity: 0.8;
+      color: rgb(50, 50, 50);
 		}
 
 	} /*end of before the user scrolls*/
