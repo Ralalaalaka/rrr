@@ -60,7 +60,7 @@ header {
 			@media #{$mid-point} {
 				&:hover {
 					border-bottom-color: rgba(80, 80, 80,.3);
-					border-bottom-width: 3px; /*nav hover*/
+					border-bottom-width: 4px; /*nav hover*/
 				}
 			}
 		}
@@ -101,11 +101,12 @@ header {
 
 		&:hover {
 			text-decoration: none;
+      opacity: 0.8; ///////********
 		}
 	} /*end of before the user scrolls*/
 
 	.company-name {
-		font-size: 1em;
+		font-size: 1em; /*size of nav bar text*/
 		display: inline-block;
 
 		img {
