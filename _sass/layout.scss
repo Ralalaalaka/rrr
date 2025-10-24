@@ -60,7 +60,7 @@ header {
 			@media #{$mid-point} {
 				&:hover {
 					border-bottom-color: rgba(80, 80, 80,.3);
-					border-bottom-width: 4px; /*nav hover*/
+					border-bottom-width: 3px; /*nav hover*/
 				}
 			}
 		}
@@ -110,8 +110,17 @@ header {
 		display: inline-block;
 
 		img {
-			height: 25px; /*logo size - it was 20*/
+			height: 25px; /*logo size on phone - it was 20*/
 			width: auto;
+
+      &:hover { ///////////////***********
+        opacity: 100%; ///////////////***********
+      } ///////////////***********
+
+        @media #{$mid-point} {
+          height: 20px; /*logo size on pc - it was 20*/ /////////////////**********
+          //width: auto; ///////////**********
+        }
 		}
 	}
 }
