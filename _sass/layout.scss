@@ -67,24 +67,39 @@ header {
 
 		/* ✅ White buttons switch to dark mode */
 		a.white {
-			background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
-      border: 0.05px solid rgba(13, 182, 189, 0.50);
-			color: #0e385b; // #333
+			border-top: 3px #000;
+
+      @media #{$mid-point} {
+        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+        border: 0.05px solid rgba(13, 182, 189, 0.50);
+        color: #0e385b;
+
+			&:hover {
+			  background: rgba(13, 182, 189, 0.2);
+        border: 0.05px solid rgba(13, 182, 189, 0.60);
+        color: inherit;
+			  }
+      }
+		}
+
+
+
+    /*
+    	a.white {
+        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+        border: 0.05px solid rgba(13, 182, 189, 0.50);
+        color: #0e385b; // #333
 
 			&:hover {
 			  background: rgba(13, 182, 189, 0.2);
         border: 0.05px solid rgba(13, 182, 189, 0.60);
         color: inherit;
 			}
-		}
+      
+		} */
 
 		.dark-logo { display: inline; }
 		.light-logo { display: none; }
-
-
-     // a.white.active { /////////
-     // border-bottom: rgb(217, 0, 0); ///////
-    //} ////////
 
 	} /*end of when the user scrolls*/
 
@@ -109,10 +124,6 @@ header {
 			text-decoration: none;
       opacity: 0.8;
 		}
-
-    a.white.active { /////////
-      border-bottom: rgb(255, 0, 0); ///////
-    } ////////
 
 	} /*end of before the user scrolls*/
 
