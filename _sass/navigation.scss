@@ -8,6 +8,11 @@ body.nav-open nav { //phone when the user presses the burger icon
 		display: block;
 		padding: 30px 10px; // it was 30px 0
     gap: 5px; //******************
+
+    .white { /////*********
+      background: none; /////*********
+      color: inherit; /////*********
+    } /////*********
 	}
 
 	@media #{$mid-point} {
