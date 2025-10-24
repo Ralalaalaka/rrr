@@ -37,7 +37,7 @@ body.nav-open nav { //phone when the user presses the burger icon
 
 nav {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1em; /*nav bar text size */
   width: 100%;
   position: relative;
   top: 0px; //it was -7
@@ -113,13 +113,13 @@ nav {
   }
 
   a.active {
-    display: inline-block; ///////////////////////////////////////
+    display: none; ///////////////////////////////////////
     border-bottom: 3px solid #0db6bd; /////////////
     @media #{$mid-point} {
     border-bottom: inherit; //////////
     //color: #0db6bd;
     }
-  }
+    }
 
   a.white.active { /////////
   //border-bottom: currentColor; ///////
