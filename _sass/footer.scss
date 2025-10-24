@@ -34,7 +34,7 @@ footer {
 
 		&.footer-right-links {
 			float: left; 
-			@media #{$phone} {
+			@media #{$mid-point} {
 				float: right; //للانجليزي نحط left
 			}
 		}
@@ -42,7 +42,7 @@ footer {
 		&.footer-left-links {
 			float: left;
 			
-			@media #{$phone} {
+			@media #{$mid-point} {
 				float: right; //للانجليزي نحط left
 			}
 		}
