@@ -59,7 +59,7 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
-					border-bottom-color: rgb(255, 0, 0);
+					border-bottom-color: rgba(80, 80, 80,.3);
 					border-bottom-width: 3px; /*nav hover*/
 				}
 			}
@@ -103,7 +103,7 @@ header {
 
 		&:hover {
 			text-decoration: none;
-      color: rgb(50, 50, 50);
+      //color: rgb(50, 50, 50);
 		}
 
 	} /*end of before the user scrolls*/
@@ -116,13 +116,8 @@ header {
 			height: 20px; /*logo size on phone - it was 20*/
 			width: auto;
 
-      &:hover { ///////////////***********
-        opacity: 1; ///////////////***********
-      } ///////////////***********
-
         @media #{$mid-point} {
-          height: 25px; /*logo size on pc - it was 20*/ /////////////////**********
-          //width: auto; ///////////**********
+          height: 25px; /*logo size on pc - it was 20*/
         }
 		}
 	}
