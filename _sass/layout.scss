@@ -59,7 +59,7 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
-					border-bottom-color: rgba(80, 80, 80,.3);
+					border-bottom-color: rgb(255, 0, 0);
 					border-bottom-width: 3px; /*nav hover*/
 				}
 			}

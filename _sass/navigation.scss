@@ -54,7 +54,6 @@ nav {
   /* Flip for Arabic: left group on the left, right group on the right */
   .nav-left { 
     display: inline;
-    border-bottom: 3px black; ///////////////////////////***********
     @media #{$mid-point} {
     flex-direction: row; 
     float: left;
