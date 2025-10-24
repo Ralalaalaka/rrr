@@ -59,8 +59,9 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
-					border-bottom-color: rgba(80, 80, 80,.3);
-					border-bottom-width: 3px; /*nav hover*/
+					//border-bottom-color: rgba(80, 80, 80,.3);
+					//border-bottom-width: 3px; /*nav hover*/
+          color: #ff0000;
 				}
 			}
 		}
@@ -103,7 +104,8 @@ header {
 
 		&:hover {
 			text-decoration: none;
-      //color: rgb(50, 50, 50);
+      //opacity: 0.8;
+      color: #ee00ff;
 		}
 
 	} /*end of before the user scrolls*/
