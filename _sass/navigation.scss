@@ -3,7 +3,7 @@
 
 body.nav-open nav { //phone when the user presses the burger icon
 	padding: 10px 0;
-  color: #333; ////////////##########
+  //color: #333; ////////////##########
 
 	a {
 		display: block;
@@ -113,7 +113,7 @@ nav {
     }
 
   a.white.active { /////////#########
-  border-bottom: currentColor; /////// ###########
+  border-bottom: border-top; /////// ###########
   border-width: 1px; ////////////////###########
 } ////////#########
 
