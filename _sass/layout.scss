@@ -61,7 +61,7 @@ header {
 				&:hover {
 					//border-bottom-color: rgba(80, 80, 80,.3);
 					//border-bottom-width: 3px; /*nav hover*/
-          color: #ff0000;
+          color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/ /////////###########
 				}
 			}
 		}
@@ -78,6 +78,9 @@ header {
         color: inherit;
 			}
       
+      .active { /////////#############
+        border-bottom: 3px solid #0db6bd; /////////////########
+      } /////////############3
 		}
 
 		.dark-logo { display: inline; }
@@ -105,9 +108,12 @@ header {
 		&:hover {
 			text-decoration: none;
       //opacity: 0.8;
-      color: #ee00ff;
+      color: rgba(255, 255, 255, 0.8); /*hover color before the user scrolls*/ /////////###########
 		}
 
+      .active { /////////###########
+        border-bottom: 3px solid #ffffff; /////////////#######3
+      } ///////#######
 	} /*end of before the user scrolls*/
 
 	.company-name {
