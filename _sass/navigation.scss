@@ -3,6 +3,7 @@
 
 body.nav-open nav { //phone when the user presses the burger icon
 	padding: 10px 0;
+  color: #333; ////////////##########
 
 	a {
 		display: block;
@@ -87,7 +88,6 @@ nav {
       border: 0;
       padding: 0 !important;
 			text-shadow: none; /* it was 0 */
-      color: #333; //////////////#################
 
       @media #{$mid-point} {
         display: none;
