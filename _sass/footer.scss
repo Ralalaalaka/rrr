@@ -41,7 +41,7 @@ footer {
 
 		&.footer-left-links {
 			float: right; //للانجليزي نحط left
-			display: inline; ////////////############
+			//display: inline; ////////////############
 			flex-direction: column; //////////////###########
 
 			@media #{$mid-point} {
