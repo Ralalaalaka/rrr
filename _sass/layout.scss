@@ -59,6 +59,8 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
+					//border-bottom-color: rgba(80, 80, 80,.3);
+					//border-bottom-width: 3px; /*nav hover*/
           color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/
 				}
 			}
@@ -66,15 +68,9 @@ header {
 
 		/* ✅ White buttons switch to light mode */
     	a.white {
-        //background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1) ///////////########
-        //border: 0.05px solid rgba(13, 182, 189, 0.50); ///////////########
-        //color: #0e385b; // #333 ///////////########
-
-            @media #{$mid-point} {
-              background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1) ///////////########
-              border: 0.05px solid rgba(13, 182, 189, 0.50); ///////////########
-              color: #0e385b; // #333 ///////////########
-            } ///////////########
+        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+        border: 0.05px solid rgba(13, 182, 189, 0.50);
+        color: #0e385b; // #333
 
 			&:hover {
 			  background: rgba(13, 182, 189, 0.2);
@@ -107,8 +103,9 @@ header {
 
 		&:not(.nav-toggle):hover{ /*nav bar hover excluding the burger icon*/
 			text-decoration: none;
-      color: rgb(255, 255, 255); /*hover color before the user scrolls*/
-    }
+      //opacity: 0.8;
+      color: rgb(255, 255, 255); /*hover color before the user scrolls*/ //rgb(255, 255, 255) /////##############33
+		}
 	} /*end of before the user scrolls*/
 
 	.company-name {
