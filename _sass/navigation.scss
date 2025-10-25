@@ -71,7 +71,7 @@ nav {
   
   a {
     margin: 0 3px;
-    padding: 14px 10px;
+    padding: 16px 10px; // it was 14px 10px ///////////////////////////#########################
     border: 0;
     display: none;
 
@@ -110,11 +110,11 @@ nav {
   }
 
   a.active {
-    border-bottom: 3px solid #0db6bd; /////////////
+    border-bottom: 3px solid #0db6bd;
     }
 
   a.white.active { /////////#########
-    border-bottom: 1px solid .white.currentColor; ////////////////###########
+    border-bottom: 1px solid currentColor; ////////////////###########
     } ////////#########
 
 }
