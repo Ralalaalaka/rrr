@@ -7,7 +7,7 @@ body.nav-open nav { //phone when the user presses the burger icon
 	a {
 		display: block;
 		padding: 30px 10px 20px 10px; // it was 30px 0
-    gap: 5px; ///////////########
+    //gap: 5px; ///////////########
 	}
 
 	@media #{$mid-point} {
@@ -71,7 +71,7 @@ nav {
   
   a {
     margin: 0 3px;
-    padding: 16px 10px; // it was 14px 10px ///////////////////////////#########################
+    padding: 17px 10px; // it was 14px 10px ///////////////////////////#########################
     border: 0;
     display: none;
 
