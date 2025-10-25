@@ -84,6 +84,14 @@ header {
 
 	} /*end of when the user scrolls*/
 
+  	&:not(.header-background) { /* before scroll only */ ////////#########3
+		a:not(.nav-toggle):hover { ////////########3
+			color: rgb(255, 255, 255); /* hover color before scroll */ ////////######3
+			text-decoration: none; ///////////###########
+		} //////////#########
+	} ///////////##########
+
+
 	a { /*before the user scrolls*/
 		color: #fff;
 		text-decoration: none;
@@ -101,13 +109,11 @@ header {
 			height: 100%;
 		}
 
-		
-    &:hover { ///////////////###############
-    //&:not(.nav-toggle):hover{ /*nav bar hover excluding the burger icon*/
-			text-decoration: none;
+		 //&:not(.nav-toggle):hover{ /*nav bar hover excluding the burger icon*/
+			//text-decoration: none;
       //opacity: 0.8;
-      color: rgb(255, 0, 0); /*hover color before the user scrolls*/ //rgb(255, 255, 255) /////##############33
-		}
+      //color: rgb(255, 0, 0); /*hover color before the user scrolls*/ //rgb(255, 255, 255) /////##############33
+		//}
 	} /*end of before the user scrolls*/
 
 	.company-name {
