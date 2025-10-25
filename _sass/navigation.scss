@@ -1,20 +1,14 @@
-
-
 /* .nav-toggle = burger button; .nav-open = body class toggled by JS to show the menu */
 /* anything inside $mid-point, it will show on wide screens (laptops/desktops).*/
 
 body.nav-open nav { //phone when the user presses the burger icon
 	padding: 10px 0;
+  color: #333; ////////////##########
 
 	a {
 		display: block;
-		padding: 30px 10px; // it was 30px 0
-    gap: 5px; //******************
-
-    .white { /////*********
-      background: none; /////*********
-      color: inherit; /////*********
-    } /////*********
+		padding: 30px 10px 20px 10px; // it was 30px 0
+    gap: 3px;
 	}
 
 	@media #{$mid-point} {
@@ -39,7 +33,7 @@ body.nav-open nav { //phone when the user presses the burger icon
 
 nav {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1em; /*nav bar text size */
   width: 100%;
   position: relative;
   top: 0px; //it was -7
@@ -82,7 +76,6 @@ nav {
 
     @media #{$mid-point} {
       display: inline;
-      border-bottom: 1px solid rgba(255,255,255,0);
 			color: rgba(255,255,255,.8);
     }
 
@@ -90,7 +83,7 @@ nav {
       display: inline;
       position: absolute;
       left: 10px; /*it was "right" in english v. this changes the menu icon in phone*/
-      top: -8px; // it was 2
+      top: -10px; // it was 2
       font-size: 1.7em;
       border: 0;
       padding: 0 !important;
@@ -111,20 +104,19 @@ nav {
 
     &:hover {
       background: rgba(255, 255, 255, 0.5);
+      color: #fff;
     }
   }
 
   a.active {
-    display: inline-block; ///////////////////////////////////////
     border-bottom: 3px solid #0db6bd; /////////////
-    @media #{$mid-point} {
-    border-bottom: inherit; //////////
-    //color: #0db6bd;
     }
-  }
 
-  a.white.active { /////////
-  border-bottom: inherit; ///////
-} ////
+  a.white.active { /////////#########
+  border-bottom: currentColor; /////// ###########
+  border-width: 0.5px; ////////////////###########
+} ////////#########
 
 }
+
+
