@@ -59,8 +59,6 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
-					//border-bottom-color: rgba(80, 80, 80,.3);
-					//border-bottom-width: 3px; /*nav hover*/
           color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/
 				}
 			}
@@ -101,11 +99,10 @@ header {
 			height: 100%;
 		}
 
-		&:not(.nav-toggle):hover{ /*excludes the burger icon*/
+		&:not(.nav-toggle):hover{ /*nav bar hover excluding the burger icon*/
 			text-decoration: none;
-      //opacity: 0.8;
-      color: rgb(13, 255, 0); /*hover color before the user scrolls*/ //rgb(255, 255, 255) /////##############33
-		}
+      color: rgb(255, 255, 255); /*hover color before the user scrolls*/
+
 	} /*end of before the user scrolls*/
 
 	.company-name {
