@@ -1,5 +1,6 @@
+/*
 footer {
-	/*font-size: .6em;*/
+	//font-size: .6em;
 	position: relative;
 	background: #022c4e;
 	color: #fff;
@@ -18,7 +19,7 @@ footer {
 		}
 	}
 
-	/*نا اضفتها*/
+	//أنا اضفتها
 		h5 { 
 			list-style: none;
 			margin: 15px auto;
@@ -26,7 +27,7 @@ footer {
 			align-items: center;
 		}
 
-		/*نا اضفتها*/
+	//أنا اضفتها
 
 	ul {
 		padding: 0;
@@ -47,7 +48,7 @@ footer {
 			}
 		}
 
-		h5 { /*it was li*/
+		h5 { //it was li
 			list-style: none;
 			margin: 15px auto;
 			display: inline-block;
@@ -103,7 +104,7 @@ footer {
 
 h5.copyright {
 	margin: 15px auto;
-	float: center; /*it was left*/
+	float: center; //it was left
 		color: #999;
 
 
@@ -114,3 +115,72 @@ h5.copyright {
 		margin: 0;
 	}
 }
+
+*/
+
+
+////////////////////////////////////////////////////////////////////
+/// 
+/// 
+/// 
+
+
+footer .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media #{$mid-point} {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		text-align: initial;
+		flex-wrap: wrap;
+	}
+}
+
+/* Order for stacking */
+.footer-left-links {
+	order: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+
+	@media #{$mid-point} {
+		order: 2; /* moves to right side on wide screens */
+		width: auto;
+		justify-content: flex-end;
+	}
+}
+
+.footer-right-links {
+	order: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin-top: 10px;
+
+	@media #{$mid-point} {
+		order: 1; /* moves to left side on wide screens */
+		width: auto;
+		margin-top: 0;
+		justify-content: flex-start;
+	}
+}
+
+h5.copyright {
+	order: 3;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+
+	@media #{$mid-point} {
+		order: 3;
+		width: 100%;
+		text-align: center;
+	}
+}
+
