@@ -143,7 +143,6 @@ h5.copyright {
 		}
 	}
 
-	//أنا اضفتها
 		h5 { 
 			list-style: none;
 			margin: 15px auto;
@@ -151,13 +150,12 @@ h5.copyright {
 			align-items: center;
 		}
 
-	//أنا اضفتها
 
 	ul {
 		padding: 0;
 		margin: 0;
 
-		&.footer-right-links {
+		&.footer-right-links { /*Social media*/
 			float: none;
 			display: flex;
 			justify-content: center;
@@ -167,12 +165,12 @@ h5.copyright {
 			@media #{$mid-point} {
 				float: right;
 				width: auto;
-				justify-content: flex-start;
-				order: 1;
+				justify-content: flex-end;
+				order: 2;
 			}
 		}
 
-		&.footer-left-links {
+		&.footer-left-links { /*Nav bar*/
 			float: none;
 			display: flex;
 			justify-content: center;
@@ -183,8 +181,8 @@ h5.copyright {
 			@media #{$mid-point} {
 				float: left; 
 				width: auto;
-				justify-content: flex-end;
-				order: 2;
+				justify-content: flex-start;
+				order: 1;
 			}
 		}
 
@@ -243,6 +241,7 @@ h5.copyright {
 }
 
 h5.copyright {
+	border-top: 1px solid #0e657e; ///////////###########
 	order: 3;
 	width: 100%;
 	text-align: center;
