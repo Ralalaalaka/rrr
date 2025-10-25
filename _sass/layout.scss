@@ -61,7 +61,7 @@ header {
 				&:hover {
 					//border-bottom-color: rgba(80, 80, 80,.3);
 					//border-bottom-width: 3px; /*nav hover*/
-          color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/ /////////###########
+          color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/
 				}
 			}
 		}
@@ -79,7 +79,7 @@ header {
 			}
       
       .active { /////////#############
-        border-bottom: 3px solid #0db6bd; /////////////########
+        border-bottom: 3px solid #bd0d0d; /////////////########
       } /////////############3
 		}
 
@@ -108,7 +108,7 @@ header {
 		&:hover {
 			text-decoration: none;
       //opacity: 0.8;
-      color: rgba(255, 255, 255, 0.8); /*hover color before the user scrolls*/ /////////###########
+      color: rgb(255, 255, 255); /*hover color before the user scrolls*/
 		}
 
       .active { /////////###########
