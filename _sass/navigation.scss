@@ -87,6 +87,7 @@ nav {
       border: 0;
       padding: 0 !important;
 			text-shadow: none; /* it was 0 */
+      color: #333; //////////////#################
 
       @media #{$mid-point} {
         display: none;
@@ -111,8 +112,8 @@ nav {
     border-bottom: 3px solid #0db6bd; /////////////
     }
 
-  //a.white.active { /////////
-  //border-bottom: currentColor; ///////
-//} ////////
+  a.white.active { /////////#########
+  border-bottom: currentColor; /////// ###########
+} ////////#########
 
 }
