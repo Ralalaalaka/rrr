@@ -35,15 +35,16 @@ footer {
 		&.footer-right-links {
 			float: right; //للانجليزي نحط left
 			@media #{$mid-point} {
-				float: right;
+				float: left; //للانجليزي نحط right
 			}
 		}
 
 		&.footer-left-links {
 			float: right; //للانجليزي نحط left
-			
+			display: inline; ////////////############
+
 			@media #{$mid-point} {
-				float: left; 
+				float: right; //للانجليزي نحط left
 			}
 		}
 
@@ -103,13 +104,13 @@ footer {
 
 h5.copyright {
 	margin: 15px auto;
-	float: center; /*it was left*/
+	float: left;
 		color: #999;
+		
 
 
 	@media #{$desktop} {
 		text-align: center;
-		float: none;
 		padding: 16px 0;
 		margin: 0;
 	}
