@@ -1,5 +1,5 @@
-footer {
-	/*font-size: .6em;*/
+/* footer {
+	//font-size: .6em;
 	position: relative;
 	background: #022c4e;
 	color: #fff;
@@ -18,7 +18,7 @@ footer {
 		}
 	}
 
-	/*نا اضفتها*/
+	//نا اضفتها
 		h5 { 
 			list-style: none;
 			margin: 15px auto;
@@ -26,7 +26,7 @@ footer {
 			align-items: center;
 		}
 
-		/*نا اضفتها*/
+		//نا اضفتها
 
 	ul {
 		padding: 0;
@@ -49,7 +49,7 @@ footer {
 			}
 		}
 
-		h5 { /*it was li*/
+		h5 { //it was li
 			list-style: none;
 			margin: 15px auto;
 			display: inline-block;
@@ -117,4 +117,101 @@ h5.copyright {
 		margin: 0;
 		align-items: center;
 	}
+} */
+
+
+
+
+
+
+footer {
+  position: relative;
+  background: #022c4e;
+  color: #fff;
+
+  &,
+  a {
+    color: #999;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 0 10px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    &.footer-right-links {
+      // Swap positions on desktop
+      order: 1;
+
+      @media #{$mid-point} { // mobile
+        order: 2;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+
+    &.footer-left-links {
+      order: 2;
+      flex-direction: column; // buttons below each other
+
+      @media #{$mid-point} { // mobile
+        order: 1;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+
+    li {
+      margin: 0 5px;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        svg {
+          fill: #999;
+          transition: fill 0.2s ease;
+          vertical-align: middle;
+          width: 18px;
+          height: 18px;
+        }
+
+        &:hover svg {
+          fill: #fff;
+        }
+
+        &.twitter-icon:hover svg { fill: #55acee; }
+        &.google-plus-icon:hover svg { fill: #db4437; }
+        &.youtube-icon:hover svg { fill: #cd201f; }
+        &.instagram-icon:hover svg { fill: #f167f5; }
+        &.linkedin-icon:hover svg { fill: #0077b5; }
+        &.pinterest-icon:hover svg { fill: #bd081c; }
+        &.rss-icon:hover svg { fill: #f26522; }
+      }
+    }
+  }
+
+  h5.copyright {
+    text-align: center;
+    margin: 15px auto;
+    color: #999;
+
+    @media #{$desktop} {
+      padding: 16px 0;
+      margin: 0;
+    }
+  }
 }
