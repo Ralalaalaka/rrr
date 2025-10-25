@@ -119,9 +119,133 @@ h5.copyright {
 	}
 } */
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+footer {
+	//font-size: .6em;
+	position: relative;
+	background: #022c4e;
+	color: #fff;
+
+	&,
+	a {
+		color: #999;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 0 10px;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	//نا اضفتها
+		h5 { 
+			list-style: none;
+			margin: 15px auto;
+			display: inline-block;
+			align-items: center;
+		}
+
+		//نا اضفتها
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		&.footer-right-links { //Social media
+			float: right; //للانجليزي نحط left
+			flex-direction: row;
+        	justify-content: center;
+
+			@media #{$mid-point} {
+				float: left; //للانجليزي نحط right
+			}
+		}
+
+		&.footer-left-links { //Website tabs
+			float: right; //للانجليزي نحط left
+			flex-direction: column;
+			//justify-content: center;
+
+			@media #{$mid-point} {
+				float: right; //للانجليزي نحط left
+			}
+		}
+
+		h5 { //it was li
+			list-style: none;
+			margin: 15px auto;
+			display: inline-block;
+
+			a {
+
+				&:hover {
+					text-decoration: none;
+				}
+				svg {
+					fill: #999;
+					transition: fill 0.2s ease;
+					vertical-align: middle;
+					width: 18px;
+					height: 18px;
+				}
+
+				&:hover svg {
+					fill: #fff;
+				}
+
+				&.twitter-icon:hover svg {
+					fill: #55acee;
+				}
+
+				&.google-plus-icon:hover svg {
+					fill: #db4437;
+				}
+
+				&.youtube-icon:hover svg {
+					fill: #cd201f;
+				}
+
+				&.instagram-icon:hover svg {
+					fill: #f167f5;
+				}
+
+				&.linkedin-icon:hover svg {
+					fill: #0077b5;
+				}
+
+				&.pinterest-icon:hover svg {
+					fill: #bd081c;
+				}
+
+				&.rss-icon:hover svg {
+					fill: #f26522;
+				}
+			}
+		}
+	}
+}
+
+  h5.copyright {
+    text-align: center;
+    margin: 15px auto;
+    color: #999;
+
+    @media #{$desktop} {
+      padding: 16px 0;
+      margin: 0;
+    }
+}
 
 
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
 
 
 footer {
