@@ -1,4 +1,4 @@
-services:
+
   - title: "إدارة الموظفين"
     description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
     image: "images/services/Service 1.png"
