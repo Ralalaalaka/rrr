@@ -127,39 +127,40 @@
 
 //----------------////////////////////////// test
 .title.container {
-  margin: 0 auto;
-	position: relative;
-	padding: 0 20px;
   max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
 
   .page-header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    max-width: 750px;
 
-    h2 {
+    h1 {
       position: relative;
+      font-size: 1.8rem;
+      font-weight: 700;
       color: #0e385b;
+      margin: 0;
       padding-right: 10px;
 
       &::after {
         content: "";
         position: absolute;
-        right: -8px;       // place it visually after Arabic text
-        top: 50%;
-        transform: translateY(-50%);
+        right: 0;
+        top: 0;
+        bottom: 0;
         width: 4px;
-        height: 50%;       // adjust as needed
         background-color: #12b3b6;
-        border-radius: 10px;
+        border-radius: 2px;
+        margin-right: -10px;
       }
     }
 
     p {
-      margin: 0.5px 0 0 0;
-      color: #6d767d;
+      font-size: 1rem;
+      color: #6b7c93;
       margin: 0;
     }
   }
