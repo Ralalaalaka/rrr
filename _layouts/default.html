@@ -94,23 +94,16 @@
 					{% endfor %}
 					</ul>
 
-					<ul class="footer-right-links"> <!--Social media-->
+				<ul class="footer-right-links"> <!--Social media-->
 					{% for link in site.data.footer.right_links %}
-						<h5>
-						<a
-							{% if link.new_window %}target="_blank"{% endif %}
-							href="{% include relative-src.html src=link.link %}"
-							{% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}
-							{% if link.name.ar %}data-i18n-key="footer.right_links.{{ forloop.index0 }}.name"{% endif %}
-						>
-							{% if link.social_icon %}
-							{% include social-icon.html icon=link.social_icon %}
-							{% endif %}
-							{% if link.name.ar %}{{ link.name.ar }}{% endif %}
-						</a>
-						</h5>
+						<h5> !--it was <li>--
+							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+								{{ link.name }}
+							</a>
+						</h5> !--it was <li>--
 					{% endfor %}
-					</ul>
+				</ul>
 
 				<h5 class="copyright">
 						صنع في السعودية <br> &#10084;
