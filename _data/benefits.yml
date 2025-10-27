@@ -1,32 +1,64 @@
 benefits:
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
-  
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
-
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+  - title:
+      ar: "إدارة الموظفين"
+      en: "Employee Management"
+    description:
+      ar: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+      en: "A unified database that gathers employee details to track and manage their affairs efficiently."
     image: "images/benefits/Benefit 1.png"
 
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
-  
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
+  - title:
+      ar: "إدارة المشاريع"
+      en: "Project Management"
+    description:
+      ar: "تنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
+      en: "Organize projects and monitor progress and deadlines with high efficiency."
+    image: "images/benefits/Benefit 2.png"
 
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
+  - title:
+      ar: "تحليل الأداء"
+      en: "Performance Analytics"
+    description:
+      ar: "تحليل بيانات الأداء عبر تقارير ولوحات تفاعلية تسهّل اتخاذ القرارات الدقيقة."
+      en: "Analyze performance data through reports and dashboards to enable accurate decision-making."
+    image: "images/benefits/Benefit 3.png"
 
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
+  - title:
+      ar: "إدارة الحضور والانصراف"
+      en: "Attendance Management"
+    description:
+      ar: "تتبع الحضور والانصراف بشكل آلي ودقيق لتعزيز الانضباط والإنتاجية."
+      en: "Automatically and accurately track attendance to enhance discipline and productivity."
+    image: "images/benefits/Benefit 4.png"
 
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    image: "images/benefits/Benefit 1.png"
+  - title:
+      ar: "إدارة الإجازات"
+      en: "Leave Management"
+    description:
+      ar: "تبسيط عمليات طلب الإجازات والموافقات وربطها بالسياسات الداخلية."
+      en: "Simplify leave requests and approvals, linking them to internal policies."
+    image: "images/benefits/Benefit 5.png"
+
+  - title:
+      ar: "إدارة الرواتب"
+      en: "Payroll Management"
+    description:
+      ar: "احتساب الرواتب والمكافآت بدقة وربطها بالحضور وسجلات الأداء."
+      en: "Accurately calculate salaries and bonuses, linking them to attendance and performance records."
+    image: "images/benefits/Benefit 6.png"
+
+  - title:
+      ar: "إدارة الأهداف"
+      en: "Goals Management"
+    description:
+      ar: "ربط الأهداف الفردية بالمؤسسية ومتابعة التقدم لتعزيز التطوير المستمر."
+      en: "Align individual goals with organizational ones and track progress for continuous improvement."
+    image: "images/benefits/Benefit 7.png"
+
+  - title:
+      ar: "الأرشفة الرقمية"
+      en: "Digital Archiving"
+    description:
+      ar: "حفظ الوثائق والمستندات إلكترونيًا لضمان سهولة الوصول والأمان."
+      en: "Store and manage documents digitally for easy access and security."
+    image: "images/benefits/Benefit 8.png"

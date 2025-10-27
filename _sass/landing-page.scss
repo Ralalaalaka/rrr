@@ -147,11 +147,11 @@
       &::after {
         content: "";
         position: absolute;
-        right: -8px; // place it visually after Arabic text
+        left: -8px; // place it visually after Arabic text
         top: 50%;
         transform: translateY(-50%);
         width: 4px;
-        height: 70%;
+        height: 60%;
         background-color: #12b3b6;
         border-radius: 10px;
       }
