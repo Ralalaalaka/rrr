@@ -127,39 +127,38 @@
 
 //----------------////////////////////////// test
 .title.container {
-  max-width: 1140px;
   margin: 0 auto;
-  padding: 20px;
+	position: relative;
+	padding: 0 20px;
+  max-width: 1140px;
 
   .page-header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    max-width: 750px;
 
-    h1 {
+    h2 {
       position: relative;
-      font-size: 1.8rem;
-      font-weight: 700;
       color: #0e385b;
-      margin: 0;
       padding-right: 10px;
 
       &::after {
         content: "";
         position: absolute;
         right: 0;
-        top: 0;
-        bottom: 0;
+        top: 10%,
+        bottom: 10%;
         width: 4px;
         background-color: #12b3b6;
-        border-radius: 2px;
-        margin-right: -10px;
+        border-radius: 10px;
+        //margin-right: -10px;
       }
     }
 
     p {
-      font-size: 1rem;
+      margin: 0 0 0 0.5px;
       color: #6b7c93;
       margin: 0;
     }
