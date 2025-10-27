@@ -100,31 +100,50 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 <!-- المزايا -->
+<!-- القديم قبل الترجمة
 <section class="benefits">
-  <!--<div class="benefits-container"> -->
     <div class="benefit">
-		<!-- <section class="pad"> -->
-			<!--<div class="container">-->
 				<ul class="staff">
 					{% for benefits in site.data.benefits.benefits %}
 						<li>
-							<div><img class="image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div> <!--it was square-image instead of image-->
+							<div><img class="image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div> !--it was square-image instead of image--
 							<div class="name"><h3>{{ benefits.title }}</h3></div>
 							<div class="position"><p>{{ benefits.description }}</p></div>
 						</li>
 					{% endfor %}
 				</ul>
-			<!--</div>-->
-		<!--</section>-->
-
-
   	</div>
+</section>
+-->
+
+
+<section class="benefits">
+  <div class="benefit">
+    <ul class="staff">
+      {% for benefit in site.data.benefits.benefits %}
+        <li>
+          <div>
+            <img class="image" src="{{ benefit.image }}" alt="{{ benefit.title.ar }}">
+          </div>
+          <div class="name">
+            <h3 data-i18n-key="benefits.benefits.{{ forloop.index0 }}.title">
+              {{ benefit.title.ar }}
+            </h3>
+          </div>
+          <div class="position">
+            <p data-i18n-key="benefits.benefits.{{ forloop.index0 }}.description">
+              {{ benefit.description.ar }}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 
 
-
-
+<!--التواصل-->
 
 <section class="pad">
 <div class="contact-card">
