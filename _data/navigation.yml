@@ -9,10 +9,16 @@
   side: left
   style: white
 
-- name: EN
-  link: /pricing/
+##- name: EN
+  ##link: /pricing/
+  ##side: left
+  ##style: regular
+
+- name_key: lang_toggle
+  link: "#"
   side: left
   style: regular
+
 
 # RIGHT SIDE BUTTONS
 - name: الخدمات

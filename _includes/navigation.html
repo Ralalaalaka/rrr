@@ -1,24 +1,7 @@
-<!--<nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> &#9776; هذي هي علامة المنيو بالجوال burger 
-	{% for link in site.data.navigation %}
-		{% assign class = "" %}
-		{% if link.highlight %}
-			{% assign class = class | append: " highlight" %}
-		{% endif %}
+<!-- <nav>
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> !--burger icon-
 
-		{% if link.link == page.url %}
-			{% assign class = class | append: " active" %}
-		{% endif %}
-		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-	{% endfor %}
-</nav> -->
-
-
-
-<nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!--burger icon-->
-
-	<!-- ✅ right buttons -->
+	!-- ✅ right buttons -
 	<div class="nav-right">
 	{% for link in site.data.navigation %}
 		{% if link.side == "right" %}
@@ -31,7 +14,7 @@
 	{% endfor %}
 	</div>
 
-	<!-- ✅ left buttons -->
+	!-- ✅ left buttons -
 	<div class="nav-left">
 	{% for link in site.data.navigation %}
 		{% if link.side == "left" %}
@@ -43,4 +26,42 @@
 		{% endif %}
 	{% endfor %}
 	</div>
+</nav>
+-->
+
+
+<nav>
+  <a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!--burger icon-->
+
+  <!-- ✅ right buttons -->
+  <div class="nav-right">
+    {% for link in site.data.navigation %}
+      {% if link.side == "right" %}
+        {% assign classes = link.style %}
+        {% if link.link == page.url %}
+          {% assign classes = classes | append: " active" %}
+        {% endif %}
+        <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- ✅ left buttons -->
+  <div class="nav-left">
+    {% for link in site.data.navigation %}
+      {% if link.side == "left" %}
+        {% assign classes = link.style %}
+        {% if link.link == page.url %}
+          {% assign classes = classes | append: " active" %}
+        {% endif %}
+
+        {% if link.name_key == "lang_toggle" %}
+          <!-- Language toggle button -->
+          <a href="#" class="{{ classes }}" data-lang-toggle>EN</a>
+        {% else %}
+          <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </nav>
