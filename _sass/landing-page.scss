@@ -143,6 +143,7 @@
       position: relative;
       color: #0e385b;
       padding-right: 10px;
+      order: 1;
 
       &::after {
         content: "";
@@ -154,11 +155,12 @@
         background-color: #12b3b6;
         border-radius: 10px;
         margin: 0 10px; /////////////
+        order: 2
       }
     }
 
     p {
-      display: inline-flex; ////////
+      order: 3;
       margin: 0.5px 0 0 0;
       color: #6b7c93;
       margin: 0;
