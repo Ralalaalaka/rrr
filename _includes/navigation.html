@@ -29,6 +29,10 @@
 </nav>
 -->
 
+<script>
+  window.translations = {{ site.data | jsonify }};
+</script>
+<script src="{{ site.baseurl }}/js/lang-toggle.js"></script>
 
 <nav>
   <a class="nav-toggle" id="open-nav" href="#">&#9776;</a> <!--burger icon-->
