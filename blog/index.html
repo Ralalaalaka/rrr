@@ -1,10 +1,30 @@
 ---
+layout: default
+title: My Tasks
+description: Simple description of the service.
+title_ar: مهامي
+description_ar: وصف بسيط للخدمة.
+---
+
+<section class="title container">
+  <div class="page-header">
+    <h1>{{ site.lang == "ar" ? page.title_ar : page.title }}</h1>
+    <p>{{ site.lang == "ar" ? page.description_ar : page.description }}</p>
+  </div>
+</section>
+
+
+
+
+
+<!--
+---
 title: Blog
 description: Keep up with the latest news.
 image: https://source.unsplash.com/MqJX_8EaStM/2000x1322?a=.png
 ---
-
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+-->
+<!-- <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
 			<h1 class="editable">The latest news</h1>
@@ -35,3 +55,4 @@ image: https://source.unsplash.com/MqJX_8EaStM/2000x1322?a=.png
 		{% endif %}
 	</div>
 </section>
+-->
