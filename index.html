@@ -50,9 +50,9 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
     <div class="container flex">
       <div class="text">
         <h3>
-          <strong data-i18n-key="services.{{ forloop.index0 }}.title"></strong>
+          <strong data-i18n-key="services.services.{{ forloop.index0 }}.title"></strong>
         </h3>
-        <p data-i18n-key="services.{{ forloop.index0 }}.description"></p>
+        <p data-i18n-key="services.services.{{ forloop.index0 }}.description"></p>
 
         {% if service.sub_services %}
        <!-- <ul>
@@ -64,7 +64,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
       </div>
 
       <div class="image">
-        <img src="{{ service.image }}" alt="{{ services.{{ forloop.index0 }}.title }}" />
+        <img src="{{ service.image }}" alt="{{ services.services.{{ forloop.index0 }}.title }}" />
       </div>
     </div>
   </section>
