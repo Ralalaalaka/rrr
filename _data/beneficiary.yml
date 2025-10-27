@@ -32,4 +32,13 @@ beneficiary:
     description:
       ar: "إدارة الرواتب بدقة ومرونة، من احتساب الأجور إلى اعتماد الكشوف وإصدار التقارير المالية."
       en: "Accurately and flexibly manage payroll, from calculating wages to approving statements and generating financial reports."
-    image_active: "images/beneficiary/beneficiary-acti_
+    image_active: "images/beneficiary/beneficiary-idle 4.png"
+
+  - name:
+      ar: "الموظف"
+      en: "Employee"
+    description:
+      ar: "كل ما تحتاجه في مكان واحد، من تقديم ومتابعة طلبات الموارد البشرية إلى متابعة الإجازات والرواتب بسهولة ووضوح."
+      en: "Everything you need in one place—from submitting and tracking HR requests to monitoring leaves and salaries easily and clearly."
+    image_active: "images/beneficiary/beneficiary-active 5.png"
+    image_idle: "images/beneficiary/beneficiary-idle 5.png"
