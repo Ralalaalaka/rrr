@@ -1,25 +1,35 @@
 beneficiary:
-  - name: "الإدارة العليا"
-    description: "رؤية شاملة ومباشرة لبيانات القوى العاملة عبر تقارير ولوحات تحليلية دقيقة تدعم اتخاذ القرارات الاستراتيجية بثقة."
+  - name:
+      ar: "الإدارة العليا"
+      en: "Executive Management"
+    description:
+      ar: "رؤية شاملة ومباشرة لبيانات القوى العاملة عبر تقارير ولوحات تحليلية دقيقة تدعم اتخاذ القرارات الاستراتيجية بثقة."
+      en: "A comprehensive, direct view of workforce data through accurate reports and analytical dashboards that support strategic decision-making with confidence."
     image_active: "images/beneficiary/beneficiary-active 1.png"
     image_idle: "images/beneficiary/beneficiary-idle 1.png"
 
-  - name: "المدير المباشر"
-    description: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
+  - name:
+      ar: "المدير المباشر"
+      en: "Direct Manager"
+    description:
+      ar: "متابعة أداء الموظفين ومقاييس الإنجازات عبر أدوات تقييم وتقارير دورية تربط الأهداف الفردية بالمؤسسية مما يعزز التطوير والتحفيز المستمر."
+      en: "Monitor employee performance and achievement metrics through evaluation tools and periodic reports linking individual and organizational goals to enhance continuous improvement and motivation."
     image_active: "images/beneficiary/beneficiary-active 2.png"
     image_idle: "images/beneficiary/beneficiary-idle 2.png"
 
-  - name: "مسؤول الموارد البشرية"
-    description: "إدارة رحلة الموظف بالكامل وأتمتة العمليات والإجراءات اليومية والحضور والانصراف لتعزيز الكفاءة وسرعة الإنجاز."
+  - name:
+      ar: "مسؤول الموارد البشرية"
+      en: "HR Officer"
+    description:
+      ar: "إدارة رحلة الموظف بالكامل وأتمتة العمليات والإجراءات اليومية والحضور والانصراف لتعزيز الكفاءة وسرعة الإنجاز."
+      en: "Manage the full employee journey and automate daily HR operations, attendance, and workflows to enhance efficiency and speed."
     image_active: "images/beneficiary/beneficiary-active 3.png"
     image_idle: "images/beneficiary/beneficiary-idle 3.png"
 
-  - name: "مسؤول المالية"
-    description: "إدارة الرواتب بدقة ومرونة، من احتساب الأجور إلى اعتماد الكشوف وإصدار التقارير المالية."
-    image_active: "images/beneficiary/beneficiary-active 4.png"
-    image_idle: "images/beneficiary/beneficiary-idle 4.png"
-
-  - name: "الموظف"
-    description: "كل ما تحتاجه في مكان واحد، من تقديم ومتابعة طلبات الموارد البشرية إلى متابعة الإجازات والرواتب بسهولة ووضوح."
-    image_active: "images/beneficiary/beneficiary-active 5.png"
-    image_idle: "images/beneficiary/beneficiary-idle 5.png"
+  - name:
+      ar: "مسؤول المالية"
+      en: "Finance Officer"
+    description:
+      ar: "إدارة الرواتب بدقة ومرونة، من احتساب الأجور إلى اعتماد الكشوف وإصدار التقارير المالية."
+      en: "Accurately and flexibly manage payroll, from calculating wages to approving statements and generating financial reports."
+    image_active: "images/beneficiary/beneficiary-acti_
