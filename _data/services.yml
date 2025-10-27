@@ -1,27 +1,64 @@
+##services:
+  ##- title: "إدارة الموظفين"
+    ##description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+    ##image: "images/services/Service 1.png"
+    ##sub_services:
+      ##- "إضافة وتعديل بيانات الموظفين"
+      ##- "تتبع الأداء وساعات العمل"
+      ##- "إدارة الإجازات والمكافآت"
+      ##- "ربط التقارير بالإدارات المختلفة"
+
+  ##- title: "إدارة المشاريع"
+    ##description: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
+    ##image: "images/services/Service 1.png"
+    ##sub_services:
+      ##- "إنشاء المهام وجدولتها"
+      ##- "تعيين المسؤوليات بين الفرق"
+      ##- "إصدار تقارير التقدم"
+      ##- "متابعة الإنجازات أسبوعيًا"
+
+  ##- title: "إدارة العملاء"
+    ##description: "قاعدة بيانات مخصصة لتتبع تفاعل العملاء وتحليل البيانات لتحسين تجربة المستخدم."
+    ##image: "images/services/Service 1.png"
+    ##sub_services:
+      ##- "تتبع استفسارات العملاء"
+      ##- "إدارة الملاحظات والشكاوى"
+      ##- "تحليل سلوك العملاء"
+      ##- "التقارير الدورية حول رضا العملاء"
+
+
+
 services:
-  - title: "إدارة الموظفين"
-    description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+  - title:
+      ar: "إدارة الموظفين"
+      en: "Employee Management"
+    description:
+      ar: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+      en: "A unified database that gathers employee details to track and manage their affairs efficiently."
     image: "images/services/Service 1.png"
     sub_services:
-      - "إضافة وتعديل بيانات الموظفين"
-      - "تتبع الأداء وساعات العمل"
-      - "إدارة الإجازات والمكافآت"
-      - "ربط التقارير بالإدارات المختلفة"
+      - ar: "إضافة وتعديل بيانات الموظفين"
+        en: "Add and edit employee data"
+      - ar: "تتبع الأداء وساعات العمل"
+        en: "Track performance and working hours"
+      - ar: "إدارة الإجازات والمكافآت"
+        en: "Manage leaves and rewards"
+      - ar: "ربط التقارير بالإدارات المختلفة"
+        en: "Link reports with different departments"
 
-  - title: "إدارة المشاريع"
-    description: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
+  - title:
+      ar: "إدارة المشاريع"
+      en: "Project Management"
+    description:
+      ar: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
+      en: "A comprehensive system to organize projects and track progress efficiently."
     image: "images/services/Service 1.png"
     sub_services:
-      - "إنشاء المهام وجدولتها"
-      - "تعيين المسؤوليات بين الفرق"
-      - "إصدار تقارير التقدم"
-      - "متابعة الإنجازات أسبوعيًا"
-
-  - title: "إدارة العملاء"
-    description: "قاعدة بيانات مخصصة لتتبع تفاعل العملاء وتحليل البيانات لتحسين تجربة المستخدم."
-    image: "images/services/Service 1.png"
-    sub_services:
-      - "تتبع استفسارات العملاء"
-      - "إدارة الملاحظات والشكاوى"
-      - "تحليل سلوك العملاء"
-      - "التقارير الدورية حول رضا العملاء"
+      - ar: "إنشاء المهام وجدولتها"
+        en: "Create and schedule tasks"
+      - ar: "تعيين المسؤوليات بين الفرق"
+        en: "Assign responsibilities among teams"
+      - ar: "إصدار تقارير التقدم"
+        en: "Generate progress reports"
+      - ar: "متابعة الإنجازات أسبوعيًا"
+        en: "Track achievements weekly"
