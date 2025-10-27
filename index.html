@@ -250,6 +250,7 @@ setInterval(() => {
 
 
 <!-- المستفيدين -->
+<!-- القديم قبل الترجمة
 <section class="roles-section">
   <h2 style="color:#0e385b; margin:10px;"><strong>وورك هب يخدم الجميع</strong></h2>
   <h3 style="color:#6d767d; margin:0 0 80px 0;"><strong>كل دور يستحق تجربة أسهل</strong></h3>
@@ -276,6 +277,43 @@ setInterval(() => {
     {% endfor %}
   </div>
 </section>
+-->
+
+<section class="roles-section">
+  <h2 style="color:#0e385b; margin:10px;">
+    <strong data-i18n-key="beneficiary.section_title_1">وورك هب يخدم الجميع</strong>
+  </h2>
+  <h3 style="color:#6d767d; margin:0 0 80px 0;">
+    <strong data-i18n-key="beneficiary.section_title_2">كل دور يستحق تجربة أسهل</strong>
+  </h3>
+
+  <div class="carousel">
+    {% for beneficiary in site.data.beneficiary.beneficiary %}
+      <div class="card" data-index="{{ forloop.index0 }}">
+        <img
+          data-active="{{ beneficiary.image_active }}"
+          data-idle="{{ beneficiary.image_idle }}"
+          src="{{ beneficiary.image_idle }}"
+          alt="{{ beneficiary.name.ar }}">
+        <div class="info">
+          <h3 data-i18n-key="beneficiary.beneficiary.{{ forloop.index0 }}.name">
+            <strong>{{ beneficiary.name.ar }}</strong>
+          </h3>
+          <p data-i18n-key="beneficiary.beneficiary.{{ forloop.index0 }}.description">
+            {{ beneficiary.description.ar }}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="dots">
+    {% for beneficiary in site.data.beneficiary.beneficiary %}
+      <span class="dot" data-index="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</section>
+
 
 
 
