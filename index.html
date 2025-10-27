@@ -50,30 +50,37 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
     <div class="container flex">
       <div class="text">
         <h3>
-          <strong data-i18n-key="services.{{ forloop.index0 }}.title">
+          <strong 
+            data-i18n-key="{{ 'services.' | append: forloop.index0 | append: '.title' }}">
             {{ service.title.ar }}
           </strong>
         </h3>
-        <p data-i18n-key="services.{{ forloop.index0 }}.description">
+        <p 
+          data-i18n-key="{{ 'services.' | append: forloop.index0 | append: '.description' }}">
           {{ service.description.ar }}
         </p>
 
         {% if service.sub_services %}
-        <!-- <ul>
+        <!-- Optional: sub-services list -->
+        <ul>
           {% for item in service.sub_services %}
-          <li>{{ item[page.lang] }}</li>
+          <li 
+            data-i18n-key="{{ 'services.' | append: forloop.parentloop.index0 | append: '.sub_services.' | append: forloop.index0 }}">
+            {{ item.ar }}
+          </li>
           {% endfor %}
-        </ul> -->
+        </ul>
         {% endif %}
       </div>
 
       <div class="image">
-        <img src="{{ service.image }}" alt="{{ service.title.ar }}" />
+        <img src="{{ service.image }}" alt="{{ service.title.ar }}">
       </div>
     </div>
   </section>
   {% endfor %}
 </div>
+
 
 
 
