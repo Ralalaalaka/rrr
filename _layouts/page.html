@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<!--
 <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
@@ -9,6 +9,19 @@ layout: default
 			<p class="subtext">{{ page.description }}</p>
 		</div>
 	</div>
+</section>
+
+{{ content }}
+
+-->
+
+
+<!------------- Test -------------->
+<section class="title container">
+  <div class="page-header">
+    <h1>{{ site.lang == "ar" ? page.title_ar : page.title }}</h1>
+    <p>{{ site.lang == "ar" ? page.description_ar : page.description }}</p>
+  </div>
 </section>
 
 {{ content }}
