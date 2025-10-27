@@ -50,14 +50,14 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
     <div class="container flex">
       <div class="text">
         <h3>
-          <strong data-i18n-key="services.{{ forloop.index0 }}.title">{{ service.title.ar }}</strong>
+          <strong data-i18n-key="services.services.{{ forloop.index0 }}.title">{{ service.title.ar }}</strong>
         </h3>
-        <p data-i18n-key="services.{{ forloop.index0 }}.description">{{ service.description.ar }}</p>
+        <p data-i18n-key="services.services.{{ forloop.index0 }}.description">{{ service.description.ar }}</p>
 
         {% if service.sub_services %}
         <ul>
           {% for item in service.sub_services %}
-          <li data-i18n-key="services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">{{ item.ar }}</li>
+          <li data-i18n-key="services.services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">{{ item.ar }}</li>
           {% endfor %}
         </ul>
         {% endif %}
@@ -70,6 +70,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   </section>
   {% endfor %}
 </div>
+
 
 
 
