@@ -42,35 +42,82 @@
 		</header>
 
 		{{ content }}
-
+		
+<!-- القديم قبل الترجمة
 		<footer>
 			<div class="container">
 				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
 				<ul class="footer-left-links">
 					{% for link in site.data.footer.left_links %}
-						<h5> <!--it was <li>-->
+						<h5> !--it was <li>--
 							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
 								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
 								{{ link.name }}
 							</a>
-						</h5> <!--it was <li>-->
+						</h5> !--it was <li>--
 					{% endfor %}
 				</ul>
 				<ul class="footer-right-links">
 					{% for link in site.data.footer.right_links %}
-						<h5> <!--it was <li>-->
+						<h5> !--it was <li>--
 							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
 								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
 								{{ link.name }}
 							</a>
-						</h5> <!--it was <li>-->
+						</h5> !--it was <li>--
 					{% endfor %}
 				</ul>
 				<h5 class="copyright">
 						صنع في السعودية <br> &#10084;
 				</h5>
 			</div>
+		</footer> -->
+
+		<footer>
+			<div class="container">
+				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
+					<ul class="footer-left-links">
+					{% for link in site.data.footer.left_links %}
+						<h5>
+						<a
+							{% if link.new_window %}target="_blank"{% endif %}
+							href="{% include relative-src.html src=link.link %}"
+							{% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}
+							data-i18n-key="footer.left_links.{{ forloop.index0 }}.name"
+						>
+							{% if link.social_icon %}
+							{% include social-icon.html icon=link.social_icon %}
+							{% endif %}
+							{{ link.name.ar }}
+						</a>
+						</h5>
+					{% endfor %}
+					</ul>
+
+					<ul class="footer-right-links">
+					{% for link in site.data.footer.right_links %}
+						<h5>
+						<a
+							{% if link.new_window %}target="_blank"{% endif %}
+							href="{% include relative-src.html src=link.link %}"
+							{% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}
+							data-i18n-key="footer.right_links.{{ forloop.index0 }}.name"
+						>
+							{% if link.social_icon %}
+							{% include social-icon.html icon=link.social_icon %}
+							{% endif %}
+							{{ link.name.ar }}
+						</a>
+						</h5>
+					{% endfor %}
+					</ul>
+				<h5 class="copyright">
+						صنع في السعودية <br> &#10084;
+				</h5>
+			</div>
 		</footer>
+
+
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="{{ site.baseurl }}/js/main.js"></script>
