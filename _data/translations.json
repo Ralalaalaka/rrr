@@ -3,4 +3,4 @@ layout: null
 permalink: /_data/translations.json
 ---
 
-{{ site.data | jsonify }}
+{{ site._data | jsonify }}
