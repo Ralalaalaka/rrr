@@ -126,34 +126,33 @@
 
 
 //----------------////////////////////////// test
+
 .title.container {
   margin: 0 auto;
-  position: relative;
   padding: 0 20px;
   max-width: 1140px;
 
   .page-header {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
-    max-width: 750px;
+    flex-wrap: wrap;
 
     h2 {
-      position: relative;
+      display: flex;
+      align-items: center;
       color: #0e385b;
-      padding-left: 10px; // for line spacing in RTL
+      margin: 0;
+      font-weight: bold;
 
       &::after {
         content: "";
-        position: absolute;
-        left: 0; // line on the left for Arabic
-        top: 0;
-        bottom: 0;
+        display: block;
         width: 4px;
+        height: 100%;
         background-color: #12b3b6;
         border-radius: 10px;
-        margin: 0 10px; // space between line and h2
+        margin-left: 10px; // space between h2 text and line (for RTL)
       }
     }
 
