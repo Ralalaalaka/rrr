@@ -147,19 +147,19 @@
       &::after {
         content: "";
         position: absolute;
-        right: -8px; // place it visually after Arabic text
-        top: 50%;
-        transform: translateY(-50%);
+        right: 0;
+        top: 0;
+        bottom: 0;
         width: 4px;
-        height: 60%;
         background-color: #12b3b6;
         border-radius: 10px;
+        //margin-right: -10px;
       }
     }
 
     p {
       margin: 0.5px 0 0 0;
-      color: #6d767d;
+      color: #6b7c93;
       margin: 0;
     }
   }
