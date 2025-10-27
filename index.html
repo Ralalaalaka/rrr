@@ -50,26 +50,21 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
     <div class="container flex">
       <div class="text">
         <h3>
-          <strong>
-            {{ forloop.index }}.
-            {{ service.title[page.lang] }}
-          </strong>
+          <strong data-i18n-key="services.{{ forloop.index0 }}.title"></strong>
         </h3>
-        <p>
-          {{ service.description[page.lang] }}
-        </p>
+        <p data-i18n-key="services.{{ forloop.index0 }}.description"></p>
 
         {% if service.sub_services %}
-        <ul>
+       <!-- <ul>
           {% for item in service.sub_services %}
           <li>{{ item[page.lang] }}</li>
           {% endfor %}
-        </ul>
+        </ul> -->
         {% endif %}
       </div>
 
       <div class="image">
-        <img src="{{ service.image }}" alt="{{ service.title[page.lang] }}" />
+        <img src="{{ service.image }}" alt="{{ services.{{ forloop.index0 }}.title }}" />
       </div>
     </div>
   </section>
