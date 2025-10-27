@@ -126,7 +126,6 @@
 
 
 //----------------////////////////////////// test
-
 .title.container {
   max-width: 1140px;
   margin: 0 auto;
@@ -137,7 +136,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    direction: var(--dir, ltr); // useful for Arabic/English layout
 
     h1 {
       position: relative;
@@ -145,17 +143,18 @@
       font-weight: 700;
       color: #0e385b;
       margin: 0;
-      padding-left: 10px;
+      padding-right: 10px;
 
-      &::before {
+      &::after {
         content: "";
         position: absolute;
-        left: 0;
+        right: 0;
         top: 0;
         bottom: 0;
         width: 4px;
         background-color: #12b3b6;
         border-radius: 2px;
+        margin-right: -10px;
       }
     }
 
@@ -163,17 +162,6 @@
       font-size: 1rem;
       color: #6b7c93;
       margin: 0;
-    }
-  }
-
-  // RTL support
-  [dir="rtl"] & .page-header h1 {
-    padding-left: 0;
-    padding-right: 10px;
-
-    &::before {
-      left: auto;
-      right: 0;
     }
   }
 }
