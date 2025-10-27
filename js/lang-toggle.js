@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize
   updateHtmlLangDir();
-  if (langBtn) langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'AR';
+  if (langBtn) langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
 
   // Toggle language on click
   if (langBtn) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('lang', currentLang);
 
       updateHtmlLangDir();
-      langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'AR';
+      langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
       updateTextContent();
     });
   }
