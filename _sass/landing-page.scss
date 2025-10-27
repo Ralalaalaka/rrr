@@ -147,20 +147,22 @@
       &::after {
         content: "";
         position: absolute;
-        left: -10px; ///
+        //left: -13px;  /////////////
         top: 0;
         bottom: 0;
         width: 4px;
         background-color: #12b3b6;
         border-radius: 10px;
-        //margin-right: -10px;
+        margin: 0 10px; /////////////
       }
     }
 
     p {
+      display: inline-flex; ////////
       margin: 0.5px 0 0 0;
       color: #6b7c93;
       margin: 0;
+      //left: -7px; /////////
     }
   }
 }
