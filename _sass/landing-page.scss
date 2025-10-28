@@ -126,43 +126,43 @@
 
 
 //----------------////////////////////////// test
-
 .title.container {
   padding: 0 20px;
   max-width: 1140px;
-  direction: rtl; // important for Arabic layout
 
   .page-header {
     margin: 40px auto;
     display: flex;
-    align-items: flex-start; // top-align
+    align-items: flex-start; // keep h2 top-aligned
     gap: 10px;
+    flex-wrap: nowrap; // keep h2 and p on same row
+    direction: rtl; // Arabic layout
 
-    .line-container {
+    h2 {
+      display: flex;
+      align-items: center;
+      color: #0e385b;
+      margin: 0;
       position: relative;
-      padding-right: 15px; // space for the vertical line
-      flex: 1;
+      flex-shrink: 0; // prevent h2 from shrinking
 
-      &::before {
+      &::after {
         content: "";
-        position: absolute;
-        right: 0; // line on the right for Arabic
-        top: 0;
+        display: block;
         width: 4px;
-        height: 100%; // spans full height of h2 + p
+        height: 1.2em;
         background-color: #0db6bd;
         border-radius: 10px;
+        margin: 0 10px;
       }
+    }
 
-      h2 {
-        margin: 0;
-        color: #0e385b;
-      }
-
-      p {
-        margin: 0;
-        color: #6d767d;
-      }
+    p {
+      margin: 0;
+      color: #6d767d;
+      flex: 1; // allow p to take remaining space
+      line-height: 1.6;
+      word-break: break-word; // wrap long words
     }
   }
 }
