@@ -114,7 +114,7 @@
 
   .hero-text-container {
     flex: 1 1 55%;
-    text-align: start; // automatically flips with dir
+    text-align: start;
 
     h1, h2, p, .button {
       text-shadow: none;
@@ -140,20 +140,28 @@
   }
 
   /* RTL & LTR direction and layout handling */
-  [dir="rtl"] & {
+  html[dir="rtl"] & {
     direction: rtl;
     text-align: right;
 
-    .hero-text-container { order: 2; }
-    .cover-image { order: 1; }
+    .inner-hero {
+      flex-direction: row-reverse; // flips the order visually
+    }
+
+    .hero-text-container { text-align: right; }
+    .cover-image { justify-content: center; }
   }
 
-  [dir="ltr"] & {
+  html[dir="ltr"] & {
     direction: ltr;
     text-align: left;
 
-    .hero-text-container { order: 1; }
-    .cover-image { order: 2; }
+    .inner-hero {
+      flex-direction: row; // default order
+    }
+
+    .hero-text-container { text-align: left; }
+    .cover-image { justify-content: center; }
   }
 
   /* Responsive */
@@ -183,6 +191,7 @@
     }
   }
 }
+
 
 ///////////////////////////////
 
