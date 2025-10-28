@@ -130,26 +130,26 @@
 .title.container {
   padding: 0 20px;
   max-width: 1140px;
+  direction: rtl; // important for Arabic layout
 
   .page-header {
-    display: flex;
-    gap: 10px;
     margin: 40px auto;
+    display: flex;
+    align-items: flex-start; // top-align
+    gap: 10px;
 
     .line-container {
       position: relative;
-      display: flex;
-      flex-direction: column; // stack h2 + p
-      gap: 5px;
-      align-items: flex-start; // top-align
+      padding-right: 15px; // space for the vertical line
+      flex: 1;
 
       &::before {
         content: "";
         position: absolute;
-        left: -10px; // for Arabic, line on left
-        top: 0; // start at top
+        right: 0; // line on the right for Arabic
+        top: 0;
         width: 4px;
-        height: 100%; // full height of container
+        height: 100%; // spans full height of h2 + p
         background-color: #0db6bd;
         border-radius: 10px;
       }
