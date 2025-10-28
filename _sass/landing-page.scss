@@ -161,4 +161,21 @@
       color: #6d767d;
     }
   }
+
+
+    @media (max-width: 768px) {
+    .page-header {
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+      gap: 5px;
+
+      h2::after {
+        margin: 0 5px; 
+      }
+
+      p {
+        white-space: nowrap; 
+      }
+    }
+  }
 }
