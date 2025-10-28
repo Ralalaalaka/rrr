@@ -92,7 +92,6 @@
   min-height: 550px;
   overflow: hidden;
 
-  // Background layers
   background:
     url("images/Pattern.svg") center center / cover no-repeat,
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
@@ -100,25 +99,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  // Text alignment based on direction
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-
-    .hero-text-container {
-      text-align: right;
-    }
-  }
-
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-
-    .hero-text-container {
-      text-align: left;
-    }
-  }
 
   .inner-hero {
     display: flex;
@@ -134,6 +114,7 @@
 
   .hero-text-container {
     flex: 1 1 55%;
+    text-align: start; // automatically flips with dir
 
     h1, h2, p, .button {
       text-shadow: none;
@@ -158,6 +139,24 @@
     }
   }
 
+  /* RTL & LTR direction and layout handling */
+  [dir="rtl"] & {
+    direction: rtl;
+    text-align: right;
+
+    .hero-text-container { order: 2; }
+    .cover-image { order: 1; }
+  }
+
+  [dir="ltr"] & {
+    direction: ltr;
+    text-align: left;
+
+    .hero-text-container { order: 1; }
+    .cover-image { order: 2; }
+  }
+
+  /* Responsive */
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
@@ -185,6 +184,7 @@
   }
 }
 
+///////////////////////////////
 
 /* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
