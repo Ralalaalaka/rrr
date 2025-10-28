@@ -1,17 +1,13 @@
 Home:
-  - title:
-      ar: "إدارة الموظفين"
-      en: "Employee Management"
-    description:
-      ar: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-      en: "A unified database that gathers employee details to track and manage their affairs efficiently."
-    image: "images/services/Service 1.png"
-    sub_services:
-      - ar: "إضافة وتعديل بيانات الموظفين"
-        en: "Add and edit employee data"
-      - ar: "تتبع الأداء وساعات العمل"
-        en: "Track performance and working hours"
-      - ar: "إدارة الإجازات والمكافآت"
-        en: "Manage leaves and rewards"
-      - ar: "ربط التقارير بالإدارات المختلفة"
-        en: "Link reports with different departments"
+  main_title:
+    ar: "حل متكامل يجمع كل ما تحتاجه الأنشطة التجارية لإدارة مواردها البشرية بكفاءة في نظام واحد موحّد"
+    en: "Main Title"
+  sub_title:
+    ar: ""
+    en: ""
+  main_button:
+    ar: "اطلب نسختك التجريبية"
+    en: "Request Your Demo"
+  main_arrow:
+    ar: "خدماتنا"
+    en: "Our Services"
