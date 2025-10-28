@@ -143,23 +143,22 @@
       align-items: center;
       color: #0e385b;
       margin: 0;
-      font-weight: bold;
       position: relative;
 
       &::after {
         content: "";
         display: block;
         width: 4px;
-        height: 1.2em; // adjust height to match h2 text
-        background-color: #12b3b6;
+        height: 1em; // adjust height to match h2 text
+        background-color: #0db6bd;
         border-radius: 10px;
-        margin-left: 10px; // for RTL, line on left of text
+        margin: 10px;
       }
     }
 
     p {
       margin: 0;
-      color: #6b7c93;
+      color: #6d767d;
     }
   }
 }
