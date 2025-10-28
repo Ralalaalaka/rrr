@@ -49,7 +49,7 @@ nav {
 
   }
 
-  &[dir="rtl"] {
+  [dir="rtl"] & {
     direction: rtl;
 
     .nav-left { order: 2; }   // left buttons appear on right in RTL
@@ -58,7 +58,7 @@ nav {
     a.nav-toggle { left: auto; right: 10px; } // burger icon position in RTL
   }
 
-  &[dir="ltr"] {
+  [dir="ltr"] & {
     direction: ltr;
 
     .nav-left { order: 1; }   // normal order

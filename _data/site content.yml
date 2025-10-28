@@ -14,3 +14,9 @@ Home:
   start_banner:
     ar: "ابدأ معنا"
     en: "Start With Us"
+  main_contact_whatsapp:
+    ar: "واتساب"
+    en: "ًWhatsApp"
+  main_contact_email:
+    ar: "البريد الإلكتروني"
+    en: "ًEmail"
