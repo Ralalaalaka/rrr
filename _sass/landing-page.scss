@@ -9,7 +9,7 @@
 
   // Background layers: pattern behind gradient
   background:
-    url("images/Pattern.svg") center center / cover no-repeat,
+    url("/images/Pattern.svg") center center / cover no-repeat,
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
 
   display: flex;
