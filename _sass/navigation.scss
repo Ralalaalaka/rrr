@@ -49,47 +49,21 @@ nav {
 
   }
 
- /* Flip for Arabic: left group on the left, right group on the right */
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-
-    .nav-left { 
-      display: inline;
-      order: 1;
-      float: left;
-      @media #{$mid-point} { flex-direction: row; }
+  /* Flip for Arabic: left group on the left, right group on the right */
+  .nav-left { 
+    display: inline;
+    @media #{$mid-point} {
+    flex-direction: row; 
+    float: left;
     }
-    .nav-right { 
-      display: inline;
-      order: 2;
-      float: right;
-      @media #{$mid-point} { flex-direction: row; }
+  }
+  .nav-right { 
+    display: inline;
+    @media #{$mid-point} {
+    flex-direction: row; 
     }
-
-    a.nav-toggle { left: 10px; right: auto; } /*burger on left*/
   }
 
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-
-    .nav-left { 
-      display: inline;
-      order: 2;
-      float: right;
-      @media #{$mid-point} { flex-direction: row; }
-    }
-    .nav-right { 
-      display: inline;
-      order: 1;
-      float: left;
-      @media #{$mid-point} { flex-direction: row; }
-    }
-
-    a.nav-toggle { left: auto; right: 10px; } /*burger on right*/
-  }
-  //until here is the translation section
   
   a {
     margin: 0 3px;
@@ -139,4 +113,26 @@ nav {
     border-bottom: 1px solid currentColor; ////////////////###########
     } ////////#########
 
+}
+
+nav {
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+
+    .nav-left { order: 1; }
+    .nav-right { order: 2; }
+
+    a.nav-toggle { left: 10px; right: auto; }
+  }
+
+  &[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+
+    .nav-left { order: 2; }
+    .nav-right { order: 1; }
+
+    a.nav-toggle { left: auto; right: 10px; }
+  }
 }
