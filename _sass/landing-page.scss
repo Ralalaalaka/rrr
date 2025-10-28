@@ -101,18 +101,21 @@
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
     //url("images/Pattern.svg") center center / cover no-repeat;
 
-
-  // pattern above the gradient but below content
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;                  // top:0; right:0; bottom:0; left:0;
-          background: url("images/Pattern.svg") center / cover no-repeat;
-          opacity: 0.2;              // 20% visibility
-          z-index: 1;                // above gradient, below content
-          pointer-events: none;      // doesn't block clicks
-        }
-
+      &::before {
+    content: "";
+    position: absolute;
+    inset: 0;                     // top:0; right:0; bottom:0; left:0;
+    display: block;               // make sure it renders
+    background-image: url("images/Pattern.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;       // try 'repeat' if you want tiling
+    opacity: 0.2;                 // 20%
+    pointer-events: none;
+    z-index: 1;                   // above gradient
+    mix-blend-mode: normal;       // fallback; change if you want blending
+  }
+   
   .inner-hero {
     display: flex;
     align-items: center;
