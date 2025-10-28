@@ -1,4 +1,4 @@
-.hero {
+/*.hero {
   position: relative;
   color: #fff;
   height: 100vh;
@@ -9,7 +9,7 @@
 
   // Background layers: pattern behind gradient
   background:
-    url("/images/Pattern.svg") center center / cover no-repeat,
+    url("images/Pattern.svg") center center / cover no-repeat,
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
 
   display: flex;
@@ -56,7 +56,7 @@
     }
   }
 
-  /* ✅ Responsive adjustments */
+  // ✅ Responsive adjustments
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
@@ -82,7 +82,109 @@
       height: 40vh;
     }
   }
+} */
+
+
+.hero {
+  position: relative;
+  color: #fff;
+  height: 100vh;
+  min-height: 550px;
+  overflow: hidden;
+
+  // Background layers
+  background:
+    url("images/Pattern.svg") center center / cover no-repeat,
+    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Text alignment based on direction
+  &[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+
+    .hero-text-container {
+      text-align: right;
+    }
+  }
+
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+
+    .hero-text-container {
+      text-align: left;
+    }
+  }
+
+  .inner-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .hero-text-container {
+    flex: 1 1 55%;
+
+    h1, h2, p, .button {
+      text-shadow: none;
+      z-index: 1;
+    }
+
+    .button {
+      margin-top: 20px;
+      display: inline-block;
+    }
+  }
+
+  .cover-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 60vh;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  @media #{$phone} {
+    .inner-hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .hero-text-container {
+      flex: 1 1 100%;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        margin-top: 10px;
+      }
+    }
+
+    .cover-image img {
+      height: 40vh;
+    }
+  }
 }
+
 
 /* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
