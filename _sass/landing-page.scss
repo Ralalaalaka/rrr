@@ -146,14 +146,17 @@
     direction: rtl;
     text-align: right;
 
+    .hero {background:linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);}
     .hero-text-container { order: 2; }
     .cover-image { order: 1; }
+    
   }
 
   &[dir="ltr"] {
     direction: ltr;
     text-align: left;
 
+    .hero {background:linear-gradient(240deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);}
     .hero-text-container { order: 1; }
     .cover-image { order: 2; }
   }
