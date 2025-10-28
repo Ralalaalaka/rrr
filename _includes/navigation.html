@@ -72,4 +72,24 @@
     {% for link in site.data.navigation %}
       {% if link.side == "left" %}
         {% assign classes = link.style %}
-        {% if l
+        {% if link.link == page.url %}
+          {% assign classes = classes | append: " active" %}
+        {% endif %}
+
+        {% if link.name_key == "lang_toggle" %}
+          <!-- Language toggle button -->
+          <a href="#" class="{{ classes }}" data-lang-toggle>EN</a>
+        {% else %}
+          <a 
+            href="{% include relative-src.html src=link.link %}" 
+            class="{{ classes }}" 
+            {% if link.new_window %}target="_blank"{% endif %}
+            data-i18n-key="navigation.{{ forloop.index0 }}.name"
+          >
+            {{ link.name.ar }}
+          </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
