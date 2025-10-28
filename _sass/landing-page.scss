@@ -128,11 +128,11 @@
 //----------------////////////////////////// test
 
 .title.container {
-  margin: 40px auto; // top and bottom margins
   padding: 0 20px;
   max-width: 1140px;
 
   .page-header {
+    margin: 40px auto; // top and bottom margins
     display: flex;
     align-items: center;
     gap: 10px;
