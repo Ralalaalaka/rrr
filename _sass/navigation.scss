@@ -49,19 +49,22 @@ nav {
 
   }
 
-  /* Flip for Arabic: left group on the left, right group on the right */
-  .nav-left { 
-    display: inline;
-    @media #{$mid-point} {
-    flex-direction: row; 
-    float: left;
-    }
+  &[dir="rtl"] {
+    direction: rtl;
+
+    .nav-left { order: 2; }   // left buttons appear on right in RTL
+    .nav-right { order: 1; }  // right buttons appear on left in RTL
+
+    a.nav-toggle { left: auto; right: 10px; } // burger icon position in RTL
   }
-  .nav-right { 
-    display: inline;
-    @media #{$mid-point} {
-    flex-direction: row; 
-    }
+
+  &[dir="ltr"] {
+    direction: ltr;
+
+    .nav-left { order: 1; }   // normal order
+    .nav-right { order: 2; }
+
+    a.nav-toggle { left: 10px; right: auto; } // burger icon position in LTR
   }
 
   
@@ -113,26 +116,4 @@ nav {
     border-bottom: 1px solid currentColor; ////////////////###########
     } ////////#########
 
-}
-
-nav {
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-
-    .nav-left { order: 1; }
-    .nav-right { order: 2; }
-
-    a.nav-toggle { left: 10px; right: auto; }
-  }
-
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-
-    .nav-left { order: 2; }
-    .nav-right { order: 1; }
-
-    a.nav-toggle { left: auto; right: 10px; }
-  }
 }
