@@ -132,49 +132,36 @@
   max-width: 1140px;
 
   .page-header {
-    margin: 40px auto; // top and bottom margins
     display: flex;
-    align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
+    margin: 40px auto;
 
-    h2 {
-      display: flex;
-      align-items: center;
-      color: #0e385b;
-      margin: 0;
+    .line-container {
       position: relative;
+      display: flex;
+      flex-direction: column; // stack h2 + p
+      gap: 5px;
+      align-items: flex-start; // top-align
 
-      &::after {
+      &::before {
         content: "";
-        display: block;
+        position: absolute;
+        left: -10px; // for Arabic, line on left
+        top: 0; // start at top
         width: 4px;
-        height: 1em; // adjust height to match h2 text
+        height: 100%; // full height of container
         background-color: #0db6bd;
         border-radius: 10px;
-        margin: 10px;
       }
-    }
 
-    p {
-      margin: 0;
-      color: #6d767d;
-    }
-  }
-
-
-    @media (max-width: 768px) {
-    .page-header {
-      flex-wrap: nowrap; 
-      overflow-x: auto; 
-      gap: 5px;
-
-      h2::after {
-        margin: 0 5px; 
+      h2 {
+        margin: 0;
+        color: #0e385b;
       }
 
       p {
-        white-space: nowrap; 
+        margin: 0;
+        color: #6d767d;
       }
     }
   }
