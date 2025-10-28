@@ -65,28 +65,28 @@ nav {
     direction: rtl;
     text-align: right;
 
-    .hero-text-container { order: 2; }
-    .cover-image { order: 1; }
+    //.hero-text-container { order: 2; }
+    //.cover-image { order: 1; }
 
-    .nav-left { float: right; }
-    .nav-right { justify-content: flex-start; }
+    //.nav-left { float: right; }
+    //.nav-right { justify-content: flex-start; }
 
-    a.white { float: left; } // fix white buttons alignment
-    a.nav-toggle { left: 10px; right: auto; } // burger icon on left
+    ////a.white { float: left; } // fix white buttons alignment
+    //a.nav-toggle { left: 10px; right: auto; } // burger icon on left
   }
 
   [dir="ltr"] & {
     direction: ltr;
     text-align: left;
 
-    .hero-text-container { order: 1; }
-    .cover-image { order: 2; }
+    //.hero-text-container { order: 1; }
+    //.cover-image { order: 2; }
 
     .nav-left { float: left; }
-    .nav-right { justify-content: flex-end; }
+    //.nav-right { justify-content: flex-end; }
 
-    a.white { float: right; } // fix white buttons alignment
-    a.nav-toggle { right: 10px; left: auto; } // burger icon on right
+    //a.white { float: right; } // fix white buttons alignment
+    //a.nav-toggle { right: 10px; left: auto; } // burger icon on right
   }
 
   a {
