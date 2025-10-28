@@ -49,24 +49,36 @@ nav {
 
   }
 
-  [dir="rtl"] & {
+  /* Flip for Arabic: left group on the left, right group on the right */
+  .nav-left { 
+    display: inline;
+    @media #{$mid-point} {
+    flex-direction: row; 
+    float: left;
+    }
+  }
+  .nav-right { 
+    display: inline;
+    @media #{$mid-point} {
+    flex-direction: row; 
+    }
+  }
+
+    &[dir="rtl"] {
     direction: rtl;
+    text-align: right;
 
-    .nav-left { order: 2; }   // left buttons appear on right in RTL
-    .nav-right { order: 1; }  // right buttons appear on left in RTL
-
-    a.nav-toggle { left: auto; right: 10px; } // burger icon position in RTL
+    .hero-text-container { order: 2; }
+    .cover-image { order: 1; }
   }
 
-  [dir="ltr"] & {
+  &[dir="ltr"] {
     direction: ltr;
+    text-align: left;
 
-    .nav-left { order: 1; }   // normal order
-    .nav-right { order: 2; }
-
-    a.nav-toggle { left: 10px; right: auto; } // burger icon position in LTR
+    .hero-text-container { order: 1; }
+    .cover-image { order: 2; }
   }
-
   
   a {
     margin: 0 3px;
