@@ -1,4 +1,5 @@
-/*.hero {
+/* قبل الترجمة
+.hero {
   position: relative;
   color: #fff;
   height: 100vh;
@@ -84,6 +85,7 @@
   }
 } */
 
+/*Pages banner*/
 
 .hero {
   position: relative;
@@ -96,8 +98,20 @@
   justify-content: center;
 
   background:
-    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
-    url("images/Pattern.svg") center center / cover no-repeat;
+    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%);
+    //url("images/Pattern.svg") center center / cover no-repeat;
+
+
+  // pattern above the gradient but below content
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;                  // top:0; right:0; bottom:0; left:0;
+          background: url("images/Pattern.svg") center / cover no-repeat;
+          opacity: 0.2;              // 20% visibility
+          z-index: 1;                // above gradient, below content
+          pointer-events: none;      // doesn't block clicks
+        }
 
   .inner-hero {
     display: flex;
@@ -187,15 +201,15 @@
 /* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
   text-align: center;
-}
+} 
 
-.bottom-cta {
+/*.bottom-cta {
   text-align: center;
 
   h2 {
     margin-bottom: 12px;
   }
-}
+}*/
 
 /* Desktop flex helper — leave it since it’s used for other layout sections */
 @media #{$desktop} {
