@@ -72,7 +72,7 @@ nav {
     //.nav-right { justify-content: flex-start; }
 
     ////a.white { float: left; } // fix white buttons alignment
-    //a.nav-toggle { left: 10px; right: auto; } // burger icon on left
+    a.nav-toggle { float: right; } // burger icon on left
   }
 
   [dir="ltr"] & {
@@ -86,7 +86,8 @@ nav {
     //.nav-right { justify-content: flex-end; }
 
     //a.white { float: right; } // fix white buttons alignment
-    a.nav-toggle { right: 10px; left: auto; } // burger icon on right
+    a.nav-left { float: left; } //////////////////////
+    a.nav-toggle { float: left; } // burger icon on right
   }
 
   a {
