@@ -1,18 +1,17 @@
 # LEFT SIDE BUTTONS
-- name: اطلب نسختك التجريبية
+- name:
+    ar: "اطلب نسختك التجريبية"
+    en: "Get Your Trial"
   link: /pricing/
   side: left
   style: white
 
-- name: تسجيل الدخول
+- name:
+    ar: "تسجيل الدخول"
+    en: "Login"
   link: /pricing/
   side: left
   style: white
-
-##- name: EN
-  ##link: /pricing/
-  ##side: left
-  ##style: regular
 
 - name_key: lang_toggle
   link: "#"
@@ -21,17 +20,23 @@
 
 
 # RIGHT SIDE BUTTONS
-- name: الخدمات
+- name:
+    ar: "الخدمات"
+    en: "Services"
   link: /blog/
   side: right
   style: regular
 
-- name: الأسعار
+- name:
+    ar: "الأسعار"
+    en: "Pricing"
   link: /pricing/
   side: right
   style: regular
 
-- name: تواصل معنا
+- name:
+    ar: "تواصل معنا"
+    en: "Contact Us"
   link: /contact/
   side: right
   style: regular

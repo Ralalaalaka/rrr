@@ -1,32 +1,41 @@
-<!-- <nav>
-	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a> !--burger icon-
+<!-- قبل الترجمة
 
-	!-- ✅ right buttons -
-	<div class="nav-right">
-	{% for link in site.data.navigation %}
-		{% if link.side == "right" %}
-			{% assign classes = link.style %}
-			{% if link.link == page.url %}
-				{% assign classes = classes | append: " active" %}
-			{% endif %}
-			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-		{% endif %}
-	{% endfor %}
-	</div>
+<nav>
+  <a class="nav-toggle" id="open-nav" href="#">&#9776;</a> !--burger icon--
 
-	!-- ✅ left buttons -
-	<div class="nav-left">
-	{% for link in site.data.navigation %}
-		{% if link.side == "left" %}
-			{% assign classes = link.style %}
-			{% if link.link == page.url %}
-				{% assign classes = classes | append: " active" %}
-			{% endif %}
-			<a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-		{% endif %}
-	{% endfor %}
-	</div>
+  !-- ✅ right buttons --
+  <div class="nav-right">
+    {% for link in site.data.navigation %}
+      {% if link.side == "right" %}
+        {% assign classes = link.style %}
+        {% if link.link == page.url %}
+          {% assign classes = classes | append: " active" %}
+        {% endif %}
+        <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  !-- ✅ left buttons --
+  <div class="nav-left">
+    {% for link in site.data.navigation %}
+      {% if link.side == "left" %}
+        {% assign classes = link.style %}
+        {% if link.link == page.url %}
+          {% assign classes = classes | append: " active" %}
+        {% endif %}
+
+        {% if link.name_key == "lang_toggle" %}
+          !-- Language toggle button --
+          <a href="#" class="{{ classes }}" data-lang-toggle>EN</a>
+        {% else %}
+          <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </nav>
+
 -->
 
 <script>
@@ -45,7 +54,15 @@
         {% if link.link == page.url %}
           {% assign classes = classes | append: " active" %}
         {% endif %}
-        <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+
+        <a 
+          href="{% include relative-src.html src=link.link %}" 
+          class="{{ classes }}" 
+          {% if link.new_window %}target="_blank"{% endif %}
+          {% if link.name %}data-i18n-key="navigation.{{ forloop.index0 }}.name"{% endif %}
+        >
+          {% if link.name %}{{ link.name.ar }}{% endif %}
+        </a>
       {% endif %}
     {% endfor %}
   </div>
@@ -55,17 +72,4 @@
     {% for link in site.data.navigation %}
       {% if link.side == "left" %}
         {% assign classes = link.style %}
-        {% if link.link == page.url %}
-          {% assign classes = classes | append: " active" %}
-        {% endif %}
-
-        {% if link.name_key == "lang_toggle" %}
-          <!-- Language toggle button -->
-          <a href="#" class="{{ classes }}" data-lang-toggle>EN</a>
-        {% else %}
-          <a href="{% include relative-src.html src=link.link %}" class="{{ classes }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</nav>
+        {% if l

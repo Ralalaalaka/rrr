@@ -101,8 +101,6 @@
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
     url("images/Pattern.svg") center center / cover no-repeat;
 
-   .hero::before { background: rgba(255,0,0,0.25); opacity:1; }
-
    
   .inner-hero {
     display: flex;
