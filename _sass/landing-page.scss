@@ -114,7 +114,7 @@
 
   .hero-text-container {
     flex: 1 1 55%;
-    text-align: start;
+    text-align: start; // automatically flips with dir
 
     h1, h2, p, .button {
       text-shadow: none;
@@ -140,28 +140,20 @@
   }
 
   /* RTL & LTR direction and layout handling */
-  html[dir="rtl"] & {
+  &[dir="rtl"] {
     direction: rtl;
     text-align: right;
 
-    .inner-hero {
-      flex-direction: row-reverse; // flips the order visually
-    }
-
-    .hero-text-container { text-align: right; }
-    .cover-image { justify-content: center; }
+    .hero-text-container { order: 2; }
+    .cover-image { order: 1; }
   }
 
-  html[dir="ltr"] & {
+  &[dir="ltr"] {
     direction: ltr;
     text-align: left;
 
-    .inner-hero {
-      flex-direction: row; // default order
-    }
-
-    .hero-text-container { text-align: left; }
-    .cover-image { justify-content: center; }
+    .hero-text-container { order: 1; }
+    .cover-image { order: 2; }
   }
 
   /* Responsive */
@@ -192,8 +184,6 @@
   }
 }
 
-
-///////////////////////////////
 
 /* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
