@@ -4,7 +4,7 @@ description: We've built an amazing team of developers, marketers, designers and
 image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 ---
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+<section class="hero">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
 			<h1 class="editable">Our Story</h1>
@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
     {% for plan in site.data.pricing.Plans %}
     <div class="plan-card">
       <div class="plan-header">
-        <h3 style="color: {{ plan.color }}">{{ plan.name.ar }}</h3>
+        <h2 style="color: {{ plan.color }}">{{ plan.name.ar }}</h2>
         <div class="plan-price">
-          <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
+          <h1 class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</h1> ريال
           {% if plan.before_price %}
           <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }}</span>
           {% endif %}
