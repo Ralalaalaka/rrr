@@ -23,6 +23,13 @@ body.nav-open nav { //phone when the user presses the burger icon
       align-items: center; 
       width: 100%;
     }  
+  
+        [dir="ltr"] & .nav-left a { ///////////
+          text-align: left; ///////////
+          width: 100%; //////////
+        } ////////
+  
+  
   }
 }
 
@@ -86,7 +93,7 @@ nav {
     //.nav-right { justify-content: flex-end; }
 
     //a.white { float: right; } // fix white buttons alignment
-    a.nav-left.white { text-align: left; } //////////////////////
+    //a.nav-left.white { text-align: left; } //////////////////////
     a.nav-toggle { right: 10px; left: auto; } // burger icon on right
   }
 
@@ -137,3 +144,4 @@ nav {
     border-bottom: 1px solid currentColor; ////////////////###########
   } ////////#########
 }
+
