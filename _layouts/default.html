@@ -25,6 +25,13 @@
 			</script>
 			<script async src='https://www.google-analytics.com/analytics.js'></script>
 		{% endif %}
+
+				<!--------------NEW---------------->
+				<script>
+				window.translations = {{ site.data | jsonify }};
+				</script>
+				<script src="{{ site.baseurl }}/js/lang-toggle.js"></script>
+
 	</head>
 
 	<body>
