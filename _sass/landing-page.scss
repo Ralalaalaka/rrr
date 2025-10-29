@@ -145,7 +145,7 @@
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
-    background:linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%) !important;,
+    background:linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
     url("images/Pattern.svg") center center / cover no-repeat;
 
     .hero-text-container { order: 2; }
@@ -156,7 +156,7 @@
   &[dir="ltr"] {
     direction: ltr;
     text-align: left;
-    background:linear-gradient(300deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100% ) !important;,
+    background:linear-gradient(300deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
     url("images/Pattern.svg") center center / cover no-repeat;
 
     .hero-text-container { order: 1; }
