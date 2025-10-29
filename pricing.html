@@ -83,8 +83,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <div class="plans">
     {% for plan in site.data.pricing.Plans %}
     <div class="plan-card">
-      <div class="plan-header" style="color: blueviolet">
-        <h2>{{ plan.name.ar }}</h2>
+      <div class="plan-header">
+        <h2 style="color: {{ plan.color }}>{{ plan.name.ar }}</h2>
         <div class="plan-price">
           <h1><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال</h1>
           {% if plan.before_price %}
