@@ -23,3 +23,27 @@ Home:
   footer_text:
     ar: "صنع في السعودية"
     en: "Made in Saudi Arabia"
+
+Pricing:
+  title:
+    ar: "اختر عدد الموظفين ومدة العقد لتظهر أسعار الباقات:"
+    en: "Select number of employees and contract duration to view plan prices:"
+  employees_label:
+    ar: "عدد الموظفين:"
+    en: "Employees:"
+  durations:
+    - key: quarter
+      ar: "ربع سنوي"
+      en: "Quarterly"
+      multiplier: 3
+    - key: half
+      ar: "نصف سنوي"
+      en: "Semi-Annual"
+      multiplier: 6
+    - key: yearly
+      ar: "سنوي"
+      en: "Yearly"
+      multiplier: 12
+  note:
+    ar: "الأسعار الظاهرة لـ 10 موظفين / ربع سنة (تتغير)"
+    en: "Prices shown for 10 employees / quarter (subject to change)"

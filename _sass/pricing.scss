@@ -1,3 +1,4 @@
+/*
 .plans {
 	@extend %flexbox;
 	@include flex-flow(wrap);
@@ -50,7 +51,7 @@ li {
 	display: inline-block;
 	background: #fff;
     position: relative;
-    z-index: 2; /* لو في عناصر تغطيه */
+    z-index: 2; // لو في عناصر تغطيه 
     padding: 0 6px;
 }
            
@@ -60,7 +61,7 @@ li {
 	cursor: pointer;
 }
             
-/* إظهار القائمة الفرعية عندما تُضاف الكلاس open */
+// إظهار القائمة الفرعية عندما تُضاف الكلاس open
 .sub-features {
   	display: none;
     margin: 6px 0 0 18px;
@@ -74,4 +75,135 @@ li {
 
 }
 
+}
+*/
+
+
+.pricing {
+  text-align: center;
+  padding: 2rem 1rem;
+
+  .pricing-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .control {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    select {
+      padding: .4rem .6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .duration-tabs {
+      display: flex;
+      gap: .6rem;
+
+      .duration-btn {
+        border: 1px solid #0e385b;
+        background: #fff;
+        color: #0e385b;
+        border-radius: 30px;
+        padding: .4rem 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+          background: #0e385b;
+          color: #fff;
+        }
+
+        &:hover {
+          background: rgba(14, 56, 91, 0.1);
+        }
+      }
+    }
+  }
+
+  .plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .plan-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 280px;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan-header {
+      border-bottom: 2px solid;
+      margin-bottom: 1rem;
+
+      h3 {
+        margin: 0 0 .5rem;
+        font-size: 1.2rem;
+        color: #0e385b;
+      }
+
+      .plan-price {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #0e385b;
+
+        .before-price {
+          color: red;
+          text-decoration: line-through;
+          font-size: 0.9rem;
+          margin-inline-start: .4rem;
+        }
+      }
+    }
+
+    .feature {
+      text-align: start;
+      margin-bottom: .6rem;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        color: #0e385b;
+        margin-inline-end: .3rem;
+      }
+
+      .sub-features {
+        display: none;
+        margin-top: .4rem;
+        margin-inline-start: 1rem;
+        font-size: 0.9rem;
+        color: #333;
+
+        &.open { display: block; }
+      }
+    }
+  }
+
+  /* RTL & LTR support */
+  &[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+  }
 }

@@ -1,51 +1,140 @@
-- name: الباقة الأساسية
-  color: "#0e385b"
-  base_price: 2200
-  features:
-    - text: الخدمات الأساسية
-      highlight: true
-      sub:
-        - علاقات الموظفين
-        - الإجازات
-        - الرواتب
-    - text: دعم العملاء
-      highlight: false
-      sub:
-        - استفسارات
-        - شكاوي
+Plans:
+  - name:
+      ar: "الباقة الأساسية"
+      en: "Basic Plan"
+    color: "#0e385b"
+    base_price: 12
+    before_price:
+    features:
+      - text:
+          ar: "الخدمات الأساسية"
+          en: "Core Services"
+        sub:
+          - ar: "علاقات الموظفين"
+            en: "Employee Relations"
+          - ar: "الإجازات"
+            en: "Leave Management"
+          - ar: "الرواتب"
+            en: "Payroll"
+      - text:
+          ar: "دعم العملاء"
+          en: "Customer Support"
+        sub:
+          - ar: "استفسارات"
+            en: "Inquiries"
+          - ar: "شكاوي"
+            en: "Complaints"
 
-- name: الباقة المتقدمة
-  color: "#0e385b"
-  base_price: 3500
-  features:
-    - text: إدارة الأداء
-      highlight: true
-      sub:
-        - تقييم الموظفين
-        - متابعة الأهداف
-    - text: التدريب والتطوير
-      highlight: true
-      sub:
-        - خطط تدريب
-        - تقارير متابعة
+  - name:
+      ar: "الباقة المتقدمة"
+      en: "Advanced Plan"
+    color: "#0e385b"
+    base_price: 12
+    before_price:
+    features:
+      - text:
+          ar: "إدارة الأداء"
+          en: "Performance Management"
+        sub:
+          - ar: "تقييم الموظفين"
+            en: "Employee Evaluation"
+          - ar: "متابعة الأهداف"
+            en: "Goal Tracking"
+      - text:
+          ar: "التدريب والتطوير"
+          en: "Training & Development"
+        sub:
+          - ar: "خطط تدريب"
+            en: "Training Plans"
+          - ar: "تقارير متابعة"
+            en: "Progress Reports"
 
-- name: الباقة المميزة
-  color: "#0e385b"
-  base_price: 5000
-  features:
-    - text: الاستشارات المتخصصة
-      highlight: true
-      sub:
-        - قانون العمل
-        - إدارة التغيير
-    - text: تقارير مخصصة
-      highlight: true
-      sub:
-        - إحصائيات شهرية
-        - تقارير تنبؤية
+  - name:
+      ar: "الباقة المميزة"
+      en: "Premium Plan"
+    color: "#0e385b"
+    base_price: 12
+    before_price:
+    features:
+      - text:
+          ar: "الاستشارات المتخصصة"
+          en: "Specialized Consulting"
+        sub:
+          - ar: "قانون العمل"
+            en: "Labor Law"
+          - ar: "إدارة التغيير"
+            en: "Change Management"
+      - text:
+          ar: "تقارير مخصصة"
+          en: "Custom Reports"
+        sub:
+          - ar: "إحصائيات شهرية"
+            en: "Monthly Statistics"
+          - ar: "تقارير تنبؤية"
+            en: "Predictive Reports"
+      - text:
+          ar: "تقارير إضافية"
+          en: "Additional Reports"
+        sub:
+          - ar: "إحصائيات شهرية"
+            en: "Monthly Statistics"
+          - ar: "تقارير تنبؤية"
+            en: "Predictive Reports"
 
-    - text: تقارير اضافية
-      highlight: true
-      sub:
-        - إحصائيات شهرية
-        - تقارير تنبؤية
+  
+  comparison:
+  - category: الخدمات الأساسية
+    features:
+      - name: علاقات الموظفين
+        plan1: true
+        plan2: true
+        plan3: true
+      - name: الإجازات
+        basic: true
+        advanced: true
+        premium: true
+      - name: الرواتب
+        basic: true
+        advanced: true
+        premium: true
+
+  - category: إدارة الأداء
+    features:
+      - name: تقييم الموظفين
+        basic: false
+        advanced: true
+        premium: true
+      - name: متابعة الأهداف
+        basic: false
+        advanced: true
+        premium: true
+
+  - category: التدريب والتطوير
+    features:
+      - name: خطط تدريب
+        basic: false
+        advanced: true
+        premium: true
+      - name: تقارير متابعة
+        basic: false
+        advanced: true
+        premium: true
+
+  - category: الاستشارات والتقارير
+    features:
+      - name: قانون العمل
+        basic: false
+        advanced: false
+        premium: true
+      - name: إدارة التغيير
+        basic: false
+        advanced: false
+        premium: true
+      - name: تقارير مخصصة
+        basic: false
+        advanced: false
+        premium: true
+      - name: تقارير تنبؤية
+        basic: false
+        advanced: false
+        premium: true
