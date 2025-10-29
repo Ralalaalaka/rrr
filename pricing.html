@@ -132,8 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="plans">
     {% for plan in site.data.pricing.Plans %}
     <div class="plan-card">
-      <div class="plan-header" style="border-color: {{ plan.color }}">
-        <h3>{{ plan.name.ar }}</h3>
+      <div class="plan-header">
+        <h3 style="color: {{ plan.color }}">{{ plan.name.ar }}</h3>
         <div class="plan-price">
           <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
           {% if plan.before_price %}
@@ -207,4 +207,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updatePrices();
 });
+</script>
+
+
+
+
+<script>
+  // Re-run translation after this section is loaded
+  if (typeof updateTextContent === "function") {
+    updateTextContent();
+  }
 </script>
