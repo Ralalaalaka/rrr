@@ -25,7 +25,10 @@ body.nav-open nav { //phone when the user presses the burger icon
     }  
   
         [dir="ltr"] & .nav-left { ///////////
-          align-items: left;
+          flex-direction: column; 
+          align-items: center;
+          width: 100%;
+          //text-align: left;
         } ////////
   }
 }

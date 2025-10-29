@@ -15,17 +15,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
 <!--
 <section class="pad">
-  // Dropdown لاختيار عدد الموظفين
-  <div class="employee-select">
-    <label for="employees">عدد الموظفين:</label>
-    <select id="employees">
-      <option value="1">1 موظف</option>
-      <option value="5">5 موظفين</option>
-      <option value="10">10 موظفين</option>
-      <option value="20">20 موظف</option>
-    </select>
-  </div>
-
   // الباقات
   <div class="plans">
       {% for plan in site.data.pricing %}
@@ -57,48 +46,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 </div>
 </section>
 
-
-
-
-
-<script>
-  // حساب السعر حسب عدد الموظفين
-  const select = document.getElementById("employees");
-  const prices = document.querySelectorAll(".price");
-
-  function updatePrices() {
-    const employees = parseInt(select.value);
-    prices.forEach(p => {
-      const base = parseInt(p.dataset.base);
-      p.textContent = base * employees;
-    });
-  }
-
-  select.addEventListener("change", updatePrices);
-  updatePrices();
-
-  // فتح/إغلاق الخدمات الفرعية
-document.addEventListener('DOMContentLoaded', function() {
-  // debug: كم زر وجد السكربت
-  console.log('toggle-sub count =', document.querySelectorAll('.toggle-sub').length);
-
-  // تفويض أحداث: يدعم أزرار مضافة ديناميكياً ويعمل في كل الحالات
-  document.addEventListener('click', function(e) {
-    const btn = e.target.closest('.toggle-sub');
-    if (!btn) return; // لو النقر مو على زر التوسيع نتجاهل
-
-    // نأمن الهيكلية: نأخذ أقرب li/feature، ثم نبحث عن الـ sub list داخله
-    const featureEl = btn.closest('.feature') || btn.parentElement;
-    if (!featureEl) return;
-
-    const subList = featureEl.querySelector('.sub-features');
-    if (!subList) return;
-
-    subList.classList.toggle('open');
-    btn.textContent = subList.classList.contains('open') ? '▼' : '▶';
-  });
-});
-</script>
 
 -->
 
@@ -132,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="plans">
     {% for plan in site.data.pricing.Plans %}
     <div class="plan-card">
-      <div class="plan-header">
-        <h2 style="color: {{ plan.color }}">{{ plan.name.ar }}</h2>
+      <div class="plan-header" style="color: {{ plan.color }}">
+        <h2>{{ plan.name.ar }}</h2>
         <div class="plan-price">
-          <h1 class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</h1> ريال
+          <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
           {% if plan.before_price %}
           <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }}</span>
           {% endif %}
@@ -207,14 +154,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updatePrices();
 });
-</script>
-
-
-
-
-<script>
-  // Re-run translation after this section is loaded
-  if (typeof updateTextContent === "function") {
-    updateTextContent();
-  }
 </script>
