@@ -24,11 +24,9 @@ body.nav-open nav { //phone when the user presses the burger icon
       width: 100%;
     }  
   
-        [dir="ltr"] & .nav-left a { ///////////
-          float: left; ///////////
+        [dir="ltr"] & .nav-left { ///////////
+          align-items: flex-start;
         } ////////
-  
-  
   }
 }
 
@@ -71,13 +69,6 @@ nav {
     direction: rtl;
     text-align: right;
 
-    //.hero-text-container { order: 2; }
-    //.cover-image { order: 1; }
-
-    //.nav-left { float: right; }
-    //.nav-right { justify-content: flex-start; }
-
-    ////a.white { float: left; } // fix white buttons alignment
     a.nav-toggle { left: 10px; right: auto; } // burger icon on left
   }
 
@@ -85,14 +76,8 @@ nav {
     direction: ltr;
     text-align: left;
 
-    //.hero-text-container { order: 1; }
-    //.cover-image { order: 2; }
-
     .nav-left { float: right; }
-    //.nav-right { justify-content: flex-end; }
-
-    //a.white { float: right; } // fix white buttons alignment
-    //a.nav-left.white { text-align: left; } //////////////////////
+    
     a.nav-toggle { right: 10px; left: auto; } // burger icon on right
   }
 
