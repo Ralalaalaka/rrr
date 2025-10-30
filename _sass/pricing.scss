@@ -51,8 +51,8 @@ h3 {
         border: 1px solid #e4e6ea;
         background: #fff;
         color: #0e385b;
-        border-radius: 20px;
-        padding: .1rem 1rem;
+        border-radius: 100px;
+        padding: .4rem .6rem;
         cursor: pointer;
         transition: 0.3s;
 
@@ -157,7 +157,7 @@ h3 {
   display: table;
   width: 100%;
   border-collapse: collapse;
-  text-align: center;
+  text-align: right; /////////////////////////////
 
   .table-header,
   .feature-row {
