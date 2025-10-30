@@ -153,7 +153,6 @@ h3 {
 }
 
 
-
 .comparison-table {
   width: 100%;
   max-width: 1000px;
@@ -171,6 +170,11 @@ h3 {
     text-align: center;
     font-weight: 700;
     color: #0e385b;
+
+    .feature-col {
+      /* leftmost empty cell (header for features) */
+      padding: 1rem;
+    }
 
     .plan-col {
       padding: 1rem;
@@ -207,15 +211,19 @@ h3 {
 
     .plan-check {
       color: var(--plan-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .checkmark {
         font-size: 1.2rem;
+        line-height: 1;
       }
     }
   }
 
-  /* Responsive for mobile */
-  @media (max-width: $mid-point) {
+  /* Responsive for mobile -- use Sass interpolation for the variable */
+  @media #{$mid-point} {
     .table-header,
     .feature-row {
       grid-template-columns: 1.5fr repeat(3, 0.8fr);
