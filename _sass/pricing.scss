@@ -3,7 +3,7 @@
   padding: 2rem 1rem;
 
 h2 {
-	margin: 0.5rem 0;
+	margin: 0.5rem;
 	color: #6d767d;
 	text-align: center;
 	}
@@ -18,7 +18,8 @@ h2 {
 	box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 	border-radius: 100px;
 	width: fit-content;
-	padding: 10px;
+	margin: 10px;
+
 
     .control {
       display: flex;
@@ -127,14 +128,4 @@ h2 {
     }
   }
 
-  /* RTL & LTR support */
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-  }
-
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-  }
 }
