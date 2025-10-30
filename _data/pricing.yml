@@ -29,7 +29,7 @@ Plans:
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price:
+    before_price: 15
     plan_text: 
       ar: "تجربة"
       en: "Test"
