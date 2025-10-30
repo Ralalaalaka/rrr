@@ -5,6 +5,9 @@ Texts:
   employees_label:
     ar: "عدد الموظفين:"
     en: "Employees:"
+  contract_label:
+    ar: "مدة العقد:"
+    en: "Contract duration:"
   durations:
     - key: quarter
       ar: "ربع سنوي"

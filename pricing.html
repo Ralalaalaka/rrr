@@ -19,48 +19,12 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 	</div>
 </section>
 
-<!--
-<section class="pad">
-  // الباقات
-  <div class="plans">
-      {% for plan in site.data.pricing %}
-    <div class="card">
-        <li style="background: {{ plan.color }}">
-          <h3>{{ plan.name }}</h3>
-        </li>
-
-        <div class="total"><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال </div>
-          
-    <ul class="plan-features">
-    {% for feature in plan.features %}
-      <li class="feature">
-        <button class="toggle-sub">▶</button>
-        {{ feature.text }}
-        {% if feature.sub %}
-        <ul class="sub-features">
-                  {% for sub in feature.sub %}
-            <li>{{ sub }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-    //  </li> 
-  </div>
-  {% endfor %}
-</div>
-</section>
-
-
--->
-
 <section class="pricing pad">
   <div class="text-container">
     <h3 data-i18n-key="pricing.Texts.title"><strong>{{ site.data.pricing.Texts.title.ar }}</strong></h3>
   </div>
 
-  <!-- Controls -->
+  <!-- Controls قائمة الموظفين والمدة -->
   <div class="pricing-controls">
     <div class="control">
       <h3><strong><label data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</label></strong></h3>
@@ -73,7 +37,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </div>
 
     <div class="duration-tabs" id="duration-tabs">
-      <h3><strong><label data-i18n-key="pricing.Texts.durations">{{ site.data.pricing.Texts.durations.ar }}</label></strong></h3>
+      <h3><strong><label data-i18n-key="pricing.Texts.contract_label">{{ site.data.pricing.Texts.contract_label.ar }}</label></strong></h3>
       {% for d in site.data.pricing.Texts.durations %}
       <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}
