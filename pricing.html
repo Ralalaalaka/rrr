@@ -56,7 +56,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 -->
 
 
-
 <section class="pricing pad" dir="rtl">
   <h2 data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.title.ar }}</h2>
 
@@ -74,7 +73,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
     <div class="duration-tabs" id="duration-tabs">
       {% for d in site.data.pricing.Texts.durations %}
-      <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}">
+      <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}
       </button>
       {% endfor %}
@@ -86,40 +85,54 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% for plan in site.data.pricing.Plans %}
     <div class="plan-card">
       <div class="plan-header">
-        <h2 style="color: {{ plan.color }}"><strong>{{ plan.name.ar }}</strong></h2>
+        <h2 style="color: {{ plan.color }}">
+          <strong data-i18n-key="pricing.Plans.{{ forloop.index0 }}.name">{{ plan.name.ar }}</strong>
+        </h2>
         <div class="plan-price">
-          <h1><strong><span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال</strong></h1>
+          <h1>
+            <strong>
+              <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
+            </strong>
+          </h1>
           {% if plan.before_price %}
           <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }}</span>
           {% endif %}
         </div>
       </div>
 
-      <p class="plan-features">
-        {% for feature in plan.plan_text %} 
+          {% if plan.plan_text %}
+          <p data-i18n-key="pricing.Plans.{{ forloop.index0 }}.plan_text">
+            {{ plan.plan_text.ar }}
+          </p>
+          {% endif %}
 
       <ul class="plan-features">
         {% for feature in plan.features %}
         <li class="feature">
           <button class="toggle-sub">▶</button>
-          {{ feature.text.ar }}
+          <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
+            {{ feature.text.ar }}
+          </span>
           {% if feature.sub %}
           <ul class="sub-features">
             {% for sub in feature.sub %}
-            <li>{{ sub.ar }}</li>
+            <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
+              {{ sub.ar }}
+            </li>
             {% endfor %}
           </ul>
           {% endif %}
         </li>
         {% endfor %}
       </ul>
-      </p>
     </div>
     {% endfor %}
   </div>
 
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
 </section>
+
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
