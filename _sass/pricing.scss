@@ -153,89 +153,51 @@ h3 {
 }
 
 
+
+/*Comparison*/
 .comparison-table {
+  display: table;
   width: 100%;
-  max-width: 1000px;
-  margin: 2rem auto;
   border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-radius: 20px;
-  overflow: hidden;
+  text-align: center;
+
+  .table-header,
+  .feature-row {
+    display: table-row;
+  }
+
+  .feature-col,
+  .plan-col,
+  .feature-name,
+  .plan-check {
+    display: table-cell;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e6e6e6;
+    vertical-align: middle;
+  }
 
   .table-header {
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
     background: #f7f7f7;
-    text-align: center;
     font-weight: 700;
     color: #0e385b;
-
-    .feature-col {
-      /* leftmost empty cell (header for features) */
-      padding: 1rem;
-    }
-
-    .plan-col {
-      padding: 1rem;
-      border-inline-start: 1px solid #e6e6e6;
-
-      h3 {
-        color: var(--plan-color);
-        margin: 0;
-      }
-    }
   }
 
   .category-row {
+    display: table-row;
     background: #fafafa;
-    text-align: right;
-    padding: 1rem;
-    font-weight: 700;
-    border-top: 1px solid #e6e6e6;
-    color: #0e385b;
-  }
 
-  .feature-row {
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
-    align-items: center;
-    border-top: 1px solid #f0f0f0;
-    padding: 0.8rem 1rem;
-    text-align: center;
-
-    .feature-name {
+    h4 {
+      display: table-cell;
+      padding: 1rem;
+      font-weight: 700;
+      color: #0e385b;
+      border: 1px solid #e6e6e6;
       text-align: right;
-      color: #333;
-    }
-
-    .plan-check {
-      color: var(--plan-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .checkmark {
-        font-size: 1.2rem;
-        line-height: 1;
-      }
     }
   }
 
-  /* Responsive for mobile -- use Sass interpolation for the variable */
-  @media #{$mid-point} {
-    .table-header,
-    .feature-row {
-      grid-template-columns: 1.5fr repeat(3, 0.8fr);
-      font-size: 0.9em;
-    }
-
-    .feature-name {
-      font-size: 0.9em;
-    }
-
-    h3 {
-      font-size: 1em;
-    }
+  .plan-check .checkmark {
+    color: var(--plan-color);
+    font-size: 1.2rem;
   }
 }
