@@ -72,8 +72,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       </select>
     </div>
 
-    <h3><strong></strong><div class="duration-tabs" id="duration-tabs"></strong></h3>
-      {% for d in site.data.pricing.Texts.durations %}
+    <div class="duration-tabs" id="duration-tabs">
+      <h3><strong>{% for d in site.data.pricing.Texts.durations %}</strong></h3>
       <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}
       </button>
@@ -96,7 +96,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
             </strong>
           </h1>
           {% if plan.before_price %}
-          <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }} ريال </span>
+          <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }} </span> ريال
           {% endif %}
         </div>
       </div>
