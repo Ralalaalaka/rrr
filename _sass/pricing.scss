@@ -2,11 +2,11 @@
   text-align: center;
   padding: 2rem 1rem;
 
-h3 {
-	margin: 0.5rem auto;
-	color: #6d767d;
-	text-align: center;
-	}
+  h3 {
+    margin: 0.5rem auto;
+    color: #6d767d;
+    text-align: center;
+    }
 
 	.note{
 		margin: 0.5rem auto;
@@ -26,9 +26,9 @@ h3 {
     margin: 2rem auto;
     padding: 10px;
 
-	h3 {
-	color: #0e385b;
-	}
+      h3 {
+      color: #0e385b;
+      }
 
     .control {
       display: flex;
@@ -55,6 +55,7 @@ h3 {
         padding: .4rem .6rem;
         cursor: pointer;
         transition: 0.3s;
+        line-height: 1; /////////////
 
         &.active {
           background: #f4fcfc;
@@ -157,7 +158,6 @@ h3 {
   display: table;
   width: 100%;
   border-collapse: collapse;
-  text-align: right; /////////////////////////////
 
   .table-header,
   .feature-row {
