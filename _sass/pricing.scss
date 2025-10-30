@@ -19,8 +19,9 @@ h2 {
 	border-radius: 100px;
 	width: fit-content;
 	margin: 10px;
+	padding: 10px;
 
-
+	
     .control {
       display: flex;
       align-items: center;
@@ -128,4 +129,14 @@ h2 {
     }
   }
 
+  /* RTL & LTR support */
+  &[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+  }
 }
