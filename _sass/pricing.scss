@@ -51,8 +51,8 @@ h3 {
         border: 1px solid #e4e6ea;
         background: #fff;
         color: #0e385b;
-        border-radius: 100px;
-        padding: .3rem 1rem;
+        border-radius: 20px;
+        padding: .1rem 1rem;
         cursor: pointer;
         transition: 0.3s;
 
@@ -99,9 +99,9 @@ h3 {
         color: #0e385b;
       }
 
-	  h1 {
-        margin: 0 0 .5rem;
-      }
+      h1 {
+          margin: 0 0 .5rem;
+        }
 
       .plan-price {
         color: #0e385b;
@@ -118,13 +118,13 @@ h3 {
       text-align: start;
       margin-bottom: .6rem;
 
-      button { //Arrow button
+      button { //Features arrow button
         background: none;
         border: none;
         cursor: pointer;
         color: #0e385b;
         margin-inline-end: .3rem;
-        border-radius: 100px;
+        list-style-type: square;
       }
 
       .sub-features {
