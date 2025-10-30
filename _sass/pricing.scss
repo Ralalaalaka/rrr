@@ -21,12 +21,12 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-	background-color: #fafafb;
-	box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-	border-radius: 100px;
-	width: max-content;
-	margin: 2rem auto;
-	padding: 10px;
+    background-color: #fafafb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 100px;
+    width: max-content;
+    margin: 2rem auto;
+    padding: 10px;
 
 	h3 {
 	color: #0e385b;
@@ -120,7 +120,7 @@ h3 {
       text-align: start;
       margin-bottom: .6rem;
 
-      button {
+      button { //Arrow button
         background: none;
         border: none;
         cursor: pointer;
