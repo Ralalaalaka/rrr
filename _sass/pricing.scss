@@ -8,6 +8,10 @@
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
+	background-color: #fafafb;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+	border-radius: 100px;
+
 
     .control {
       display: flex;
@@ -56,7 +60,7 @@
 
   .plan-card {
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 280px;
     padding: 1.5rem;
     background: #fff;
@@ -85,7 +89,7 @@
         color: #0e385b;
 
         .before-price {
-          color: red;
+          color: #d44549;
           text-decoration: line-through;
           margin-inline-start: .4rem;
         }
