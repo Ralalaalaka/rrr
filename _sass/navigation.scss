@@ -24,11 +24,12 @@ body.nav-open nav { //phone when the user presses the burger icon
       width: 100%;
     }  
   }
+      [dir="ltr"] & {
+          direction: ltr;
+          text-align: left;
 
-      [dir="ltr"] body.nav-open nav .nav-left {
-      display: grid;
-      }
-
+          .nav-left { float: left; }
+        }    
 }
 
 nav {

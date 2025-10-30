@@ -59,8 +59,6 @@ header {
 			color: #333;
 			@media #{$mid-point} {
 				&:hover {
-					//border-bottom-color: rgba(80, 80, 80,.3);
-					//border-bottom-width: 3px; /*nav hover*/
           color: rgba(82, 82, 82, 0.8); /*hover color when the user scrolls*/
 				}
 			}
@@ -68,15 +66,15 @@ header {
 
 		/* ✅ White buttons switch to light mode */
     	a.white {
-        background: none; // rgba(0,0,0,0.1) ///////////////#########
-        border: none; ////////////#########
-        color: #333; // #333 ////////////#########
+        background: none; // rgba(0,0,0,0.1) 
+        border: none; 
+        color: #333; // #333 
 
-        @media #{$mid-point} { ////////////#########
-        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1) ////////////#########
-        border: 0.05px solid rgba(13, 182, 189, 0.50); ////////////#########
-        color: #0e385b; // #333 ////////////#########
-        } ////////////#########
+        @media #{$mid-point} { 
+        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+        border: 0.05px solid rgba(13, 182, 189, 0.50); 
+        color: #0e385b; // #333 
+        } 
 
 			&:hover {
 			  background: rgba(13, 182, 189, 0.2);
@@ -90,12 +88,12 @@ header {
 
 	} /*end of when the user scrolls*/
 
-  	&:not(.header-background) { /* before scroll only */ ////////#########3
-		a:not(.nav-toggle):hover { ////////########3
-			color: rgb(255, 255, 255); /* hover color before scroll */ ////////######3
-			text-decoration: none; ///////////###########
-		} //////////#########
-	} ///////////##########
+  	&:not(.header-background) { 
+		a:not(.nav-toggle):hover { 
+			color: rgb(255, 255, 255); 
+			text-decoration: none; 
+		} 
+	}
 
 
 	a { /*before the user scrolls*/
@@ -114,12 +112,6 @@ header {
 			display: block;
 			height: 100%;
 		}
-
-		 //&:not(.nav-toggle):hover{ /*nav bar hover excluding the burger icon*/
-			//text-decoration: none;
-      //opacity: 0.8;
-      //color: rgb(255, 0, 0); /*hover color before the user scrolls*/ //rgb(255, 255, 255) /////##############33
-		//}
 	} /*end of before the user scrolls*/
 
 	.company-name {
