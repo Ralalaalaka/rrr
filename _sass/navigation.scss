@@ -23,12 +23,13 @@ body.nav-open nav { //phone when the user presses the burger icon
       align-items: center; 
       width: 100%;
     }  
-  
-      [dir="ltr"] body.nav-open nav .nav-left {
-        float: left;
-        width: 100%;
-      }
   }
+
+      [dir="ltr"] body.nav-open nav .nav-left {
+      float: left;
+      width: 100%;
+      }
+      
 }
 
 nav {
