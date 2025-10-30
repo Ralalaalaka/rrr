@@ -73,7 +73,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </div>
 
     <div class="duration-tabs" id="duration-tabs">
-      <h3><strong>{% for d in site.data.pricing.Texts.durations %}</strong></h3>
+      {% for d in site.data.pricing.Texts.durations %}
       <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}
       </button>
