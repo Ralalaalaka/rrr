@@ -63,7 +63,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <!-- Controls -->
   <div class="pricing-controls">
     <div class="control">
-      <label data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</label>
+      <h3><strong><label data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</label></strong></h3>
       <select id="employees">
         <option value="1">1 موظف</option>
         <option value="5">5 موظفين</option>
@@ -72,7 +72,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       </select>
     </div>
 
-    <div class="duration-tabs" id="duration-tabs">
+    <h3><strong></strong><div class="duration-tabs" id="duration-tabs"></strong></h3>
       {% for d in site.data.pricing.Texts.durations %}
       <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}
@@ -96,7 +96,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
             </strong>
           </h1>
           {% if plan.before_price %}
-          <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }}</span> ريال
+          <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }} ريال </span>
           {% endif %}
         </div>
       </div>
@@ -179,3 +179,19 @@ document.addEventListener("DOMContentLoaded", function() {
   updatePrices();
 });
 </script>
+
+
+<section class="banner">
+  <div class="inner-banner">
+    <div class="banner-text">
+      <h1><strong data-i18n-key="site_content.Home.start_banner">
+        {{ site.data.site_content.Home.start_banner.ar }}
+      </strong></h1>
+      <div class="button alt">
+      <a href="#" data-i18n-key="site_content.Home.main_button">
+       {{ site.data.site_content.Home.main_button.ar }}
+      </a>
+      </div>
+    </div>
+  </div>
+</section>

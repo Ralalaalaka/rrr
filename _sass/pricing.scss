@@ -8,10 +8,12 @@ h3 {
 	text-align: center;
 	}
 
-p {
-	margin: 0.5rem auto;
-	color: #6d767d;
-	text-align: center;
+	.note{
+	p {
+		margin: 0.5rem auto;
+		color: #6d767d;
+		text-align: center;
+		}
 	}
 
   .pricing-controls {
@@ -25,8 +27,10 @@ p {
 	width: max-content;
 	margin: 2rem auto;
 	padding: 10px;
-	color:#0e385b;
 
+	h3 {
+	color: #0e385b;
+	}
 
     .control {
       display: flex;
@@ -38,6 +42,7 @@ p {
       padding: .4rem .6rem;
       border: 1px solid #e4e6ea;
       border-radius: 100px;
+	  color:#0e385b;
     }
 
     .duration-tabs {
