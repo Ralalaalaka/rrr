@@ -14,21 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
       let value = translations;
 
       for (let k of keyPath) {
-      if (Array.isArray(value) && !isNaN(k)) k = parseInt(k, 10);
-
-      if (value && value[k] !== undefined) {
-        value = value[k];
-      } else {
-        value = null;
-        break;
+        if (value && value[k] !== undefined) {
+          value = value[k];
+        } else {
+          value = null;
+          break;
+        }
       }
-    }
 
-    if (value && value[currentLang] !== undefined) {
-      el.textContent = value[currentLang];
-    }
-  });
-}
+      if (value && value[currentLang] !== undefined) {
+        el.textContent = value[currentLang];
+      }
+    });
+  }
+
   // ✅ Use inline injected data instead of fetching JSON
   if (!window.translations) {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
