@@ -47,29 +47,25 @@ Plans:
     plan_text: 
       ar: "تجربة"
       en: "Test"
-    features_0:
-      text:
-        ar: "الخدمات الأساسية"
-        en: "Core Services"
-      sub_0:
-        ar: "علاقات الموظفين"
-        en: "Employee Relations"
-      sub_1:
-        ar: "الإجازات"
-        en: "Leave Management"
-      sub_2:
-        ar: "الرواتب"
-        en: "Payroll"
-    features_1:
-      text:
-        ar: "دعم العملاء"
-        en: "Customer Support"
-      sub_0:
-        ar: "استفسارات"
-        en: "Inquiries"
-      sub_1:
-        ar: "شكاوي"
-        en: "Complaints"
+    features:
+      - text:
+          ar: "الخدمات الأساسية"
+          en: "Core Services"
+        sub:
+          - ar: "علاقات الموظفين"
+            en: "Employee Relations"
+          - ar: "الإجازات"
+            en: "Leave Management"
+          - ar: "الرواتب"
+            en: "Payroll"
+      - text:
+          ar: "دعم العملاء"
+          en: "Customer Support"
+        sub:
+          - ar: "استفسارات"
+            en: "Inquiries"
+          - ar: "شكاوي"
+            en: "Complaints"
 
   - name:
       ar: "الباقة المتقدمة"
