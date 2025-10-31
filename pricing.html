@@ -74,44 +74,25 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           {% endif %}
 
   <!-- Features -->
-      <!-- Features -->
-<ul class="plan-features">
-  {% assign feature_index = 0 %}
-  {% for feature_key in plan %}
-    {% if feature_key contains 'features_' %}
-      {% assign feature = plan[feature_key] %}
-      <li class="feature">
-        <!-- Main feature text -->
-        <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.{{ feature_key }}.text">
-          {{ feature.text.ar }}
-        </span>
-
-        {% assign sub_keys = feature | keys | sort %}
-        {% assign has_sub = false %}
-        {% for k in sub_keys %}
-          {% if k contains 'sub_' %}
-            {% assign has_sub = true %}
-          {% endif %}
-        {% endfor %}
-
-        {% if has_sub %}
+      <ul class="plan-features">
+        {% for feature in plan.features %}
+        <li class="feature">
+          <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
+            {{ feature.text.ar }}
+          </span>
           <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
+          {% if feature.sub %} <!-- Sub Features -->
           <ul class="sub-features">
-            {% for k in sub_keys %}
-              {% if k contains 'sub_' %}
-                <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.{{ feature_key }}.{{ k }}">
-                  {{ feature[k].ar }}
-                </li>
-              {% endif %}
+            {% for sub in feature.sub %}
+            <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
+              {{ sub.ar }}
+            </li>
             {% endfor %}
           </ul>
-        {% endif %}
-      </li>
-      {% assign feature_index = feature_index | plus: 1 %}
-    {% endif %}
-  {% endfor %}
-</ul>
-
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
     {% endfor %}
   </div>
