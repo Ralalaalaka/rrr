@@ -32,7 +32,7 @@ Plans:
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price: 15
+    before_price: 15 ##add the number of employees so, before_price10 then before_price20 and base price the same
     plan_text: 
       ar: "تجربة"
       en: "Test"

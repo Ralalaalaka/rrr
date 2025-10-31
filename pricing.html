@@ -65,7 +65,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           {% endif %}
         </div>
       </div>
-
+<!---
           {% if plan.plan_text %}
           <p data-i18n-key="pricing.Plans.{{ forloop.index0 }}.plan_text">
             {{ plan.plan_text.ar }}
@@ -93,7 +93,37 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       </ul>
     </div>
     {% endfor %}
-  </div>
+  </div> --->
+
+  <!-- Plan description and features -->
+{% if plan.plan_text %}
+  <p data-i18n-key="pricing.Plans.{{ forloop.index0 }}.plan_text">
+    {{ plan.plan_text.ar }}
+  </p>
+{% endif %}
+
+<ul class="plan-features" style="--plan-color: {{ plan.color }}">
+  {% for feature in plan.features %}
+    <li class="feature">
+      <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
+        {{ feature.text.ar }}
+      </span>
+      <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
+
+      {% if feature.sub %}
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+            <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
+              {{ sub.ar }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<!-------------------------------------------->
 
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
 </section>
