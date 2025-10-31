@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
       let value = translations;
 
       for (let k of keyPath) {
-        // ✅ Convert numeric keys to array indices if value is an array
-        if (Array.isArray(value) && !isNaN(k)) k = parseInt(k, 10);
-
         if (value && value[k] !== undefined) {
           value = value[k];
         } else {
