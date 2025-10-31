@@ -34,7 +34,7 @@ Texts:
     ar: "مقارنة الباقات"
     en: "Plans Comparison"
 
-
+pricing:
 Plans:
   - name:
       ar: "الباقة الأساسية"
