@@ -18,13 +18,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    //gap: 1.5rem; /////////////////////////////////////////////#########################################3
     background-color: #fafafb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     border-radius: 100px;
     width: max-content;
     margin: 2rem auto;
-    padding: 10px;
+    //padding: 10px; /////////////////////////////////////////////#########################################3
 
       h3 {
       color: #0e385b;
@@ -40,11 +40,11 @@
       padding: .4rem .6rem;
       border: 1px solid #e4e6ea;
       border-radius: 100px;
-	  color:#0e385b;
+	    color:#0e385b;
 
-      &.active {  /////////////////////////////////////////////#########################################3
-        border: 1px solid #e4e6ea;  /////////////////////////////////////////////#########################################3
-      }  /////////////////////////////////////////////#########################################3
+      //&.active {  //it didn't work
+        //border: 1px solid #e4e6ea;
+      //}  
     }
 
     .duration-tabs {
@@ -56,17 +56,17 @@
         background: #fff;
         color: #0e385b;
         border-radius: 100px;
-        padding: -0.4rem .6rem; /////////////////////////////////////////////#########################################3
+        padding: 0.4rem .6rem; /////////////////////////////////////////////#########################################3
         cursor: pointer;
         transition: 0.3s;
 
         &.active {
           background: #f4fcfc;
-		  border: 1px solid #0db6bd;
+		      border: 1px solid #0db6bd;
         }
 
         &:hover {
-			color: #0e385b;
+			    color: #0e385b;
         	opacity: 0.8;
         }
       }
@@ -122,19 +122,20 @@
       text-align: start;
       margin-bottom: .6rem;
 
-      button { //Features arrow button
+      button .checkmark{ //Features arrow button /////////////////////////////////////////////#########################################
         background: none;
         border: none;
         cursor: pointer;
         margin-inline-end: .3rem;
-        list-style-type: square;  /////////////////////////////////////////////#########################################3
+        //list-style-type: square;  /////////////////////////////////////////////#########################################3
       }
 
       .sub-features {
         display: none;
         margin-top: .4rem;
-        margin-inline-start: .3rem;  /////////////////////////////////////////////#########################################3
+        margin-inline-start: .1rem;  /////////////////////////////////////////////#########################################3
         color: #333;
+        list-style-type: none; /////////////////////////////////////////////#########################################
 
         &.open { display: block; }
       }
