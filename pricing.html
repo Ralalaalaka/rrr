@@ -75,24 +75,26 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
   <!-- Features -->
       <ul class="plan-features">
-        {% for feature in plan.features %}
-        <li class="feature">
-          <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
-            {{ feature.text.ar }}
-          </span>
-          <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
-          {% if feature.sub %} <!-- Sub Features -->
-          <ul class="sub-features">
-            {% for sub in feature.sub %}
-            <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
+  {% for feature in plan.features %}
+    <li class="feature">
+      <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features_{{ forloop.index0 }}.text">
+        {{ feature.text.ar }}
+      </span>
+
+      {% if feature.sub %}
+        <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+            <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features_{{ forloop.parent.index0 }}.sub_{{ forloop.index0 }}">
               {{ sub.ar }}
             </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
     </div>
     {% endfor %}
   </div>

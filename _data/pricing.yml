@@ -43,91 +43,89 @@ Plans:
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price: 15 ##add the number of employees so, before_price10 then before_price20 and base price the same
-    plan_text: 
-      ar: "تجربة"
-      en: "Test"
-    features:
-      - text:
-          ar: "الخدمات الأساسية"
-          en: "Core Services"
-        sub:
-          - ar: "علاقات الموظفين"
-            en: "Employee Relations"
-          - ar: "الإجازات"
-            en: "Leave Management"
-          - ar: "الرواتب"
-            en: "Payroll"
-      - text:
-          ar: "دعم العملاء"
-          en: "Customer Support"
-        sub:
-          - ar: "استفسارات"
-            en: "Inquiries"
-          - ar: "شكاوي"
-            en: "Complaints"
-
+    before_price: 15
+    features_0:
+      text:
+        ar: "الخدمات الأساسية"
+        en: "Core Services"
+      sub_0:
+        ar: "علاقات الموظفين"
+        en: "Employee Relations"
+      sub_1:
+        ar: "الإجازات"
+        en: "Leave Management"
+      sub_2:
+        ar: "الرواتب"
+        en: "Payroll"
+    features_1:
+      text:
+        ar: "دعم العملاء"
+        en: "Customer Support"
+      sub_0:
+        ar: "استفسارات"
+        en: "Inquiries"
+      sub_1:
+        ar: "شكاوي"
+        en: "Complaints"
   - name:
-      ar: "الباقة المتقدمة"
-      en: "Advanced Plan"
-    color: "#4ca626"
+      ar: "الباقة الأساسية"
+      en: "Basic Plan"
+    color: "#38b6ff"
     base_price: 12
-    before_price:
-    plan_text: 
-      ar: "تجربة"
-      en: "Test"
-    features:
-      - text:
-          ar: "إدارة الأداء"
-          en: "Performance Management"
-        sub:
-          - ar: "تقييم الموظفين"
-            en: "Employee Evaluation"
-          - ar: "متابعة الأهداف"
-            en: "Goal Tracking"
-      - text:
-          ar: "التدريب والتطوير"
-          en: "Training & Development"
-        sub:
-          - ar: "خطط تدريب"
-            en: "Training Plans"
-          - ar: "تقارير متابعة"
-            en: "Progress Reports"
-
+    before_price: 15
+    features_0:
+      text:
+        ar: "الخدمات الأساسية"
+        en: "Core Services"
+      sub_0:
+        ar: "علاقات الموظفين"
+        en: "Employee Relations"
+      sub_1:
+        ar: "الإجازات"
+        en: "Leave Management"
+      sub_2:
+        ar: "الرواتب"
+        en: "Payroll"
+    features_1:
+      text:
+        ar: "دعم العملاء"
+        en: "Customer Support"
+      sub_0:
+        ar: "استفسارات"
+        en: "Inquiries"
+      sub_1:
+        ar: "شكاوي"
+        en: "Complaints"
   - name:
-      ar: "الباقة المميزة"
-      en: "Premium Plan"
-    color: "#0db6bd"
+      ar: "الباقة الأساسية"
+      en: "Basic Plan"
+    color: "#38b6ff"
     base_price: 12
-    before_price:
-    plan_text: 
-      ar: "تجربة"
-      en: "Test"
-    features:
-      - text:
-          ar: "الاستشارات المتخصصة"
-          en: "Specialized Consulting"
-        sub:
-          - ar: "قانون العمل"
-            en: "Labor Law"
-          - ar: "إدارة التغيير"
-            en: "Change Management"
-      - text:
-          ar: "تقارير مخصصة"
-          en: "Custom Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
-      - text:
-          ar: "تقارير إضافية"
-          en: "Additional Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
+    before_price: 15
+    features_0:
+      text:
+        ar: "الخدمات الأساسية"
+        en: "Core Services"
+      sub_0:
+        ar: "علاقات الموظفين"
+        en: "Employee Relations"
+      sub_1:
+        ar: "الإجازات"
+        en: "Leave Management"
+      sub_2:
+        ar: "الرواتب"
+        en: "Payroll"
+    features_1:
+      text:
+        ar: "دعم العملاء"
+        en: "Customer Support"
+      sub_0:
+        ar: "استفسارات"
+        en: "Inquiries"
+      sub_1:
+        ar: "شكاوي"
+        en: "Complaints"
+
 
   
 comparison:
