@@ -75,7 +75,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
   <!-- Features -->
       <ul class="plan-features">
-        {% for feature in plan.features %}
+        {% for feature in Plans.features %}
         <li class="feature">
           <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
             {{ feature.text.ar }}
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <!------Banner------->
-<section class="banner" style="padding: 30px 10%; box-shadow: 2px 22px 29px -27px rgba(0,0,0,0.75);">
+<section class="banner" style="padding: 30px 10%; box-shadow: 2px 22px 32px -27px rgba(0,0,0,0.93);">
   <div class="inner-banner">
     <div class="banner-text">
       <h1><strong data-i18n-key="site_content.Home.start_banner">
