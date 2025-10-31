@@ -76,17 +76,21 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <!-- Features -->
       <ul class="plan-features">
         {% for feature in plan.features %}
-          <li class="feature">
-            <span>{{ feature.text[page.lang] }}</span> <!-- Liquid chooses ar/en -->
-            {% if feature.sub %}
-              <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
-              <ul class="sub-features">
-                {% for sub in feature.sub %}
-                  <li>{{ sub[page.lang] }}</li> <!-- Liquid chooses ar/en -->
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
+        <li class="feature">
+          <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
+            {{ feature.text.ar }}
+          </span>
+          <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
+          <ul class="sub-features">
+            {% for k in sub_keys %}
+              {% if k contains 'sub_' %}
+                <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.{{ feature_key }}.{{ k }}">
+                  {{ feature[k].ar }}
+                </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
     </div>
