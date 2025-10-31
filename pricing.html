@@ -80,6 +80,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
             {{ feature.text.ar }}
           </span>
+          
+        {% if has_sub %}
           <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
           <ul class="sub-features">
             {% for k in sub_keys %}
