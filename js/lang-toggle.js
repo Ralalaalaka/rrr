@@ -1,7 +1,8 @@
+<script>
 document.addEventListener('DOMContentLoaded', function() {
   const langBtn = document.querySelector('[data-lang-toggle]');
   let currentLang = localStorage.getItem('lang') || 'ar'; // default Arabic
-  let translations = window.translations || {}; // YAML data injected via Liquid
+  let translations = window.translations || {}; // YAML/Liquid data
 
   function updateHtmlLangDir() {
     document.documentElement.lang = currentLang;
@@ -14,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let value = translations;
 
       for (let k of keyPath) {
-        // Handle numeric indices for arrays
-        if (value && (value[k] !== undefined || (!isNaN(k) && value[parseInt(k)] !== undefined))) {
-          value = value[k] !== undefined ? value[k] : value[parseInt(k)];
+        if (value && value[k] !== undefined) {
+          value = value[k];
         } else {
           value = null;
           break;
@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ✅ Check if translations exist
+  // Check translations
   if (!window.translations) {
-    console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
+    console.error('No translations found. Make sure translations data is loaded.');
   }
 
   // Initialize
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
   updateTextContent();
   if (langBtn) langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
 
-  // Toggle language on click
+  // Toggle language
   if (langBtn) {
     langBtn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -52,3 +52,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+</script>
