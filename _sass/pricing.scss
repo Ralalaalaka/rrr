@@ -41,6 +41,10 @@
       border: 1px solid #e4e6ea;
       border-radius: 100px;
 	  color:#0e385b;
+
+      &.active {  /////////////////////////////////////////////#########################################3
+        border: 1px solid #e4e6ea;  /////////////////////////////////////////////#########################################3
+      }  /////////////////////////////////////////////#########################################3
     }
 
     .duration-tabs {
@@ -52,10 +56,9 @@
         background: #fff;
         color: #0e385b;
         border-radius: 100px;
-        padding: .4rem .6rem;
+        padding: -0.4rem .6rem; /////////////////////////////////////////////#########################################3
         cursor: pointer;
         transition: 0.3s;
-        line-height: 1; /////////////
 
         &.active {
           background: #f4fcfc;
@@ -123,15 +126,14 @@
         background: none;
         border: none;
         cursor: pointer;
-        color: #0e385b;
         margin-inline-end: .3rem;
-        list-style-type: square;
+        list-style-type: square;  /////////////////////////////////////////////#########################################3
       }
 
       .sub-features {
         display: none;
         margin-top: .4rem;
-        margin-inline-start: 1rem;
+        margin-inline-start: .3rem;  /////////////////////////////////////////////#########################################3
         color: #333;
 
         &.open { display: block; }
