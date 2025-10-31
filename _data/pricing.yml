@@ -24,6 +24,15 @@ Texts:
   note:
     ar: "الأسعار الظاهرة لـ 10 موظفين / ربع سنة (تتغير)"
     en: "Prices shown for 10 employees / quarter (subject to change)"
+  help:
+    ar: "تحتاج مساعدة؟"
+    en: "Need help?"
+  help_button:
+    ar: "تواصل معنا"
+    en: "Contact Us"
+  plans_compare:
+    ar: "مقارنة الباقات"
+    en: "Plans Comparison"
 
 
 Plans:
