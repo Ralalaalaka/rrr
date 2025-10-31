@@ -77,7 +77,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       <ul class="plan-features">
         {% for feature in Plans.features %}
         <li class="feature">
-          <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
+          <span data-i18n-key="Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
             {{ feature.text.ar }}
           </span>
           <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
