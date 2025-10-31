@@ -9,27 +9,30 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateTextContent() {
-    document.querySelectorAll('[data-i18n-key]').forEach(el => {
-      const keyPath = el.getAttribute('data-i18n-key').split('.');
-      let value = translations;
+  document.querySelectorAll('[data-i18n-key]').forEach(el => {
+    const keyPath = el.getAttribute('data-i18n-key').split('.');
+    let value = translations;
 
-      for (let k of keyPath) {
-        // Handle numeric indices for arrays
-        if (value && (value[k] !== undefined || (!isNaN(k) && value[parseInt(k)] !== undefined))) {
-          value = value[k] !== undefined ? value[k] : value[parseInt(k)];
-        } else {
-          value = null;
-          break;
-        }
+    for (let k of keyPath) {
+      if (Array.isArray(value)) {
+        let idx = parseInt(k);
+        if (!isNaN(idx) && value[idx] !== undefined) value = value[idx];
+        else { value = null; break; }
+      } else if (value && value[k] !== undefined) {
+        value = value[k];
+      } else {
+        value = null;
+        break;
       }
+    }
 
-      if (value && value[currentLang] !== undefined) {
-        el.textContent = value[currentLang];
-      }
-    });
-  }
+    if (value && value[currentLang] !== undefined) {
+      el.textContent = value[currentLang];
+    }
+  });
+}
 
-  // ✅ Check if translations exist
+
   if (!window.translations) {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
   }
