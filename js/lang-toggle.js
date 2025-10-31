@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
       let value = translations;
 
       for (let k of keyPath) {
-        if (value && value[k] !== undefined) {
-          value = value[k];
+        // Handle numeric indices for arrays
+        if (value && (value[k] !== undefined || (!isNaN(k) && value[parseInt(k)] !== undefined))) {
+          value = value[k] !== undefined ? value[k] : value[parseInt(k)];
         } else {
           value = null;
           break;
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ✅ Use inline injected data instead of fetching JSON
+  // ✅ Check if translations exist
   if (!window.translations) {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
   }
