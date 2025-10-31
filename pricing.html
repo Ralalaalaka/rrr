@@ -66,12 +66,14 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
         </div>
       </div>
 
+  <!-- Plan Text-->
           {% if plan.plan_text %}
           <p data-i18n-key="pricing.Plans.{{ forloop.index0 }}.plan_text">
             {{ plan.plan_text.ar }}
           </p>
           {% endif %}
 
+  <!-- Features -->
       <ul class="plan-features">
         {% for feature in plan.features %}
         <li class="feature">
@@ -79,7 +81,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
             {{ feature.text.ar }}
           </span>
           <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
-          {% if feature.sub %}
+          {% if feature.sub %} <!-- Sub Features -->
           <ul class="sub-features">
             {% for sub in feature.sub %}
             <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
@@ -146,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
+<!------Banner------->
 <section class="banner" style="">
   <div class="inner-banner">
     <div class="banner-text">
