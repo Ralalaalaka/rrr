@@ -9,13 +9,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: auto; ///////////////
-  margin-right: auto; ///////////////
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services-slider-title {
   color: #0e385b;
   margin-bottom: 40px;
+  align-items: right;
 }
 
 .services-slider {
@@ -43,12 +44,13 @@
     list-style: none;
     padding: 0;
     margin-top: 10px;
+    color: #6d767d;
 
     li {
       position: relative;
       padding: 0 25px;
       margin-bottom: 8px;
-      color: #0e385b;
+      color: #6d767d;
       text-align: right;
 
       &::before {
@@ -76,7 +78,7 @@
 .arrows-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  //transform: translateY(-50%);
   background: #fff;
   color: #6d767d;
   border: none;
