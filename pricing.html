@@ -173,43 +173,46 @@ document.addEventListener("DOMContentLoaded", function() {
   <h2 data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.title.ar }}</h2>
 
   <div class="comparison-table">
-    <div class="table-header">
-      <div class="feature-col"></div>
-      {% for plan in site.data.pricing.Plans %}
-      <div class="plan-col" style="--plan-color: {{ plan.color }}">
-        <h3 data-i18n-key="pricing.Plans.{{ forloop.index0 }}.name">{{ plan.name.ar }}</h3>
-      </div>
-      {% endfor %}
+  <div class="table-header">
+    <div class="feature-col"></div>
+    {% for plan in site.data.pricing.Plans %}
+    <div class="plan-col" style="--plan-color: {{ plan.color }}">
+      <h3 data-i18n-key="pricing.Plans.{{ forloop.index0 }}.name">{{ plan.name.ar }}</h3>
     </div>
-
-    {% for category in site.data.pricing.comparison %}
-    <div class="category-row">
-      <h4>{{ category.category }}</h4>
-    </div>
-
-    {% for feature in category.features %}
-    <div class="feature-row">
-      <div class="feature-name">{{ feature.name }}</div>
-
-      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[0].color }}">
-        {% if feature.basic or feature.plan1 %}
-        <span class="checkmark">✔</span>
-        {% endif %}
-      </div>
-
-      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[1].color }}">
-        {% if feature.advanced or feature.plan2 %}
-        <span class="checkmark">✔</span>
-        {% endif %}
-      </div>
-
-      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[2].color }}">
-        {% if feature.premium or feature.plan3 %}
-        <span class="checkmark">✔</span>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
     {% endfor %}
   </div>
+
+  {% for category in site.data.pricing.Comparison %}
+  <div class="category-row">
+    <h4 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category }}</h4>
+  </div>
+
+  {% for feature in category.features %}
+  <div class="feature-row">
+    <div class="feature-name" data-i18n-key="pricing.Comparison.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.name">
+      {{ feature.name }}
+    </div>
+
+    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[0].color }}">
+      {% if feature.basic or feature.plan1 %}
+      <span class="checkmark">✔</span>
+      {% endif %}
+    </div>
+
+    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[1].color }}">
+      {% if feature.advanced or feature.plan2 %}
+      <span class="checkmark">✔</span>
+      {% endif %}
+    </div>
+
+    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[2].color }}">
+      {% if feature.premium or feature.plan3 %}
+      <span class="checkmark">✔</span>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+  {% endfor %}
+</div>
+
 </section>
