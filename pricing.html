@@ -73,25 +73,26 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
     <!-- Features -->
     <ul class="plan-features">
-      {% for feature in site.data.pricing.Plan1 %}
-      {% if forloop.index0 != 0 %}
-      <li class="feature">
-        <span data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.features">{{ feature.features.ar }}</span>
-        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
+  {% for feature in site.data.pricing.Plan1 %}
+  {% if forloop.index0 != 0 %}
+  {% assign parentIndex = forloop.index0 %}
+  <li class="feature">
+    <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
+    <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
 
-        {% if feature.sub %}
-        <ul class="sub-features">
-          {% for sub in feature.sub %}
-          <li data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.sub.{{ forloop.index0 }}">
-            {{ sub.ar }}
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+    {% if feature.sub %}
+    <ul class="sub-features">
+      {% for sub in feature.sub %}
+      <li data-i18n-key="pricing.Plan1.{{ parentIndex }}.sub.{{ forloop.index0 }}">
+        {{ sub.ar }}
       </li>
-      {% endif %}
       {% endfor %}
     </ul>
+    {% endif %}
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
   </div>
 
   <!-- Repeat the same structure for Plan2 and Plan3 -->
