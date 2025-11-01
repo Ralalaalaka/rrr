@@ -129,58 +129,88 @@ Plans:
 
   
 Comparison:
-  - category: الخدمات الأساسية
+  - category:
+      ar: "الخدمات الأساسية"
+      en: "Core Services"
     features:
-      - name: علاقات الموظفين
+      - name:
+          ar: "علاقات الموظفين"
+          en: "Employee Relations"
         plan1: true
         plan2: true
         plan3: true
-      - name: الإجازات
-        basic: true
-        advanced: true
-        premium: true
-      - name: الرواتب
-        basic: true
-        advanced: true
-        premium: true
+      - name:
+          ar: "الإجازات"
+          en: "Leave Management"
+        plan1: true
+        plan2: true
+        plan3: true
+      - name:
+          ar: "الرواتب"
+          en: "Payroll"
+        plan1: true
+        plan2: true
+        plan3: true
 
-  - category: إدارة الأداء
+  - category:
+      ar: "إدارة الأداء"
+      en: "Performance Management"
     features:
-      - name: تقييم الموظفين
-        basic: false
-        advanced: true
-        premium: true
-      - name: متابعة الأهداف
-        basic: false
-        advanced: true
-        premium: true
+      - name:
+          ar: "تقييم الموظفين"
+          en: "Employee Evaluation"
+        plan1: false
+        plan2: true
+        plan3: true
+      - name:
+          ar: "متابعة الأهداف"
+          en: "Goal Tracking"
+        plan1: false
+        plan2: true
+        plan3: true
 
-  - category: التدريب والتطوير
+  - category:
+      ar: "التدريب والتطوير"
+      en: "Training & Development"
     features:
-      - name: خطط تدريب
-        basic: false
-        advanced: true
-        premium: true
-      - name: تقارير متابعة
-        basic: false
-        advanced: true
-        premium: true
+      - name:
+          ar: "خطط تدريب"
+          en: "Training Plans"
+        plan1: false
+        plan2: true
+        plan3: true
+      - name:
+          ar: "تقارير متابعة"
+          en: "Progress Reports"
+        plan1: false
+        plan2: true
+        plan3: true
 
-  - category: الاستشارات والتقارير
+  - category:
+      ar: "الاستشارات والتقارير"
+      en: "Consulting & Reports"
     features:
-      - name: قانون العمل
-        basic: false
-        advanced: false
-        premium: true
-      - name: إدارة التغيير
-        basic: false
-        advanced: false
-        premium: true
-      - name: تقارير مخصصة
-        basic: false
-        advanced: false
-        premium: true
-      - name: تقارير تنبؤية
-        basic: false
-        advanced: false
-        premium: true
+      - name:
+          ar: "قانون العمل"
+          en: "Labor Law"
+        plan1: false
+        plan2: false
+        plan3: true
+      - name:
+          ar: "إدارة التغيير"
+          en: "Change Management"
+        plan1: false
+        plan2: false
+        plan3: true
+      - name:
+          ar: "تقارير مخصصة"
+          en: "Custom Reports"
+        plan1: false
+        plan2: false
+        plan3: true
+      - name:
+          ar: "تقارير تنبؤية"
+          en: "Predictive Reports"
+        plan1: false
+        plan2: false
+        plan3: true
