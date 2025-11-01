@@ -3,30 +3,26 @@
   padding: 2rem 1rem;
 
   h3 {
-    //margin: 0.5rem auto; /////////////////////////////////////////////#########################################
     color: #6d767d;
     text-align: center;
     }
 
 	.note{
-		//margin: 0.5rem auto; /////////////////////////////////////////////#########################################
 		color: #6d767d;
 		text-align: center;
 	}
 
   .pricing-controls {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem; 
     background-color: #fafafb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     border-radius: 100px;
-    width: max-content;
+    //width: max-content;
     margin: 2rem auto;
     padding: 10px;
-    flex-wrap: nowrap; // force single line
-    align-items: center;
 
       h3 {
       color: #0e385b;

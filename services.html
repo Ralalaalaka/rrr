@@ -58,7 +58,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <button class="arrows-button prev">&#10094;</button>
   <button class="arrows-button next">&#10095;</button>
 
-  <div class="services-dots">
+  <div class="dots">
     {% for service in site.data.services.services %}
       <span class="dot" data-index="{{ forloop.index0 }}"></span>
     {% endfor %}
@@ -69,7 +69,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".service-slide");
-  const dots = document.querySelectorAll(".services-dots .dot");
+  const dots = document.querySelectorAll(".dot");
   const prev = document.querySelector(".arrows-button.prev");
   const next = document.querySelector(".arrows-button.next");
   let current = 0;

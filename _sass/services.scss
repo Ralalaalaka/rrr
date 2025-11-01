@@ -68,9 +68,7 @@
 
 .service-image img {
   max-width: 45vh;
-  border-radius: 20px;
   margin-bottom: 25px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .arrows-button {
@@ -102,6 +100,7 @@
   right: 40px;
 }
 
+/*
 .services-dots {
   margin-top: 30px;
 
@@ -121,6 +120,7 @@
     }
   }
 }
+*/
 
 /* Responsive (laptop) */
 @media #{$mid-point} {
