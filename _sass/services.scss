@@ -4,8 +4,8 @@
   background: #fafafb;
   border-radius: 1000px 1000px 0 0;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.05);
-  padding: 60px 20px 100px;
-  min-height: 100vh;
+  padding: 60px 20px 0;
+  min-height: 80vh; //it was 100vh
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +45,7 @@
 
     li {
       position: relative;
-      padding-right: 25px;
+      padding: 0 25px;
       margin-bottom: 8px;
       color: #0e385b;
       text-align: right;
@@ -105,7 +105,7 @@
 /* Responsive (laptop) */
 @media #{$mid-point} {
   .services-slider-section {
-    padding: 40px 20px 20px;
+    padding: 40px 20px;
   }
 
   .service-slide {
