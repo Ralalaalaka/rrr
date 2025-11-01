@@ -4,8 +4,8 @@
   background: #fafafb;
   border-radius: 1000px 1000px 0 0;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.05);
-  padding: 60px 20px 20px;
-  min-height: 100vh;
+  padding: 20px 20px; //it was 60px 20px 20px
+  min-height: 70vh; //it was 100vh
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 70vh;
+  //height: 70vh;
 }
 
 .service-slide {
@@ -100,27 +100,6 @@
   right: 40px;
 }
 
-/*
-.services-dots {
-  margin-top: 30px;
-
-  .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background: #e4e6ea;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
-
-    &.active {
-      background: #0e385b;
-      transform: scale(1.3);
-    }
-  }
-}
-*/
 
 /* Responsive (laptop) */
 @media #{$mid-point} {
