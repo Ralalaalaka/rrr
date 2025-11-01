@@ -49,21 +49,10 @@ Plans:
       - text:
           ar: "الخدمات الأساسية"
           en: "Core Services"
-        sub:
-          - ar: "علاقات الموظفين"
-            en: "Employee Relations"
-          - ar: "الإجازات"
-            en: "Leave Management"
-          - ar: "الرواتب"
-            en: "Payroll"
       - text:
           ar: "دعم العملاء"
           en: "Customer Support"
-        sub:
-          - ar: "استفسارات"
-            en: "Inquiries"
-          - ar: "شكاوي"
-            en: "Complaints"
+
 
   - name:
       ar: "الباقة المتقدمة"
@@ -78,19 +67,9 @@ Plans:
       - text:
           ar: "إدارة الأداء"
           en: "Performance Management"
-        sub:
-          - ar: "تقييم الموظفين"
-            en: "Employee Evaluation"
-          - ar: "متابعة الأهداف"
-            en: "Goal Tracking"
       - text:
           ar: "التدريب والتطوير"
           en: "Training & Development"
-        sub:
-          - ar: "خطط تدريب"
-            en: "Training Plans"
-          - ar: "تقارير متابعة"
-            en: "Progress Reports"
 
   - name:
       ar: "الباقة المميزة"
@@ -105,27 +84,12 @@ Plans:
       - text:
           ar: "الاستشارات المتخصصة"
           en: "Specialized Consulting"
-        sub:
-          - ar: "قانون العمل"
-            en: "Labor Law"
-          - ar: "إدارة التغيير"
-            en: "Change Management"
       - text:
           ar: "تقارير مخصصة"
           en: "Custom Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
       - text:
           ar: "تقارير إضافية"
           en: "Additional Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
 
   
 Comparison:
