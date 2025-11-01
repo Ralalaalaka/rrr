@@ -234,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-
 <!------Banner------->
 <section class="banner" style="padding: 30px 10%; box-shadow: 2px 22px 32px -27px rgba(0,0,0,0.93);">
   <div class="inner-banner">
@@ -256,60 +255,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <!--Comparison-->
 
-  <section class="benefits pad">
-  <h2 data-i18n-key="pricing.Texts.plans_compare">{{ site.data.pricing.Texts.plans_compare.ar }}</h2>
+<section class="benefits pad">
+  <h2 data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.title.ar }}</h2>
 
   <div class="comparison-table">
     <div class="table-header">
       <div class="feature-col"></div>
-
-      <div class="plan-col" style="--plan-color: {{ site.data.pricing.Plan1[0].color }}">
-        <h3 data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</h3>
+      {% assign plans = site.data.pricing.Plan1 | concat: site.data.pricing.Plan2 | concat: site.data.pricing.Plan3 %}
+      {% for plan_index in (0..2) %}
+      <div class="plan-col" style="--plan-color: {{ site.data.pricing["Plan" | append: plan_index | plus: 1][0].color }}">
+        <h3 data-i18n-key="pricing.Plan{{ plan_index | plus: 1 }}.0.name">
+          {{ site.data.pricing["Plan" | append: plan_index | plus: 1][0].name.ar }}
+        </h3>
       </div>
-      <div class="plan-col" style="--plan-color: {{ site.data.pricing.Plan2[0].color }}">
-        <h3 data-i18n-key="pricing.Plan2.0.name">{{ site.data.pricing.Plan2[0].name.ar }}</h3>
-      </div>
-      <div class="plan-col" style="--plan-color: {{ site.data.pricing.Plan3[0].color }}">
-        <h3 data-i18n-key="pricing.Plan3.0.name">{{ site.data.pricing.Plan3[0].name.ar }}</h3>
-      </div>
-    </div>
-
-{% for category in site.data.pricing.Comparison %}
-  <div class="category-row">
-    <h4 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">
-      {{ category.category.ar }}
-    </h4>
-  </div>
-
-  {% for feature in category.features %}
-  <div class="feature-row">
-    <div class="feature-name"
-         data-i18n-key="pricing.Comparison.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.name">
-      {{ feature.name.ar }}
-    </div>
-
-    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan1[0].color }}">
-      {% if feature.plan1 %}<span class="checkmark">✔</span>{% endif %}
-    </div>
-    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan2[0].color }}">
-      {% if feature.plan2 %}<span class="checkmark">✔</span>{% endif %}
-    </div>
-    <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan3[0].color }}">
-      {% if feature.plan3 %}<span class="checkmark">✔</span>{% endif %}
-    </div>
-
-    {% if feature.sub %}
-    <ul class="sub-features">
-      {% for sub in feature.sub %}
-      <li data-i18n-key="pricing.Comparison.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
-        {{ sub.ar }}
-      </li>
       {% endfor %}
-    </ul>
-    {% endif %}
-  </div>
-  {% endfor %}
-{% endfor %}
+    </div>
 
+    {% for category_index in (0..site.data.pricing.Comparison.size | minus: 1) %}
+    {% assign category = site.data.pricing.Comparison[category_index] %}
+    <div class="category-row">
+      <h4 data-i18n-key="pricing.Comparison.{{ category_index }}.category">
+        {{ category.category.ar }}
+      </h4>
+    </div>
+
+    {% for feature_index in (0..category.features.size | minus: 1) %}
+    {% assign feature = category.features[feature_index] %}
+    <div class="feature-row">
+      <div class="feature-name" data-i18n-key="pricing.Comparison.{{ category_index }}.features.{{ feature_index }}.name">
+        {{ feature.name.ar }}
+      </div>
+
+      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan1[0].color }}">
+        {% if feature.plan1 %}
+        <span class="checkmark">✔</span>
+        {% endif %}
+      </div>
+
+      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan2[0].color }}">
+        {% if feature.plan2 %}
+        <span class="checkmark">✔</span>
+        {% endif %}
+      </div>
+
+      <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan3[0].color }}">
+        {% if feature.plan3 %}
+        <span class="checkmark">✔</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
   </div>
 </section>
