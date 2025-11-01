@@ -41,9 +41,8 @@ Plans:
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price10: 15
-    before_price20: 25
-    plan_text:
+    before_price: 15 ##add the number of employees so, before_price10 then before_price20 and base price the same
+    plan_text: 
       ar: "تجربة"
       en: "Test"
     features:
@@ -71,9 +70,8 @@ Plans:
       en: "Advanced Plan"
     color: "#4ca626"
     base_price: 12
-    before_price10: 18
-    before_price20: 28
-    plan_text:
+    before_price:
+    plan_text: 
       ar: "تجربة"
       en: "Test"
     features:
@@ -99,9 +97,8 @@ Plans:
       en: "Premium Plan"
     color: "#0db6bd"
     base_price: 12
-    before_price10: 22
-    before_price20: 35
-    plan_text:
+    before_price:
+    plan_text: 
       ar: "تجربة"
       en: "Test"
     features:
@@ -116,6 +113,14 @@ Plans:
       - text:
           ar: "تقارير مخصصة"
           en: "Custom Reports"
+        sub:
+          - ar: "إحصائيات شهرية"
+            en: "Monthly Statistics"
+          - ar: "تقارير تنبؤية"
+            en: "Predictive Reports"
+      - text:
+          ar: "تقارير إضافية"
+          en: "Additional Reports"
         sub:
           - ar: "إحصائيات شهرية"
             en: "Monthly Statistics"
