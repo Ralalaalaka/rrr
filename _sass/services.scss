@@ -1,7 +1,7 @@
 .services-slider-section {
   position: relative;
   text-align: center;
-  background: #fafafb;
+  background: #fafbfa;
   border-radius: 1000px 1000px 0 0;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.05);
   padding: 60px 20px 0;
@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: auto; ///////////////
+  margin-right: auto; ///////////////
 }
 
 .services-slider-title {
@@ -67,8 +69,8 @@
 }
 
 .service-image img {
-  max-width: 60vh;
-  margin: 25px 0;
+  max-width: 70vh;
+  margin:30 0;
 }
 
 .arrows-button {
@@ -76,18 +78,16 @@
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
-  color: #0e385b;
+  color: #6d767d;
   border: none;
-  font-size: 10px;
-  padding: 8px 8px;
+  font-size: 18px;
+  padding: 16px 8px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, transform 0.3s;
 
   &:hover {
-    background: #0db6bd;
-    color: #fff;
     transform: translateY(-50%) scale(1.1);
   }
 }
@@ -111,19 +111,19 @@
     width: 85%;
   }
 
-  .arrows-button.prev {
-    left: 20px;
-  }
+  //.arrows-button.prev {
+    //left: 20px;
+  //}
 
-  .arrows-button.next {
-    right: 20px;
-  }
+  //.arrows-button.next {
+    //right: 20px;
+  //}
 }
 
 /* Phone view */
 @media #{$phone} {
   .services-slider-section {
-    padding: 30px 15px 60px;
+    padding: 30px 15px;
   }
 
   .service-image img {
@@ -131,6 +131,6 @@
   }
 
   .service-slide {
-    width: 95%;
+    width: 80%; //it was 95
   }
 }
