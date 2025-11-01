@@ -47,41 +47,109 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
   <!-- Plans -->
+<!-- Plans -->
+<div class="plans">
+
   <!-- Plan 1 -->
-<div class="plan-card" style="border-color: {{ site.data.pricing.Plan1[0].color }}">
-  <h2 data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</h2>
-  <p>{{ site.data.pricing.Plan1[0].plan_text.ar }}</p>
-  <div class="price">
-    <span class="base-price">{{ site.data.pricing.Plan1[0].base_price }}</span>
-    <span class="before-price">{{ site.data.pricing.Plan1[0].before_price10 }}</span>
-  </div>
+  <div class="plan-card">
+    <div class="plan-header">
+      <h2 style="color: {{ site.data.pricing.Plan1[0].color }}">
+        <strong data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</strong>
+      </h2>
+      <div class="plan-price">
+        <h1>
+          <strong>
+            <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
+          </strong>
+        </h1>
+        <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}">{{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
+      </div>
+    </div>
 
-  <ul class="plan-features">
-    {% for feature in site.data.pricing.Plan1 offset:1 %}
-    <li class="feature">
-      <span data-i18n-key="pricing.Plan1.{{ forloop.index }}.features">{{ feature.features.ar }}</span>
-      <button class="toggle-sub">▶</button>
+    <!-- Plan Text -->
+    {% if site.data.pricing.Plan1[0].plan_text %}
+    <p data-i18n-key="pricing.Plan1.0.plan_text">{{ site.data.pricing.Plan1[0].plan_text.ar }}</p>
+    {% endif %}
 
-      {% if feature.sub %}
-      <ul class="sub-features">
-        {% for sub in feature.sub %}
-        <li data-i18n-key="pricing.Plan1.{{ forloop.parent.index }}.sub.{{ forloop.index0 }}">
-          {{ sub.ar }}
-        </li>
-        {% endfor %}
-      </ul>
+    <!-- Features -->
+    <ul class="plan-features">
+      {% for feature in site.data.pricing.Plan1 %}
+      {% if forloop.index0 != 0 %}
+      <li class="feature">
+        <span data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.features">{{ feature.features.ar }}</span>
+        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
+
+        {% if feature.sub %}
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+          <li data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.sub.{{ forloop.index0 }}">
+            {{ sub.ar }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
       {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+      {% endfor %}
+    </ul>
   </div>
 
-  <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
-</section>
+  <!-- Repeat the same structure for Plan2 and Plan3 -->
+  <!-- Just replace Plan1 → Plan2 / Plan3 and adjust colors/data-i18n-key accordingly -->
+
+</div>
 
 
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const empSelect = document.getElementById("employees");
+  const durationTabs = document.querySelectorAll(".duration-btn");
+  const prices = document.querySelectorAll(".price");
+  const beforePrices = document.querySelectorAll(".before-price");
+
+  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
+
+  function updatePrices() {
+    const emp = parseInt(empSelect.value);
+    prices.forEach((p, i) => {
+      const base = parseFloat(p.dataset.base);
+      p.textContent = (base * emp * months).toLocaleString();
+
+      if (beforePrices[i]) {
+        // Choose the right before_price based on employees
+        let before = parseFloat(beforePrices[i].dataset.before);
+        beforePrices[i].textContent = (before * emp * months).toLocaleString();
+      }
+    });
+  }
+
+  empSelect.addEventListener("change", updatePrices);
+
+  durationTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      durationTabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      months = parseInt(btn.dataset.months);
+      updatePrices();
+    });
+  });
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".toggle-sub");
+    if (!btn) return;
+    const sub = btn.parentElement.querySelector(".sub-features");
+    if (!sub) return;
+    sub.classList.toggle("open");
+    btn.textContent = sub.classList.contains("open") ? "▼" : "▶";
+  });
+
+  updatePrices();
+});
+</script>
+
+<!--
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const empSelect = document.getElementById("employees");
@@ -126,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function() {
   updatePrices();
 });
 </script>
-
+-->
 
 <!------Banner------->
 <section class="banner" style="padding: 30px 10%; box-shadow: 2px 22px 32px -27px rgba(0,0,0,0.93);">
