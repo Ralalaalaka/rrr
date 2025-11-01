@@ -19,3 +19,112 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 	</div>
 </section>
 
+
+
+<section class="services-slider-section" dir="rtl">
+  <h2 class="services-slider-title" data-i18n-key="services.section_title">
+    <strong>خدماتنا</strong>
+  </h2>
+
+  <div class="services-slider">
+    {% for service in site.data.services.services %}
+      <div class="service-slide" data-index="{{ forloop.index0 }}">
+        <div class="service-image">
+          <img src="{{ service.image }}" alt="{{ service.title.ar }}">
+        </div>
+
+        <div class="service-text">
+          <h3 data-i18n-key="services.services.{{ forloop.index0 }}.title">
+            {{ service.title.ar }}
+          </h3>
+          <p data-i18n-key="services.services.{{ forloop.index0 }}.description">
+            {{ service.description.ar }}
+          </p>
+
+          {% if service.sub_services %}
+          <ul>
+            {% for item in service.sub_services %}
+            <li data-i18n-key="services.services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">
+              {{ item.ar }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="arrow prev">&#10094;</button>
+  <button class="arrow next">&#10095;</button>
+
+  <div class="services-dots">
+    {% for service in site.data.services.services %}
+      <span class="dot" data-index="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".service-slide");
+  const dots = document.querySelectorAll(".services-dots .dot");
+  const prev = document.querySelector(".arrow.prev");
+  const next = document.querySelector(".arrow.next");
+  let current = 0;
+  let timer;
+
+  const rotationSpeed = 6000;
+
+  function updateSlides() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+    });
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function showNext() {
+    current = (current + 1) % slides.length;
+    updateSlides();
+  }
+
+  function showPrev() {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlides();
+  }
+
+  function startAuto() {
+    timer = setInterval(showNext, rotationSpeed);
+  }
+
+  function stopAuto() {
+    clearInterval(timer);
+  }
+
+  prev.addEventListener("click", () => {
+    stopAuto();
+    showPrev();
+    startAuto();
+  });
+
+  next.addEventListener("click", () => {
+    stopAuto();
+    showNext();
+    startAuto();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      stopAuto();
+      current = i;
+      updateSlides();
+      startAuto();
+    });
+  });
+
+  updateSlides();
+  startAuto();
+});
+</script>
