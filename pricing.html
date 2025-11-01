@@ -281,9 +281,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     {% for feature in category.features %}
     <div class="feature-row">
-      <div class="feature-name" data-i18n-key="pricing.Comparison.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.name">
+      <div class="feature-name"
+     data-i18n-key="pricing.Comparison.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.name">
         {{ feature.name.ar }}
       </div>
+
 
       <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plan1[0].color }}">
         {% if feature.plan1 %}
