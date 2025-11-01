@@ -20,11 +20,8 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 </section>
 
 
-
-<section class="services-slider-section" dir="rtl">
-  <h2 class="services-slider-title" data-i18n-key="services.section_title">
-    <strong>خدماتنا</strong>
-  </h2>
+<section class="pad">
+<div class="services-slider-section">
 
   <div class="services-slider">
     {% for service in site.data.services.services %}
@@ -63,6 +60,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       <span class="dot" data-index="{{ forloop.index0 }}"></span>
     {% endfor %}
   </div>
+</div>
 </section>
 
 <script>
