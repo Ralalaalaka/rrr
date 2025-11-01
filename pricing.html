@@ -47,56 +47,139 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
   <!-- Plans -->
-<!-- Plans -->
-<div class="plans">
+    <div class="plans">
 
-  <!-- Plan 1 -->
-  <div class="plan-card">
-    <div class="plan-header">
-      <h2 style="color: {{ site.data.pricing.Plan1[0].color }}">
-        <strong data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</strong>
-      </h2>
-      <div class="plan-price">
-        <h1>
-          <strong>
-            <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
-          </strong>
-        </h1>
-        <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}">{{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
-      </div>
-    </div>
+      <!-- Plan 1 -->
+      <div class="plan-card">
+        <div class="plan-header">
+          <h2 style="color: {{ site.data.pricing.Plan1[0].color }}">
+            <strong data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</strong>
+          </h2>
+          <div class="plan-price">
+            <h1>
+              <strong>
+                <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
+              </strong>
+            </h1>
+            <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}">{{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
+          </div>
+        </div>
 
-    <!-- Plan Text -->
-    {% if site.data.pricing.Plan1[0].plan_text %}
-    <p data-i18n-key="pricing.Plan1.0.plan_text">{{ site.data.pricing.Plan1[0].plan_text.ar }}</p>
-    {% endif %}
+        <!-- Plan Text -->
+        {% if site.data.pricing.Plan1[0].plan_text %}
+        <p data-i18n-key="pricing.Plan1.0.plan_text">{{ site.data.pricing.Plan1[0].plan_text.ar }}</p>
+        {% endif %}
 
-    <!-- Features -->
-    <ul class="plan-features">
-  {% for feature in site.data.pricing.Plan1 %}
-  {% if forloop.index0 != 0 %}
-  {% assign parentIndex = forloop.index0 %}
-  <li class="feature">
-    <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-    <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
+        <!-- Features -->
+        <ul class="plan-features">
+      {% for feature in site.data.pricing.Plan1 %}
+      {% if forloop.index0 != 0 %}
+      {% assign parentIndex = forloop.index0 %}
+      <li class="feature">
+        <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
+        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
 
-    {% if feature.sub %}
-    <ul class="sub-features">
-      {% for sub in feature.sub %}
-      <li data-i18n-key="pricing.Plan1.{{ parentIndex }}.sub.{{ forloop.index0 }}">
-        {{ sub.ar }}
+        {% if feature.sub %}
+        <ul class="sub-features">
+          {% for sub in feature.sub %}
+          <li data-i18n-key="pricing.Plan1.{{ parentIndex }}.sub.{{ forloop.index0 }}">
+            {{ sub.ar }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
-    {% endif %}
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
   </div>
 
-  <!-- Repeat the same structure for Plan2 and Plan3 -->
-  <!-- Just replace Plan1 → Plan2 / Plan3 and adjust colors/data-i18n-key accordingly -->
+    <!-- Plan 2 -->
+    <div class="plan-card">
+      <div class="plan-header">
+        <h2 style="color: {{ site.data.pricing.Plan2[0].color }}">
+          <strong data-i18n-key="pricing.Plan2.0.name">{{ site.data.pricing.Plan2[0].name.ar }}</strong>
+        </h2>
+        <div class="plan-price">
+          <h1>
+            <strong>
+              <span class="price" data-base="{{ site.data.pricing.Plan2[0].base_price }}">{{ site.data.pricing.Plan2[0].base_price }}</span> ريال
+            </strong>
+          </h1>
+          <span class="before-price" data-before="{{ site.data.pricing.Plan2[0].before_price10 }}">{{ site.data.pricing.Plan2[0].before_price10 }}</span> ريال
+        </div>
+      </div>
+
+      {% if site.data.pricing.Plan2[0].plan_text %}
+      <p data-i18n-key="pricing.Plan2.0.plan_text">{{ site.data.pricing.Plan2[0].plan_text.ar }}</p>
+      {% endif %}
+
+      <ul class="plan-features">
+        {% for feature in site.data.pricing.Plan2 %}
+        {% if forloop.index0 != 0 %}
+        {% assign parentIndex = forloop.index0 %}
+        <li class="feature">
+          <span data-i18n-key="pricing.Plan2.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
+          <button class="toggle-sub" style="color: {{ site.data.pricing.Plan2[0].color }}">▶</button>
+
+          {% if feature.sub %}
+          <ul class="sub-features">
+            {% for sub in feature.sub %}
+            <li data-i18n-key="pricing.Plan2.{{ parentIndex }}.sub.{{ forloop.index0 }}">
+              {{ sub.ar }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    <!-- Plan 3 -->
+    <div class="plan-card">
+      <div class="plan-header">
+        <h2 style="color: {{ site.data.pricing.Plan3[0].color }}">
+          <strong data-i18n-key="pricing.Plan3.0.name">{{ site.data.pricing.Plan3[0].name.ar }}</strong>
+        </h2>
+        <div class="plan-price">
+          <h1>
+            <strong>
+              <span class="price" data-base="{{ site.data.pricing.Plan3[0].base_price }}">{{ site.data.pricing.Plan3[0].base_price }}</span> ريال
+            </strong>
+          </h1>
+          <span class="before-price" data-before="{{ site.data.pricing.Plan3[0].before_price10 }}">{{ site.data.pricing.Plan3[0].before_price10 }}</span> ريال
+        </div>
+      </div>
+
+      {% if site.data.pricing.Plan3[0].plan_text %}
+      <p data-i18n-key="pricing.Plan3.0.plan_text">{{ site.data.pricing.Plan3[0].plan_text.ar }}</p>
+      {% endif %}
+
+      <ul class="plan-features">
+        {% for feature in site.data.pricing.Plan3 %}
+        {% if forloop.index0 != 0 %}
+        {% assign parentIndex = forloop.index0 %}
+        <li class="feature">
+          <span data-i18n-key="pricing.Plan3.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
+          <button class="toggle-sub" style="color: {{ site.data.pricing.Plan3[0].color }}">▶</button>
+
+          {% if feature.sub %}
+          <ul class="sub-features">
+            {% for sub in feature.sub %}
+            <li data-i18n-key="pricing.Plan3.{{ parentIndex }}.sub.{{ forloop.index0 }}">
+              {{ sub.ar }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
 
 </div>
 
