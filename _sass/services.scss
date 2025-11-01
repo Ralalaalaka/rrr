@@ -61,11 +61,11 @@
   }
 }
 
-//.service-slide.active {
-  //opacity: 1;
-  //transform: scale(1);
-  //z-index: 2;
-//}
+.service-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
 
 .service-image img {
   max-width: 60vh;
