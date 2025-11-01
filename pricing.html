@@ -47,72 +47,34 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   </div>
 
   <!-- Plans -->
-  <div class="plans">
-    {% for plan in site.data.pricing.Plans %}
-    <div class="plan-card">
-      <div class="plan-header">
-        <h2 style="color: {{ plan.color }}">
-          <strong data-i18n-key="pricing.Plans.{{ forloop.index0 }}.name">{{ plan.name.ar }}</strong>
-        </h2>
-        <div class="plan-price">
-          <h1>
-            <strong>
-              <span class="price" data-base="{{ plan.base_price }}">{{ plan.base_price }}</span> ريال
-            </strong>
-          </h1>
-          {% if plan.before_price %}
-          <span class="before-price" data-before="{{ plan.before_price }}">{{ plan.before_price }} </span> ريال
-          {% endif %}
-        </div>
-      </div>
-
-  <!-- Plan Text-->
-          {% if plan.plan_text %}
-          <p data-i18n-key="pricing.Plans.{{ forloop.index0 }}.plan_text">
-            {{ plan.plan_text.ar }}
-          </p>
-          {% endif %}
-
-  <!-- Features -->
+  <!-- Plan 1 -->
 <div class="plan-card" style="border-color: {{ site.data.pricing.Plan1[0].color }}">
-  <div class="plan-header">
-    <h2 style="color: {{ site.data.pricing.Plan1[0].color }}">
-      <strong data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</strong>
-    </h2>
-    <div class="plan-price">
-      <h1>
-        <strong>
-          <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
-        </strong>
-      </h1>
-      <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}">{{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
-    </div>
+  <h2 data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</h2>
+  <p>{{ site.data.pricing.Plan1[0].plan_text.ar }}</p>
+  <div class="price">
+    <span class="base-price">{{ site.data.pricing.Plan1[0].base_price }}</span>
+    <span class="before-price">{{ site.data.pricing.Plan1[0].before_price10 }}</span>
   </div>
 
   <ul class="plan-features">
-    {% for feature in site.data.pricing.Plan1 %}
-    {% if forloop.index0 != 0 %}
+    {% for feature in site.data.pricing.Plan1 offset:1 %}
     <li class="feature">
-      <span data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.features">{{ feature.features.ar }}</span>
+      <span data-i18n-key="pricing.Plan1.{{ forloop.index }}.features">{{ feature.features.ar }}</span>
       <button class="toggle-sub">▶</button>
 
       {% if feature.sub %}
       <ul class="sub-features">
         {% for sub in feature.sub %}
-        <li data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.sub.{{ forloop.index0 }}">
+        <li data-i18n-key="pricing.Plan1.{{ forloop.parent.index }}.sub.{{ forloop.index0 }}">
           {{ sub.ar }}
         </li>
         {% endfor %}
       </ul>
       {% endif %}
     </li>
-    {% endif %}
     {% endfor %}
   </ul>
 </div>
-
-    </div>
-    {% endfor %}
   </div>
 
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
