@@ -36,8 +36,7 @@ Texts:
 
 
 Plans:
-  - key: basic
-    name:
+  - name:
       ar: "الباقة الأساسية"
       en: "Basic Plan"
     color: "#38b6ff"
@@ -48,34 +47,26 @@ Plans:
       ar: "تجربة"
       en: "Test"
     features:
-      - key: core_services
-        text:
+      - text:
           ar: "الخدمات الأساسية"
           en: "Core Services"
         sub:
-          - key: employee_relations
-            ar: "علاقات الموظفين"
+          - ar: "علاقات الموظفين"
             en: "Employee Relations"
-          - key: leave_management
-            ar: "الإجازات"
+          - ar: "الإجازات"
             en: "Leave Management"
-          - key: payroll
-            ar: "الرواتب"
+          - ar: "الرواتب"
             en: "Payroll"
-      - key: customer_support
-        text:
+      - text:
           ar: "دعم العملاء"
           en: "Customer Support"
         sub:
-          - key: inquiries
-            ar: "استفسارات"
+          - ar: "استفسارات"
             en: "Inquiries"
-          - key: complaints
-            ar: "شكاوي"
+          - ar: "شكاوي"
             en: "Complaints"
 
-  - key: advanced
-    name:
+  - name:
       ar: "الباقة المتقدمة"
       en: "Advanced Plan"
     color: "#4ca626"
@@ -86,31 +77,24 @@ Plans:
       ar: "تجربة"
       en: "Test"
     features:
-      - key: performance_management
-        text:
+      - text:
           ar: "إدارة الأداء"
           en: "Performance Management"
         sub:
-          - key: evaluation
-            ar: "تقييم الموظفين"
+          - ar: "تقييم الموظفين"
             en: "Employee Evaluation"
-          - key: goals
-            ar: "متابعة الأهداف"
+          - ar: "متابعة الأهداف"
             en: "Goal Tracking"
-      - key: training_development
-        text:
+      - text:
           ar: "التدريب والتطوير"
           en: "Training & Development"
         sub:
-          - key: training_plans
-            ar: "خطط تدريب"
+          - ar: "خطط تدريب"
             en: "Training Plans"
-          - key: progress_reports
-            ar: "تقارير متابعة"
+          - ar: "تقارير متابعة"
             en: "Progress Reports"
 
-  - key: premium
-    name:
+  - name:
       ar: "الباقة المميزة"
       en: "Premium Plan"
     color: "#0db6bd"
@@ -121,27 +105,21 @@ Plans:
       ar: "تجربة"
       en: "Test"
     features:
-      - key: consulting
-        text:
+      - text:
           ar: "الاستشارات المتخصصة"
           en: "Specialized Consulting"
         sub:
-          - key: labor_law
-            ar: "قانون العمل"
+          - ar: "قانون العمل"
             en: "Labor Law"
-          - key: change_management
-            ar: "إدارة التغيير"
+          - ar: "إدارة التغيير"
             en: "Change Management"
-      - key: custom_reports
-        text:
+      - text:
           ar: "تقارير مخصصة"
           en: "Custom Reports"
         sub:
-          - key: monthly_stats
-            ar: "إحصائيات شهرية"
+          - ar: "إحصائيات شهرية"
             en: "Monthly Statistics"
-          - key: predictive_reports
-            ar: "تقارير تنبؤية"
+          - ar: "تقارير تنبؤية"
             en: "Predictive Reports"
 
   

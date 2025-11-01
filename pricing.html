@@ -73,11 +73,11 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           </p>
           {% endif %}
 
-  <!-- Features -->
+<!-- Features -->
 <ul class="plan-features">
   {% for feature in plan.features %}
   <li class="feature">
-    <span data-i18n-key="pricing.Plans.{{ plan.key }}.features.{{ feature.key }}.text">
+    <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
       {{ feature.text.ar }}
     </span>
     <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
@@ -85,7 +85,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% if feature.sub %}
     <ul class="sub-features">
       {% for sub in feature.sub %}
-      <li data-i18n-key="pricing.Plans.{{ plan.key }}.features.{{ feature.key }}.sub.{{ sub.key }}">
+      <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
         {{ sub.ar }}
       </li>
       {% endfor %}
