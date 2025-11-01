@@ -1,5 +1,3 @@
-pricing:
-
 Texts:
   title:
     ar: "اختر عدد الموظفين ومدة العقد لتظهر أسعار الباقات:"
@@ -130,7 +128,7 @@ Plans:
             en: "Predictive Reports"
 
   
-comparison:
+Comparison:
   - category: الخدمات الأساسية
     features:
       - name: علاقات الموظفين
