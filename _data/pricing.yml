@@ -36,95 +36,112 @@ Texts:
 
 
 Plans:
-  - name:
+  - key: basic
+    name:
       ar: "الباقة الأساسية"
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price: 15 ##add the number of employees so, before_price10 then before_price20 and base price the same
-    plan_text: 
+    before_price10: 15
+    before_price20: 25
+    plan_text:
       ar: "تجربة"
       en: "Test"
     features:
-      - text:
+      - key: core_services
+        text:
           ar: "الخدمات الأساسية"
           en: "Core Services"
         sub:
-          - ar: "علاقات الموظفين"
+          - key: employee_relations
+            ar: "علاقات الموظفين"
             en: "Employee Relations"
-          - ar: "الإجازات"
+          - key: leave_management
+            ar: "الإجازات"
             en: "Leave Management"
-          - ar: "الرواتب"
+          - key: payroll
+            ar: "الرواتب"
             en: "Payroll"
-      - text:
+      - key: customer_support
+        text:
           ar: "دعم العملاء"
           en: "Customer Support"
         sub:
-          - ar: "استفسارات"
+          - key: inquiries
+            ar: "استفسارات"
             en: "Inquiries"
-          - ar: "شكاوي"
+          - key: complaints
+            ar: "شكاوي"
             en: "Complaints"
 
-  - name:
+  - key: advanced
+    name:
       ar: "الباقة المتقدمة"
       en: "Advanced Plan"
     color: "#4ca626"
     base_price: 12
-    before_price:
-    plan_text: 
+    before_price10: 18
+    before_price20: 28
+    plan_text:
       ar: "تجربة"
       en: "Test"
     features:
-      - text:
+      - key: performance_management
+        text:
           ar: "إدارة الأداء"
           en: "Performance Management"
         sub:
-          - ar: "تقييم الموظفين"
+          - key: evaluation
+            ar: "تقييم الموظفين"
             en: "Employee Evaluation"
-          - ar: "متابعة الأهداف"
+          - key: goals
+            ar: "متابعة الأهداف"
             en: "Goal Tracking"
-      - text:
+      - key: training_development
+        text:
           ar: "التدريب والتطوير"
           en: "Training & Development"
         sub:
-          - ar: "خطط تدريب"
+          - key: training_plans
+            ar: "خطط تدريب"
             en: "Training Plans"
-          - ar: "تقارير متابعة"
+          - key: progress_reports
+            ar: "تقارير متابعة"
             en: "Progress Reports"
 
-  - name:
+  - key: premium
+    name:
       ar: "الباقة المميزة"
       en: "Premium Plan"
     color: "#0db6bd"
     base_price: 12
-    before_price:
-    plan_text: 
+    before_price10: 22
+    before_price20: 35
+    plan_text:
       ar: "تجربة"
       en: "Test"
     features:
-      - text:
+      - key: consulting
+        text:
           ar: "الاستشارات المتخصصة"
           en: "Specialized Consulting"
         sub:
-          - ar: "قانون العمل"
+          - key: labor_law
+            ar: "قانون العمل"
             en: "Labor Law"
-          - ar: "إدارة التغيير"
+          - key: change_management
+            ar: "إدارة التغيير"
             en: "Change Management"
-      - text:
+      - key: custom_reports
+        text:
           ar: "تقارير مخصصة"
           en: "Custom Reports"
         sub:
-          - ar: "إحصائيات شهرية"
+          - key: monthly_stats
+            ar: "إحصائيات شهرية"
             en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
-      - text:
-          ar: "تقارير إضافية"
-          en: "Additional Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
+          - key: predictive_reports
+            ar: "تقارير تنبؤية"
             en: "Predictive Reports"
 
   
