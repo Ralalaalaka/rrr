@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const keyPath = el.getAttribute('data-i18n-key').split('.');
       let value = translations;
 
-      // Traverse the key path strictly by object keys
       for (let k of keyPath) {
-        if (value && value[k] !== undefined) {
-          value = value[k];
+        // Handle numeric indices for arrays
+        if (value && (value[k] !== undefined || (!isNaN(k) && value[parseInt(k)] !== undefined))) {
+          value = value[k] !== undefined ? value[k] : value[parseInt(k)];
         } else {
           value = null;
           break;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Check if translations exist
+  // ✅ Check if translations exist
   if (!window.translations) {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
   }

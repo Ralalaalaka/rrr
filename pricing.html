@@ -74,29 +74,42 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           {% endif %}
 
   <!-- Features -->
-<!-- Features -->
-<ul class="plan-features">
-  {% for feature in plan.features %}
-  <li class="feature">
-    <!-- Feature text -->
-    <span data-i18n-key="pricing.Plans.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.text">
-      {{ feature.text.ar }}
-    </span>
+<div class="plan-card" style="border-color: {{ site.data.pricing.Plan1[0].color }}">
+  <div class="plan-header">
+    <h2 style="color: {{ site.data.pricing.Plan1[0].color }}">
+      <strong data-i18n-key="pricing.Plan1.0.name">{{ site.data.pricing.Plan1[0].name.ar }}</strong>
+    </h2>
+    <div class="plan-price">
+      <h1>
+        <strong>
+          <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
+        </strong>
+      </h1>
+      <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}">{{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
+    </div>
+  </div>
 
-    <button class="toggle-sub" style="color: {{ plan.color }}">▶</button>
+  <ul class="plan-features">
+    {% for feature in site.data.pricing.Plan1 %}
+    {% if forloop.index0 != 0 %}
+    <li class="feature">
+      <span data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.features">{{ feature.features.ar }}</span>
+      <button class="toggle-sub">▶</button>
 
-    {% if feature.sub %}
-    <ul class="sub-features">
-      {% for sub in feature.sub %}
-      <li data-i18n-key="pricing.Plans.{{ forloop.parent.parent.index0 }}.features.{{ forloop.parent.index0 }}.sub.{{ forloop.index0 }}">
-        {{ sub.ar }}
-      </li>
-      {% endfor %}
-    </ul>
+      {% if feature.sub %}
+      <ul class="sub-features">
+        {% for sub in feature.sub %}
+        <li data-i18n-key="pricing.Plan1.{{ forloop.index0 }}.sub.{{ forloop.index0 }}">
+          {{ sub.ar }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
     {% endif %}
-  </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+</div>
 
     </div>
     {% endfor %}

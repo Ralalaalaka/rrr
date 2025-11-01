@@ -35,97 +35,99 @@ Texts:
     en: "Plans Comparison"
 
 
-Plans:
+Plan1:
   - name:
       ar: "الباقة الأساسية"
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price: 15 ##add the number of employees so, before_price10 then before_price20 and base price the same
+    before_price10: 15
+    before_price20: 25
     plan_text: 
       ar: "تجربة"
       en: "Test"
-    features:
-      - text:
-          ar: "الخدمات الأساسية"
-          en: "Core Services"
-        sub:
-          - ar: "علاقات الموظفين"
-            en: "Employee Relations"
-          - ar: "الإجازات"
-            en: "Leave Management"
-          - ar: "الرواتب"
-            en: "Payroll"
-      - text:
-          ar: "دعم العملاء"
-          en: "Customer Support"
-        sub:
-          - ar: "استفسارات"
-            en: "Inquiries"
-          - ar: "شكاوي"
-            en: "Complaints"
+  - features:
+      ar: "الخدمات الأساسية"
+      en: "Core Services"
+    sub:
+      - ar: "علاقات الموظفين"
+        en: "Employee Relations"
+      - ar: "الإجازات"
+        en: "Leave Management"
+      - ar: "الرواتب"
+        en: "Payroll"
+  - features:
+      ar: "دعم العملاء"
+      en: "Customer Support"
+    sub:
+      - ar: "استفسارات"
+        en: "Inquiries"
+      - ar: "شكاوي"
+        en: "Complaints"
 
+Plan2:
   - name:
       ar: "الباقة المتقدمة"
       en: "Advanced Plan"
     color: "#4ca626"
     base_price: 12
-    before_price:
+    before_price10: 18
+    before_price20: 28
     plan_text: 
       ar: "تجربة"
       en: "Test"
-    features:
-      - text:
-          ar: "إدارة الأداء"
-          en: "Performance Management"
-        sub:
-          - ar: "تقييم الموظفين"
-            en: "Employee Evaluation"
-          - ar: "متابعة الأهداف"
-            en: "Goal Tracking"
-      - text:
-          ar: "التدريب والتطوير"
-          en: "Training & Development"
-        sub:
-          - ar: "خطط تدريب"
-            en: "Training Plans"
-          - ar: "تقارير متابعة"
-            en: "Progress Reports"
+  - features:
+      ar: "إدارة الأداء"
+      en: "Performance Management"
+    sub:
+      - ar: "تقييم الموظفين"
+        en: "Employee Evaluation"
+      - ar: "متابعة الأهداف"
+        en: "Goal Tracking"
+  - features:
+      ar: "التدريب والتطوير"
+      en: "Training & Development"
+    sub:
+      - ar: "خطط تدريب"
+        en: "Training Plans"
+      - ar: "تقارير متابعة"
+        en: "Progress Reports"
 
+Plan3:
   - name:
       ar: "الباقة المميزة"
       en: "Premium Plan"
     color: "#0db6bd"
     base_price: 12
-    before_price:
+    before_price10: 22
+    before_price20: 35
     plan_text: 
       ar: "تجربة"
       en: "Test"
-    features:
-      - text:
-          ar: "الاستشارات المتخصصة"
-          en: "Specialized Consulting"
-        sub:
-          - ar: "قانون العمل"
-            en: "Labor Law"
-          - ar: "إدارة التغيير"
-            en: "Change Management"
-      - text:
-          ar: "تقارير مخصصة"
-          en: "Custom Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
-      - text:
-          ar: "تقارير إضافية"
-          en: "Additional Reports"
-        sub:
-          - ar: "إحصائيات شهرية"
-            en: "Monthly Statistics"
-          - ar: "تقارير تنبؤية"
-            en: "Predictive Reports"
+  - features:
+      ar: "الاستشارات المتخصصة"
+      en: "Specialized Consulting"
+    sub:
+      - ar: "قانون العمل"
+        en: "Labor Law"
+      - ar: "إدارة التغيير"
+        en: "Change Management"
+  - features:
+      ar: "تقارير مخصصة"
+      en: "Custom Reports"
+    sub:
+      - ar: "إحصائيات شهرية"
+        en: "Monthly Statistics"
+      - ar: "تقارير تنبؤية"
+        en: "Predictive Reports"
+  - features:
+      ar: "تقارير إضافية"
+      en: "Additional Reports"
+    sub:
+      - ar: "إحصائيات شهرية"
+        en: "Monthly Statistics"
+      - ar: "تقارير تنبؤية"
+        en: "Predictive Reports"
 
   
 Comparison:
