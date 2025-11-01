@@ -4,7 +4,7 @@
   background: #fafafb;
   border-radius: 1000px 1000px 0 0;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.05);
-  padding: 60px 20px 100px;
+  padding: 60px 20px 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.arrow {
+.arrows-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -94,11 +94,11 @@
   }
 }
 
-.arrow.prev {
+.arrows-button.prev {
   left: 40px;
 }
 
-.arrow.next {
+.arrows-button.next {
   right: 40px;
 }
 
