@@ -69,7 +69,6 @@
 
 .service-image img {
   max-width: 60vh;
-  border-radius: 20px;
   margin-bottom: 25px;
 }
 
@@ -106,7 +105,7 @@
 /* Responsive (laptop) */
 @media #{$mid-point} {
   .services-slider-section {
-    padding: 40px 20px 80px;
+    padding: 40px 20px 20px;
   }
 
   .service-slide {
