@@ -233,52 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!--
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const empSelect = document.getElementById("employees");
-  const durationTabs = document.querySelectorAll(".duration-btn");
-  const prices = document.querySelectorAll(".price");
-  const beforePrices = document.querySelectorAll(".before-price");
 
-  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
-
-  function updatePrices() {
-    const emp = parseInt(empSelect.value);
-    prices.forEach((p, i) => {
-      const base = parseFloat(p.dataset.base);
-      p.textContent = (base * emp * months).toLocaleString();
-      if (beforePrices[i]) {
-        const before = parseFloat(beforePrices[i].dataset.before);
-        beforePrices[i].textContent = (before * emp * months).toLocaleString();
-      }
-    });
-  }
-
-  empSelect.addEventListener("change", updatePrices);
-
-  durationTabs.forEach(btn => {
-    btn.addEventListener("click", () => {
-      durationTabs.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      months = parseInt(btn.dataset.months);
-      updatePrices();
-    });
-  });
-
-  document.addEventListener("click", e => {
-    const btn = e.target.closest(".toggle-sub");
-    if (!btn) return;
-    const sub = btn.parentElement.querySelector(".sub-features");
-    if (!sub) return;
-    sub.classList.toggle("open");
-    btn.textContent = sub.classList.contains("open") ? "▼" : "▶";
-  });
-
-  updatePrices();
-});
-</script>
--->
 
 <!------Banner------->
 <section class="banner" style="padding: 30px 10%; box-shadow: 2px 22px 32px -27px rgba(0,0,0,0.93);">
@@ -314,29 +269,31 @@ document.addEventListener("DOMContentLoaded", function() {
       {% endfor %}
     </div>
 
-    {% for category in site.data.pricing.comparison %}
+    {% for category in site.data.pricing.Comparison %}
     <div class="category-row">
-      <h4>{{ category.category }}</h4>
+      <h4 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</h4>
     </div>
 
     {% for feature in category.features %}
     <div class="feature-row">
-      <div class="feature-name">{{ feature.name }}</div>
+      <div class="feature-name" data-i18n-key="pricing.Comparison.{{ forloop.parent.index0 }}.features.{{ forloop.index0 }}.name">
+        {{ feature.name.ar }}
+      </div>
 
       <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[0].color }}">
-        {% if feature.basic or feature.plan1 %}
+        {% if feature.plan1 %}
         <span class="checkmark">✔</span>
         {% endif %}
       </div>
 
       <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[1].color }}">
-        {% if feature.advanced or feature.plan2 %}
+        {% if feature.plan2 %}
         <span class="checkmark">✔</span>
         {% endif %}
       </div>
 
       <div class="plan-check" style="--plan-color: {{ site.data.pricing.Plans[2].color }}">
-        {% if feature.premium or feature.plan3 %}
+        {% if feature.plan3 %}
         <span class="checkmark">✔</span>
         {% endif %}
       </div>
