@@ -183,6 +183,7 @@
   .table-header,
   .feature-row {
     display: table-row;
+    background: white;
   }
 
   .feature-col,
@@ -200,10 +201,6 @@
     font-weight: 700;
     color: #0e385b;
     padding: 0.8rem 1rem;
-  }
-
-  .feature-row {
-    background: white;
   }
 
   .category-row {
