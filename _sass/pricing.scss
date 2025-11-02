@@ -31,8 +31,8 @@
       }
 
     .control {
-      display: flex;
-      flex: 0 0 auto; //////
+      //display: flex;
+      //align-items: center; ////
       gap: .5rem;
     }
 
@@ -41,7 +41,6 @@
       border: 1px solid #e4e6ea;
       border-radius: 100px;
 	    color:#0e385b;
-      flex: 0 0 auto; //////
 
       //&.active {  //it didn't work
         //border: 1px solid #e4e6ea;
@@ -51,7 +50,6 @@
     .duration-tabs {
       //display: flex; 
       gap: .6rem;
-      flex: 0 0 auto; //////
 
       .duration-btn {
         border: 1px solid #e4e6ea;
@@ -63,7 +61,6 @@
         line-height: 2rem; // centers text vertically /////////////////////////////////////////////#########################################
         cursor: pointer;
         transition: 0.3s;
-        flex: 0 0 auto; //////
 
         &.active {
           background: #f4fcfc;
@@ -194,14 +191,19 @@
   .plan-check {
     display: table-cell;
     padding: 0.8rem 1rem;
-    border: 1px solid #ffffff;
+    border: 1px solid #d9d9d9;
     vertical-align: middle;
   }
 
   .table-header {
-    background: #ffffff;
+    background: white;
     font-weight: 700;
     color: #0e385b;
+    padding: 0.8rem 1rem;
+  }
+
+  .feature-row {
+    background: white;
   }
 
   .category-row {
@@ -213,7 +215,7 @@
       padding: 1rem;
       //font-weight: 700;
       color: #0e385b;
-      border: 1px solid #e6e6e6;
+      border: 1px solid #d9d9d9;
     }
   }
 
