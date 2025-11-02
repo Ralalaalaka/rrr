@@ -39,6 +39,7 @@
   align-items: center;
   color: #0e385b;
   text-align: center;
+  padding-bottom: 0; ///////
 
   ul {
     list-style: none;
@@ -77,13 +78,13 @@
 
 .arrows-button {
   position: absolute;
-  //top: 50%;
+  top: 50%;
   //transform: translateY(-50%);
   background: #fff;
   color: #6d767d;
   border: none;
   font-size: 18px;
-  padding: 16px 16px;
+  padding: 8px 16px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
