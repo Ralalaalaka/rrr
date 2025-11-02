@@ -58,7 +58,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <button class="arrows-button next">&#10094;</button>
   <button class="arrows-button prev">&#10095;</button>
 
-  <div class="dots">
+  <div class="dots" style="margin-top: 40px;">
     {% for service in site.data.services.services %}
       <span class="dot" data-index="{{ forloop.index0 }}"></span>
     {% endfor %}
