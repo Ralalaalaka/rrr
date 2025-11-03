@@ -10,7 +10,7 @@ Texts:
       link: "https://wa.me/966550000000"
       handle: "+966 55 000 0000"
       icon: "/assets/icons/WhatsappIcon.png"
-      QR: "/assets/qrcodes/WhatsappQR.png"
+      QR: "/images/contact-us/WhatsappQR.png"
 
     - x_platform:
       ar: "X"
