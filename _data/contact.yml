@@ -9,29 +9,29 @@ Texts:
       en: "WhatsApp"
       link: "https://wa.me/966550000000"
       handle: "+966 55 000 0000"
-      icon: "/images/contact/WhatsappIcon.png"
-      QR: "/images/contact/WhatsappQR.png"
+      icon: "images/contact/WhatsappIcon.png"
+      QR: "images/contact/WhatsappQR.png"
 
     - x_platform:
       ar: "X"
       en: "X"
       link: "https://x.com/WorkHub.SA"
       handle: "@WorkHub.SA"
-      icon: "/images/contact/XplatformIcon.png"
-      QR: "/images/contact/XplatformQR.png"
+      icon: "images/contact/XplatformIcon.png"
+      QR: "images/contact/XplatformQR.png"
 
     - linkedin:
       ar: "لنكد إن"
       en: "LinkedIn"
       link: "https://linkedin.com/company/Workhub"
       handle: "@Workhub"
-      icon: "/images/contact/LinkedinIcon.png"
-      QR: "/images/contact/LinkedinQR.png"
+      icon: "images/contact/LinkedinIcon.png"
+      QR: "images/contact/LinkedinQR.png"
 
     - email:
       ar: "البريد الإلكتروني"
       en: "Email"
       link: "mailto:info@workhub.com"
       handle: "info@workhub.com"
-      icon: "/images/contact/EmailIcon.png"
-      QR: "/images/contact/EmailQR.png"
+      icon: "images/contact/EmailIcon.png"
+      QR: "images/contact/EmailQR.png"
