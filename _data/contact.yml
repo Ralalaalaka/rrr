@@ -17,8 +17,8 @@ Texts:
       en: "X"
       link: "https://x.com/WorkHub.SA"
       handle: "@WorkHub.SA"
-      icon: "/images/contact/XIcon.png"
-      QR: "/images/contact/XQR.png"
+      icon: "/images/contact/XplatformIcon.png"
+      QR: "/images/contact/XplatformQR.png"
 
     - linkedin:
       ar: "لنكد إن"
