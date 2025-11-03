@@ -10,11 +10,11 @@
     - name:
         ar: "تواصل معنا"
         en: "Contact Us"
-      link: /communication/
+      link: /contact/
     - name:
         ar: "اطلب نسختك التجريبية"
         en: "Request a Demo"
-      link: /contact/
+      link: /request_demo/
 
   right_links:
     - name:
