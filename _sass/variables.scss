@@ -1,5 +1,36 @@
 $brand-color: #0db6bd;
 
+$darkest-navy: #022c4e;
+$main-navy: #0e385b; /*العناوين الرئيسية*/
+$light-navy: #4d72a7;
+
+$darkest-teal: #0e657e;
+$main-teal: #0db6bd;
+$light-teal1: #bcebed;
+$light-teal2: #f4fcfc;
+
+$main-gray: #6d767d; /*النصوص الثانوية*/
+$light-gray1: #e4e6ea; /*إطارات الصناديق*/
+$light-gray2: #f2f3f5; /*خلفية الصناديق*/
+$light-gray3: #fafafb; 
+
+$main-yellow: #eab646;
+$light-yellow1: #fbf1cd;
+$light-yellow2: #fefbf0;
+
+$main-blue: #3f79cb;
+$light-blue1: #dae9fe;
+$light-blue2: #f4f9ff;
+
+$main-red: #d44549;
+$light-red1: #f7d7da;
+$light-red2: #fdf3f4;
+
+$main-green: #4ca626;
+$light-green1: #d9f4cd;
+$light-green2: #f4fcf1;
+
+
 // Breakpoints
 $phone: "(max-width: 767px)"; 
 $mid-point: "(min-width: 768px)"; /* it was 620px */
