@@ -1,173 +1,28 @@
-
-/*Contact Us section in main page*/
-.contact-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: linear-gradient(90deg, #00b3b3, #003f61);
-  border-radius: 1000px;
-  padding: 40px; /*it was 20*/
-  margin: 50px 10vw; /*انا اضفته*/
-  box-shadow: 0 0px 10px rgba(0,0,0,0.1); /*نا اضفته*/
-  gap: 20px;
-  color: white;
-  text-align: center;
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 180px;
-}
-
-.contact-item .icon img {
-  width: 40px;
-  height: 40px;
-}
-
-.contact-item .info p {
-  margin: 5px 0;
-}
-
-.contact-item .info a {
-  color: white;
-  text-decoration: none;
-}
-
-.qr-section img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  gap: 100px; /*انا اضفته*/
-}
-
-/* Small screens */
-@media #{$phone} {
-  .contact-card {
-    flex-direction: column;
-    background: linear-gradient(180deg, #00b3b3, #003f61);
-    border-radius: 30px;
-  }
-
-  .qr-section img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .contact-item {
-    margin-top: 10px;
-  }
-}
-
-
-
-
-
-
-
-
-/*Contact Us page*/
-.contact-tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; // fits the whole screen
-  text-align: center;
-  background: #fff;
-  padding: 3rem 1rem;
-}
-
-.contact-grid {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  flex-wrap: nowrap;
-}
+/*.map {
+	width: 100%;
+	height: 440px;
+}*/
 
 .contact-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
+	margin: 0 auto;
 
-.platform-icon {
-  width: 35px;
-  height: 35px;
-}
+	form {
+		width: 100%
+	}
 
-.qr-code {
-  width: 130px;
-  height: 130px;
-}
+	p {
+		margin: 0;
+	}
 
-.platform-name {
-  font-weight: 500;
-  color: #777;
-  margin: 0;
-}
+	.contact-form, .contact-details  {
+		@media #{$desktop} {
+			-webkit-flex: 1;
+			flex: 1;
+		}
+	}
 
-.platform-handle {
-  color: #00b3b3;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.divider {
-  width: 1px;
-  background: #e0e0e0;
-  height: auto;
-}
-
-/* Laptop layout */
-@media #{$mid-point} {
-  .contact-grid {
-    flex-wrap: nowrap;
-  }
-}
-
-/* Mobile layout: 2 x 2 grid with vertical & horizontal lines */
-@media #{$phone} {
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
-    position: relative;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .contact-grid::before,
-  .contact-grid::after {
-    content: "";
-    position: absolute;
-    background: #e0e0e0;
-  }
-
-  /* vertical line between columns */
-  .contact-grid::before {
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-  }
-
-  /* horizontal line between rows */
-  .contact-grid::after {
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 1px;
-  }
+	.contact-details {
+		font-size: .9em;
+		margin-top: 60px;
+	}
 }

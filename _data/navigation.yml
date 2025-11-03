@@ -2,7 +2,7 @@
 - name:
     ar: "اطلب نسختك التجريبية"
     en: "Get Your Trial"
-  link: /demo-request/
+  link: /contact/
   side: left
   style: white
 
@@ -37,6 +37,6 @@
 - name:
     ar: "تواصل معنا"
     en: "Contact Us"
-  link: /contact/
+  link: /communication/
   side: right
   style: regular
