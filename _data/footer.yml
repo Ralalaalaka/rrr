@@ -14,7 +14,7 @@
     - name:
         ar: "اطلب نسختك التجريبية"
         en: "Request a Demo"
-      link: /contact/
+      link: /demo-request/
 
   right_links:
     - name:
