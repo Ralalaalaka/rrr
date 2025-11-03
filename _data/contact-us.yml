@@ -1,0 +1,37 @@
+Texts:
+  Title:
+    ar: "يسعدنا تواصلكم معنا! فريقنا هنا لدعمكم والإجابة على استفساراتكم"
+    en: "We’re happy to hear from you! Our team is here to support you and answer all your inquiries."
+
+  Contacts:
+    - whatsapp:
+      ar: "واتساب"
+      en: "WhatsApp"
+      link: "https://wa.me/966550000000"
+      handle: "+966 55 000 0000"
+      icon: "/assets/icons/WhatsappIcon.png"
+      QR: "/assets/qrcodes/WhatsappQR.png"
+
+    - x_platform:
+      ar: "X"
+      en: "X"
+      link: "https://x.com/WorkHub.SA"
+      handle: "@WorkHub.SA"
+      icon: "/assets/icons/XIcon.png"
+      QR: "/assets/qrcodes/XQR.png"
+
+    - linkedin:
+      ar: "لنكد إن"
+      en: "LinkedIn"
+      link: "https://linkedin.com/company/Workhub"
+      handle: "@Workhub"
+      icon: "/assets/icons/LinkedinIcon.png"
+      QR: "/assets/qrcodes/LinkedinQR.png"
+
+    - email:
+      ar: "البريد الإلكتروني"
+      en: "Email"
+      link: "mailto:info@workhub.com"
+      handle: "info@workhub.com"
+      icon: "/assets/icons/EmailIcon.png"
+      QR: "/assets/qrcodes/EmailQR.png"
