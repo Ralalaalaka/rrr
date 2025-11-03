@@ -45,6 +45,9 @@
       //&.active {  //it didn't work
         //border: 1px solid #e4e6ea;
       //}  
+        select:focus {
+          outline: none; /* Changes the outline to a 2px solid blue line */ 
+            }
     }
 
     .duration-tabs {
