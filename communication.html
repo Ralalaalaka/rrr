@@ -21,10 +21,10 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
 
 <section class="contact-tab pad">
-  <h2 data-i18n-key="Contacts.Title">{{ site.data.contacts.Texts.Title.ar }}</h2>
+  <h2 data-i18n-key="Contacts.Title">{{ site.data.communication.Texts.Title.ar }}</h2>
 
   <div class="contact-grid">
-    {% for c in site.data.contacts.Texts.Contacts %}
+    {% for c in site.data.communication.Texts.Contacts %}
       <div class="contact-box">
         <img class="platform-icon" src="{{ c.icon }}" alt="{{ c.en }} icon">
         <img class="qr-code" src="{{ c.QR }}" alt="{{ c.en }} QR">
@@ -37,3 +37,5 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% endfor %}
   </div>
 </section>
+
+
