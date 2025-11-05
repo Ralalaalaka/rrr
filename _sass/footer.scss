@@ -171,26 +171,6 @@ footer {
     align-items: center;
   }
 
-  /* RIGHT SIDE */
-  .footer-nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px; //it was 20 ///////////////////////////////////////////////////////////////////////
-
-    @media #{$mid-point} {
-      order: 1;
-      justify-content: flex-end;
-      margin: 0;
-    }
-
-    h5 a {
-      &:hover {
-        color: #ccc;
-      }
-    }
-  }
-
-
   /* LEFT SIDE */
   .footer-left {
     display: flex;
@@ -265,5 +245,22 @@ footer {
 	}
   }
 
+  /* RIGHT SIDE */
+  .footer-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; //it was 20 ///////////////////////////////////////////////////////////////////////
 
+    @media #{$mid-point} {
+      order: 1;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    h5 a {
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
 }
