@@ -21,18 +21,48 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
 
 <section class="contact-tab pad">
-  <div class="contact-grid">
-    {% for c in site.data.contact.Texts.Contacts %}
+  <div class="content">
+    <div class="contact-grid">
+      {% for contact in site.data.contact.Texts.Contacts %}
       <div class="contact-box">
-        <img class="platform-icon" src="{{ c.icon }}" alt="{{ c.en }} icon">
-        <img class="qr-code" src="{{ c.QR }}" alt="{{ c.en }} QR">
-        <p class="platform-name" data-i18n-key="Contacts.{{ c.en }}">{{ c.ar }}</p>
-        <a href="{{ c.link }}" target="_blank" class="platform-handle">{{ c.handle }}</a>
+        <div class="icon">
+          <img
+            src="{{ contact.icon }}"
+            alt="{{ contact.en }}"
+            data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.icon"
+          >
+        </div>
+
+        <div class="qr-section">
+          <img
+            src="{{ contact.QR }}"
+            alt="{{ contact.en }} QR"
+            data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.QR"
+          >
+        </div>
+
+        <p
+          class="platform-name"
+          data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.en"
+        >
+          {{ contact.ar }}
+        </p>
+
+        <a
+          href="{{ contact.link }}"
+          target="_blank"
+          class="platform-handle"
+          data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.handle"
+        >
+          {{ contact.handle }}
+        </a>
       </div>
+
       {% unless forloop.last %}
-        <div class="divider"></div>
+      <div class="divider"></div>
       {% endunless %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
