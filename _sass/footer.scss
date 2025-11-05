@@ -167,8 +167,6 @@ footer {
   // All h5 elements in footer share the same size and base style
   h5 {
     margin: 0 10px;
-    //font-size: 1rem;
-    //font-weight: 500;
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -182,7 +180,7 @@ footer {
     margin-bottom: 10px;
 
     @media #{$mid-point} {
-      order: 1;
+      order: 3;
       margin-bottom: 0;
     }
 
@@ -244,6 +242,14 @@ footer {
       margin-top: 5px;
       font-family: "Arial", sans-serif; // stays as a symbol, not emoji
     }
+
+	.footer-heart svg { ///////////////////////////////////////////////
+		display: inline-block;
+		vertical-align: middle;
+		fill: #fff;
+		width: 16px;
+		height: 16px;
+	} ///////////////////////////////////////////////
   }
 
   /* RIGHT SIDE */
@@ -253,14 +259,12 @@ footer {
     gap: 20px;
 
     @media #{$mid-point} {
-      order: 3;
+      order: 1;
       justify-content: flex-end;
       margin: 0;
     }
 
     h5 a {
-      //font-weight: 500;
-
       &:hover {
         color: #ccc;
       }
