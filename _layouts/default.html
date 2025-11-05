@@ -117,20 +117,15 @@
 		<footer>
 		<div class="container footer-container">
 
-			<!-- Left side: Social media + EN -->
-			<div class="footer-left">
-			<div class="footer-social-links">
-				{% for link in site.data.footer.right_links %}
+			<!-- Right side: Navigation -->
+			<div class="footer-nav-links">
+			{% for link in site.data.footer.left_links %}
 				<h5>
-					<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" class="social-icon {% if link.social_icon %}{{ link.social_icon | slugify }}-icon{% endif %}">
-					{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-					</a>
+				<a href="{% include relative-src.html src=link.link %}" data-i18n-key="footer.left_links.{{ forloop.index0 }}.name">
+					{{ link.name.ar }}
+				</a>
 				</h5>
-				{% endfor %}
-			</div>
-			
-				<h5 class="lang-toggle"><a href="#" data-lang-toggle>EN</a></h5>
-
+			{% endfor %}
 			</div>
 
 			<!-- Center -->
@@ -146,15 +141,21 @@
 			</span>
 			</div>
 
-			<!-- Right side: Navigation -->
-			<div class="footer-nav-links">
-			{% for link in site.data.footer.left_links %}
+
+			<!-- Left side: Social media + EN -->
+			<div class="footer-left">
+			<div class="footer-social-links">
+				{% for link in site.data.footer.right_links %}
 				<h5>
-				<a href="{% include relative-src.html src=link.link %}" data-i18n-key="footer.left_links.{{ forloop.index0 }}.name">
-					{{ link.name.ar }}
-				</a>
+					<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" class="social-icon {% if link.social_icon %}{{ link.social_icon | slugify }}-icon{% endif %}">
+					{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+					</a>
 				</h5>
-			{% endfor %}
+				{% endfor %}
+			</div>
+			
+				<h5 class="lang-toggle"><a href="#" data-lang-toggle>EN</a></h5>
+
 			</div>
 		</div>
 		</footer>
