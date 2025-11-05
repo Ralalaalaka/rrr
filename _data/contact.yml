@@ -4,34 +4,34 @@ Texts:
     en: "We’re happy to hear from you! Our team is here to support you and answer all your inquiries."
 
 Contacts:
-  - id: whatsapp
-    ar: "واتساب"
-    en: "WhatsApp"
-    link: "https://wa.me/966550000000"
+  - title:
+      ar: "واتساب"
+      en: "WhatsApp"
     handle: "+966 55 000 0000"
+    link: "https://wa.me/966550000000"
     icon: "/images/contact/WhatsappIcon.png"
     QR: "/images/contact/WhatsappQR.png"
 
-  - id: x_platform
-    ar: "X"
-    en: "X"
-    link: "https://x.com/WorkHub.SA"
+  - title:
+      ar: "X"
+      en: "X"
     handle: "@WorkHub.SA"
+    link: "https://x.com/WorkHub.SA"
     icon: "/images/contact/XplatformIcon.png"
     QR: "/images/contact/XplatformQR.png"
 
-  - id: linkedin
-    ar: "لنكد إن"
-    en: "LinkedIn"
-    link: "https://linkedin.com/company/Workhub"
+  - title:
+      ar: "لنكد إن"
+      en: "LinkedIn"
     handle: "@Workhub"
+    link: "https://linkedin.com/company/Workhub"
     icon: "/images/contact/LinkedinIcon.png"
     QR: "/images/contact/LinkedinQR.png"
 
-  - id: email
-    ar: "البريد الإلكتروني"
-    en: "Email"
-    link: "mailto:info@workhub.com"
+  - title:
+      ar: "البريد الإلكتروني"
+      en: "Email"
     handle: "info@workhub.com"
+    link: "mailto:info@workhub.com"
     icon: "/images/contact/EmailIcon.png"
     QR: "/images/contact/EmailQR.png"

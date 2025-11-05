@@ -26,25 +26,24 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       <div class="contact-box">
         <img
           src="{{ contact.icon | relative_url }}"
-          alt="{{ contact.en }} icon"
+          alt="{{ contact.title.en }} icon"
           class="platform-icon"
         >
 
         <img
           src="{{ contact.QR | relative_url }}"
-          alt="{{ contact.en }} QR"
+          alt="{{ contact.title.en }} QR"
           class="qr-code"
         >
 
         <p class="platform-name"
-           data-i18n-key="contact.Contacts.{{ forloop.index0 }}.ar">
-          {{ contact.ar }}
+           data-i18n-key="contact.Contacts.{{ forloop.index0 }}.title">
+          {{ contact.title.ar }}
         </p>
 
         <a href="{{ contact.link }}"
            target="_blank"
-           class="platform-handle"
-           data-i18n-key="contact.Contacts.{{ forloop.index0 }}.handle">
+           class="platform-handle">
           {{ contact.handle }}
         </a>
       </div>
@@ -55,4 +54,3 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% endfor %}
   </div>
 </section>
-
