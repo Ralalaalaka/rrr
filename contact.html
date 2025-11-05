@@ -21,10 +21,6 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
 
 <section class="contact-tab pad">
-  <h2 data-i18n-key="contact.Texts.Title.ar">
-    {{ site.data.contact.Texts.Title.ar }}
-  </h2>
-
   <div class="contact-grid">
     {% for contact in site.data.contact.Texts.Contacts %}
       <div class="contact-box">
@@ -40,16 +36,15 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           class="qr-code"
         >
 
-        <p class="platform-name" data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.en">
+        <p class="platform-name"
+           data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.ar">
           {{ contact.ar }}
         </p>
 
-        <a
-          href="{{ contact.link }}"
-          target="_blank"
-          class="platform-handle"
-          data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.handle"
-        >
+        <a href="{{ contact.link }}"
+           target="_blank"
+           class="platform-handle"
+           data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.handle">
           {{ contact.handle }}
         </a>
       </div>
@@ -60,3 +55,4 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% endfor %}
   </div>
 </section>
+
