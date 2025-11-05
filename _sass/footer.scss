@@ -235,6 +235,14 @@ footer {
       //margin: 0; ///////////////////////////////////////////////////////////////////////
 	  margin-top: 10px; ///////////////////////////////////////////////////////////////////////
     }
+	
+    .footer-heart {
+      display: block;
+      color: #fff;
+      font-size: 1.2em;
+      margin-top: 5px;
+      font-family: "Arial", sans-serif; // stays as a symbol, not emoji
+    }
 
 	.footer-heart svg {
 		display: inline-block;
@@ -249,7 +257,7 @@ footer {
   .footer-nav-links {
     display: flex;
     justify-content: center;
-    gap: 20px; //it was 20 ///////////////////////////////////////////////////////////////////////
+    gap: 10px; //it was 20 ///////////////////////////////////////////////////////////////////////
 
     @media #{$mid-point} {
       order: 1;
