@@ -164,7 +164,6 @@ footer {
     }
   }
 
-  // All h5 elements in footer share the same size and base style
   h5 {
     margin: 0 10px;
     color: #fff;
@@ -177,7 +176,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px; //it wa 10 ///////////////////////////////////////////////////////////////////////
 
     @media #{$mid-point} {
       order: 3;
@@ -225,6 +224,7 @@ footer {
   .footer-center {
     text-align: center;
     order: 2;
+	margin-top: 2px; ///////////////////////////////////////////////////////////////////////
 
     @media #{$mid-point} {
       order: 2;
@@ -232,31 +232,25 @@ footer {
     }
 
     .copyright {
-      margin: 0;
+      //margin: 0; ///////////////////////////////////////////////////////////////////////
+	  margin-top: 10px; ///////////////////////////////////////////////////////////////////////
     }
 
-    .footer-heart {
-      display: block;
-      color: #fff;
-      font-size: 1.2em;
-      margin-top: 5px;
-      font-family: "Arial", sans-serif; // stays as a symbol, not emoji
-    }
-
-	.footer-heart svg { ///////////////////////////////////////////////
+	.footer-heart svg {
 		display: inline-block;
 		vertical-align: middle;
 		fill: #fff;
 		width: 16px;
 		height: 16px;
-	} ///////////////////////////////////////////////
+	}
   }
 
   /* RIGHT SIDE */
   .footer-nav-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20rem; //it was px ///////////////////////////////////////////////////////////////////////
+	order: 1; ///////////////////////////////////////////////////////////////////////
 
     @media #{$mid-point} {
       order: 1;
