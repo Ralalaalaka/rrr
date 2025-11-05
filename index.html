@@ -29,32 +29,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 <!--الخدمات-->
-<!-- القديم قبل الترجمة
-<div class="content">
-  {% for service in site.data.services.services %}
-  <section class="info" id="learn-more">
-    <div class="container flex">
-      <div class="text">
-        <h3><strong>{{ forloop.index }}. {{ service.title }}</strong></h3>
-        <p>{{ service.description }}</p>
-        {% if service.sub_services %}
-        !-- <ul>
-          {% for item in service.sub_services %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul> --
-        {% endif %}
-      </div>
-      <div class="image">
-        <img src="{{ service.image }}" alt="{{ service.title }}" />
-      </div>
-    </div>
-  </section>
-  {% endfor %}
-</div> -->
-
-
-<!--الجديد بعد الترجمة-->
 <div class="content">
   {% for service in site.data.services.services %}
   <section class="info" id="learn-more">
@@ -92,8 +66,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 
-
-
 <!-- ✅ Banner Section -->
 <section class="banner">
   <div class="inner-banner">
@@ -115,23 +87,6 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 
 
 <!-- المزايا -->
-<!-- القديم قبل الترجمة
-<section class="benefits">
-    <div class="benefit">
-				<ul class="staff">
-					{% for benefits in site.data.benefits.benefits %}
-						<li>
-							<div><img class="image" src="{{ benefits.image }}" alt="{{ benefits.title }}"></div> !--it was square-image instead of image--
-							<div class="name"><h3>{{ benefits.title }}</h3></div>
-							<div class="position"><p>{{ benefits.description }}</p></div>
-						</li>
-					{% endfor %}
-				</ul>
-  	</div>
-</section>
--->
-
-
 <section class="benefits">
   <div class="benefit">
     <ul class="staff">
@@ -164,7 +119,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 <div class="contact-card">
   <div class="contact-item">
     <div class="icon">
-      <img src="images/contact-us/WhatsappIcon-main.png" alt="WhatsApp">
+      <img src="images/contact/WhatsappIcon-main.png" alt="WhatsApp">
 	</div>
 
     <div>
@@ -176,16 +131,16 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   </div>
 
   <div class="qr-section">
-    <img src="images/contact-us/WhatsappQR-main.png" alt="WhatsApp QR">
+    <img src="images/contact/WhatsappQR-main.png" alt="WhatsApp QR">
   </div>
 
   <div class="qr-section">
-    <img src="images/contact-us/EmailQR-main.png" alt="Email QR">
+    <img src="images/contact/EmailQR-main.png" alt="Email QR">
   </div>
 
   <div class="contact-item">
     <div class="icon">
-      <img src="images/contact-us/EmailIcon-main.png" alt="Email">
+      <img src="images/contact/EmailIcon-main.png" alt="Email">
 	</div>
     <div>
       <p><strong data-i18n-key="site_content.Home.main_contact_email">
@@ -269,34 +224,6 @@ setInterval(() => {
 
 
 <!-- المستفيدين -->
-<!-- القديم قبل الترجمة
-<section class="roles-section">
-  <h2 style="color:#0e385b; margin:10px;"><strong>وورك هب يخدم الجميع</strong></h2>
-  <h3 style="color:#6d767d; margin:0 0 80px 0;"><strong>كل دور يستحق تجربة أسهل</strong></h3>
-
-  <div class="carousel">
-    {% for beneficiary in site.data.beneficiary.beneficiary %}
-        <div class="card" data-index="{{ forloop.index0 }}">
-          <img
-            data-active="{{ beneficiary.image_active }}"
-            data-idle="{{ beneficiary.image_idle }}"
-            src="{{ beneficiary.image_idle }}"
-            alt="{{ beneficiary.name }}">
-          <div class="info">
-            <h3><strong>{{ beneficiary.name }}</strong></h3>
-            <p>{{ beneficiary.description }}</p>
-          </div>
-        </div>
-    {% endfor %}
-  </div>
-
-  <div class="dots">
-    {% for beneficiary in site.data.beneficiary.beneficiary %}
-    <span class="dot" data-index="{{ forloop.index0 }}"></span>
-    {% endfor %}
-  </div>
-</section>
--->
 
 <section class="roles-section">
   <h2 style="color:#0e385b; margin:10px;">
@@ -428,68 +355,3 @@ function updateCards() {
   startRotation();
 });
 </script>
-
-
-
-
-
-<!-- Test fonts
-<section class="typography-test" style="max-width: 700px; margin: 50px auto; text-align: right; font-family: 'Almarai', 'Tajawal', sans-serif;">
-  <h1> h1 عنوان رئيسي - هذا مثال للنص العربي</h1>
-  <p> p هذا نص تجريبي لاختبار حجم الخطوط العربية في التصميم. يمكنك استخدامه لمعرفة التناسب بين العناوين والفقرات وتناسق المسافات. الهدف هو التأكد من وضوح النص وجاذبيته على مختلف الأجهزة.</p>
-
-  <h2> h2 عنوان فرعي - مثال على النصوص الثانوية</h2>
-  <p>هذا نص عربي إضافي لاختبار الفقرات الثانوية والتأكد من وضوحها وسهولة قراءتها.</p>
-
-  <h3> h3 عنوان فرعي صغير - ضبط تناسق النصوص</h3>
-  <p>هذا نص تجريبي آخر لتوضيح الفروق بين أحجام الخطوط المختلفة مثل h3 و p و h5.</p>
-
-  <h5> h5 عنوان فرعي دقيق</h5>
-  <p>هذا نص صغير لاختبار حجم h5 والفقرات القريبة منه من حيث الحجم.</p>
-
-  <hr style="margin: 40px 0;">
-
-  <h1>Main Heading - English Example h1 </h1>
-  <p>This is a sample text to test English font sizes in your website design. You can use it to verify the balance between headings and paragraphs and to ensure readability across devices. -p </p>
-
-  <h2>Subheading Example h2 </h2>
-  <p>Additional paragraph for secondary text, used to verify the font scaling consistency and readability.</p>
-
-  <h3>Smaller Subheading - Consistency Check h3 </h3>
-  <p>This short text demonstrates the visual difference between h3, paragraph, and h5 elements.</p>
-
-  <h5>Tiny Heading Example h5</h5>
-  <p>This small paragraph helps verify text hierarchy at the smallest font sizes.</p>
-</section>
--->
-
-
-
-	<!--القديم من هنا وتحت-->
-<!--
-	<section class="hero" style="background-image: url({% include relative-src.html src=page.bottom_image %})">
-		<div class="inner-hero text-container">
-			<div class="hero-text-container">
-				<h2 class="editable">Find your buddy today</h2>
-				<p class="subtext editable">It's free, fun and an exciting way to meet new people.</p>
-				<div class="cta button alt"><a href="#">Join Now</a></div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section class="pad">
-		<div class="container">
-			<ul class="staff">
-				{% for person in site.staff_members %}
-					<li>
-						<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
-						<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
-						<div class="position">{{ person.position }}</div>
-					</li>
-				{% endfor %}
-				</ul>
-		</div>
-	</section>
--->
