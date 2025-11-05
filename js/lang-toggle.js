@@ -34,13 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
   }
 
+
   // Initialize
   updateHtmlLangDir();
   updateTextContent();
-  if (langBtn) langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
 
-  // Toggle language on click
-  if (langBtn) {
+  // Attach click listener to **all language toggle buttons**
+  document.querySelectorAll('[data-lang-toggle]').forEach(langBtn => {
+    langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
+
     langBtn.addEventListener('click', function(e) {
       e.preventDefault();
       currentLang = (currentLang === 'ar') ? 'en' : 'ar';
@@ -48,7 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       updateHtmlLangDir();
       updateTextContent();
-      langBtn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
+
+      // Update all buttons
+      document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+        btn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
     });
-  }
+  });
+  });
 });
