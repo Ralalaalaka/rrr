@@ -116,21 +116,23 @@
 
 		<footer>
 		<div class="container footer-container">
+
 			<!-- Left side: Social media + EN -->
 			<div class="footer-left">
-			<ul class="footer-social-links">
+			<div class="footer-social-links">
 				{% for link in site.data.footer.right_links %}
-				<li>
+				<h5>
 					<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" class="social-icon {% if link.social_icon %}{{ link.social_icon | slugify }}-icon{% endif %}">
 					{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
 					</a>
-				</li>
+				</h5>
 				{% endfor %}
-			</ul>
-			<button class="lang-toggle">EN</button>
 			</div>
 
-			<!-- Center: Copyright -->
+			<h5 class="lang-toggle">EN</h5>
+			</div>
+
+			<!-- Center -->
 			<div class="footer-center">
 			<h5 class="copyright" data-i18n-key="site_content.Home.footer_text">
 				{{ site.data.site_content.Home.footer_text.ar }}
@@ -139,15 +141,15 @@
 			</div>
 
 			<!-- Right side: Navigation -->
-			<ul class="footer-nav-links">
+			<div class="footer-nav-links">
 			{% for link in site.data.footer.left_links %}
-				<li>
+				<h5>
 				<a href="{% include relative-src.html src=link.link %}" data-i18n-key="footer.left_links.{{ forloop.index0 }}.name">
 					{{ link.name.ar }}
 				</a>
-				</li>
+				</h5>
 			{% endfor %}
-			</ul>
+			</div>
 		</div>
 		</footer>
 
