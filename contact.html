@@ -23,13 +23,13 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 <section class="contact-tab pad">
   <div class="content">
     <div class="contact-grid">
-      {% for contact in site.data.contact.Texts.Contacts %}
+      {% for contact in site.data.contact.Contacts %}
       <div class="contact-box">
         <div class="icon">
           <img
             src="{{ contact.icon }}"
             alt="{{ contact.en }}"
-            data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.icon"
+            data-i18n-key="contact.Contacts.{{ forloop.index0 }}.icon"
           >
         </div>
 
@@ -37,13 +37,13 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <img
             src="{{ contact.QR }}"
             alt="{{ contact.en }} QR"
-            data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.QR"
+            data-i18n-key="contact.Contacts.{{ forloop.index0 }}.QR"
           >
         </div>
 
         <p
           class="platform-name"
-          data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.en"
+          data-i18n-key="contact.Contacts.{{ forloop.index0 }}.en"
         >
           {{ contact.ar }}
         </p>
@@ -52,7 +52,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           href="{{ contact.link }}"
           target="_blank"
           class="platform-handle"
-          data-i18n-key="contact.Texts.Contacts.{{ forloop.index0 }}.handle"
+          data-i18n-key="contact.Contacts.{{ forloop.index0 }}.handle"
         >
           {{ contact.handle }}
         </a>
