@@ -368,33 +368,48 @@ blockquote:before {
 /* ========================================================= */
 /* === Banner & Benefits Section حق المزايا === */
 /* ========================================================= */
-
 .banner {
   position: relative;
-  background: linear-gradient(49deg, rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
+  background: linear-gradient(
+    49deg,
+    rgba(2, 44, 78, 1) 0%,
+    rgba(14, 56, 91, 1) 45%,
+    rgba(33, 87, 132, 1) 100%
+  );
   color: #fff;
   padding: 80px 10%;
   direction: rtl;
   text-align: right;
   overflow: hidden;
+  isolation: isolate; // ensures stacking context, fixes visibility
 
-  /* Pattern layer */
+  /* 🟩 PATTERN LAYER (works for both PNG/SVG) */
   &::before {
     content: "";
     position: absolute;
-    inset: 0; // shorthand for top:0; right:0; bottom:0; left:0;
-    display: block;
-    background-image: url('/Ralalaalaka/rrr/images/Pattern.svg');
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/Ralalaalaka/rrr/images/Pattern.svg");
     background-repeat: repeat;
-    background-size: auto;
-    opacity: 0.2;
+    background-size: 200px auto; // adjust to taste
+    opacity: 0.25;
+    z-index: 0;
     pointer-events: none;
-    z-index: 1;
+    display: block;
   }
 
   .inner-banner {
-    position: relative;
-    z-index: 2; // content above the pattern
+    position: relative; // ensures this sits above pattern
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .banner-text {
@@ -417,7 +432,7 @@ blockquote:before {
     }
   }
 
-  /* ✅ Responsive (mobile layout) */
+  /* ✅ Responsive */
   @media #{$phone} {
     padding: 60px 20px;
     text-align: center;
@@ -432,10 +447,6 @@ blockquote:before {
       margin-bottom: 20px;
     }
   }
-}
-
-.banner::before {
-  background: red !important;
 }
 
 
