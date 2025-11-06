@@ -2,101 +2,88 @@
   text-align: center;
   padding: 2rem 1rem;
 
-  h3 {
+  h3, .note {
     color: #6d767d;
     text-align: center;
   }
 
-  .note {
-    color: #6d767d;
-    text-align: center;
-  }
-
+  /* ---------------- Controls ---------------- */
   .pricing-controls {
-  display: flex;
-  flex-direction: column; // default for phones
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background-color: #fafafb;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  border-radius: 20px;
-  width: 90%;
-  margin: 2rem auto;
-  padding: 15px;
-
-  h3 {
-    color: #0e385b;
-    margin: 0;
-  }
-
-  .control {
     display: flex;
+    flex-direction: column; // phones
     align-items: center;
     justify-content: center;
-    gap: .5rem;
     flex-wrap: wrap;
-  }
+    gap: 1rem;
+    background-color: #fafafb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 15px;
 
-  select {
-    padding: .4rem .6rem;
-    border: 1px solid #e4e6ea;
-    border-radius: 100px;
-    color: #0e385b;
-    background: #fff;
-    min-width: 100px;
-  }
+    h3 { color: #0e385b; margin: 0; }
 
-  .duration-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: .6rem;
-
-    .duration-btn {
-      border: 1px solid #e4e6ea;
-      background: #fff;
-      color: #0e385b;
-      border-radius: 100px;
-      padding: 0 .6rem;
-      height: 2rem;
-      line-height: 2rem;
-      cursor: pointer;
-      transition: 0.3s;
-
-      &.active {
-        background: #f4fcfc;
-        border: 1px solid #0db6bd;
-      }
-
-      &:hover {
-        color: #0e385b;
-        opacity: 0.8;
-      }
-    }
-  }
-
-  /* 💻 Laptops and above */
-  @media #{$mid-point} {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    width: max-content;
-    //padding: 20px;
-    //gap: 1.5rem;
-
-    .control,
-    .duration-tabs {
-      flex-wrap: nowrap;
+    .control {
+      display: flex;
+      align-items: center;
       justify-content: center;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+
+    select {
+      padding: .4rem .6rem;
+      border: 1px solid #e4e6ea;
+      border-radius: 100px;
+      color: #0e385b;
+      background: #fff;
+      min-width: 100px;
+    }
+
+    .duration-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: .6rem;
+
+      .duration-btn {
+        border: 1px solid #e4e6ea;
+        background: #fff;
+        color: #0e385b;
+        border-radius: 100px;
+        padding: 0 .6rem;
+        height: 2rem;
+        line-height: 2rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+          background: #f4fcfc;
+          border: 1px solid #0db6bd;
+        }
+
+        &:hover {
+          color: #0e385b;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    /* Laptops and above */
+    @media #{$mid-point} {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      width: max-content;
+
+      .control, .duration-tabs { flex-wrap: nowrap; justify-content: center; }
     }
   }
-}
 
-
+  /* ---------------- Plans ---------------- */
   .plans {
     display: flex;
     flex-wrap: wrap;
@@ -113,23 +100,13 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     transition: 0.3s;
 
-    //&:hover {
-    //  transform: translateY(-5px);
-    //}
-
     .plan-header {
       border-bottom: 2px solid;
       margin-bottom: 1rem;
-	    text-align: center;
+      text-align: center;
 
-      h2 {
-        margin: 0 0 .5rem;
-        color: #0e385b;
-      }
-
-      h1 {
-          margin: 0 0 .5rem;
-        }
+      h2 { margin: 0 0 .5rem; color: #0e385b; }
+      h1 { margin: 0 0 .5rem; }
 
       .plan-price {
         color: #0e385b;
@@ -137,90 +114,77 @@
         .before-price {
           color: #d44549;
           text-decoration: line-through;
-          //margin-inline-start: .4rem;
-          padding: 0 0 1rem 0; //////////////////////////////////
+          padding-bottom: 1rem;
         }
       }
     }
 
-      p {
-        text-align: right;
+    p { text-align: right; }
+
+    /* ---------------- Features ---------------- */
+    .feature {
+      position: relative;
+      margin-bottom: .6rem;
+      padding-inline-start: 1.2rem; // space for checkmark
+      list-style: none;
+      text-align: start;
+
+      &::before {
+        content: "✔";
+        color: var(--plan-color, #0db6bd);
+        font-weight: bold;
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
       }
 
-    .feature {
-      text-align: start;
-      margin-bottom: .6rem;
-      list-style-type: none;  /////////////////////////////////////////////#########################################
-
-      /////////////////////////////////////////////#########################################
-        &::before {
-          content: "✔";
-          //color: var(--plan-color);
-          //font-weight: bold;
-          position: absolute;
-          inset-inline-start: 0;
-          top: 0;
-        }
-        /////////////////////////////////////////////#########################################
-
-      button { //Features arrow button 
+      .toggle-sub {
         background: none;
         border: none;
         cursor: pointer;
-        margin-inline-end: .3rem;
+        padding: 0;
+        margin-inline-start: .3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+
+        svg.chevron {
+          width: 0.9em;
+          height: 0.9em;
+          fill: currentColor;
+          vertical-align: middle;
+          transition: transform 0.3s ease;
+        }
       }
 
       .sub-features {
         display: none;
         margin-top: .4rem;
-        margin-inline-start: 0;  /////////////////////////////////////////////#########################################
+        margin-inline-start: 0;
         color: #333;
-        list-style-type: none; /////////////////////////////////////////////#########################################
+        list-style: none;
 
         &.open { display: block; }
       }
     }
-
-    .feature {
-  position: relative;
-
-  .toggle-sub {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-inline-start: 0.3rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: inherit; // inherits from inline style color
-
-    svg.chevron {
-      width: 0.8em;
-      height: 0.8em;
-      fill: currentColor;
-      vertical-align: middle;
-      transition: transform 0.3s ease;
-    }
-
-    /* Flip automatically for RTL layout */
-    [dir="rtl"] & svg.chevron {
-      transform: rotate(180deg);
-    }
-
-    /* Rotate down when open */
-    &.open svg.chevron {
-      transform: rotate(90deg);
-    }
-  }
-}
-
   }
 
-  /* RTL & LTR support */
+  /* ---------------- RTL / LTR ---------------- */
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
+
+    .feature {
+      padding-inline-start: 0;
+      padding-inline-end: 1.2rem;
+
+      &::before { inset-inline-start: auto; inset-inline-end: 0; }
+
+      .sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; }
+
+      .toggle-sub svg.chevron { transform: rotate(180deg); }
+    }
   }
 
   &[dir="ltr"] {
