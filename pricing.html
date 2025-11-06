@@ -77,11 +77,11 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
+        <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
           <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
             <path fill="currentColor" d="M96 96l128 160-128 160" />
           </svg>
-        </button>
+        </button> <!-------------------->
 
 
         {% if feature.sub %}
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!--Comparison-->
 
 <section class="benefits pad">
-  <h2><strong data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.plans_compare.ar }}</strong></h2>
+  <h2><strong data-i18n-key="pricing.Texts.plans_compare">{{ site.data.pricing.Texts.plans_compare.ar }}</strong></h2>
 
     <div class="comparison-table">
     <div class="table-header">

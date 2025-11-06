@@ -85,8 +85,8 @@
     justify-content: center;
     border-radius: 100px;
     width: max-content;
-    padding: 20px;
-    gap: 1.5rem;
+    //padding: 20px;
+    //gap: 1.5rem;
 
     .control,
     .duration-tabs {
@@ -150,7 +150,7 @@
     .feature {
       text-align: start;
       margin-bottom: .6rem;
-      //list-style-type: square;  /////////////////////////////////////////////#########################################
+      list-style-type: none;  /////////////////////////////////////////////#########################################
 
       /////////////////////////////////////////////#########################################
         &::before {
