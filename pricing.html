@@ -77,7 +77,12 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">▶</button>
+        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
+          <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M96 96l128 160-128 160" />
+          </svg>
+        </button>
+
 
         {% if feature.sub %}
         <ul class="sub-features">
@@ -185,7 +190,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
 </section>
 
-
+<!--
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const empSelect = document.getElementById("employees");
@@ -232,6 +237,68 @@ document.addEventListener("DOMContentLoaded", function() {
   updatePrices();
 });
 </script>
+-->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const empSelect = document.getElementById("employees");
+  const durationTabs = document.querySelectorAll(".duration-btn");
+  const prices = document.querySelectorAll(".price");
+  const beforePrices = document.querySelectorAll(".before-price");
+
+  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
+
+  // --- Price Calculation ---
+  function updatePrices() {
+    const emp = parseInt(empSelect.value);
+    prices.forEach((p, i) => {
+      const base = parseFloat(p.dataset.base);
+      p.textContent = (base * emp * months).toLocaleString();
+
+      if (beforePrices[i]) {
+        const before = parseFloat(beforePrices[i].dataset.before);
+        beforePrices[i].textContent = (before * emp * months).toLocaleString();
+      }
+    });
+  }
+
+  empSelect.addEventListener("change", updatePrices);
+
+  durationTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      durationTabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      months = parseInt(btn.dataset.months);
+      updatePrices();
+    });
+  });
+
+  // --- Sub-feature toggle with SVG chevron ---
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".toggle-sub");
+    if (!btn) return;
+    const sub = btn.parentElement.querySelector(".sub-features");
+    if (!sub) return;
+
+    sub.classList.toggle("open");
+
+    // Replace button contents with proper SVG based on open state
+    const isOpen = sub.classList.contains("open");
+    btn.innerHTML = isOpen
+      ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="12" height="12" fill="currentColor" aria-hidden="true">
+           <path d="M96 96l128 160-128 160"/>
+         </svg>`
+      : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="12" height="12" fill="currentColor" aria-hidden="true">
+           <path d="M96 160l128 128-128 128"/>
+         </svg>`;
+  });
+
+  // Initialize
+  updatePrices();
+});
+</script>
+
+
 
 
 <!------Banner------->
@@ -256,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!--Comparison-->
 
 <section class="benefits pad">
-  <h2><strong data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.title.ar }}</strong></h2>
+  <h2><strong data-i18n-key="pricing.Texts.title">{{ site.data.pricing.Texts.plans_compare.ar }}</strong></h2>
 
     <div class="comparison-table">
     <div class="table-header">

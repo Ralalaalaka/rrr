@@ -13,68 +13,88 @@
   }
 
   .pricing-controls {
+  display: flex;
+  flex-direction: column; // default for phones
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #fafafb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 20px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 15px;
+
+  h3 {
+    color: #0e385b;
+    margin: 0;
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+  }
+
+  select {
+    padding: .4rem .6rem;
+    border: 1px solid #e4e6ea;
+    border-radius: 100px;
+    color: #0e385b;
+    background: #fff;
+    min-width: 100px;
+  }
+
+  .duration-tabs {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; // ✅ keeps everything vertically aligned
-    gap: 1.5rem;
-    background-color: #fafafb;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    border-radius: 100px;
-    width: max-content;
-    margin: 2rem auto;
-    padding: 10px 20px; // ✅ reduce padding to fix the "top space"
+    align-items: center;
+    gap: .6rem;
 
-    h3 {
-      color: #0e385b;
-      margin: 0; // ✅ remove any default top margin
-      font-size: 1rem; // ✅ keeps size consistent
-    }
-
-    .control {
-      display: flex; // ✅ enables inline layout between label & select
-      align-items: center; // ✅ vertical alignment
-      gap: .5rem;
-    }
-
-    select {
-      padding: .4rem .6rem;
+    .duration-btn {
       border: 1px solid #e4e6ea;
-      border-radius: 100px;
+      background: #fff;
       color: #0e385b;
-      background-color: #fff;
-      font-size: 1rem;
-      height: 2rem; // match duration button height
-    }
+      border-radius: 100px;
+      padding: 0 .6rem;
+      height: 2rem;
+      line-height: 2rem;
+      cursor: pointer;
+      transition: 0.3s;
 
-    .duration-tabs {
-      display: flex; // ✅ align label & buttons in one line
-      align-items: center;
-      gap: .6rem;
+      &.active {
+        background: #f4fcfc;
+        border: 1px solid #0db6bd;
+      }
 
-      .duration-btn {
-        border: 1px solid #e4e6ea;
-        background: #fff;
+      &:hover {
         color: #0e385b;
-        border-radius: 100px;
-        padding: 0 .6rem;
-        height: 2rem; // same height as select
-        line-height: 2rem;
-        cursor: pointer;
-        transition: 0.3s;
-
-        &.active {
-          background: #f4fcfc;
-          border: 1px solid #0db6bd;
-        }
-
-        &:hover {
-          color: #0e385b;
-          opacity: 0.8;
-        }
+        opacity: 0.8;
       }
     }
   }
+
+  /* 💻 Laptops and above */
+  @media #{$mid-point} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    width: max-content;
+    padding: 20px;
+    gap: 1.5rem;
+
+    .control,
+    .duration-tabs {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+}
 
 
   .plans {
@@ -160,6 +180,41 @@
         &.open { display: block; }
       }
     }
+
+    .feature {
+  position: relative;
+
+  .toggle-sub {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-inline-start: 0.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit; // inherits from inline style color
+
+    svg.chevron {
+      width: 0.8em;
+      height: 0.8em;
+      fill: currentColor;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    /* Flip automatically for RTL layout */
+    [dir="rtl"] & svg.chevron {
+      transform: rotate(180deg);
+    }
+
+    /* Rotate down when open */
+    &.open svg.chevron {
+      transform: rotate(90deg);
+    }
+  }
+}
+
   }
 
   /* RTL & LTR support */
