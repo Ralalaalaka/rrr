@@ -371,7 +371,7 @@ blockquote:before {
 
 .banner {
   position: relative; // needed for pseudo-element
-  //background: linear-gradient(49deg, rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
+  background: url('Ralalaalaka/rrr/images/Pattern.svg') repeat, linear-gradient(49deg, rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
   color: #fff;
   padding: 80px 10%;
   direction: rtl;
@@ -379,7 +379,7 @@ blockquote:before {
   overflow: hidden; // prevent pattern overflow
 
   // Pattern layer
-  &::before {
+ /* &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -390,7 +390,7 @@ blockquote:before {
     opacity: 0.2; // adjust for subtlety
     pointer-events: none; // allow clicks on buttons
     z-index: 1; // behind content
-  }
+  } */
 
   .inner-banner {
     position: relative; // bring content above pattern
