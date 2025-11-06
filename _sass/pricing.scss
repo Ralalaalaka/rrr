@@ -198,7 +198,7 @@
 
   .table-header { //Plan names
     background: white;
-    color: var(--plan-color);
+    color: #0e385b;
     //padding: 0.8rem 1rem; 
   }
 
@@ -211,9 +211,9 @@
       display: table-cell;
       padding: 1rem;
       color: #0e385b;
-      border: 1px solid #d9d9d9;
-      border-right: none; ///////////////////////////////////
-      border-left: none; ///////////////////////////////////
+      border: 1px solid #fafafb;
+      border-right: none;
+      border-left: none;
     }
   }
 
