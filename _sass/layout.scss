@@ -370,7 +370,9 @@ blockquote:before {
 /* ========================================================= */
 
 .banner {
-  background: linear-gradient(49deg,rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
+  background: 
+      linear-gradient(49deg, rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%),
+      url("images/Pattern.svg") center center / cover no-repeat;
   color: #fff;
   padding: 80px 10%;
   direction: rtl;
