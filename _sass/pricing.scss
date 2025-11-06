@@ -64,10 +64,14 @@
           border: 1px solid #0db6bd;
         }
 
-        &:hover { color: #0e385b; opacity: 0.8; }
+        &:hover {
+          color: #0e385b;
+          opacity: 0.8;
+        }
       }
     }
 
+    /* Laptops and above */
     @media #{$mid-point} {
       flex-direction: row;
       align-items: center;
@@ -135,36 +139,38 @@
       }
 
       .toggle-sub {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-inline-start: .3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-inline-start: .3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
 
-  svg.chevron { 
-    width: 0.9em; 
-    height: 0.9em; 
-    fill: currentColor; 
-    display: none; 
-  }
+        svg.chevron {
+          width: 0.9em;
+          height: 0.9em;
+          fill: currentColor;
+          vertical-align: middle;
+          transition: transform 0.3s ease;
+        }
+      }
 
-  /* Default visible arrow depending on direction */
-  &[dir="ltr"] .chevron-right { display: inline; }
-  &[dir="rtl"] .chevron-left { display: inline; }
+      .sub-features {
+        display: none;
+        margin-top: .4rem;
+        margin-inline-start: 0;
+        color: #333;
+        list-style: none;
 
-  &.open {
-    .chevron-right, .chevron-left { display: none; }
-    .chevron-down { display: inline; }
-  }
-}
+        &.open { display: block; }
+      }
     }
   }
 
-  /* ---------------- RTL ---------------- */
+  /* ---------------- RTL / LTR ---------------- */
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
@@ -177,14 +183,21 @@
 
       .sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; }
 
-      .toggle-sub {
-        .chevron-right { display: none; }
-        .chevron-left { display: inline; }
+      .toggle-sub svg.chevron {
+        width: 0.9em;
+        height: 0.9em;
+        fill: currentColor;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
       }
+
     }
   }
 
-  &[dir="ltr"] { direction: ltr; text-align: left; }
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+  }
 }
 
 

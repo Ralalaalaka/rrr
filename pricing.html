@@ -77,21 +77,11 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <!--------------------> <button class="toggle-sub">
-  <!-- Closed state -->
-  <svg class="chevron chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M9 18l6-6-6-6"/>
-  </svg>
-  <svg class="chevron chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M6 9l6 6 6-6"/>
-  </svg>
-  <!-- RTL support -->
-  <svg class="chevron chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M15 6l-6 6 6 6"/>
-  </svg>
-</button>
-
- <!-------------------->
+        <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
+          <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M96 96l128 160-128 160" />
+          </svg>
+        </button> <!-------------------->
 
 
         {% if feature.sub %}
@@ -250,38 +240,63 @@ document.addEventListener("DOMContentLoaded", function() {
 -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".toggle-sub").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const sub = btn.parentElement.querySelector(".sub-features");
-      if (!sub) return;
+  const empSelect = document.getElementById("employees");
+  const durationTabs = document.querySelectorAll(".duration-btn");
+  const prices = document.querySelectorAll(".price");
+  const beforePrices = document.querySelectorAll(".before-price");
+  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
 
-      sub.classList.toggle("open");
+  // --- Price Calculation ---
+  function updatePrices() {
+    const emp = parseInt(empSelect.value);
+    prices.forEach((p, i) => {
+      const base = parseFloat(p.dataset.base);
+      p.textContent = (base * emp * months).toLocaleString();
 
-      const dir = document.documentElement.getAttribute("dir") || "ltr";
-
-      const right = btn.querySelector(".chevron-right");
-      const left = btn.querySelector(".chevron-left");
-      const down = btn.querySelector(".chevron-down");
-
-      if (sub.classList.contains("open")) {
-        right && (right.style.display = "none");
-        left && (left.style.display = "none");
-        down && (down.style.display = "inline");
-      } else {
-        down && (down.style.display = "none");
-        if (dir === "rtl") {
-          left && (left.style.display = "inline");
-          right && (right.style.display = "none");
-        } else {
-          right && (right.style.display = "inline");
-          left && (left.style.display = "none");
-        }
+      if (beforePrices[i]) {
+        const before = parseFloat(beforePrices[i].dataset.before);
+        beforePrices[i].textContent = (before * emp * months).toLocaleString();
       }
     });
+  }
+
+  empSelect.addEventListener("change", updatePrices);
+
+  durationTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      durationTabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      months = parseInt(btn.dataset.months);
+      updatePrices();
+    });
   });
+
+  // --- Toggle sub-features with SVG chevron ---
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".toggle-sub");
+  if (!btn) return;
+
+  const sub = btn.parentElement.querySelector(".sub-features");
+  if (!sub) return;
+
+  sub.classList.toggle("open");
+
+  const svg = btn.querySelector("svg.chevron");
+  const isOpen = sub.classList.contains("open");
+  const dir = document.documentElement.dir || "ltr";
+
+  if (dir === "rtl") {
+    svg.style.transform = isOpen ? "rotate(-90deg)" : "rotate(0deg)";
+  } else { // ltr
+    svg.style.transform = isOpen ? "rotate(90deg)" : "rotate(0deg)";
+  }
+});
+
+  });
+
+  updatePrices();
 });
 </script>
-
 
 
 
