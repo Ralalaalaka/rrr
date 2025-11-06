@@ -390,6 +390,7 @@ blockquote:before {
     opacity: 0.2; // adjust for subtlety
     pointer-events: none; // allow clicks on buttons
     z-index: 1; // behind content
+    background-size: 300px auto;
   }
 
   .inner-banner {
