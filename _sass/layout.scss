@@ -398,6 +398,7 @@ blockquote:before {
     z-index: 0;
     pointer-events: none;
     display: block;
+    background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px);
   }
 
   .inner-banner {
