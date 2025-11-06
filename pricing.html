@@ -77,22 +77,20 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">
-  <!-- Right arrow (LTR closed) -->
+        <!--------------------> <button class="toggle-sub">
+  <!-- Closed state -->
   <svg class="chevron chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9 18l6-6-6-6"/>
   </svg>
-
-  <!-- Left arrow (RTL closed) -->
-  <svg class="chevron chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-
-  <!-- Down arrow (open) -->
   <svg class="chevron chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+  <!-- RTL support -->
+  <svg class="chevron chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15 6l-6 6 6 6"/>
   </svg>
 </button>
+
  <!-------------------->
 
 

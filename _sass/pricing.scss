@@ -135,31 +135,32 @@
       }
 
       .toggle-sub {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        margin-inline-start: .3rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: inherit;
-        gap: 0.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-inline-start: .3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
 
-        svg.chevron { width: 0.9em; height: 0.9em; display: none; fill: currentColor; }
+  svg.chevron { 
+    width: 0.9em; 
+    height: 0.9em; 
+    fill: currentColor; 
+    display: none; 
+  }
 
-        .chevron-right { display: inline; } // default LTR closed
-      }
+  /* Default visible arrow depending on direction */
+  &[dir="ltr"] .chevron-right { display: inline; }
+  &[dir="rtl"] .chevron-left { display: inline; }
 
-      .sub-features {
-        display: none;
-        margin-top: .4rem;
-        margin-inline-start: 0;
-        color: #333;
-        list-style: none;
-
-        &.open { display: block; }
-      }
+  &.open {
+    .chevron-right, .chevron-left { display: none; }
+    .chevron-down { display: inline; }
+  }
+}
     }
   }
 
