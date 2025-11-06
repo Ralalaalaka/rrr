@@ -272,31 +272,34 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // --- Toggle sub-features with SVG chevron ---
-document.addEventListener("click", e => {
-  const btn = e.target.closest(".toggle-sub");
-  if (!btn) return;
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".toggle-sub");
+    if (!btn) return;
+    const sub = btn.parentElement.querySelector(".sub-features");
+    if (!sub) return;
 
-  const sub = btn.parentElement.querySelector(".sub-features");
-  if (!sub) return;
+    const isRTL = document.documentElement.dir === "rtl";
+    sub.classList.toggle("open");
+    const isOpen = sub.classList.contains("open");
 
-  sub.classList.toggle("open");
+    // Always render the same SVG and rotate via CSS
+    btn.innerHTML = `
+      <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true">
+        <path d="M96 160l128 128-128 128"/>
+      </svg>
+    `;
 
-  const svg = btn.querySelector("svg.chevron");
-  const isOpen = sub.classList.contains("open");
-  const dir = document.documentElement.dir || "ltr";
-
-  if (dir === "rtl") {
-    svg.style.transform = isOpen ? "rotate(-90deg)" : "rotate(0deg)";
-  } else { // ltr
-    svg.style.transform = isOpen ? "rotate(90deg)" : "rotate(0deg)";
-  }
-});
-
+    // Reset rotation for both directions
+    const svg = btn.querySelector(".chevron");
+    svg.style.transform = isOpen
+      ? (isRTL ? "rotate(90deg)" : "rotate(90deg)") // down arrow both directions
+      : (isRTL ? "rotate(180deg)" : "rotate(0deg)"); // default left/right
   });
 
   updatePrices();
 });
 </script>
+
 
 
 

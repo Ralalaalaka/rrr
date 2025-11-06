@@ -370,6 +370,79 @@ blockquote:before {
 /* ========================================================= */
 
 .banner {
+  position: relative; // needed for pseudo-element
+  background: linear-gradient(49deg, rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
+  color: #fff;
+  padding: 80px 10%;
+  direction: rtl;
+  text-align: right;
+  overflow: hidden; // prevent pattern overflow
+
+  // Pattern layer
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Ralalaalaka/rrr/images/Pattern.svg') repeat;
+    opacity: 0.2; // adjust for subtlety
+    pointer-events: none; // allow clicks on buttons
+    z-index: 1; // behind content
+  }
+
+  .inner-banner {
+    position: relative; // bring content above pattern
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .banner-text {
+    flex: 1 1 45%;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .banner-image {
+    flex: 1 1 45%;
+    text-align: center;
+
+    img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* ✅ Responsive (mobile layout) */
+  @media #{$phone} {
+    padding: 60px 20px;
+    text-align: center;
+
+    .inner-banner {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .banner-image img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/*
+.banner {
   background: linear-gradient(49deg,rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
   color: #fff;
   padding: 80px 10%;
@@ -406,7 +479,7 @@ blockquote:before {
     }
   }
 
-  /* ✅ Responsive (mobile layout) */
+  /* ✅ Responsive (mobile layout) 
   @media #{$phone} {
     padding: 60px 20px;
     text-align: center;
@@ -422,6 +495,40 @@ blockquote:before {
     }
   }
 }
+
+/* ✅ Light gray background with icons/text grid 
+.benefits {
+  background: #f7f7f7;
+  padding: 60px 10%;
+  text-align: center;
+
+
+  .benefit {
+    text-align: center;
+
+    img {
+      width: 60px;
+      margin-top: 15px; /*it was margin-bottom
+    }
+
+    h3 {
+      color: #022c4e;
+    }
+
+    p {
+      color: #555;
+    }
+  }
+
+  /* ✅ For small screens: 2 per row 
+  @media #{$phone} {
+    .benefits-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+*/
+
 
 /* ✅ Light gray background with icons/text grid */
 .benefits {

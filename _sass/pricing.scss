@@ -183,14 +183,7 @@
 
       .sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; }
 
-      .toggle-sub svg.chevron {
-        width: 0.9em;
-        height: 0.9em;
-        fill: currentColor;
-        vertical-align: middle;
-        transition: transform 0.3s ease;
-      }
-
+      .toggle-sub svg.chevron { transform: rotate(180deg); }
     }
   }
 
@@ -199,7 +192,6 @@
     text-align: left;
   }
 }
-
 
 
 /*Comparison*/
