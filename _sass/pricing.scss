@@ -196,11 +196,18 @@
     vertical-align: middle;
   }
 
-  .table-header { //Plan names
+    /* Table header: Plan names */
+  .table-header {
     background: white;
     color: #0e385b;
-    //padding: 0.8rem 1rem; 
+
+    .plan-col {
+      h3, strong {
+        color: var(--plan-color); // Use the plan color variable
+      }
+    }
   }
+
 
   .category-row { 
     display: table-row;
