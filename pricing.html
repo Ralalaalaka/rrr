@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     {% for category in site.data.pricing.Comparison %}
     <div class="category-row">
-      <h4 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</h4>
+      <h3 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</h3>
     </div>
 
     {% for feature in category.features %}
