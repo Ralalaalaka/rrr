@@ -196,14 +196,13 @@
     vertical-align: middle;
   }
 
-  .table-header {
+  .table-header { //Plan names
     background: white;
-    font-weight: 700;
-    color: #0e385b;
-    padding: 0.8rem 1rem;
+    color: var(--plan-color);
+    //padding: 0.8rem 1rem; 
   }
 
-  .category-row {
+  .category-row { 
     display: table-row;
     background: #fafafb;
     border: none;
@@ -211,9 +210,9 @@
     h4 {
       display: table-cell;
       padding: 1rem;
-      //font-weight: 700;
       color: #0e385b;
       border: 1px solid #d9d9d9;
+      border: none; ///////////////////////////////////
     }
   }
 
