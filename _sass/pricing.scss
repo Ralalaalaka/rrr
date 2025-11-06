@@ -64,14 +64,10 @@
           border: 1px solid #0db6bd;
         }
 
-        &:hover {
-          color: #0e385b;
-          opacity: 0.8;
-        }
+        &:hover { color: #0e385b; opacity: 0.8; }
       }
     }
 
-    /* Laptops and above */
     @media #{$mid-point} {
       flex-direction: row;
       align-items: center;
@@ -148,14 +144,11 @@
         align-items: center;
         justify-content: center;
         color: inherit;
+        gap: 0.2rem;
 
-        svg.chevron {
-          width: 0.9em;
-          height: 0.9em;
-          fill: currentColor;
-          vertical-align: middle;
-          transition: transform 0.3s ease;
-        }
+        svg.chevron { width: 0.9em; height: 0.9em; display: none; fill: currentColor; }
+
+        .chevron-right { display: inline; } // default LTR closed
       }
 
       .sub-features {
@@ -170,7 +163,7 @@
     }
   }
 
-  /* ---------------- RTL / LTR ---------------- */
+  /* ---------------- RTL ---------------- */
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
@@ -183,14 +176,14 @@
 
       .sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; }
 
-      .toggle-sub svg.chevron { transform: rotate(180deg); }
+      .toggle-sub {
+        .chevron-right { display: none; }
+        .chevron-left { display: inline; }
+      }
     }
   }
 
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-  }
+  &[dir="ltr"] { direction: ltr; text-align: left; }
 }
 
 

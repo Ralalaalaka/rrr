@@ -77,11 +77,23 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
-          <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
-            <path fill="currentColor" d="M96 96l128 160-128 160" />
-          </svg>
-        </button> <!-------------------->
+        <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}">
+  <!-- Right arrow (LTR closed) -->
+  <svg class="chevron chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <!-- Left arrow (RTL closed) -->
+  <svg class="chevron chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <!-- Down arrow (open) -->
+  <svg class="chevron chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+ <!-------------------->
 
 
         {% if feature.sub %}
@@ -240,65 +252,38 @@ document.addEventListener("DOMContentLoaded", function() {
 -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const empSelect = document.getElementById("employees");
-  const durationTabs = document.querySelectorAll(".duration-btn");
-  const prices = document.querySelectorAll(".price");
-  const beforePrices = document.querySelectorAll(".before-price");
-  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
+  document.querySelectorAll(".toggle-sub").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const sub = btn.parentElement.querySelector(".sub-features");
+      if (!sub) return;
 
-  // --- Price Calculation ---
-  function updatePrices() {
-    const emp = parseInt(empSelect.value);
-    prices.forEach((p, i) => {
-      const base = parseFloat(p.dataset.base);
-      p.textContent = (base * emp * months).toLocaleString();
+      sub.classList.toggle("open");
 
-      if (beforePrices[i]) {
-        const before = parseFloat(beforePrices[i].dataset.before);
-        beforePrices[i].textContent = (before * emp * months).toLocaleString();
+      const dir = document.documentElement.getAttribute("dir") || "ltr";
+
+      const right = btn.querySelector(".chevron-right");
+      const left = btn.querySelector(".chevron-left");
+      const down = btn.querySelector(".chevron-down");
+
+      if (sub.classList.contains("open")) {
+        right && (right.style.display = "none");
+        left && (left.style.display = "none");
+        down && (down.style.display = "inline");
+      } else {
+        down && (down.style.display = "none");
+        if (dir === "rtl") {
+          left && (left.style.display = "inline");
+          right && (right.style.display = "none");
+        } else {
+          right && (right.style.display = "inline");
+          left && (left.style.display = "none");
+        }
       }
     });
-  }
-
-  empSelect.addEventListener("change", updatePrices);
-
-  durationTabs.forEach(btn => {
-    btn.addEventListener("click", () => {
-      durationTabs.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      months = parseInt(btn.dataset.months);
-      updatePrices();
-    });
   });
-
-  // --- Toggle sub-features with SVG chevron ---
-  document.addEventListener("click", e => {
-    const btn = e.target.closest(".toggle-sub");
-    if (!btn) return;
-    const sub = btn.parentElement.querySelector(".sub-features");
-    if (!sub) return;
-
-    const isRTL = document.documentElement.dir === "rtl";
-    sub.classList.toggle("open");
-    const isOpen = sub.classList.contains("open");
-
-    // Always render the same SVG and rotate via CSS
-    btn.innerHTML = `
-      <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true">
-        <path d="M96 160l128 128-128 128"/>
-      </svg>
-    `;
-
-    // Reset rotation for both directions
-    const svg = btn.querySelector(".chevron");
-    svg.style.transform = isOpen
-      ? (isRTL ? "rotate(90deg)" : "rotate(90deg)") // down arrow both directions
-      : (isRTL ? "rotate(180deg)" : "rotate(0deg)"); // default left/right
-  });
-
-  updatePrices();
 });
 </script>
+
 
 
 
