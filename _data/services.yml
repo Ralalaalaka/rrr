@@ -1,64 +1,126 @@
-##services:
-  ##- title: "إدارة الموظفين"
-    ##description: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-    ##image: "images/services/Service 1.png"
-    ##sub_services:
-      ##- "إضافة وتعديل بيانات الموظفين"
-      ##- "تتبع الأداء وساعات العمل"
-      ##- "إدارة الإجازات والمكافآت"
-      ##- "ربط التقارير بالإدارات المختلفة"
-
-  ##- title: "إدارة المشاريع"
-    ##description: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
-    ##image: "images/services/Service 1.png"
-    ##sub_services:
-      ##- "إنشاء المهام وجدولتها"
-      ##- "تعيين المسؤوليات بين الفرق"
-      ##- "إصدار تقارير التقدم"
-      ##- "متابعة الإنجازات أسبوعيًا"
-
-  ##- title: "إدارة العملاء"
-    ##description: "قاعدة بيانات مخصصة لتتبع تفاعل العملاء وتحليل البيانات لتحسين تجربة المستخدم."
-    ##image: "images/services/Service 1.png"
-    ##sub_services:
-      ##- "تتبع استفسارات العملاء"
-      ##- "إدارة الملاحظات والشكاوى"
-      ##- "تحليل سلوك العملاء"
-      ##- "التقارير الدورية حول رضا العملاء"
-
-
-
 services:
   - title:
       ar: "إدارة الموظفين"
       en: "Employee Management"
     description:
-      ar: "قاعدة بيانات موحدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
-      en: "A unified database that gathers employee details to track and manage their affairs efficiently."
+      ar: "قاعدة بيانات موحّدة تجمع تفاصيل الموظفين لمتابعة شؤونهم وتسهيل إدارتها والوصول إليها."
+      en: "A unified database that consolidates all employee details to streamline management, tracking, and accessibility."
     image: "images/services/Service 1.png"
     sub_services:
-      - ar: "إضافة وتعديل بيانات الموظفين"
-        en: "Add and edit employee data"
-      - ar: "تتبع الأداء وساعات العمل"
-        en: "Track performance and working hours"
-      - ar: "إدارة الإجازات والمكافآت"
-        en: "Manage leaves and rewards"
-      - ar: "ربط التقارير بالإدارات المختلفة"
-        en: "Link reports with different departments"
+      - ar: "حفظ وتحديث المعلومات الشخصية والوظيفية"
+        en: "Store and update personal and employment information"
+      - ar: "تصنيف الموظفين حسب القسم أو الوظيفة"
+        en: "Classify employees by department or position"
+      - ar: "إمكانية البحث واسترجاع البيانات بسهولة"
+        en: "Easily search for and retrieve employee data"
 
   - title:
-      ar: "إدارة المشاريع"
-      en: "Project Management"
+      ar: "الحضور والانصراف"
+      en: "Attendance & Time Tracking"
     description:
-      ar: "نظام شامل لتنظيم المشاريع ومتابعة مراحل التنفيذ والمواعيد النهائية بكفاءة عالية."
-      en: "A comprehensive system to organize projects and track progress efficiently."
-    image: "images/services/Service 1.png"
+      ar: "تسجيل ومتابعة أوقات الدخول والخروج بدقة مع نظام ذكي يوفر تقارير لحظية ويعزز الانضباط في العمل."
+      en: "Accurately record and monitor employee check-in and check-out times with an intelligent system that provides real-time reports and enhances workplace discipline."
+    image: "images/services/Service 2.png"
     sub_services:
-      - ar: "إنشاء المهام وجدولتها"
-        en: "Create and schedule tasks"
-      - ar: "تعيين المسؤوليات بين الفرق"
-        en: "Assign responsibilities among teams"
-      - ar: "إصدار تقارير التقدم"
-        en: "Generate progress reports"
-      - ar: "متابعة الإنجازات أسبوعيًا"
-        en: "Track achievements weekly"
+      - ar: "متابعة الحضور اليومي والشهري"
+        en: "Track daily and monthly attendance"
+      - ar: "دعم البصمة أو التسجيل الرقمي"
+        en: "Support for fingerprint or digital sign-in"
+      - ar: "إصدار تقارير مفصلة للمديرين"
+        en: "Generate detailed reports for managers"
+
+  - title:
+      ar: "الإجازات"
+      en: "Leave Management"
+    description:
+      ar: "تقديم طلبات الإجازة ورفع المستندات ومتابعة حالة الطلب والموافقة إلكترونيًا."
+      en: "Submit leave requests, upload documents, and track approval status — all electronically."
+    image: "images/services/Service 3.png"
+    sub_services:
+      - ar: "تقديم ومراجعة الطلبات"
+        en: "Submit and review leave requests"
+      - ar: "متابعة موافقة المدير المباشر أو مسؤول الموارد البشرية مباشرة في النظام"
+        en: "Managers or HR representatives can approve directly within the system"
+      - ar: "حفظ سجل الإجازات لكل موظف"
+        en: "Maintain a comprehensive leave history for each employee"
+      - ar: "عرض إحصائيات الإجازات الشهرية والسنوية"
+        en: "Display monthly and annual leave statistics"
+
+  - title:
+      ar: "التأمين الطبي"
+      en: "Medical Insurance Management"
+    description:
+      ar: "إدارة بيانات التأمين الطبي للموظفين بكل سلاسة، مع إمكانية تحديث ومتابعة الاشتراكات والتحديثات بسهولة."
+      en: "Manage employee medical insurance data with ease — update, renew, and monitor subscriptions efficiently."
+    image: "images/services/Service 4.png"
+    sub_services:
+      - ar: "تسجيل بيانات الموظفين والتغطية التأمينية"
+        en: "Register employee and coverage information"
+      - ar: "متابعة التجديدات والتحديثات"
+        en: "Track renewals and policy updates"
+      - ar: "تصدير تقارير التأمين عند الحاجة"
+        en: "Export insurance reports when needed"
+
+  - title:
+      ar: "خدمة الطلبات الإلكترونية"
+      en: "E-Requests Service"
+    description:
+      ar: "يتيح وورك هب للموظفين إرسال طلباتهم مباشرة لمسؤولي الموارد البشرية عبر النظام، مما يسهل المتابعة ويضمن سرعة التنفيذ."
+      en: "WorkHub enables employees to submit requests directly to HR representatives through the system, ensuring fast processing and smooth communication."
+    image: "images/services/Service 5.png"
+    sub_services:
+      - ar: "متابعة حالة الطلب من البداية للنهاية"
+        en: "Track request status from submission to completion"
+      - ar: "إرسال إشعارات تلقائية للمديرين"
+        en: "Automatic notifications to managers"
+      - ar: "أرشفة الطلبات للرجوع إليها لاحقًا"
+        en: "Archive requests for future reference"
+
+  - title:
+      ar: "تذاكر الطيران"
+      en: "Travel Tickets"
+    description:
+      ar: "يوفر وورك هب إرسال طلبات تذاكر السفر ومتابعة حالتها حتى إصدارها."
+      en: "WorkHub allows employees to request and track travel tickets until issuance."
+    image: "images/services/Service 6.png"
+    sub_services:
+      - ar: "تقديم الطلب ومراجعته إلكترونيًا"
+        en: "Submit and review requests online"
+      - ar: "متابعة حالة الطلب في كل مرحلة"
+        en: "Track the status of each stage"
+      - ar: "حفظ سجل السفر لكل موظف"
+        en: "Maintain a travel record for every employee"
+      - ar: "متابعة رصيد البدل المتبقي"
+        en: "Monitor remaining travel allowance balance"
+
+  - title:
+      ar: "مسيّر الرواتب"
+      en: "Payroll Management"
+    description:
+      ar: "حساب الرواتب تلقائيًا وفقًا لساعات العمل والبدلات والخصومات، ويُنشئ كشوف رواتب جاهزة."
+      en: "Automatically calculate salaries based on working hours, allowances, and deductions — generating ready-to-use payroll reports."
+    image: "images/services/Service 7.png"
+    sub_services:
+      - ar: "احتساب الرواتب بشكل دقيق"
+        en: "Accurate salary calculations"
+      - ar: "إدارة البدلات والخصومات"
+        en: "Manage allowances and deductions"
+      - ar: "إصدار كشوف الرواتب الشهرية"
+        en: "Issue monthly payslips"
+      - ar: "الاحتفاظ بسجلات الرواتب السابقة"
+        en: "Maintain historical payroll records"
+
+  - title:
+      ar: "تقييم الأداء"
+      en: "Performance Evaluation"
+    description:
+      ar: "يتيح للمدراء متابعة أداء الموظفين عبر مؤشرات واضحة وتقارير تفصيلية دورية تساعد في تعزيز الإنتاجية وتحفيز التميز."
+      en: "Enable managers to monitor employee performance through clear KPIs and detailed periodic reports that promote productivity and reward excellence."
+    image: "images/services/Service 8.png"
+    sub_services:
+      - ar: "تحديد وتحديث الأهداف"
+        en: "Define and update performance goals"
+      - ar: "إمكانية تسجيل الملاحظات"
+        en: "Record notes and feedback"
+      - ar: "إصدار التقارير التحليلية"
+        en: "Generate analytical performance reports"
