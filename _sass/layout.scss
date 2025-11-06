@@ -434,6 +434,11 @@ blockquote:before {
   }
 }
 
+.banner::before {
+  background: red !important;
+}
+
+
 /*
 .banner {
   background: linear-gradient(49deg,rgba(2, 44, 78, 1) 0%, rgba(14, 56, 91, 1) 45%, rgba(33, 87, 132, 1) 100%);
