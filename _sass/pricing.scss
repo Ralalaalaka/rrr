@@ -258,7 +258,6 @@
      ----------------------------------------- */
   .feature-row {
     display: table-row;
-    background: white;
 
     /* First column (Feature names - column A) */
     .feature-name {
@@ -268,7 +267,6 @@
       border: 1px solid #d9d9d9;
       border-right: none;        // no right border
       vertical-align: middle;
-      background: none;
     }
 
     /* Plan check columns (B, C, D...) */
@@ -277,6 +275,7 @@
       padding: 0.8rem 1rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
+      background: white;
 
       .checkmark {
         color: var(--plan-color);
