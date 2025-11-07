@@ -209,10 +209,10 @@
 
   .feature-col,
   .plan-col,
-  /*.feature-name,*/
+  .feature-name,
   .plan-check {
     display: table-cell;
-    //padding: 0.8rem 1rem; ////////////////////////////////
+    padding: 0.8rem 1rem;
     border: 1px solid #d9d9d9;
     vertical-align: middle;
   }
@@ -229,17 +229,14 @@
     }
   }
 
-  .feature-col,
-  .feature-name { ////////////////////////////////////////////////////////
-    background: none; ////////////////////////////////////////////////////////
-    border-right: none; ////////////////////////////////////////////////////////
-  } ////////////////////////////////////////////////////////
+  .feature-col{ 
+    background: none; 
+    border-right: none; 
+  } 
 
 
   .category-row { 
     display: table-row;
-    //background: #fafafb;
-    //border: none;
 
 
     h3 {
