@@ -207,6 +207,7 @@
   .table-header {
     display: table-row;
     color: #0e385b;
+    position: sticky;
 
     /* First cell (A1) - no border, no background */
     .feature-col {
