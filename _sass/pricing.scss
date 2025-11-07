@@ -279,13 +279,16 @@
       padding: 0.8rem 1rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
-      background: white;
+      text-align: center;
 
       .checkmark {
-        color: var(--plan-color);
-        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: var(--plan-color);
+        vertical-align: middle;
       }
     }
+
   }
 }
 
