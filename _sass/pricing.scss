@@ -196,6 +196,10 @@
 
 
 /*Comparison*/
+/* =========================================
+   Comparison Table Styles (Column-based)
+   ========================================= */
+
 .comparison-table {
   display: table;
   width: 100%;
@@ -207,12 +211,11 @@
   .table-header {
     display: table-row;
     color: #0e385b;
-    position: sticky;
 
     /* First cell (A1) - no border, no background */
     .feature-col {
       display: table-cell;
-      padding: 0.5rem 0.5rem; //0.8rem 1rem;
+      padding: 0.8rem 1rem;
       border: none;
       background: none;
       vertical-align: middle;
@@ -221,7 +224,7 @@
     /* Plan columns (B1, C1, D1...) */
     .plan-col {
       display: table-cell;
-      padding: 0.5rem 0.5rem;
+      padding: 0.8rem 1rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
       background: white;
@@ -241,7 +244,7 @@
 
     h3 {
       display: table-cell;
-      //padding: 1rem;
+      padding: 1rem;
       color: #0e385b;
       background: none;         // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
@@ -261,7 +264,7 @@
     /* First column (Feature names - column A) */
     .feature-name {
       display: table-cell;
-      padding: 0.5rem 0.5rem;
+      padding: 0.8rem 1rem;
       background: none;          // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
       border-right: none;        // no right border
@@ -273,11 +276,10 @@
     /* Plan check columns (B, C, D...) */
     .plan-check {
       display: table-cell;
-      padding: 0.5rem 0.5rem;
+      padding: 0.8rem 1rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
       text-align: center;
-      color: white; //////////
 
       .checkmark {
         width: 1.2rem;
