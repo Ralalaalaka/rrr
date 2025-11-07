@@ -237,7 +237,7 @@
   }
 
   /* -----------------------------------------
-     Category Rows
+     Category Rows / Main features
      ----------------------------------------- */
   .category-row {
     display: table-row;
@@ -250,11 +250,12 @@
       border: 1px solid #d9d9d9;
       border-left: none;        // no left border for category rows
       border-right: none;
+      text-align: right;
     }
   }
 
   /* -----------------------------------------
-     Feature Rows
+     Feature Rows / Sub features
      ----------------------------------------- */
   .feature-row {
     display: table-row;
@@ -267,6 +268,7 @@
       border: 1px solid #d9d9d9;
       border-right: none;        // no right border
       vertical-align: middle;
+      text-align: right;
     }
 
     /* Plan check columns (B, C, D...) */
