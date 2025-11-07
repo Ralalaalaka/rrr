@@ -212,11 +212,12 @@
   .table-header {
     display: table-row;
     color: #0e385b;
+    margin: 0;
 
     /* First cell (A1) - no border, no background */
     .feature-col {
       display: table-cell;
-      padding: 0.7rem 0.5rem; //0.8rem 1rem;
+      padding: 0.8rem 0.5rem; //0.8rem 1rem;
       border: none;
       background: none;
       vertical-align: middle;
@@ -225,13 +226,10 @@
     /* Plan columns (B1, C1, D1...) */
     .plan-col {
       display: table-cell;
-      padding: 0.7rem 0.5rem;
+      padding: 0.8rem 0.5rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
       background: white;
-      position: sticky;
-      top: 0;
-      z-index: 2;
 
       h3,
       strong {
@@ -270,7 +268,7 @@
     /* First column (Feature names - column A) */
     .feature-name {
       display: table-cell;
-      padding: 0.7rem 0.5rem;
+      padding: 0.8rem 0.5rem;
       background: none;          // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
       border-right: none;        // no right border
@@ -282,7 +280,7 @@
     /* Plan check columns (B, C, D...) */
     .plan-check {
       display: table-cell;
-      padding: 0.7rem 0.5rem;
+      padding: 0.8rem 0.5rem;
       border: 1px solid #d9d9d9;
       vertical-align: middle;
       text-align: center;
