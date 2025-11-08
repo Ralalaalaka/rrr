@@ -140,7 +140,7 @@
 
       &::before {
         content: "✔";
-        color: var(--plan-color, #0db6bd);
+        color: #6d767d;
         font-weight: bold;
         position: absolute;
         inset-inline-start: 0;
@@ -159,8 +159,8 @@
         color: inherit;
 
         svg.chevron {
-          width: 0.9em;
-          height: 0.9em;
+          width: 1.7em;
+          height: 1.7em;
           fill: currentColor;
           vertical-align: middle;
           transition: transform 0.3s ease;
