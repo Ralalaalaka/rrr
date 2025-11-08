@@ -18,15 +18,12 @@
     background-color: #fafafb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     border-radius: 100px;
-    width: 90%;
+    width: 95%; //it was 90
     margin: 2rem auto;
     padding: 10px; //////////////////////////15px
 
     h3, strong { 
       color: #0e385b; 
-      margin: 0; ///////////////
-    	line-height: 0; /////////////////
-       padding-bottom: 1rem;
     }
 
     .control {
@@ -81,7 +78,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      border-radius: 100px;
+      //border-radius: 100px;
       width: max-content;
       gap: 1rem;
 
