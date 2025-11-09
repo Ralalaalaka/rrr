@@ -130,18 +130,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 -->
-<!-----------4444444444444444444444444444444444444444444444444------------->
-
+<!-----------555555555555555555555555555555555555555555555------------->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".service-slide");
   const dots = document.querySelectorAll(".dot");
   const prev = document.querySelector(".arrows-button.prev");
   const next = document.querySelector(".arrows-button.next");
-  const slider = document.querySelector(".services-slider");
-
   let current = 0;
   let timer;
+
   const rotationSpeed = 9000;
 
   function updateSlides() {
@@ -171,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(timer);
   }
 
-  // ---- Click Events ----
   prev.addEventListener("click", () => {
     stopAuto();
     showPrev();
@@ -193,15 +190,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ---- Swipe + Drag Support ----
+  updateSlides();
+  startAuto();
+
+  // ---- Add Swipe Support (minimal) ----
+  const slider = document.querySelector(".services-slider");
   let startX = 0;
   let endX = 0;
-  let isDragging = false;
-  const swipeThreshold = 50; // min px for valid swipe
 
-  // Touch events (mobile)
   slider.addEventListener("touchstart", (e) => {
-    stopAuto();
     startX = e.touches[0].clientX;
   });
 
@@ -211,43 +208,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   slider.addEventListener("touchend", () => {
     const diff = startX - endX;
-    if (Math.abs(diff) > swipeThreshold) {
-      diff > 0 ? showNext() : showPrev();
-    }
-    startAuto();
-  });
-
-  // Mouse drag events (desktop)
-  slider.addEventListener("mousedown", (e) => {
-    stopAuto();
-    isDragging = true;
-    startX = e.clientX;
-  });
-
-  slider.addEventListener("mousemove", (e) => {
-    if (isDragging) endX = e.clientX;
-  });
-
-  slider.addEventListener("mouseup", () => {
-    if (!isDragging) return;
-    const diff = startX - endX;
-    if (Math.abs(diff) > swipeThreshold) {
-      diff > 0 ? showNext() : showPrev();
-    }
-    isDragging = false;
-    startAuto();
-  });
-
-  // (Optional) cancel drag if user leaves slider area
-  slider.addEventListener("mouseleave", () => {
-    if (isDragging) {
-      isDragging = false;
-      startAuto();
+    if (Math.abs(diff) > 50) { // adjust swipe sensitivity
+      if (diff > 0) {
+        // swipe left → next slide
+        showNext();
+      } else {
+        // swipe right → previous slide
+        showPrev();
+      }
     }
   });
-
-  // ---- Initialize ----
-  updateSlides();
-  startAuto();
 });
 </script>
+

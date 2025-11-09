@@ -115,29 +115,12 @@
       .plan-price {
         color: #0e385b;
 
-        //.before-price {
-         // color: #d44549;
-         // text-decoration: line-through;
-         // margin-bottom: 1rem; //it was padding-bottom /////////////////////////////////////////2222222222222222222222222222222222222222222 تحت السعر
-        //}
-
-        /////////////////////////////////////////33333333333333333333333333333333333
         .before-price {
-          color: #d44549;               // text color
-          text-decoration: line-through; 
-          text-decoration-color: #6d767d; // line color under the strike-through line
-          display: inline-flex;
-          align-items: center;
-          gap: 0.25em;
+          color: #d44549;
+          text-decoration: line-through;
+          margin-bottom: 1rem; //it was padding-bottom
+        }
 
-          .currency-icon {
-            width: 1em;
-            height: 1em;
-            fill: currentColor;       // makes SVG take the same color as the text
-            vertical-align: middle;
-          }
-        } 
-        /////////////////////////////////////////333333333333333333333333333333333333
 
       }
     }
