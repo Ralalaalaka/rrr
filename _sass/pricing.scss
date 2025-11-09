@@ -20,7 +20,7 @@
     border-radius: 100px;
     width: 95%; //it was 90
     margin: 2rem auto;
-    padding: 10px; //////////////////////////15px
+    padding: 10px;
 
     h3, strong { 
       color: #0e385b; 
@@ -105,7 +105,7 @@
     transition: 0.3s;
 
     .plan-header {
-      border-bottom: 2px solid #e4e6ea; ///////////////////////////////////////////2222222222222222222222222222222222222222222 اغير لون الخط العريض
+      border-bottom: 2px solid #e4e6ea;
       margin-bottom: 1rem;
       text-align: center;
 
@@ -115,19 +115,38 @@
       .plan-price {
         color: #0e385b;
 
+        //.before-price {
+         // color: #d44549;
+         // text-decoration: line-through;
+         // margin-bottom: 1rem; //it was padding-bottom /////////////////////////////////////////2222222222222222222222222222222222222222222 تحت السعر
+        //}
+
+        /////////////////////////////////////////33333333333333333333333333333333333
         .before-price {
-          color: #d44549;
-          text-decoration: line-through;
-          margin-bottom: 1rem; //it was padding-bottom /////////////////////////////////////////2222222222222222222222222222222222222222222 تحت السعر
-        }
+          color: #d44549;               // text color
+          text-decoration: line-through; 
+          text-decoration-color: #6d767d; // line color under the strike-through line
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25em;
+
+          .currency-icon {
+            width: 1em;
+            height: 1em;
+            fill: currentColor;       // makes SVG take the same color as the text
+            vertical-align: middle;
+          }
+        } 
+        /////////////////////////////////////////333333333333333333333333333333333333
+
       }
     }
 
-    p {  ///it was h3 ////////////////////////////////////////2222222222222222222222222222222222222222222 غيرتها عشان نص تجربة
+    p {
       text-align: right;
       margin: 0;
-      color: #0e385b; ///////////////////////////////////////////2222222222222222222222222222222222222222222
-     } //it was p
+      color: #0e385b;
+     }
 
     /* ---------------- Features ---------------- */
     .feature {
@@ -136,8 +155,8 @@
       padding-inline-start: 1.2rem; // space for checkmark
       list-style: none;
       text-align: start;
-      line-height: 1em; ///////////////////////////////////////////2222222222222222222222222222222222222222222 يشيل المسافة فوق الفيتشرز
-      color: #6d767d; ///////////////////////////////////////////2222222222222222222222222222222222222222222
+      line-height: 0; // it was 1em/////////////////////////////////////////3333333333333333333333333333333333333333333333 يشيل المسافة فوق الفيتشرز
+      color: #6d767d;
 
       &::before {
         content: "✔";
@@ -289,7 +308,7 @@
       border: 1px solid #d9d9d9;
       vertical-align: middle;
       text-align: center;
-      background: white; //////////
+      background: white;
 
       .checkmark {
         width: 1.2rem;
@@ -310,13 +329,13 @@
   padding: 2rem 1rem;
 
   h3 {
-    //margin: 0.5rem auto; /////////////////////////////////////////////#########################################
+    //margin: 0.5rem auto;
     color: #6d767d;
     text-align: center;
     }
 
 	.note{
-		//margin: 0.5rem auto; /////////////////////////////////////////////#########################################
+		//margin: 0.5rem auto; 
 		color: #6d767d;
 		text-align: center;
 	}
@@ -363,9 +382,9 @@
         background: #fff;
         color: #0e385b;
         border-radius: 100px;
-        padding: 0 .6rem; /////////////////////////////////////////////######################################### it was 0.4
-        height: 2rem; // same height as select /////////////////////////////////////////////#########################################
-        line-height: 2rem; // centers text vertically /////////////////////////////////////////////#########################################
+        padding: 0 .6rem;
+        height: 2rem; // same height as select
+        line-height: 2rem; // centers text vertically
         cursor: pointer;
         transition: 0.3s;
 
@@ -423,7 +442,7 @@
           color: #d44549;
           text-decoration: line-through;
           //margin-inline-start: .4rem;
-          padding: 0 0 1rem 0; //////////////////////////////////
+          padding: 0 0 1rem 0;
         }
       }
     }
@@ -435,9 +454,8 @@
     .feature {
       text-align: start;
       margin-bottom: .6rem;
-      //list-style-type: square;  /////////////////////////////////////////////#########################################
-
-      /////////////////////////////////////////////#########################################
+      //list-style-type: square;  
+      
         &::before {
           content: "✔";
           //color: var(--plan-color);
@@ -446,7 +464,6 @@
           inset-inline-start: 0;
           top: 0;
         }
-        /////////////////////////////////////////////#########################################
 
       button { //Features arrow button 
         background: none;
@@ -458,9 +475,9 @@
       .sub-features {
         display: none;
         margin-top: .4rem;
-        margin-inline-start: 0;  /////////////////////////////////////////////#########################################
+        margin-inline-start: 0;
         color: #333;
-        list-style-type: none; /////////////////////////////////////////////#########################################
+        list-style-type: none;
 
         &.open { display: block; }
       }
@@ -515,10 +532,10 @@
     }
   }
 
-  .feature-col{ ////////////////////////////////////////////////////////
-    background: none; ////////////////////////////////////////////////////////
-    border-right: none; ////////////////////////////////////////////////////////
-  } ////////////////////////////////////////////////////////
+  .feature-col{
+    background: none; 
+    border-right: none; 
+  } 
 
 
   .category-row { 
