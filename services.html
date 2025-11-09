@@ -19,7 +19,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 	</div>
 </section>
 
-<!--
+
 <section class="pad" style="padding-bottom: 0;">
 <div class="services-slider-section" style="max-width: 1000px;">
 
@@ -127,73 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateSlides();
   startAuto();
-});
-</script>
--->
-<!-----------555555555555555555555555555555555555555555555------------->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".service-slide");
-  const dots = document.querySelectorAll(".dot");
-  const prev = document.querySelector(".arrows-button.prev");
-  const next = document.querySelector(".arrows-button.next");
-  let current = 0;
-  let timer;
 
-  const rotationSpeed = 9000;
-
-  function updateSlides() {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      dots[i].classList.remove("active");
-    });
-    slides[current].classList.add("active");
-    dots[current].classList.add("active");
-  }
-
-  function showNext() {
-    current = (current + 1) % slides.length;
-    updateSlides();
-  }
-
-  function showPrev() {
-    current = (current - 1 + slides.length) % slides.length;
-    updateSlides();
-  }
-
-  function startAuto() {
-    timer = setInterval(showNext, rotationSpeed);
-  }
-
-  function stopAuto() {
-    clearInterval(timer);
-  }
-
-  prev.addEventListener("click", () => {
-    stopAuto();
-    showPrev();
-    startAuto();
-  });
-
-  next.addEventListener("click", () => {
-    stopAuto();
-    showNext();
-    startAuto();
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      stopAuto();
-      current = i;
-      updateSlides();
-      startAuto();
-    });
-  });
-
-  updateSlides();
-  startAuto();
-
-  // ---- Add Swipe Support (minimal) ----
+    // ---- Add swipe support ---- 66666666666666666666666666666666666666666666666666666666666666666
   const slider = document.querySelector(".services-slider");
   let startX = 0;
   let endX = 0;
@@ -208,16 +143,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   slider.addEventListener("touchend", () => {
     const diff = startX - endX;
-    if (Math.abs(diff) > 50) { // adjust swipe sensitivity
+    if (Math.abs(diff) > 50) { // swipe threshold
       if (diff > 0) {
-        // swipe left → next slide
-        showNext();
+        showNext(); // swipe left → next
       } else {
-        // swipe right → previous slide
-        showPrev();
+        showPrev(); // swipe right → previous
       }
     }
-  });
+  }); ///////////////////////////////////////////////////66666666666666666666666666666666666666666666
+
 });
 </script>
-
