@@ -130,7 +130,7 @@
   color: #6d767d;
   border: none;
   font-size: 18px;
-  padding: 8px 8px; //////////////////////////////////////33333333333333333333333333333333333333333333333333333
+  padding: 8px 15px; /////////////////////////////////////444444444444444444444444444444444444444
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -147,19 +147,17 @@
 
 .arrows-button.next {
   right: 60px;
-
 }
-
 }
 
 /* Phone view */
 @media #{$phone} {
   .services-slider-section {
-    padding: 30px 15px;
+    padding: 10px; //30px 15px ///////////////////////////////////444444444444444444444444444444444444444
   }
 
   .service-image img {
-    max-width: 70%;
+    max-width: 80%; //it was 70 ///////////////////////////////////444444444444444444444444444444444444444
   }
 
   .service-slide {
