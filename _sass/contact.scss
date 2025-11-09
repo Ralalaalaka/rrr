@@ -77,14 +77,14 @@
   min-height: 100vh; // fits the whole screen
   text-align: center;
   background: #fff;
-  padding: 3rem 1rem;
+  //padding: 3rem 1rem; /////////////////////////////////////////////222222222222222222222222222222222222222222222222222222
 }
 
 .contact-grid {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
+  gap: 5rem; //////////////////////////////////////////222222222222222222222222222222222222222222222
   flex-wrap: nowrap;
 }
 
@@ -108,16 +108,17 @@
 
 .platform-name {
   font-weight: 500;
-  color: #777;
+  color: #6d767d;
   margin: 0;
 }
 
 .platform-handle {
-  color: #00b3b3;
+  color: #0db6bd;
   text-decoration: none;
+  direction: ltr; /////////////////////////////////////////////222222222222222222222222222222222222222222222222222222
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none; /////////////////////////////////////////////222222222222222222222222222222222222222222222222222222
   }
 }
 
@@ -139,8 +140,8 @@
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
+    row-gap: 5rem; /////////////////////////////////////////////222222222222222222222222222222222222222222222222222222
+    column-gap: 5rem; /////////////////////////////////////////////222222222222222222222222222222222222222222222222222222
     position: relative;
   }
 
