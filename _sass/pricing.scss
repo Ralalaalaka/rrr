@@ -106,7 +106,7 @@
 
     .plan-header {
       border-bottom: 2px solid #e4e6ea;
-      padding-bottom: 1px; //it was margin-bottom: 1rem ///////////////////////////////////111111111111111111111111111111111111111111
+      padding-bottom: 20px; //it was margin-bottom: 1rem ///////////////////////////////////2222222222222222222222222222222222222222222222222222
       text-align: center;
 
       h2 { margin: 0 0 .5rem; color: #0e385b; }
@@ -118,14 +118,13 @@
         .before-price {
           color: #d44549;
           text-decoration: line-through;
-          //margin-bottom: 1rem; //it was padding-bottom ///////////////////////////////////111111111111111111111111111111111111111111
         }
       }
     }
 
     p {
-      text-align: right;
-      margin: 0;
+      //text-align: right; ///////////////////////////////////////////////////////2222222222222222222222222222222222222222222222
+      margin: 0 30px; ///////////////////////////////////////////////////////2222222222222222222222222222222222222222222222
       color: #0e385b;
      }
 
@@ -163,7 +162,7 @@
           width: 1.7em;
           height: 1.7em;
           fill: currentColor;
-          vertical-align: center; // it was middle/////////////////////////////////111111111111111111111111111111111111111111
+          vertical-align: right; // it was middle/////////////////////////////////22222222222222222222222222222222222222222222222222222
           transition: transform 0.3s ease;
         }
       }

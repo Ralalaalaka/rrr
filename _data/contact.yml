@@ -1,7 +1,11 @@
 Texts:
   Title:
-    ar: "يسعدنا تواصلكم معنا! فريقنا هنا لدعمكم والإجابة على استفساراتكم"
-    en: "We’re happy to hear from you! Our team is here to support you and answer all your inquiries"
+    ar: "يسعدنا تواصلكم معنا!"
+    en: "We’re happy to hear from you!"
+  
+  Sub_Title:
+    ar: "فريقنا هنا لدعمكم والإجابة على استفساراتكم"
+    en: "Our team is here to support you and answer all your inquiries"
 
 Contacts:
   - title:
