@@ -24,7 +24,7 @@
     max-width: 1200px;
     padding: 0 60px;
     flex-wrap: wrap;
-    z-index: 2;
+    z-index: 1; //it was 2 /////////////////////////////10101010110101010101010101010
   }
 
   .hero-text-container {
@@ -80,7 +80,7 @@
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
-      align-items: center; //it was center to stretch //////////////////////////////////////99999999999999999999999999999999999999
+      align-items: stretch; //it was center //////////////////////////////////////55555555555555555555555555555555
       gap: 20px;
       padding: 20px;
     }

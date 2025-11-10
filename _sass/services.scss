@@ -60,11 +60,19 @@
       text-align: start; /////////////////////////////////////////666666666666666666666666666666666
 
       &::before {
-        content: "✔";
+        content: ""; //it was "✔" ////////////////////////1010101010101010101010101
         position: absolute;
-        //right: 0; //////////////////////////999999999999999999999999999
+        //right: 0; //////////////////////////1010101010101010101010101
+        inset-inline-start: 0; //////////////////////////1010101010101010101010101
         color: #0db6bd;
-        font-weight: bold;
+        //font-weight: bold; /////////////////////////1010101010101010101010101
+
+        /*for the check*/ /////////////////////////1010101010101010101010101
+        width: 20px;
+        height: 20px;
+        background-image: $checkmark;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }
