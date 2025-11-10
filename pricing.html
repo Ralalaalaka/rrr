@@ -89,13 +89,13 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 
 
         {% if feature.sub %}
-        <ul class="sub-features">
+        <div class="sub-features"> <!--//it was ul////////////////////////////8888888888888888888888888888888888888888888888-->
           {% for sub in feature.sub %}
           <li data-i18n-key="pricing.Plan1.{{ parentIndex }}.sub.{{ forloop.index0 }}">
             {{ sub.ar }}
           </li>
           {% endfor %}
-        </ul>
+        </div> <!--//it was ul////////////////////////////8888888888888888888888888888888888888888888888-->
         {% endif %}
       </li>
       {% endif %}
@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     {% for category in site.data.pricing.Comparison %}
     <div class="category-row">
-      <h3 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</h3> <!----///////////////////666666666666666666666666666--->
+      <h3><strong data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</strong></h3> <!----///////////////////88888888888888888888888888888--->
     </div>
 
     {% for feature in category.features %}

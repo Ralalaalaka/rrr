@@ -80,7 +80,7 @@
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
-      align-items: stretch; //it was center //////////////////////////////////////55555555555555555555555555555555
+      align-items: stretch; //it was center
       gap: 20px;
       padding: 20px;
     }
@@ -96,8 +96,6 @@
         margin-top: 10px;
       }
 
-
-    ////////////////////555555555555555555555555555555555
           &[dir="rtl"],
             [dir="rtl"] & {
               text-align: right;
@@ -109,7 +107,6 @@
               text-align: left;
               padding-left: 0;
               }
-    ////////////////////555555555555555555555555555555555
     }
 
     .cover-image img {

@@ -38,7 +38,7 @@ h2 {
 	font-weight: 400;
 	font-size: clamp(1.45rem, 1.6vw, 1.75rem);
 	/*margin: 0 0 30px 0;*/
-	line-height: 1.2em;
+	line-height: 1.6em;
 }
 
 h3 { 
@@ -59,7 +59,7 @@ a {
 }
 
 p, address, ul { /*افصلهم عن بعض*/
-	font-size: clamp(0.9rem, 1.1vw, 1.20rem);
+	font-size: clamp(0.9rem, 1.1vw, 1.25rem);
 	margin-bottom: 20px;
 	font-weight: 370;
 	line-height: 1.6em;
