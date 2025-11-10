@@ -1,5 +1,13 @@
 Texts:
-  title:
+  Title:
+    ar: "يسعدنا تواصلكم معنا!"
+    en: "We’re happy to hear from you!"
+  
+  Sub_Title:
+    ar: "فريقنا هنا لدعمكم والإجابة على استفساراتكم"
+    en: "Our team is here to support you and answer all your inquiries"
+
+  instruction:
     ar: "اختر عدد الموظفين ومدة العقد لتظهر أسعار الباقات:"
     en: "Select number of employees and contract duration to view plan prices:"
   employees_label:
