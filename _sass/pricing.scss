@@ -132,7 +132,7 @@
     .feature {
       position: relative;
       margin-bottom: .6rem;
-      //padding-inline-start: 1.2rem; // space for checkmark //////////////////////////////8888888888888888888888888888888888888888888888
+      //padding-inline-start: 1.2rem; // space for checkmark //////////////////////////999999999999999999999999999
       list-style: none;
       text-align: start;
       color: #6d767d;
@@ -174,7 +174,7 @@
         list-style: none;
 
         &.open { display: block;
-        /*margin-inline-start: 0;*/} //////////////////////////////8888888888888888888888888888888888888888888888 added
+        text-align: start; } ///////////////////////////////////////66666666666666666666666 added
       }
     }
   }
@@ -183,6 +183,17 @@
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
+
+    //.feature { ///////////////////////////////////111111111111111111111111111111111111111111
+      //padding-inline-start: 0; ///////////////////////////////////111111111111111111111111111111111111111111
+      //padding-inline-end: 1.2rem; ///////////////////////////////////111111111111111111111111111111111111111111
+
+      //&::before { inset-inline-start: auto; inset-inline-end: 0; } ///////////////////////////////////111111111111111111111111111111111111111111
+
+      //.sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; } ///////////////////////////////////111111111111111111111111111111111111111111
+
+      //.toggle-sub svg.chevron { transform: rotate(180deg); } ///////////////////////////////////111111111111111111111111111111111111111111
+    //} ///////////////////////////////////111111111111111111111111111111111111111111
   }
 
   &[dir="ltr"] {
@@ -198,7 +209,9 @@
   width: 100%;
   border-collapse: collapse;
 
-  /* Table Header (Plan Names) */
+  /* -----------------------------------------
+     Table Header (Plan Names)
+     ----------------------------------------- */
   .table-header {
     display: table-row;
     color: #0e385b;
@@ -229,7 +242,9 @@
     }
   }
 
-  /* Category Rows / Main features */
+  /* -----------------------------------------
+     Category Rows / Main features
+     ----------------------------------------- */
   .category-row {
     display: table-row;
 
@@ -248,7 +263,9 @@
     }
   }
 
-  /* Feature Rows / Sub features */
+  /* -----------------------------------------
+     Feature Rows / Sub features
+     ----------------------------------------- */
   .feature-row {
     display: table-row;
 
