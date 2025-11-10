@@ -13,11 +13,11 @@
   margin-right: auto;
 }
 
-.services-slider-title {
-  color: #0e385b;
-  margin-bottom: 40px;
-  align-items: right;
-}
+//.services-slider-title { ///////////////////////////////////111111111111111111111111111111111111111111
+  //color: #0e385b; ///////////////////////////////////111111111111111111111111111111111111111111
+  //margin-bottom: 40px; ///////////////////////////////////111111111111111111111111111111111111111111
+  //align-items: right; ///////////////////////////////////111111111111111111111111111111111111111111
+//} ///////////////////////////////////111111111111111111111111111111111111111111
 
 .services-slider {
   position: relative;
@@ -30,7 +30,7 @@
 
 .service-slide {
   position: absolute;
-  width: 70%;
+  //width: 60%; //it was 70% //////////////////////////////////111111111111111111111111111111111111111111
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -39,7 +39,7 @@
   align-items: center;
   color: #0e385b;
   text-align: center;
-  margin-bottom: 0; ///////
+  //margin-bottom: 0; ///////////////////////////////////111111111111111111111111111111111111111111
 
   ul {
     list-style: none;
@@ -50,8 +50,7 @@
     li {
       position: relative;
       padding: 0 25px;
-      //margin-bottom: 8px;
-      color: #6d767d;
+      //color: #6d767d; ///////////////////////////////////111111111111111111111111111111111111111111
       text-align: right;
 
       &::before {
@@ -73,55 +72,19 @@
 
 .service-image img {
   max-width: 70vh;
-  margin:30 0;
+  margin: 30px 0; ///////////////////////////////////111111111111111111111111111111111111111111
 }
 
-/* //////////////////////////////////////////////111111111111111111111111111111111111111111111 عشان اشيل الاسهم من الجوال
-.arrows-button {
-  position: absolute;
-  top: 50%;
-  //transform: translateY(-50%);
-  background: #fff;
-  color: #6d767d;
-  border: none;
-  font-size: 18px;
-  padding: 7px 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, transform 0.3s;
-
-  &:hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  }
-}
-
-.arrows-button.prev {
-  left: 70px;
-}
-
-.arrows-button.next {
-  right: 70px;
-}
-*/
 
 /* Responsive (laptop) */
 @media #{$mid-point} {
   .services-slider-section {
-    padding: 40px 20px;
+    padding: 40px 20px 0; ///////////////////////////////////////////111111111111111111111111111111111111
   }
 
   .service-slide {
-    width: 85%;
+    width: 75%; //it was 85 ////////////////////////////////////////11111111111111111111111111111111
   }
-
-  //.arrows-button.prev {
-    //left: 20px;
-  //}
-
-  //.arrows-button.next {
-    //right: 20px;
-  //}
 
 .arrows-button {
   position: absolute;
@@ -130,7 +93,7 @@
   color: #6d767d;
   border: none;
   font-size: 18px;
-  padding: 8px 15px; /////////////////////////////////////444444444444444444444444444444444444444
+  padding: 8px 15px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -152,16 +115,16 @@
 
 /* Phone view */
 @media #{$phone} {
-  .services-slider-section {
-    padding: 10px; //30px 15px ///////////////////////////////////444444444444444444444444444444444444444
-  }
+  //.services-slider-section {
+  //  padding: 10px; //30px 15px ///////////////////////////////////11111111111111111111111111111111111111111
+  //}
 
   .service-image img {
-    max-width: 80%; //it was 70 ///////////////////////////////////444444444444444444444444444444444444444
+    max-width: 100%; //it was 70 ///////////////////////////////////111111111111111111111111111111111111111111
   }
 
   .service-slide {
-    width: 80%; //it was 95
+    width: 100%; //it was 95 ///////////////////////////////////111111111111111111111111111111111111111111
   }
 
   .arrows-button {

@@ -106,7 +106,7 @@
 
     .plan-header {
       border-bottom: 2px solid #e4e6ea;
-      margin-bottom: 1rem;
+      padding-bottom: 1px; //it was margin-bottom: 1rem ///////////////////////////////////111111111111111111111111111111111111111111
       text-align: center;
 
       h2 { margin: 0 0 .5rem; color: #0e385b; }
@@ -118,10 +118,8 @@
         .before-price {
           color: #d44549;
           text-decoration: line-through;
-          margin-bottom: 1rem; //it was padding-bottom
+          //margin-bottom: 1rem; //it was padding-bottom ///////////////////////////////////111111111111111111111111111111111111111111
         }
-
-
       }
     }
 
@@ -138,7 +136,7 @@
       padding-inline-start: 1.2rem; // space for checkmark
       list-style: none;
       text-align: start;
-      line-height: 0; // it was 1em/////////////////////////////////////////3333333333333333333333333333333333333333333333 يشيل المسافة فوق الفيتشرز
+      line-height: 1em;
       color: #6d767d;
 
       &::before {
@@ -165,7 +163,7 @@
           width: 1.7em;
           height: 1.7em;
           fill: currentColor;
-          vertical-align: middle;
+          vertical-align: center; // it was middle/////////////////////////////////111111111111111111111111111111111111111111
           transition: transform 0.3s ease;
         }
       }
@@ -187,16 +185,16 @@
     direction: rtl;
     text-align: right;
 
-    .feature {
-      padding-inline-start: 0;
-      padding-inline-end: 1.2rem;
+    //.feature { ///////////////////////////////////111111111111111111111111111111111111111111
+      //padding-inline-start: 0; ///////////////////////////////////111111111111111111111111111111111111111111
+      //padding-inline-end: 1.2rem; ///////////////////////////////////111111111111111111111111111111111111111111
 
-      &::before { inset-inline-start: auto; inset-inline-end: 0; }
+      //&::before { inset-inline-start: auto; inset-inline-end: 0; } ///////////////////////////////////111111111111111111111111111111111111111111
 
-      .sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; }
+      //.sub-features { margin-inline-start: 0; margin-inline-end: 1.2rem; } ///////////////////////////////////111111111111111111111111111111111111111111
 
-      .toggle-sub svg.chevron { transform: rotate(180deg); }
-    }
+      //.toggle-sub svg.chevron { transform: rotate(180deg); } ///////////////////////////////////111111111111111111111111111111111111111111
+    //} ///////////////////////////////////111111111111111111111111111111111111111111
   }
 
   &[dir="ltr"] {
@@ -303,243 +301,3 @@
 
   }
 }
-
-
-
-/*
-.pricing {
-  text-align: center;
-  padding: 2rem 1rem;
-
-  h3 {
-    //margin: 0.5rem auto;
-    color: #6d767d;
-    text-align: center;
-    }
-
-	.note{
-		//margin: 0.5rem auto; 
-		color: #6d767d;
-		text-align: center;
-	}
-
-  .pricing-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem; 
-    background-color: #fafafb;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    border-radius: 100px;
-    width: max-content;
-    margin: 2rem auto;
-    padding: 20px;
-
-      h3 {
-      color: #0e385b;
-      }
-
-    .control {
-      //display: flex;
-      //align-items: center; ////
-      gap: .5rem;
-    }
-
-    select {
-      padding: .4rem .6rem;
-      border: 1px solid #e4e6ea;
-      border-radius: 100px;
-	    color:#0e385b;
-
-      //&.active {  //it didn't work
-        //border: 1px solid #e4e6ea;
-      //}  
-    }
-
-    .duration-tabs {
-      //display: flex; 
-      gap: .6rem;
-
-      .duration-btn {
-        border: 1px solid #e4e6ea;
-        background: #fff;
-        color: #0e385b;
-        border-radius: 100px;
-        padding: 0 .6rem;
-        height: 2rem; // same height as select
-        line-height: 2rem; // centers text vertically
-        cursor: pointer;
-        transition: 0.3s;
-
-        &.active {
-          background: #f4fcfc;
-		      border: 1px solid #0db6bd;
-        }
-
-        &:hover {
-			    color: #0e385b;
-        	opacity: 0.8;
-        }
-      }
-    }
-  }
-
-  .plans {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-
-  .plan-card {
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    width: 280px;
-    padding: 1.5rem;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: 0.3s;
-
-    //&:hover {
-    //  transform: translateY(-5px);
-    //}
-
-    .plan-header {
-      border-bottom: 2px solid;
-      margin-bottom: 1rem;
-	    text-align: center;
-
-      h2 {
-        margin: 0 0 .5rem;
-        color: #0e385b;
-      }
-
-      h1 {
-          margin: 0 0 .5rem;
-        }
-
-      .plan-price {
-        color: #0e385b;
-
-        .before-price {
-          color: #d44549;
-          text-decoration: line-through;
-          //margin-inline-start: .4rem;
-          padding: 0 0 1rem 0;
-        }
-      }
-    }
-
-      p {
-        text-align: right;
-      }
-
-    .feature {
-      text-align: start;
-      margin-bottom: .6rem;
-      //list-style-type: square;  
-      
-        &::before {
-          content: "✔";
-          //color: var(--plan-color);
-          //font-weight: bold;
-          position: absolute;
-          inset-inline-start: 0;
-          top: 0;
-        }
-
-      button { //Features arrow button 
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-inline-end: .3rem;
-      }
-
-      .sub-features {
-        display: none;
-        margin-top: .4rem;
-        margin-inline-start: 0;
-        color: #333;
-        list-style-type: none;
-
-        &.open { display: block; }
-      }
-    }
-  }
-
-  /* RTL & LTR support 
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-  }
-
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-  }
-}
-
-
-
-/*Comparison
-.comparison-table {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-
-  .table-header,
-  .feature-row {
-    display: table-row;
-    background: white;
-  }
-
-  .feature-col,
-  .plan-col,
-  .feature-name,
-  .plan-check {
-    display: table-cell;
-    padding: 0.8rem 1rem;
-    border: 1px solid #d9d9d9;
-    vertical-align: middle;
-  }
-
-    /* Table header: Plan names 
-  .table-header {
-    background: white;
-    color: #0e385b;
-
-    .plan-col {
-      h3, strong {
-        color: var(--plan-color); // Use the plan color variable
-      }
-    }
-  }
-
-  .feature-col{
-    background: none; 
-    border-right: none; 
-  } 
-
-
-  .category-row { 
-    display: table-row;
-    //background: #fafafb;
-    //border: none;
-
-
-    h4 {
-      display: table-cell;
-      padding: 1rem;
-      color: #0e385b;
-      border: 1px solid #d9d9d9;
-      border-right: none;
-      border-left: none;
-    }
-  }
-
-  .plan-check .checkmark {
-    color: var(--plan-color);
-    font-size: 1.2rem;
-  }
-}
-*/
