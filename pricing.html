@@ -10,7 +10,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 </script>
 <script src="{{ site.baseurl }}/js/lang-toggle.js"></script>
 
-<section class="hero" style="height: 50vh;"> <!----3333333333333333333333333333333333--->
+<section class="hero" style="height: 50vh;">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
 			<h1 class="editable">Our Story</h1>
@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     {% for category in site.data.pricing.Comparison %}
     <div class="category-row">
-      <h3><strong data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</strong></h3>
+      <h3 data-i18n-key="pricing.Comparison.{{ forloop.index0 }}.category">{{ category.category.ar }}</h3> <!----///////////////////666666666666666666666666666--->
     </div>
 
     {% for feature in category.features %}

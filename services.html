@@ -46,13 +46,13 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           </p>
 
           {% if service.sub_services %}
-          <li> <!--it was ul /////////////////////////////////////////555555555555555555555555555555555 -->
+          <ul>
             {% for item in service.sub_services %}
             <li data-i18n-key="services.services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">
               {{ item.ar }}
             </li>
             {% endfor %}
-          </li> <!--it was ul /////////////////////////////////////////555555555555555555555555555555555 -->
+          </ul>
           {% endif %}
         </div>
       </div>

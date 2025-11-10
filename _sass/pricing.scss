@@ -106,9 +106,9 @@
 
     .plan-header {
       border-bottom: 2px solid #e4e6ea;
-      padding-bottom: 15rem; ///////////////////////////////////555555555555555555555555555555555555555555
+      padding-bottom: 0.5rem; ///////////////////////////////////666666666666666666666666666 under the before price?
       text-align: center;
-      margin-bottom: 2rem; //.6rem///////////////////////////555555555555555555555555555555555555555555
+      margin-bottom: 0.2rem; //17px///////////////////////////66666666666666666666666666666666666 under the line?
 
       h2 { margin: 0 0 .5rem; color: #0e385b; }
       h1 { margin: 0 0 .5rem; }
@@ -124,7 +124,7 @@
     }
 
     p {
-      margin: 0 30px; ///////////////////////////////////////////////////////3333333333333333333333333333333333333333
+      //margin: 0 30px; ///////////////////////////////////////////////////////66666666666666666666666666666666666666
       color: #0e385b;
       text-align: start; //moves automatically with direction
      }
@@ -132,7 +132,7 @@
     /* ---------------- Features ---------------- */
     .feature {
       position: relative;
-      //margin-bottom: .6rem; ///////////////////////////////////////////////////////3333333333333333333333333333333333333333
+      margin-bottom: .6rem; ///////////////////////////////////////////////////////6666666666666666 maybe no need?
       padding-inline-start: 1.2rem; // space for checkmark
       list-style: none;
       text-align: start;
@@ -163,7 +163,7 @@
           width: 1.7em;
           height: 1.7em;
           fill: currentColor;
-          vertical-align: middle; /////////////////////////////////3333333333333333333333333333333333333
+          vertical-align: middle;
           transition: transform 0.3s ease;
         }
       }
@@ -175,7 +175,8 @@
         color: #333;
         list-style: none;
 
-        &.open { display: block; }
+        &.open { display: block;
+        text-align: start; } ///////////////////////////////////////66666666666666666666666 added
       }
     }
   }
