@@ -4,7 +4,7 @@
   position: relative;
   color: #fff;
   height: 100vh;
-  min-height: 300px; //it was 550px ///////////////////////////999999999999999999999999999
+  //min-height: 550px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
-      align-items: stretch; //it was center
+      align-items: center; //it was center to stretch //////////////////////////////////////99999999999999999999999999999999999999
       gap: 20px;
       padding: 20px;
     }
@@ -96,6 +96,8 @@
         margin-top: 10px;
       }
 
+
+    ////////////////////555555555555555555555555555555555
           &[dir="rtl"],
             [dir="rtl"] & {
               text-align: right;
@@ -107,6 +109,9 @@
               text-align: left;
               padding-left: 0;
               }
+    ////////////////////555555555555555555555555555555555
+    /// 
+    /// 
     }
 
     .cover-image img {
