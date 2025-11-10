@@ -52,8 +52,8 @@ Plan1:
     before_price10: 15 ##it should be after discount price for all counts of employees
     before_price20: 25
     plan_text: 
-      ar: "تجربة"
-      en: "Test"
+      ar: "تجرةب تجربة تجربة تجبرة تجبرة ينمتينتنتنمي نتانت نت"
+      en: "jhdjjkd djhdjhd jdh djkhd djhd dkj djd kjhd jhdj jhdj hd"
   - features:
       ar: "الخدمات الأساسية"
       en: "Core Services"

@@ -10,11 +10,15 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
 </script>
 <script src="{{ site.baseurl }}/js/lang-toggle.js"></script>
 
-<section class="hero" style="height: 50vh;"> <!----44444444444444444444444444444444--->
+<section class="hero" style="height: 50vh;">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
-			<h1 class="editable">Our Story</h1>
-			<p class="subtext editable">We have an extremely talented team whose sole goal is to bring you closer to the people around you.</p>
+      <h2 data-i18n-key="services.Texts.Title">
+        {{ site.data.services.Texts.Title.ar }} 
+      </h2>
+      <h3 data-i18n-key="services.Texts.Sub_Title">
+        {{ site.data.services.Texts.Sub_Title.ar }}
+      </h3>
 		</div>
 	</div>
 </section>
@@ -42,13 +46,13 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           </p>
 
           {% if service.sub_services %}
-          <ul>
+          <li> <!--it was ul /////////////////////////////////////////555555555555555555555555555555555 -->
             {% for item in service.sub_services %}
             <li data-i18n-key="services.services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">
               {{ item.ar }}
             </li>
             {% endfor %}
-          </ul>
+          </li> <!--it was ul /////////////////////////////////////////555555555555555555555555555555555 -->
           {% endif %}
         </div>
       </div>
