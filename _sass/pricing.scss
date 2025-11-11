@@ -262,6 +262,10 @@
       vertical-align: middle;
       text-align: start;
       color: #6d767d;
+
+          &[dir="ltr"] { //************************************99999999999999999999
+            border-left: none; //////////added
+      } //////////added
     }
 
     /* Plan check columns (B, C, D...) */

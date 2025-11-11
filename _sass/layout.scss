@@ -481,11 +481,6 @@ blockquote:before {
 
   /* ✅ For small screens: 2 per row */
   @media #{$phone} { 
-    
-    benefits { //************************************888888888888888888888888
-      margin: auto; //************************************888888888888888888888888
-    } //************************************888888888888888888888888
-
     .benefits-container {
       grid-template-columns: repeat(2, 1fr);
     }
