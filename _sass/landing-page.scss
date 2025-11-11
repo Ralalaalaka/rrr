@@ -14,9 +14,9 @@
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%), 
     url("images/Pattern.svg") center center / cover no-repeat; 
 
-    &[dir="rtl"] { //************************************666666666666666666666666666666
-    background: linear-gradient(300deg, rgba(13,182,189,1), rgba(14,101,126,1), rgba(2,44,78,1)), //************************************666666666666666666666666666666
-                url("images/Pattern.svg") center center / cover no-repeat; //************************************666666666666666666666666666666
+    &[dir="ltr"] { //************************************77777777777777777777777777
+      background: linear-gradient(300deg, rgba(13,182,189,1), rgba(14,101,126,1), rgba(2,44,78,1)),
+                  url("images/Pattern.svg") center center / cover no-repeat;
     }
 
   .inner-hero {
@@ -35,10 +35,6 @@
     flex: 1 1 55%;
     text-align: start; //moves automatically with direction
 
-    //h1, h2, p, .button {
-     // text-shadow: none;
-     // z-index: 1;
-   // }
 
     .button {
       margin-top: 20px;
@@ -84,7 +80,7 @@
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
-      align-items: stretch; //it was center //////////////////////////////////////55555555555555555555555555555555
+      align-items: stretch; //it was center
       gap: 20px;
       padding: 20px;
     }
