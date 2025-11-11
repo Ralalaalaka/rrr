@@ -31,7 +31,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <!-- Controls قائمة الموظفين والمدة -->
   <div class="pricing-controls">
     <div class="control">
-      <h3><strong><label data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</label></strong></h3>
+      <h3><strong data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</strong></h3>
       <select id="employees">
         <option value="1">1 موظف</option>
         <option value="5">5 موظفين</option>
@@ -41,8 +41,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     </div>
 
     <div class="duration-tabs" id="duration-tabs">
-      <h3><strong data-i18n-key="pricing.Texts.contract_label">{{ site.data.pricing.Texts.contract_label.ar }}</strong></h3> <!--//*********************************************33333333333333333333333333333333333333-->
-            <!--<h3><strong><label data-i18n-key="pricing.Texts.contract_label">{{ site.data.pricing.Texts.contract_label.ar }}</label></strong></h3>--> <!--//*********************************************33333333333333333333333333333333333333-->
+      <h3><strong data-i18n-key="pricing.Texts.contract_label">{{ site.data.pricing.Texts.contract_label.ar }}</strong></h3>
       {% for d in site.data.pricing.Texts.durations %}
       <button class="duration-btn{% if forloop.first %} active{% endif %}" data-months="{{ d.multiplier }}" data-i18n-key="pricing.Texts.durations.{{ forloop.index0 }}">
         {{ d.ar }}

@@ -46,7 +46,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           </p>
 
           {% if service.sub_services %}
-          <div> <!--it was ul//////////////////////////888888888888888888888888888888888-->
+          <ul>
             {% for item in service.sub_services %}
             <li data-i18n-key="services.services.{{ forloop.parentloop.index0 }}.sub_services.{{ forloop.index0 }}">
               <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -55,7 +55,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
               {{ item.ar }}
             </li>
             {% endfor %}
-          </div> <!--it was ul//////////////////////////888888888888888888888888888888888-->
+          </ul>
           {% endif %}
         </div>
       </div>
