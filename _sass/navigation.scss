@@ -39,6 +39,7 @@ nav {
   position: relative;
   top: 0px; //it was -7
   text-shadow: none;
+  z-index: 1000;      // <-- ensure nav is above hero/other elements /////////////////////////////////////////////////////newnewnewnew
 
   @media #{$mid-point} {
     padding: 0 20px;
