@@ -37,9 +37,18 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #00ff22; //#0e385b
+//*********************************************111111111111111111111111111111111111111
+  h3 {
+  align-items: start;
+  color: #ff0000; //#0e385b
+  }
 
+  p {
+  align-items: start;
+  color: #0000ff; //#0e385b
+  }
+
+//*********************************************111111111111111111111111111111111111111
 
 /*   ////////////////////////////////////////////////88888888888888888888888888888888888888888
   ul { /*Sub-services
@@ -54,20 +63,18 @@
   li {
       position: relative;
       padding: 0 25px;
-      list-style: none; //////////////////////////999999999999999999999999999
-      margin-top: 10px; //////////////////////////999999999999999999999999999
-      color: #ff5e00; //#6d767d
-      text-align: start; /////////////////////////////////////////666666666666666666666666666666666
+      list-style: none;
+      margin-top: 10px;
+      color: #6d767d; 
+      text-align: start;
 
       &::before {
-        content: ""; //it was "✔" ////////////////////////1010101010101010101010101
+        content: "";
         position: absolute;
-        //right: 0; //////////////////////////1010101010101010101010101
-        inset-inline-start: 0; //////////////////////////1010101010101010101010101
+        inset-inline-start: 0;
         color: #0db6bd;
-        //font-weight: bold; /////////////////////////1010101010101010101010101
 
-        /*for the check*/ /////////////////////////1010101010101010101010101
+        /*for the check*/ 
         width: 20px;
         height: 20px;
         background-image: $checkmark;
