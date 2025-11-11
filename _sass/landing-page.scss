@@ -10,14 +10,15 @@
   align-items: center;
   justify-content: center;
 
-  //background: //*********************************************111111111111111111111111111111111111111
-  //  linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%), //*********************************************111111111111111111111111111111111111111
-  //  url("images/Pattern.svg") center center / cover no-repeat; //*********************************************111111111111111111111111111111111111111
+  background:
+    linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%), 
+    url("images/Pattern.svg") center center / cover no-repeat; 
 
-  background: //*********************************************33333333333333333333333333333333333333
-    linear-gradient(to inline-end, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%), //*********************************************111111111111111111111111111111111111111
-    url("images/Pattern.svg") center center / cover no-repeat;
-   
+    &[dir="rtl"] { //************************************666666666666666666666666666666
+    background: linear-gradient(300deg, rgba(13,182,189,1), rgba(14,101,126,1), rgba(2,44,78,1)), //************************************666666666666666666666666666666
+                url("images/Pattern.svg") center center / cover no-repeat; //************************************666666666666666666666666666666
+    }
+
   .inner-hero {
     display: flex;
     align-items: center;
@@ -117,21 +118,6 @@
     }
   }
 
-  //*********************************************111111111111111111111111111111111111111
-    /* RTL & LTR direction and layout handling */
-  [dir="rtl"] .hero {
-    background:linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
-    url("images/Pattern.svg") center center / cover no-repeat;
-  }
-
-  [dir="ltr"] .hero {
-    background:linear-gradient(300deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
-    url("images/Pattern.svg") center center / cover no-repeat;
-  }
-}
-//*********************************************111111111111111111111111111111111111111
-
-
 /* Keep your global image & CTA styles — they’re unrelated to .hero but used elsewhere */
 .image {
   text-align: center;
@@ -155,5 +141,3 @@
     flex-direction: row-reverse;
   }
 }
-
-

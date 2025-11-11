@@ -20,7 +20,7 @@
     border-radius: 100px;
     width: 95%; //it was 90
     margin: 2rem auto;
-    padding: 10px;
+    padding: 20px; //10px //************************************666666666666666666666666666666
 
     h3, strong { 
       color: #0e385b; 
@@ -132,7 +132,7 @@
     .feature {
       position: relative;
       margin-bottom: .6rem;
-      //padding-inline-start: 1.2rem; // space for checkmark //////////////////////////999999999999999999999999999
+      padding-inline-start: 1.2rem; // space for checkmark //************************************666666666666666666666666666666
       list-style: none;
       text-align: start;
       color: #6d767d;
@@ -241,7 +241,7 @@
       border-left: none;        // no left border for category rows
       border-right: none;
       border-top: none;
-      text-align: start; //*********************************************22222222222222222222222222222222222222
+      text-align: start;
       padding: 0.8rem 0.5rem;
       margin: 0;
     }
@@ -258,8 +258,9 @@
       background: none;          // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
       border-right: none;        // no right border
+      border-left: none; //************************************666666666666666666666666666666
       vertical-align: middle;
-      text-align: start; //*********************************************55555555555555555555555555555555555
+      text-align: start;
       color: #6d767d;
     }
 
