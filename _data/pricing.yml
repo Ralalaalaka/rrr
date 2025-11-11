@@ -49,7 +49,7 @@ Plan1:
       en: "Basic Plan"
     color: "#38b6ff"
     base_price: 12
-    before_price10: ##it should be after discount price for all counts of employees
+    before_price10: 20##it should be after discount price for all counts of employees
     before_price20: 25
     plan_text: 
       ar: "تشمل الباقة:"

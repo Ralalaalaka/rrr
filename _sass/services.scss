@@ -12,14 +12,6 @@
   margin-right: auto;
 }
 
-/* //////////////////////////88888888888888888888888888888888
-.services-slider-title { ///////////////////////////////////555555555555555555555555555555555
-  color: #ff0000; //#0e385b//////////////////////////77777777777777777777777
-  //margin-bottom: 40px;
-  align-items: right; ///////////////////////////////////555555555555555555555555555555555
-} ///////////////////////////////////555555555555555555555555555555555
-//////////////////////////88888888888888888888888888888888 */
-
 .services-slider {
   position: relative;
   display: flex;
@@ -39,26 +31,16 @@
   flex-direction: column;
 //*********************************************111111111111111111111111111111111111111
   h3 {
-  align-items: start;
+  align-items: center; //*********************************************22222222222222222222222222222222222222
   color: #ff0000; //#0e385b
   }
 
   p {
-  align-items: start;
+  align-items: start; //This makes sub-features under the description and not fixed *********************************************33333333333333333333333333333
+  text-align: start;  //*********************************************22222222222222222222222222222222222222
   color: #0000ff; //#0e385b
+  position: relative; //*******************************3333333333333333333333333333333
   }
-
-//*********************************************111111111111111111111111111111111111111
-
-/*   ////////////////////////////////////////////////88888888888888888888888888888888888888888
-  ul { /*Sub-services
-    list-style: none;
-    margin-top: 10px;
-    color: #ff00e1; //#6d767d
-    text-align: start;
-    position: relative; 
-    padding: 0 25px; 
-////////////////////////////////////////////////88888888888888888888888888888888888888888 */
 
   li {
       position: relative;
@@ -68,22 +50,19 @@
       color: #6d767d; 
       text-align: start;
 
-      &::before {
-        content: "";
-        position: absolute;
+        .checkmark {
+    width: 16px; //*******************************3333333333333333333333333333333
+    height: 16px; //*******************************3333333333333333333333333333333
+    flex-shrink: 0; //*******************************3333333333333333333333333333333
+
+        //content: "✔"; //*******************************3333333333333333333333333333333
+        //position: absolute; //*******************************3333333333333333333333333333333
         inset-inline-start: 0;
         color: #0db6bd;
-
-        /*for the check*/ 
-        width: 20px;
-        height: 20px;
-        background-image: $checkmark;
-        background-size: contain;
-        background-repeat: no-repeat;
+        font-weight: bold;
       }
     }
   }
-//} //////////////////////////888888888888888888888888888888888
 
 .service-slide.active {
   opacity: 1;
@@ -137,7 +116,7 @@
 /* Phone view */
 @media #{$phone} {
   .services-slider-section {
-    padding: 30px 15px 20px; // padding under the dots to the top
+    padding: 10px 15px 20px; // padding under the dots to the top //*******************************3333333333333333333333333333333
   }
 
   .service-image img {
