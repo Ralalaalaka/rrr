@@ -173,6 +173,21 @@
 
 
 
+.service-slide ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6d767d;
+}
+
+.service-slide ul li .checkmark-list {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  display: inline-block;
+  fill: #28a745; /* test with visible green color */
+}
 
 
 
