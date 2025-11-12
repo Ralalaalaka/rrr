@@ -278,12 +278,19 @@
       text-align: center;
       background: white;
 
-      .checkmark {
-        width: 1.2rem;
-        height: 1.2rem;
-        fill: var(--plan-color);
-        vertical-align: middle;
-      }
+      &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            background-image: $check-services;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
     }
 
   }
