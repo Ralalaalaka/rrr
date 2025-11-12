@@ -77,15 +77,19 @@
         padding: 0 0 10px 0;     // adjust padding as needed
         color: #6d767d;          // text color
 
-        .checkmark-list {
-          width: 1.2rem;
-          height: 1.2rem;
-          fill: #0db6bd;
-          //vertical-align: middle;
-          //display: inline-block;
-
-        //*********************************************5555555555555555555555555555555555555555555
-      }
+      &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            background-image: $check-services;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
     }
   }
 }
