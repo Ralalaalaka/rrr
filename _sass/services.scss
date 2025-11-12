@@ -49,47 +49,26 @@
     margin-top: 10px; //*********************************************555555555555555555555555555555
 
     li {
-      /*position: relative;
-      padding: 0 25px;
-      list-style: none;
-      margin-top: 10px;
-      color: #6d767d; 
-      text-align: start;
-      align-items: start; //This makes sub-features under the description and not fixed *********************************************5555555555555555555555555555555
-
-        .checkmark {
-    width: 16px; //*******************************3333333333333333333333333333333
-    height: 16px; //*******************************3333333333333333333333333333333
-    flex-shrink: 0; //*******************************3333333333333333333333333333333
-    fill: #0db6bd; //*********************************************555555555555555555555555555555555555
-
-        //content: "✔"; //*******************************3333333333333333333333333333333
-        //position: absolute; //*******************************3333333333333333333333333333333
-        inset-inline-start: 0;
-        //color: #0db6bd; //*********************************************5555555555555555555555555555555555555555555
-        font-weight: bold;*/
-
-        //*********************************************5555555555555555555555555555555555555555555
-        list-style: none;
-        display: flex;           // make the li content a flex row
-        align-items: center;     // vertically center SVG and text
-        gap: 8px;                // space between checkmark and text
-        padding: 0 0 10px 0;     // adjust padding as needed
-        color: #6d767d;          // text color
+      position: relative;
+    padding-left: 1.8rem; // space for the checkmark
+    margin-bottom: 10px;
+    color: $main-gray;
+    display: flex;
+    align-items: center;
 
       &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1.2rem;
-            height: 1.2rem;
-            background-image: $check-services;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.2rem;
+        height: 1.2rem;
+        background-image: $check-services;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
   }
 }
