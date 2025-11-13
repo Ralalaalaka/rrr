@@ -29,48 +29,43 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
   display: flex;
   flex-direction: column;
-//*********************************************111111111111111111111111111111111111111
+
   h3 {
-  align-items: center; //*********************************************22222222222222222222222222222222222222
+  align-items: center; 
   color: #ff0000; //#0e385b
   }
 
   p {
-  align-items: start; //This makes sub-features under the description and not fixed //*********************************************44444444444444444444444444444444444444
-  text-align: start;  //*********************************************22222222222222222222222222222222222222
+  align-items: start; //This makes sub-features under the description and not fixed 
+  text-align: start;  
   color: #0000ff; //#0e385b
-  position: relative; //*******************************3333333333333333333333333333333
+  position: relative; 
   }
 
 
-    ul { //*********************************************5555555555555555555555555555555555
-    list-style: none; //*********************************************5555555555555555555555555555555
-    padding: 0; //*********************************************5555555555555555555555555555555555555555555
-    margin-top: 10px; //*********************************************555555555555555555555555555555
+    
+  ul li {
+  position: relative; // already done
+  padding-left: 1.8rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: $main-gray;
 
-    li {
-      position: relative;
-    padding-left: 1.8rem; // space for the checkmark
-    margin-bottom: 10px;
-    color: $main-gray;
-    display: flex;
-    align-items: center;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 1.2rem;
-        height: 1.2rem;
-        background-image: $check-services;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
+  &::before {
+    content: "";
+    position: absolute; // relative to li now
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: $check-services;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
+}
 }
 
 .service-slide.active {
