@@ -52,7 +52,8 @@
   align-items: start;
   color: $main-gray;
   gap: 8px; // space between check icon and text
-
+  position: relative;
+  padding: 0 25px;
 
   &::before {
     content: "";
@@ -66,9 +67,8 @@
     margin-inline-end: 8px;
   }
 }
-}
-}
-
+    }
+  }
 .service-slide.active {
   opacity: 1;
   transform: scale(1);
