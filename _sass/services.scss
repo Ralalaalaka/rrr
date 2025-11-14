@@ -55,7 +55,7 @@
 
   &::before {
     content: "";
-    //position: inline-block; // relative to li now
+    position: inline-block; // relative to li now
     ///left: 0;
     //top: 50%;
     //transform: translateY(-50%);
