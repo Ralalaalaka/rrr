@@ -54,6 +54,7 @@
   gap: 8px; // space between check icon and text
   position: relative;
   padding: 0 25px;
+  text-align: start;
 
   &::before {
     content: "";
