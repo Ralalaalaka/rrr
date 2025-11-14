@@ -51,10 +51,11 @@
   display: flex;
   align-items: center;
   color: $main-gray;
+  display: flex; ////////////////////////
 
   &::before {
     content: "";
-    position: inline-block; // relative to li now
+    //position: inline-block; // relative to li now
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -64,6 +65,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    
   }
 }
 }
