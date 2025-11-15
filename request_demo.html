@@ -1,22 +1,26 @@
 ---
-title: Contact
-description: Send us a message to find out more!
-map:
-  latitude: -45.8787605
-  longitude: 170.5027976
-  address: "1 George Street, Dunedin, New Zealand"
-  zoom: 13
-image: https://source.unsplash.com/WNAO036c6FM/2000x1322?a=.png
+layout: default
+title: Request a Demo
 ---
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+<script>
+  window.translations = {{ site.data | jsonify }};
+</script>
+<script src="{{ site.baseurl }}/js/lang-toggle.js"></script>
+
+<section class="hero" style="height: 50vh;">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
-			<h1>Get in touch today</h1>
-			<p class="subtext">If you have any questions or queries send us a message and we'll get back to you as soon as we can.</p>
+      <h2 data-i18n-key="request a demo.Texts.Title">
+        {{ site.data.services.Texts.Title.ar }} 
+      </h2>
+      <h3 data-i18n-key="request a demo.Texts.Sub_Title">
+        {{ site.data.services.Texts.Sub_Title.ar }}
+      </h3>
 		</div>
 	</div>
 </section>
+
 
 <section class="pad">
 	<div class="text-container contact-box">
