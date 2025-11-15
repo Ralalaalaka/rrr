@@ -43,77 +43,6 @@
 
 		{{ content }}
 
-<!-- القديم قبل الترجمة
-		<footer>
-			<div class="container">
-				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
-				<ul class="footer-left-links">
-					{% for link in site.data.footer.left_links %}
-						<h5> !--it was <li>--
-							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-								{{ link.name }}
-							</a>
-						</h5> !--it was <li>--
-					{% endfor %}
-				</ul>
-				<ul class="footer-right-links">
-					{% for link in site.data.footer.right_links %}
-						<h5> !--it was <li>--
-							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-								{{ link.name }}
-							</a>
-						</h5> !--it was <li>--
-					{% endfor %}
-				</ul>
-				<h5 class="copyright">
-						صنع في السعودية <br> &#10084;
-				</h5>
-			</div>
-		</footer> -->
-
-		<!---
-		<footer>
-			<div class="container">
-				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
-					<ul class="footer-left-links"> !--Nav bar tabs--
-					{% for link in site.data.footer.left_links %}
-						<h5>
-						<a
-							{% if link.new_window %}target="_blank"{% endif %}
-							href="{% include relative-src.html src=link.link %}"
-							{% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}
-							data-i18n-key="footer.left_links.{{ forloop.index0 }}.name"
-						>
-							{% if link.social_icon %}
-							{% include social-icon.html icon=link.social_icon %}
-							{% endif %}
-							{{ link.name.ar }}
-						</a>
-						</h5>
-					{% endfor %}
-					</ul>
-
-				<ul class="footer-right-links"> !--Social media--
-					{% for link in site.data.footer.right_links %}
-						<h5>
-							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-								{{ link.name }}
-							</a>
-						</h5>
-					{% endfor %}
-				</ul>
-
-				<h5 class="copyright" data-i18n-key="site_content.Home.footer_text">
-        			{{ site.data.site_content.Home.footer_text.ar }} <br> &#10084;
-				</h5>
-			</div>
-		</footer>
----->
-
-
 		<footer>
 		<div class="container footer-container">
 
@@ -138,7 +67,6 @@
 			<h5 class="copyright" data-i18n-key="site_content.Home.footer_text">
 				{{ site.data.site_content.Home.footer_text.ar }}
 			</h5>
-			<!--<span class="footer-heart">&#10084;</span>-->
 			<span class="footer-heart" aria-hidden="true">
 				<svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" role="img">
 					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
