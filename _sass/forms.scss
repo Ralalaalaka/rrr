@@ -1,20 +1,4 @@
-.button a, input[type=submit] {
-	color: $brand-color;
-	text-decoration: none;
-	border: 2px solid $brand-color;
-	transition: .2s ease-in-out;
-	display: inline-block;
-	padding: 16px 50px;
-	background: #fff;
-}
-
-.button a:hover, input[type=submit]:hover {
-	background: $brand-color;
-	color: #fff;
-	cursor: pointer;
-}
-
-.button.alt a { /*white clear button USED*/
+.button.alt a { /*white clear button*/
 	border-radius: 100px;
 	background: rgba(255, 255, 255, 0.30);
 	border: 0.05px solid rgba(255, 255, 255, 1);
@@ -22,11 +6,29 @@
 	font-weight: bold;
 	padding: 10px 60px;
 	
+	&:hover { /*white clear button*/
+		background: rgba(255, 255, 255, 0.50); /*it was #fff*/
+	}
+}
 
-&:hover { /*white clear button USED*/
-	background: rgba(255, 255, 255, 0.50); /*it was #fff*/
+
+.button a, input[type=submit] {
+	color: #0db6bd;
+	text-decoration: none;
+	border: 1px solid #bcebed;
+	transition: .2s ease-in-out;
+	display: inline-block;
+	padding: 16px 50px;
+	background: #f4fcfc;
+	border-radius: 100px;
 }
+
+.button a:hover, input[type=submit]:hover {
+	opacity: 0.8;
+	color: $main-teal;
+	cursor: pointer;
 }
+
 
 textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
@@ -38,6 +40,7 @@ label, input, textarea {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
+	border-radius: 100px;
 }
 
 textarea {
@@ -61,9 +64,9 @@ input, textarea {
 	-o-transition: all 0.30s ease-in-out;
 	outline: none;
 	border: 1px solid #DDDDDD;
+	border-radius: 100px;
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
-	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-	border: 1px solid rgba(81, 203, 238, 1);
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, input[type=number]:focus, input[type=tel]:focus {
+	border: 1px solid $main-navy;
 }
