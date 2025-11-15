@@ -1,7 +1,7 @@
 # LEFT SIDE BUTTONS
 - name:
     ar: "اطلب نسختك التجريبية"
-    en: "Get Your Trial"
+    en: "Request a Demo"
   link: /request_demo/
   side: left
   style: white
