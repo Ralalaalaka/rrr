@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const beforePrices = document.querySelectorAll(".before-price");
   let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
 
-  // --- Price Calculation ---
+  // --- Price Calculation (unchanged) ---
   function updatePrices() {
     const emp = parseInt(empSelect.value);
     prices.forEach((p, i) => {
@@ -277,34 +277,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // --- Toggle sub-features with SVG chevron ---
+  // --- REPLACE YOUR OLD TOGGLE CODE WITH THIS ---
   document.addEventListener("click", e => {
     const btn = e.target.closest(".toggle-sub");
     if (!btn) return;
+
     const sub = btn.parentElement.querySelector(".sub-features");
     if (!sub) return;
 
     const isRTL = document.documentElement.dir === "rtl";
+    const svg = btn.querySelector(".chevron");
+
     sub.classList.toggle("open");
     const isOpen = sub.classList.contains("open");
 
-    // Always render the same SVG and rotate via CSS
-    btn.innerHTML = `
-      <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true">
-        <path d="M96 160l128 128-128 128"/>
-      </svg>
-    `;
+    const baseClosed = isRTL ? 180 : 0;      // RTL closed = ← , LTR closed = →
+    const openRotation = baseClosed + 90;    // Open = ↓ always
 
-    // Reset rotation for both directions
-    const svg = btn.querySelector(".chevron");
     svg.style.transform = isOpen
-      ? (isRTL ? "rotate(90deg)" : "rotate(90deg)") // down arrow both directions
-      : (isRTL ? "rotate(180deg)" : "rotate(0deg)"); // default left/right
+      ? `rotate(${openRotation}deg)`
+      : `rotate(${baseClosed}deg)`;
   });
+  // --- END TOGGLE CODE ---
 
   updatePrices();
 });
 </script>
+
 
 
 
