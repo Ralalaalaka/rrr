@@ -24,6 +24,19 @@ section {
 	padding: 60px 0;
 }
 
+.button.alt a { /*white clear button*/
+	border-radius: 100px;
+	background: rgba(255, 255, 255, 0.30);
+	border: 0.05px solid rgba(255, 255, 255, 1);
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 60px;
+	
+	&:hover { /*white clear button*/
+		background: rgba(255, 255, 255, 0.50); /*it was #fff*/
+		color: #fff;
+	}
+}
 
 /*Nav Bar*/
 
