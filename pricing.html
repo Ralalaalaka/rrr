@@ -291,8 +291,8 @@ document.addEventListener("DOMContentLoaded", function() {
     sub.classList.toggle("open");
     const isOpen = sub.classList.contains("open");
 
-    const baseClosed = isRTL ? 0 : 0;      // RTL closed = ← , LTR closed = →
-    const openRotation = baseClosed + 90;    // Open = ↓ always
+    const baseClosed = isRTL ? -180 : 0;      // RTL closed = ← , LTR closed = →
+    const openRotation = baseClosed - 90;    // Open = ↓ always
 
     svg.style.transform = isOpen
       ? `rotate(${openRotation}deg)`
