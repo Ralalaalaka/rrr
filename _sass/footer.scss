@@ -23,7 +23,7 @@ footer {
 
   .footer-container {
     display: flex;
-    flex-direction: column; // mobile first
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -85,7 +85,9 @@ footer {
   .footer-center {
     text-align: center;
     order: 3; // mobile order
-    margin-top: 2px;
+    //margin-top: 2px; ///////////////////////
+    margin: 2px auto 0; /////////////////////
+    
 
     .copyright {
       margin: 0;
