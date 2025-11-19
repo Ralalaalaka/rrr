@@ -296,17 +296,7 @@
          url("/images/Saudi-Riyal Symbol/saudiriyalsymbol.otf") format("opentype");
 }
 
-/*.riyal {
+.riyal {
     font-family: "SaudiRiyalSymbol", sans-serif;
     font-weight: bold;
-}*/
-
-
-.riyal::before {
-    content: "\ea"; /* Unicode U+00EA */
-    font-family: "SaudiRiyalSymbol", sans-serif;
-    font-weight: normal;
-    font-size: 1em;
-    vertical-align: middle;
-    margin-right: 0.2em; /* spacing before number */
 }
