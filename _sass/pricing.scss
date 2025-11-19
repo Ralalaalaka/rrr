@@ -288,15 +288,15 @@
   }
 }
 
-/*Saudi Riyal*/
+/*Saudi Riyal Symbol*/
 @font-face {
-    font-family: 'SaudiRiyalSymbol';
-    src: url('saudiriyal.woff2') format('woff2');
+    font-family: "SaudiRiyalSymbol";
+    src: url("/assets/fonts/saudiriyal.woff2") format("woff2"),
+         url("/assets/fonts/saudiriyal.woff") format("woff"),
+         url("/assets/fonts/saudiriyal.otf") format("opentype");
 }
-.symbol {
-    font-family: 'SaudiRiyalSymbol', sans-serif;
-    font-size: inherit;
-    margin: 20px auto;
-    color: inherit;
+
+.riyal {
+    font-family: "SaudiRiyalSymbol";
     font-weight: bold;
 }
