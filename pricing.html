@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const isOpen = sub.classList.contains("open");
 
     const baseClosed = isRTL ? -180 : 0;      // RTL closed = ← , LTR closed = →
-    const openRotation = baseClosed - 90;    // Open = ↓ always
+    const openRotation = baseClosed + 90;    // Open = ↓ always
 
     svg.style.transform = isOpen
       ? `rotate(${openRotation}deg)`
