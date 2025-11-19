@@ -287,3 +287,18 @@
     }
   }
 }
+
+/*Saudi Riyal*/
+@font-face {
+    font-family: 'SaudiRiyalSymbol';
+    src: url('saudiriyal.woff2') format('woff2'),
+         url('saudiriyal.woff') format('woff'),
+         url('saudiriyal.otf') format('opentype');
+}
+.symbol {
+    font-family: 'SaudiRiyalSymbol', sans-serif;
+    font-size: inherit;
+    margin: 20px auto;
+    color: inherit;
+    font-weight: bold;
+}

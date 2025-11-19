@@ -33,10 +33,10 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     <div class="control">
       <h3><strong data-i18n-key="pricing.Texts.employees_label">{{ site.data.pricing.Texts.employees_label.ar }}</strong></h3>
       <select id="employees">
-        <option value="1">1 موظف</option>
-        <option value="5">5 موظفين</option>
-        <option value="10" selected>10 موظفين</option>
-        <option value="20">20 موظف</option>
+        <option value="1" data-i18n-key="pricing.Texts.emp_count1">{{ site.data.pricing.Texts.emp_count1.ar }}</option>
+        <option value="10" data-i18n-key="pricing.Texts.emp_count2">{{ site.data.pricing.Texts.emp_count2.ar }}</option>
+        <option value="100" selected data-i18n-key="pricing.Texts.emp_count3">{{ site.data.pricing.Texts.emp_count3.ar }}</option>
+        <option value="1000" data-i18n-key="pricing.Texts.emp_count4">{{ site.data.pricing.Texts.emp_count4.ar }}</option>
       </select>
     </div>
 
@@ -62,10 +62,10 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
           <div class="plan-price">
             <h1>
               <strong>
-                <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> ريال
+                <span class="price" data-base="{{ site.data.pricing.Plan1[0].base_price }}">{{ site.data.pricing.Plan1[0].base_price }}</span> <span class="symbol">&#xea;</span>
               </strong>
             </h1>
-            <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}"> {{ site.data.pricing.Plan1[0].before_price10 }}</span> ريال
+            <span class="before-price" data-before="{{ site.data.pricing.Plan1[0].before_price10 }}"> {{ site.data.pricing.Plan1[0].before_price10 }}</span> <span class="symbol">&#xea;</span>
           </div>
         </div>
 
