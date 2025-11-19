@@ -30,8 +30,8 @@ Texts:
       en: "Yearly"
       multiplier: 12
   note:
-    ar: "الأسعار الظاهرة لـ 10 موظفين / ربع سنة (تتغير)"
-    en: "Prices shown for 10 employees / quarter (subject to change)"
+    ar: "تعكس الأسعار عدد الموظفين ومدة العقد المحددة."
+    en: "Prices reflect the chosen employee count and contract duration."
   help:
     ar: "تحتاج مساعدة؟"
     en: "Need help?"

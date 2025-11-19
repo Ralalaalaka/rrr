@@ -291,9 +291,7 @@
 /*Saudi Riyal*/
 @font-face {
     font-family: 'SaudiRiyalSymbol';
-    src: url('saudiriyal.woff2') format('woff2'),
-         url('saudiriyal.woff') format('woff'),
-         url('saudiriyal.otf') format('opentype');
+    src: url('saudiriyal.woff2') format('woff2');
 }
 .symbol {
     font-family: 'SaudiRiyalSymbol', sans-serif;
