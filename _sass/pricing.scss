@@ -196,7 +196,10 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+
+    ul, li{
     list-style: none;
+    }
 
       /* CHECK ICON */
   &::before {
