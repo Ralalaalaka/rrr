@@ -184,12 +184,18 @@
   
     .feature {
       display: flex;
-      flex-direction: column; // main feature line + sub features stacked
+      flex-direction: column;
       position: relative;
       color: #6d767d;
       text-align: start;
-      padding: 0 0.5rem; // small padding instead of large 25px
-      gap: 0.2rem;         // text color
+      padding: 0 0.5rem;
+      gap: 0.2rem;
+
+        > span {
+          display: flex;            // make feature text and arrow inline
+          align-items: center;      
+          gap: 0.3rem;
+        }
 
       &::before {
         content: "";
