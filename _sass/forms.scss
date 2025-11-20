@@ -6,7 +6,7 @@
 	}
 }
 
-.button a, input[type=submit] {
+.button a, button[type=submit] {
 	color: #0db6bd;
 	text-decoration: none;
 	border: 1px solid #bcebed;
@@ -17,7 +17,7 @@
 	border-radius: 100px;
 }
 
-.button a:hover, input[type=submit]:hover {
+.button a:hover, button[type=submit]:hover {
 	opacity: 0.8;
 	color: $main-teal;
 	cursor: pointer;
