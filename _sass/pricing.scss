@@ -196,13 +196,13 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    list-style: none;
 
       /* CHECK ICON */
   &::before {
     content: "";
     position: absolute;
     top: 0.4rem;         // aligns vertically with the h3
-    left: 0;             // always left (no RTL logic)
     width: 1rem;
     height: 1rem;
     background-image: $check-plans;
