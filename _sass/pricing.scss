@@ -137,11 +137,12 @@
       padding: 0 25px;         // adjust space for custom icon
       text-align: start;
       color: #6d767d;          // text color
+      justify-content: start; //////////////////////////////
 
       &::before {
         content: "";
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1rem;
+        height: 1rem;
         background-image: $check-plans; // your custom check icon
         background-size: contain;
         background-repeat: no-repeat;
@@ -154,15 +155,15 @@
         border: none;
         cursor: pointer;
         padding: 0;
-        margin-inline-start: .3rem;
+        //margin-inline-start: .3rem;
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        //align-items: center;
+        //justify-content: center;
         color: inherit;
 
         svg.chevron {
-          width: 1.7em;
-          height: 1.7em;
+          width: 1em;
+          height: 1em;
           fill: currentColor;
           vertical-align: middle;
           transition: transform 0.3s ease;
