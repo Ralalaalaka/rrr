@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
         btn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
     });
+
+          location.reload();
   });
   });
 });
