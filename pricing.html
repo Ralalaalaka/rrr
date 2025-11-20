@@ -252,11 +252,17 @@ document.addEventListener("DOMContentLoaded", function() {
   const beforePrices = document.querySelectorAll(".before-price");
   let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
 
-  /* ---------------- INITIAL ARROW DIRECTION (RTL/LTR) ---------------- */
-  document.querySelectorAll(".toggle-sub .chevron").forEach(svg => {
+  /* ---------------- RTL/LTR Arrow Reset Function ---------------- */
+  function resetArrows() {
     const isRTL = document.documentElement.dir === "rtl";
-    svg.style.transform = isRTL ? "rotate(180deg)" : "rotate(0deg)";
-  });
+    document.querySelectorAll(".toggle-sub .chevron").forEach(svg => {
+      const sub = svg.closest(".toggle-sub").parentElement.querySelector(".sub-features");
+      if (!sub.classList.contains("open")) {
+        // Closed arrows follow dir
+        svg.style.transform = isRTL ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    });
+  }
 
   /* ---------------- PRICE CALCULATION ---------------- */
   function updatePrices() {
@@ -283,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  /* ---------------- RTL + LTR TOGGLE FIX ---------------- */
+  /* ---------------- TOGGLE SUB FEATURES ---------------- */
   document.addEventListener("click", e => {
     const btn = e.target.closest(".toggle-sub");
     if (!btn) return;
@@ -297,15 +303,31 @@ document.addEventListener("DOMContentLoaded", function() {
     sub.classList.toggle("open");
     const isOpen = sub.classList.contains("open");
 
-    const closedRotation = isRTL ? 180 : 0;  // RTL = left, LTR = right
-    const openRotation = 90;                 // Down for both
+    const closedRotation = isRTL ? 180 : 0; // RTL = left, LTR = right
+    const openRotation = 90;                // down for both
 
     svg.style.transform = isOpen
       ? `rotate(${openRotation}deg)`
       : `rotate(${closedRotation}deg)`;
   });
 
+  /* ---------------- INITIALIZATION ---------------- */
   updatePrices();
+  resetArrows();
+
+  /* ---------------- LANGUAGE SWITCH HANDLING ---------------- */
+  // Replace '#change-language-btn' with your actual language switch button
+  const langBtn = document.getElementById("change-language-btn");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      // Here you change the dir & text
+      // Example:
+      // document.documentElement.dir = (document.documentElement.dir === "rtl") ? "ltr" : "rtl";
+
+      // Reset closed arrows after language change
+      resetArrows();
+    });
+  }
 });
 </script>
 
