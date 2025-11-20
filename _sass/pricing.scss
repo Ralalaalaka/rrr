@@ -129,15 +129,67 @@
      }
 
     /* ---------------- Features ---------------- */
+
+    /*  .feature {
+    display: flex;
+    align-items: flex-start; // align check and text
+    gap: 8px;                // space between check icon and text
+    position: relative;
+    padding: 0 25px;         // adjust space for custom icon
+    text-align: start;
+    color: #6d767d;          // text color
+
+    &::before {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: $check-services; // your custom check icon
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0; // prevent icon from shrinking
+    }
+
+    .toggle-sub {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-inline-start: .3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+
+      svg.chevron {
+        width: 1.7em;
+        height: 1.7em;
+        fill: currentColor;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .sub-features {
+      display: none;
+      margin-top: .4rem;
+      margin-inline-start: 0;
+      color: #333;
+      list-style: none;
+
+      &.open { display: block; } 
+    }
+  }*/
+
+  
     .feature {
       display: flex;
-      align-items: flex-start; // align check and text
-      gap: 8px;                // space between check icon and text
+      flex-direction: column; // main feature line + sub features stacked
       position: relative;
-      padding: 0 25px;         // adjust space for custom icon
+      color: #6d767d;
       text-align: start;
-      color: #6d767d;          // text color
-      justify-content: start; //////////////////////////////
+      padding: 0 0.5rem; // small padding instead of large 25px
+      gap: 0.2rem;         // text color
 
       &::before {
         content: "";
@@ -155,10 +207,10 @@
         border: none;
         cursor: pointer;
         padding: 0;
-        //margin-inline-start: .3rem;
+        margin-left: auto;       // pushes arrow to the end of the line
         display: inline-flex;
-        //align-items: center;
-        //justify-content: center;
+        align-items: center;
+        justify-content: center;
         color: inherit;
 
         svg.chevron {
@@ -172,10 +224,10 @@
 
       .sub-features {
         display: none;
-        margin-top: .4rem;
-        margin-inline-start: 0;
+        margin: 0.2rem 0 0 1.3rem; // small margin to indent under feature text
         color: #333;
         list-style: none;
+        padding: 0;
 
         &.open { display: block; } 
       }
