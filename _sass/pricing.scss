@@ -196,12 +196,14 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+  }
 
-    ul, li{
-    list-style: none;
-    }
+  h3 {
+    margin: 0;
+    color: #6d767d;
+  }
 
-      /* CHECK ICON */
+        /* CHECK ICON */
   &::before {
     content: "";
     position: absolute;
@@ -214,13 +216,6 @@
     background-position: center;
     z-index: 5;          // make sure it shows
   } 
-
-  }
-
-  h3 {
-    margin: 0;
-    color: #6d767d;
-  }
 
   /* ARROW BUTTON */
   .toggle-sub {
