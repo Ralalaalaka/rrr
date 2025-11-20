@@ -42,20 +42,20 @@ Texts:
     ar: "مقارنة الباقات"
     en: "Plans Comparison"
   emp_count1:
-    ar: "1-5 موظفين"
-    en: "1-5 Employees"
+    ar: "1 - 5 موظفين"
+    en: "1 - 5 Employees"
   emp_count2:
-    ar: "6-100 موظف"
-    en: "6-100 Employees"
+    ar: "6 - 100 موظف"
+    en: "6 - 100 Employees"
   emp_count3:
-    ar: "101-500 موظف"
-    en: "101-500 Employees"
+    ar: "101 - 500 موظف"
+    en: "101 - 500 Employees"
   emp_count4:
-    ar: "501-1000 موظف"
-    en: "501-1000 Employees"
+    ar: "501 - 1000 موظف"
+    en: "501 - 1000 Employees"
   riyal:
-    ar: "ريال سعودي"
-    en: "Saudi Riyal"
+    ar: "ريال"
+    en: "SAR"
 
 
 Plan1:
