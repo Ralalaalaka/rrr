@@ -129,61 +129,6 @@
      }
 
     /* ---------------- Features ---------------- */
-
-    /*  .feature {
-    display: flex;
-    align-items: flex-start; // align check and text
-    gap: 8px;                // space between check icon and text
-    position: relative;
-    padding: 0 25px;         // adjust space for custom icon
-    text-align: start;
-    color: #6d767d;          // text color
-
-    &::before {
-      content: "";
-      width: 1.2rem;
-      height: 1.2rem;
-      background-image: $check-services; // your custom check icon
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      flex-shrink: 0; // prevent icon from shrinking
-    }
-
-    .toggle-sub {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      margin-inline-start: .3rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: inherit;
-
-      svg.chevron {
-        width: 1.7em;
-        height: 1.7em;
-        fill: currentColor;
-        vertical-align: middle;
-        transition: transform 0.3s ease;
-      }
-    }
-
-    .sub-features {
-      display: none;
-      margin-top: .4rem;
-      margin-inline-start: 0;
-      color: #333;
-      list-style: none;
-
-      &.open { display: block; } 
-    }
-  }*/
-
-
-  ///////////////////////////////////////////////
-  /// 
   
   .plan-features {
   list-style: none;
@@ -227,7 +172,8 @@
 
   /* ARROW BUTTON */
   .toggle-sub {
-    margin-left: auto;
+    margin-inline-start: 0.4rem; /////////////////////////
+    //margin-left: auto;
     background: none;
     border: none;
     cursor: pointer;
@@ -248,7 +194,7 @@
     margin-top: 0.4rem;
     margin-left: 1.8rem;  // aligns under feature text
     padding: 0;
-    color: #555;
+    color: #6d767d;
 
     p {
       margin: 0.25rem 0;
