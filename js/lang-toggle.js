@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('No translations found. Make sure {{ site.data | jsonify }} is defined.');
   }
 
-
   // Initialize
   updateHtmlLangDir();
   updateTextContent();
@@ -45,18 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     langBtn.addEventListener('click', function(e) {
       e.preventDefault();
+
+      // Toggle language
       currentLang = (currentLang === 'ar') ? 'en' : 'ar';
       localStorage.setItem('lang', currentLang);
 
-      updateHtmlLangDir();
-      updateTextContent();
-
-      // Update all buttons
-      document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
-        btn.textContent = (currentLang === 'ar') ? 'EN' : 'عربي';
+      // Reload page so all text, dir, and arrows reinitialize
+      location.reload();
     });
-
-          location.reload();
-  });
   });
 });
