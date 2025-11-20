@@ -186,7 +186,6 @@
   
     .feature {
       display: flex;
-      //flex-direction: column;
       position: relative;
       color: #6d767d;
       text-align: start;
@@ -205,11 +204,11 @@
         color: #6d767d;
       }
 
-        > span {
+       /* > span {
           display: inline-flex;            // make feature text and arrow inline
           align-items: center;      
           gap: 0.3rem;
-        }
+        } */
 
       &::before {
         content: "";
