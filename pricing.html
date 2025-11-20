@@ -81,7 +81,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
       {% assign parentIndex = forloop.index0 %}
       <li class="feature">
         <span data-i18n-key="pricing.Plan1.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-        <button class="toggle-sub" style="color: {{ site.data.pricing.Plan3[0].color }}">▶</button>
+        <!--<button class="toggle-sub" style="color: {{ site.data.pricing.Plan3[0].color }}">▶</button>-->
         <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
           <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
             <path fill="currentColor" d="M96 96l128 160-128 160" />
@@ -130,7 +130,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
         {% assign parentIndex = forloop.index0 %}
         <li class="feature">
           <span data-i18n-key="pricing.Plan2.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-          <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
+          <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan2[0].color }}" aria-label="Toggle feature">
           <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
             <path fill="currentColor" d="M96 96l128 160-128 160" /></svg></button> <!-------------------->
 
@@ -176,7 +176,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
         {% assign parentIndex = forloop.index0 %}
         <li class="feature">
           <span data-i18n-key="pricing.Plan3.{{ parentIndex }}.features">{{ feature.features.ar }}</span>
-                  <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan1[0].color }}" aria-label="Toggle feature">
+                  <!--------------------> <button class="toggle-sub" style="color: {{ site.data.pricing.Plan3[0].color }}" aria-label="Toggle feature">
           <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="14" height="14" aria-hidden="true">
             <path fill="currentColor" d="M96 96l128 160-128 160" />
           </svg>
