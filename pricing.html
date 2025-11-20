@@ -252,7 +252,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const beforePrices = document.querySelectorAll(".before-price");
   let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
 
-  // --- Price Calculation (unchanged) ---
+  /* ---------------- INITIAL ARROW DIRECTION (RTL/LTR) ---------------- */
+  document.querySelectorAll(".toggle-sub .chevron").forEach(svg => {
+    const isRTL = document.documentElement.dir === "rtl";
+    svg.style.transform = isRTL ? "rotate(180deg)" : "rotate(0deg)";
+  });
+
+  /* ---------------- PRICE CALCULATION ---------------- */
   function updatePrices() {
     const emp = parseInt(empSelect.value);
     prices.forEach((p, i) => {
@@ -277,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // --- REPLACE YOUR OLD TOGGLE CODE WITH THIS ---
+  /* ---------------- RTL + LTR TOGGLE FIX ---------------- */
   document.addEventListener("click", e => {
     const btn = e.target.closest(".toggle-sub");
     if (!btn) return;
@@ -291,18 +297,18 @@ document.addEventListener("DOMContentLoaded", function() {
     sub.classList.toggle("open");
     const isOpen = sub.classList.contains("open");
 
-    const baseClosed = isRTL ? -180 : 0;      // RTL closed = ← , LTR closed = →
-    const openRotation = baseClosed + 90;    // Open = ↓ always
+    const closedRotation = isRTL ? 180 : 0;  // RTL = left, LTR = right
+    const openRotation = 90;                 // Down for both
 
     svg.style.transform = isOpen
       ? `rotate(${openRotation}deg)`
-      : `rotate(${baseClosed}deg)`;
+      : `rotate(${closedRotation}deg)`;
   });
-  // --- END TOGGLE CODE ---
 
   updatePrices();
 });
 </script>
+
 
 
 
