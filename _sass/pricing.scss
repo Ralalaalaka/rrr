@@ -137,13 +137,23 @@
       text-align: start;
       color: #6d767d;
 
-      &::before {
+      /*&::before {
         content: "✔";
         color: #6d767d;
         font-weight: bold;
         position: absolute;
         inset-inline-start: 0;
-        top: 0;
+        top: 0;*/
+
+          &::before {
+          content: "";
+          width: 1.2rem;
+          height: 1.2rem;
+          background-image: $check-services;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
       }
 
 .toggle-sub {
