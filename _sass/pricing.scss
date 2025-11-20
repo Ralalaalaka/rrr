@@ -130,31 +130,24 @@
 
     /* ---------------- Features ---------------- */
     .feature {
+      display: flex;
+      align-items: flex-start; // align check and text
+      gap: 8px;                // space between check icon and text
       position: relative;
-      margin-bottom: .6rem;
-      padding-inline-start: 1.2rem; // space for checkmark
-      list-style: none;
+      padding: 0 25px;         // adjust space for custom icon
       text-align: start;
-      color: #6d767d;
+      color: #6d767d;          // text color
 
-      /*&::before {
-        content: "✔";
-        color: #6d767d;
-        font-weight: bold;
-        position: absolute;
-        inset-inline-start: 0;
-        top: 0;
-      }*/
-
-        &::before {
-          content: "";
-          width: 1.2rem;
-          height: 1.2rem;
-          background-image: $check-services;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
+      &::before {
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        background-image: $check-services; // your custom check icon
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0; // prevent icon from shrinking
+      }
 
       .toggle-sub {
         background: none;
@@ -179,11 +172,11 @@
       .sub-features {
         display: none;
         margin-top: .4rem;
-        margin-inline-start: 0; //************************************77777777777777777777777777
+        margin-inline-start: 0;
         color: #333;
         list-style: none;
 
-        &.open { display: block;} 
+        &.open { display: block; } 
       }
     }
   }
