@@ -186,8 +186,8 @@
   
 .feature {
   position: relative;
-  padding-left: 1.6rem;   // space for check icon
-  margin-bottom: 0.7rem;
+  padding-left: 1.8rem;   // space for checkmark
+  margin-bottom: 1rem;
   color: #6d767d;
   text-align: start;
 
@@ -195,35 +195,38 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0.35rem;
-    left: 0;              // always left (no RTL logic)
+    top: 0.4rem;         // aligns vertically with the h3
+    left: 0;             // always left (no RTL logic)
     width: 1rem;
     height: 1rem;
     background-image: $check-plans;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;          // make sure it shows
   }
 
-  /* MAIN LINE: feature text + arrow */
+  /* MAIN LINE: h3 + arrow */
   .feature-main {
     display: flex;
     align-items: center;
     gap: 0.4rem;
   }
 
-  h3.feature-title {
+  h3 {
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
     color: #6d767d;
   }
 
-  /* TOGGLE ARROW */
+  /* ARROW BUTTON */
   .toggle-sub {
-    margin-left: auto;     // arrow stays on the right
+    margin-left: auto;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
     display: inline-flex;
     align-items: center;
 
@@ -237,20 +240,17 @@
   /* SUB FEATURES */
   .sub-features {
     display: none;
-    margin-top: 0.3rem;
-    margin-left: 1.3rem;  // indent under text
-    list-style: none;
+    margin-top: 0.4rem;
+    margin-left: 1.8rem;  // aligns under feature text
     padding: 0;
-
-    &.open {
-      display: block;
-    }
+    color: #555;
 
     p {
-      margin: 0.2rem 0;
+      margin: 0.25rem 0;
       font-size: 0.9rem;
-      color: gray;
     }
+
+    &.open { display: block; }
   }
 }
   }
