@@ -183,10 +183,17 @@
 
 
   ///////////////////////////////////////////////
+  /// 
+  
+  .plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
   
 .feature {
   position: relative;
-  padding-left: 1.8rem;   // space for checkmark
+  padding-inline-start: 1.8rem;   // space for checkmark
   margin-bottom: 1rem;
   color: #6d767d;
   text-align: start;
@@ -207,6 +214,7 @@
   &::before {
     content: "";
     position: absolute;
+    inset-inline-start: 0;
     top: 0.4rem;         // aligns vertically with the h3
     width: 1rem;
     height: 1rem;
