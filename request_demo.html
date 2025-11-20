@@ -24,7 +24,7 @@ title: Request a Demo
 
 <section class="request-demo pad">
 	<div class="text-container">
-    	<h3 data-i18n-key="request_demo.Texts.Instructions"><strong>{{ site.data.request_demo.Texts.Instructions.ar }}</strong></h3>
+    	<h2 data-i18n-key="request_demo.Texts.Instructions"><strong>{{ site.data.request_demo.Texts.Instructions.ar }}</strong></h2>
 	</div>
 
 	<div class="text-container">
@@ -54,11 +54,9 @@ title: Request a Demo
 			<label><h3 for="message" data-i18n-key="request_demo.Texts.Message">{{ site.data.request_demo.Texts.Message.ar }}</h3></label>
 			<textarea name="message" id="message"></textarea> <!-- placeholder="Enter your message..." -->
 
-			<input 
-  type="submit" 
-  value="{{ site.data.request_demo.Texts.Submit.ar }}" 
-  data-i18n-key="request_demo.Texts.Submit">
-				</form>
+			<button type="submit" data-i18n-key="request_demo.Texts.Submit">
+  			{{ site.data.request_demo.Texts.Submit.ar }}
+			</button>
 
 			</div>
 
