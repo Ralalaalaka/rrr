@@ -133,7 +133,7 @@
   .plan-features {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0.1rem;
 }
   
 .feature {
@@ -147,7 +147,7 @@
   .feature-main {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
   }
 
   h3 {
@@ -191,7 +191,7 @@
   /* SUB FEATURES */
   .sub-features {
     display: none;
-    margin-top: 0.4rem;
+    margin-top: 0.3rem;
     margin-inline-start: 1.8rem;  // aligns under feature text
     padding: 0;
     color: #6d767d;
