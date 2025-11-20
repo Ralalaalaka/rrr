@@ -143,9 +143,10 @@
         font-weight: bold;
         position: absolute;
         inset-inline-start: 0;
-        top: 0;*/
+        top: 0;
+      }*/
 
-          &::before {
+        &::before {
           content: "";
           width: 1.2rem;
           height: 1.2rem;
@@ -154,30 +155,26 @@
           background-repeat: no-repeat;
           background-position: center;
         }
+
+      .toggle-sub {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-inline-start: .3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+
+        svg.chevron {
+          width: 1.7em;
+          height: 1.7em;
+          fill: currentColor;
+          vertical-align: middle;
+          transition: transform 0.3s ease;
+        }
       }
-
-.toggle-sub {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-inline-start: .3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
-
-  svg.chevron {
-    width: 1.2em;         // smaller looks cleaner with outline icons
-    height: 1.2em;
-    fill: none;           // remove fill
-    stroke: currentColor; // use stroke
-    stroke-width: 2;      // thickness of the outline
-    vertical-align: middle;
-    transition: transform 0.25s ease;
-  }
-}
-
 
       .sub-features {
         display: none;
