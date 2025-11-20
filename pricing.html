@@ -207,57 +207,7 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
 </section>
 
-<!--
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const empSelect = document.getElementById("employees");
-  const durationTabs = document.querySelectorAll(".duration-btn");
-  const prices = document.querySelectorAll(".price");
-  const beforePrices = document.querySelectorAll(".before-price");
-
-  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
-
-  function updatePrices() {
-    const emp = parseInt(empSelect.value);
-    prices.forEach((p, i) => {
-      const base = parseFloat(p.dataset.base);
-      p.textContent = (base * emp * months).toLocaleString();
-
-      if (beforePrices[i]) {
-        // Choose the right before_price based on employees
-        let before = parseFloat(beforePrices[i].dataset.before);
-        beforePrices[i].textContent = (before * emp * months).toLocaleString();
-      }
-    });
-  }
-
-  empSelect.addEventListener("change", updatePrices);
-
-  durationTabs.forEach(btn => {
-    btn.addEventListener("click", () => {
-      durationTabs.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      months = parseInt(btn.dataset.months);
-      updatePrices();
-    });
-  });
-
-  document.addEventListener("click", e => {
-    const btn = e.target.closest(".toggle-sub");
-    if (!btn) return;
-    const sub = btn.parentElement.querySelector(".sub-features");
-    if (!sub) return;
-    sub.classList.toggle("open");
-    btn.textContent = sub.classList.contains("open") ? "▼" : "▶";
-  });
-
-  updatePrices();
-});
-</script>
--->
-
-
-<script>
+<!--<script>
 document.addEventListener("DOMContentLoaded", function() {
   const empSelect = document.getElementById("employees");
   const durationTabs = document.querySelectorAll(".duration-btn");
@@ -339,6 +289,97 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Reset closed arrows after language change
       resetArrows();
+    });
+  }
+});
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const empSelect = document.getElementById("employees");
+  const durationTabs = document.querySelectorAll(".duration-btn");
+  const prices = document.querySelectorAll(".price");
+  const beforePrices = document.querySelectorAll(".before-price");
+  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
+
+  /* ---------------- RTL/LTR Arrow Reset Function ---------------- */
+  function resetArrows() {
+    const isRTL = document.documentElement.dir === "rtl";
+    document.querySelectorAll(".toggle-sub .chevron").forEach(svg => {
+      const feature = svg.closest(".feature");
+      if (!feature) return;
+      const sub = feature.querySelector(".sub-features");
+      if (!sub || sub.classList.contains("open")) return;
+
+      svg.style.transform = isRTL ? "rotate(180deg)" : "rotate(0deg)";
+    });
+  }
+
+  /* ---------------- PRICE CALCULATION ---------------- */
+  function updatePrices() {
+    const emp = parseInt(empSelect.value);
+    prices.forEach((p, i) => {
+      const base = parseFloat(p.dataset.base);
+      p.textContent = (base * emp * months).toLocaleString();
+
+      if (beforePrices[i]) {
+        const before = parseFloat(beforePrices[i].dataset.before);
+        beforePrices[i].textContent = (before * emp * months).toLocaleString();
+      }
+    });
+  }
+
+  empSelect.addEventListener("change", updatePrices);
+
+  durationTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      durationTabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      months = parseInt(btn.dataset.months);
+      updatePrices();
+    });
+  });
+
+  /* ---------------- TOGGLE SUB FEATURES ---------------- */
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".toggle-sub");
+    if (!btn) return;
+
+    const feature = btn.closest(".feature");
+    if (!feature) return;
+
+    const sub = feature.querySelector(".sub-features");
+    if (!sub) return;
+
+    const svg = btn.querySelector(".chevron");
+    const isRTL = document.documentElement.dir === "rtl";
+
+    sub.classList.toggle("open");
+    const isOpen = sub.classList.contains("open");
+
+    const closedRotation = isRTL ? 180 : 0;
+    const openRotation = 90;
+
+    svg.style.transform = isOpen
+      ? `rotate(${openRotation}deg)`
+      : `rotate(${closedRotation}deg)`;
+  });
+
+  /* ---------------- INITIALIZATION ---------------- */
+  updatePrices();
+  resetArrows();
+
+  /* ---------------- LANGUAGE SWITCH HANDLING ---------------- */
+  const langBtn = document.getElementById("change-language-btn");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      // Toggle language in localStorage or reload page
+      const currentLang = localStorage.getItem('lang') || 'ar';
+      const newLang = currentLang === 'ar' ? 'en' : 'ar';
+      localStorage.setItem('lang', newLang);
+
+      // Reload page to reinitialize arrows, prices, and text
+      location.reload();
     });
   }
 });
