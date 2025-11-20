@@ -191,7 +191,13 @@
   color: #6d767d;
   text-align: start;
 
-  /* CHECK ICON */
+  /* MAIN LINE: h3 + arrow */
+  .feature-main {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+      /* CHECK ICON */
   &::before {
     content: "";
     position: absolute;
@@ -204,19 +210,12 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 5;          // make sure it shows
-  }
+  } 
 
-  /* MAIN LINE: h3 + arrow */
-  .feature-main {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
   }
 
   h3 {
     margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
     color: #6d767d;
   }
 
@@ -247,23 +246,11 @@
 
     p {
       margin: 0.25rem 0;
-      font-size: 0.9rem;
     }
 
     &.open { display: block; }
   }
 }
-  }
-
-  /* ---------------- RTL / LTR ---------------- */
-  &[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-  }
-
-  &[dir="ltr"] {
-    direction: ltr;
-    text-align: left;
   }
 }
 
