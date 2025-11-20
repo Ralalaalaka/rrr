@@ -30,7 +30,7 @@ button[type=submit] {
 	margin: 20px 0 0 0;
 }
 
-label, input, textarea, button{
+label, input, textarea, button[type=submit]{
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -52,7 +52,6 @@ label {
 
 input, textarea {
 	padding: 10px;
-	font-size: 1em;
 }
 
 input, textarea {
