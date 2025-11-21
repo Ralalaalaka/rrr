@@ -350,7 +350,7 @@ blockquote:before {
   border-color: #000;
 }
 
-/* Responsive 
+/* Responsive */
 @media #{$phone} {
   .info {
     padding: 40px 20px;
@@ -363,11 +363,10 @@ blockquote:before {
     padding: 40px 30px;
   }
 
-  .info .text, 
-  .info .image {
-    max-width: 100%;
+  .info:nth-child(even) .container {
+      border-radius: 30px;
   }
-}*/
+}
 
 
 
