@@ -332,7 +332,6 @@ blockquote:before {
 
 .info .image img {
   max-width: 50vh; /*it was 70%*/
-  border-radius: 12px;
 }
 
 /* Button styling */
@@ -366,6 +365,11 @@ blockquote:before {
   .info:nth-child(even) .container {
       border-radius: 30px;
   }
+
+  .info .image img {
+  max-width: 50vh; /*it was 70%*/
+}
+
 }
 
 
