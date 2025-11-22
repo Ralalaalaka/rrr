@@ -32,14 +32,14 @@ description: We've built an amazing team of developers, marketers, designers and
         <strong data-i18n-key="beneficiary.section_title_2">كل دور يستحق تجربة أسهل</strong>
       </h3>
 
-  <div class="clients-grid">
-    {% assign all_clients = site.data.clients.Clients %}
-    {% for client in all_clients %}
+    <div class="clients-preview-grid">
+    {% assign visible_clients = site.data.clients.Clients | where: "view", true %}
+    {% for client in visible_clients %}
       <div class="client-box">
         <img src="{{ client.logo }}" alt="{{ client.name }}">
       </div>
     {% endfor %}
-  </div>
+    </div>
 
 </section>
 
