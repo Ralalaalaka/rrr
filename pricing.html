@@ -203,6 +203,92 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
   <p class="note" data-i18n-key="pricing.Texts.note">{{ site.data.pricing.Texts.note.ar }}</p>
 </section>
 
+<!--<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const empSelect = document.getElementById("employees");
+  const durationTabs = document.querySelectorAll(".duration-btn");
+  const prices = document.querySelectorAll(".price");
+  const beforePrices = document.querySelectorAll(".before-price");
+  let months = parseInt(document.querySelector(".duration-btn.active").dataset.months);
+
+  /* ---------------- RTL/LTR Arrow Reset Function ---------------- */
+  function resetArrows() {
+    const isRTL = document.documentElement.dir === "rtl";
+    document.querySelectorAll(".toggle-sub .chevron").forEach(svg => {
+      const sub = svg.closest(".toggle-sub").parentElement.querySelector(".sub-features");
+      if (!sub.classList.contains("open")) {
+        // Closed arrows follow dir
+        svg.style.transform = isRTL ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    });
+  }
+
+  /* ---------------- PRICE CALCULATION ---------------- */
+  function updatePrices() {
+    const emp = parseInt(empSelect.value);
+    prices.forEach((p, i) => {
+      const base = parseFloat(p.dataset.base);
+      p.textContent = (base * emp * months).toLocaleString();
+
+      if (beforePrices[i]) {
+        const before = parseFloat(beforePrices[i].dataset.before);
+        beforePrices[i].textContent = (before * emp * months).toLocaleString();
+      }
+    });
+  }
+
+  empSelect.addEventListener("change", updatePrices);
+
+  durationTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      durationTabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      months = parseInt(btn.dataset.months);
+      updatePrices();
+    });
+  });
+
+  /* ---------------- TOGGLE SUB FEATURES ---------------- */
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".toggle-sub");
+    if (!btn) return;
+
+    const sub = btn.parentElement.querySelector(".sub-features");
+    if (!sub) return;
+
+    const isRTL = document.documentElement.dir === "rtl";
+    const svg = btn.querySelector(".chevron");
+
+    sub.classList.toggle("open");
+    const isOpen = sub.classList.contains("open");
+
+    const closedRotation = isRTL ? 180 : 0; // RTL = left, LTR = right
+    const openRotation = 90;                // down for both
+
+    svg.style.transform = isOpen
+      ? `rotate(${openRotation}deg)`
+      : `rotate(${closedRotation}deg)`;
+  });
+
+  /* ---------------- INITIALIZATION ---------------- */
+  updatePrices();
+  resetArrows();
+
+  /* ---------------- LANGUAGE SWITCH HANDLING ---------------- */
+  // Replace '#change-language-btn' with your actual language switch button
+  const langBtn = document.getElementById("change-language-btn");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      // Here you change the dir & text
+      // Example:
+      // document.documentElement.dir = (document.documentElement.dir === "rtl") ? "ltr" : "rtl";
+
+      // Reset closed arrows after language change
+      resetArrows();
+    });
+  }
+});
+</script> -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {

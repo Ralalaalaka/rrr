@@ -11,6 +11,15 @@ body {
 	font-family: 'Almarai', Tajawal;
 }
 
+//a {
+//	color: #0db6bd; 
+//	text-decoration: none;
+//}
+
+//a:hover {
+//	text-decoration: underline;
+//}
+
 img {
 	max-width: 100%;
 }
@@ -43,6 +52,10 @@ a {
 	color: inherit; 
 	text-decoration: none; 
 	transition: opacity 0.2s ease;
+
+	//&:hover {
+	//	opacity: 0.8;
+	//}
 }
 
 p, address, ul { /*افصلهم عن بعض*/

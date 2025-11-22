@@ -2,7 +2,7 @@
 # Site
 
 title: WorkHub
-url: ""
+url: "https://brave-submarine.cloudvent.net"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
@@ -10,7 +10,7 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description:
+description: App marketing template for Jekyll.
 author:
   name:
   email:
@@ -18,6 +18,7 @@ author:
 social:
   name: WorkHub
   links:
+    - https://github.com/CloudCannon/frisco-jekyll-template
 
 # -----
 # Build
