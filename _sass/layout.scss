@@ -280,32 +280,6 @@ blockquote:before {
   margin: 0;
   padding: 50px 0; /*it was 80px*/
   overflow: hidden;
-
-  &:nth-child(odd)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;                        /* screen left */
-    right: auto;                     /* width determined by container */
-    width: 100%;                     /* will be cropped by container width */
-    background: #fafafb;
-    z-index: 1;
-  }
-
-  /* Even sections: background starts from right */
-  &:nth-child(even)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;                        /* screen right */
-    left: auto;
-    width: 100%;                     /* will be cropped by container width */
-    background: #fafafb;
-    z-index: 1;
-  }
-
 }
 
 
@@ -330,6 +304,7 @@ blockquote:before {
   border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
   float: left; /*انا اضفته*/
+  right: 0; ////////////////////////////////////////////////////
 }
 
 
