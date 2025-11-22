@@ -57,8 +57,13 @@
 .qr-divider {
   width: 2px;          /* thickness of the line */
   height: 120px;        /* match QR code height */
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   margin: 0 20px;
+
+  @media #{$phone} {
+  width: 120px;
+  height: 2px;
+  }
 }
 
 /* Small screens */
