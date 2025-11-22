@@ -268,9 +268,7 @@ blockquote:before {
 
 
 
-/* ============================= */
 /* --- Services Section Fix --- */
-/* ============================= */
 
 .info {
   position: relative;
@@ -295,16 +293,19 @@ blockquote:before {
   padding: 15px 80px; /*it was 60px 80px من هنا اتحكم بالبوكس الرمادي*/
   z-index: 2;
   gap: 50px;
-  float: right; /*انا اضفته*/
-}
+  float: right;
+  padding: 15px 80px 15px 100vw; /* left padding extends to screen edge *///////////////////
+
+  
 
 /* Even sections: rounded on the left, aligned right */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
   justify-content: space-between;
-  float: left; /*انا اضفته*/
-  right: 0; ////////////////////////////////////////////////////
+  float: left; 
+  padding: 100vw 80px 15px 15px; /* left padding extends to screen edge *///////////////////
+
 }
 
 
@@ -362,6 +363,7 @@ blockquote:before {
     text-align: center;
     border-radius: 30px;
     padding: 40px 30px;
+    gap: 30px;
   }
 
   .info:nth-child(even) .container {
