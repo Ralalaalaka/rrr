@@ -14,6 +14,9 @@
   border-radius: 8px;
   padding: 0;                    // mobile default
   background: #fff;
+
+  position: relative;            // allows proper stacking above gradient
+  z-index: 2;
 }
 
 @media (min-width: 992px) {
@@ -60,13 +63,20 @@
   right: 0;
   bottom: 80px;
   height: 120px;
+
   background: linear-gradient(
     rgba(255,255,255,0),
     rgba(255,255,255,1)
   );
+
+  z-index: 1;
+  pointer-events: none; // Do NOT block clicks on the button
 }
 
-/* View More Button */
+/* ============================================================
+   View More Button
+   ============================================================ */
+
 .clients-view-more {
   text-align: center;
   margin-top: 20px;
