@@ -21,7 +21,7 @@
   border: 1px solid #eaeaea;
   border-radius: 8px;
   background: #fff;
-  padding: 10px;
+  padding: 40px;
 
   //@media #{$phone} {
     //grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -70,6 +70,8 @@
   pointer-events: none; // allows clicks through the gradient
 }
 
+
+
 /* ============================================================
    View More Button
    ============================================================ */
@@ -80,12 +82,12 @@
 }
 
 .view-more-btn {
-  padding: 12px 30px;
-  background: #0e385b;
-  color: #fff;
-  border-radius: 6px;
+  //padding: 12px 30px;
+  //background: #0e385b;
+  color: #0db6bd;
+  //border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  //font-weight: bold;
   transition: 0.2s ease;
 
   &:hover {
