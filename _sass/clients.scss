@@ -2,6 +2,13 @@
    Clients Grid (Homepage + Page)
    ============================================================ */
 
+
+.clients-section {
+  padding: 60px 0;
+  margin: 0 60px;
+}
+
+
 .clients-preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -14,7 +21,7 @@
   border: 1px solid #eaeaea;
   border-radius: 8px;
   background: #fff;
-  padding: 0 60px;
+  padding: 0;
 
   @media #{$phone} {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -39,15 +46,6 @@
   }
 }
 
-/* Remove borders on last column (approximation with nth-child) */
-.client-box:nth-child(5n) {
-  border-right: none;
-}
-
-/* Remove borders on last row (approximation with last 5 items) */
-.client-box:nth-last-child(-n + 5) {
-  border-bottom: none;
-}
 
 /* ============================================================
    Gradient overlay
