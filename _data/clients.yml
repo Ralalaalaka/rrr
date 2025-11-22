@@ -18,13 +18,13 @@ Texts:
 Clients:
   - name: Ready Burger
     view: true ##to view in the main page in the section or not 
-    logo: "images/client/ReadyBurger.png" 
+    logo: "images/clients/ReadyBurger.png" 
     
   - name: Saja Coffee
     view: true ##to view in the main page in the section or not 
-    logo: "images/client/SajaCoffee.png"
+    logo: "images/clients/SajaCoffee.png"
 
   - name: Barbeque Aldira
     view: true ##to view in the main page in the section or not 
-    logo: "images/client/BarbequeAldira.png"
+    logo: "images/clients/BarbequeAldira.png"
   
