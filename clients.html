@@ -33,13 +33,13 @@ description: We've built an amazing team of developers, marketers, designers and
       </h3>
 
   <div class="clients-grid">
-    {% for client in site.data.clients.Clients %}
+    {% assign all_clients = site.data.clients.Clients %}
+    {% for client in all_clients %}
       <div class="client-box">
-        <img 
-          src="{{ client.logo }}" 
-          alt="{{ client.name }}" 
-          class="client-logo">
+        <img src="{{ client.logo }}" alt="{{ client.name }}">
       </div>
     {% endfor %}
   </div>
+
 </section>
+

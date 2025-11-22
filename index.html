@@ -67,24 +67,25 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
     <strong data-i18n-key="beneficiary.section_title_2">كل دور يستحق تجربة أسهل</strong>
   </h3>
 
-  <div class="clients-preview">
+  <div class="clients-preview-grid">
     {% assign visible_clients = site.data.clients.Clients | where: "view", true %}
-
     {% for client in visible_clients %}
       <div class="client-box">
-        <img 
-          src="{{ client.logo }}" 
-          alt="{{ client.name }}" 
-          class="client-logo">
+        <img src="{{ client.logo }}" alt="{{ client.name }}">
       </div>
     {% endfor %}
   </div>
 
-  <div class="clients-fade"></div>
+  <!-- Gradient overlay -->
+  <div class="clients-gradient"></div>
 
-  <div class="clients-more">
-    <a href="/clients" class="view-more-btn" data-i18n-key="clients.view_more">View more</a>
+  <!-- Button -->
+  <div class="clients-view-more">
+    <a href="/clients/" class="view-more-btn">
+      <span data-i18n-key="clients.view_more">View more</span>
+    </a>
   </div>
+
 </section>
 
 

@@ -16,15 +16,39 @@ Texts:
     en: "Our team is here to support you and answer all your inquiries"
 
 Clients:
-  - name: Ready Burger
+  - name: "Ready Burger"
     view: true ##to view in the main page in the section or not 
     logo: "images/clients/ReadyBurger.png" 
     
-  - name: Saja Coffee
+  - name: "Saja Coffee"
     view: true ##to view in the main page in the section or not 
     logo: "images/clients/SajaCoffee.png"
 
-  - name: Barbeque Aldira
+  - name: "Barbeque Aldira"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/BarbequeAldira.png"
+  
+  - name: "Ready Burger"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/ReadyBurger.png" 
+    
+  - name: "Saja Coffee"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/SajaCoffee.png"
+
+  - name: "Barbeque Aldira"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/BarbequeAldira.png"
+  
+  - name: "Ready Burger"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/ReadyBurger.png" 
+    
+  - name: "Saja Coffee"
+    view: true ##to view in the main page in the section or not 
+    logo: "images/clients/SajaCoffee.png"
+
+  - name: "Barbeque Aldira"
     view: true ##to view in the main page in the section or not 
     logo: "images/clients/BarbequeAldira.png"
   
