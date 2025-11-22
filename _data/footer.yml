@@ -18,18 +18,18 @@
 
   right_links:
     - name:
-      link: https://facebook.com/cloudcannon
+      link: 
       new_window: true
       social_icon: Email
     - name:
-      link: https://twitter.com/cloudcannon
+      link: 
       social_icon: Xplatform
       new_window: true
     - name:
-      link: https://youtube.com/c/cloudcannon
+      link: 
       social_icon: Whatsapp
       new_window: true
     - name:
-      link: https://instagram.com/
+      link: 
       social_icon: LinkedIn
       new_window: true
