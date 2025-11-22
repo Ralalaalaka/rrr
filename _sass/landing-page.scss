@@ -4,7 +4,6 @@
   position: relative;
   color: #fff;
   height: 100vh;
-  //min-height: 550px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -14,7 +13,7 @@
     linear-gradient(60deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%), 
     url("images/Pattern.svg") center center / cover no-repeat; 
 
-    &[dir="ltr"] { //************************************888888888888888888888888
+    &[dir="ltr"] { 
       background: linear-gradient(300deg, rgba(13,182,189,1) 0%, rgba(14,101,126,1) 50%, rgba(2,44,78,1) 100%),
                   url("images/Pattern.svg") center center / cover no-repeat;
     }
@@ -33,7 +32,7 @@
 
   .hero-text-container {
     flex: 1 1 55%;
-    text-align: start; //moves automatically with direction
+    text-align: start; 
 
 
     .button {
@@ -49,12 +48,10 @@
 
     img {
       height: 60vh;
-     // width: auto;
       object-fit: contain;
     }
   }
 
-  /* RTL & LTR direction and layout handling */
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
@@ -72,11 +69,10 @@
     .cover-image { order: 2; }
   }
 
-  /* Responsive */
   @media #{$phone} {
     .inner-hero {
       flex-direction: column;
-      align-items: stretch; //it was center
+      align-items: stretch; 
       gap: 20px;
       padding: 20px;
     }

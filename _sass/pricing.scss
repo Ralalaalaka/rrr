@@ -10,7 +10,7 @@
   /* ---------------- Controls ---------------- */
   .pricing-controls {
     display: flex;
-    flex-direction: column; // phones
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -18,7 +18,7 @@
     background-color: #fafafb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     border-radius: 100px;
-    width: 95%; //it was 90
+    width: 95%; 
     margin: 2rem auto;
     padding: 20px;
 
@@ -74,7 +74,6 @@
       }
     }
 
-    /* Laptops and above */
     @media #{$mid-point} {
       flex-direction: row;
       align-items: center;
@@ -106,9 +105,9 @@
 
     .plan-header {
       border-bottom: 2px solid #e4e6ea;
-      padding-bottom: 0.5rem; // under the before price
+      padding-bottom: 0.5rem;
       text-align: center;
-      margin-bottom: 0.2rem; // under the line
+      margin-bottom: 0.2rem;
 
       h2 { margin: 0 0 .5rem; color: #0e385b; }
       h1 { margin: 0 0 .5rem; }
@@ -125,7 +124,7 @@
 
     p {
       color: #0e385b;
-      text-align: start; //moves automatically with direction
+      text-align: start; 
      }
 
     /* ---------------- Features ---------------- */
@@ -138,12 +137,11 @@
   
 .feature {
   position: relative;
-  padding-inline-start: 1.8rem;   // space for checkmark
+  padding-inline-start: 1.8rem;   
   margin-bottom: 1rem;
   color: #6d767d;
   text-align: start;
 
-  /* MAIN LINE: h3 + arrow */
   .feature-main {
     display: flex;
     align-items: center;
@@ -155,12 +153,11 @@
     color: #6d767d;
   }
 
-        /* CHECK ICON */
   &::before {
     content: "";
     position: absolute;
     inset-inline-start: 0;
-    top: 0.4rem;         // aligns vertically with the h3
+    top: 0.4rem;
     width: 1rem;
     height: 1rem;
     background-image: $check-plans;
@@ -172,8 +169,7 @@
 
   /* ARROW BUTTON */
   .toggle-sub {
-    margin-inline-start: 0.4rem; /////////////////////////
-    //margin-left: auto;
+    margin-inline-start: 0.4rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -192,7 +188,7 @@
   .sub-features {
     display: none;
     margin-top: 0.3rem;
-    margin-inline-start: 1.8rem;  // aligns under feature text
+    margin-inline-start: 1.8rem;
     padding: 0;
     color: #6d767d;
 
@@ -207,7 +203,6 @@
   }
 
   
-  /* ---------------- RTL / LTR ---------------- */
   &[dir="rtl"] {
     direction: rtl;
     text-align: right;
@@ -267,7 +262,7 @@
       color: #0e385b;
       background: none;
       border: 1px solid #d9d9d9;
-      border-left: none; // no left border for category rows
+      border-left: none; 
       border-right: none;
       border-top: none;
       text-align: start;
@@ -287,15 +282,14 @@
       background: none;          // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
       border-right: none;
-      //border-left: none; //************************************77777777777777777777777777
       vertical-align: middle;
       text-align: start;
       color: #6d767d;
 
-          &[dir="ltr"] { //************************************99999999999999999999
-            border-left: none; //////////added
+          &[dir="ltr"] { 
+            border-left: none; 
             border-right: 1px solid #d9d9d9;
-      } //////////added
+      }
     }
 
     /* Plan check columns (B, C, D...) */
