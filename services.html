@@ -169,13 +169,16 @@ document.addEventListener("DOMContentLoaded", () => {
 -->
 
 
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
   const slides = document.querySelectorAll(".service-slide");
   const dots = document.querySelectorAll(".dot");
-  const prev = document.querySelector(".arrows-button.prev");
-  const next = document.querySelector(".arrows-button.next");
+
+  // Support multiple arrow buttons (LTR + RTL versions)
+  const prevButtons = document.querySelectorAll(".arrows-button.prev");
+  const nextButtons = document.querySelectorAll(".arrows-button.next");
+
   let current = 0;
   let timer;
 
@@ -194,14 +197,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showNext() {
-    // For RTL, "next" moves backward
-    current = isRTL ? (current - 1 + slides.length) % slides.length : (current + 1) % slides.length;
+    current = isRTL
+      ? (current - 1 + slides.length) % slides.length
+      : (current + 1) % slides.length;
+
     updateSlides();
   }
 
   function showPrev() {
-    // For RTL, "prev" moves forward
-    current = isRTL ? (current + 1) % slides.length : (current - 1 + slides.length) % slides.length;
+    current = isRTL
+      ? (current + 1) % slides.length
+      : (current - 1 + slides.length) % slides.length;
+
     updateSlides();
   }
 
@@ -213,18 +220,24 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(timer);
   }
 
-  prev.addEventListener("click", () => {
-    stopAuto();
-    showPrev();
-    startAuto();
+  // Bind click events to ALL arrow buttons (LTR + RTL)
+  prevButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      stopAuto();
+      showPrev();
+      startAuto();
+    });
   });
 
-  next.addEventListener("click", () => {
-    stopAuto();
-    showNext();
-    startAuto();
+  nextButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      stopAuto();
+      showNext();
+      startAuto();
+    });
   });
 
+  // Dots
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
       stopAuto();
@@ -238,31 +251,31 @@ document.addEventListener("DOMContentLoaded", () => {
   startAuto();
 
   // Swipe support
-const slider = document.querySelector(".services-slider");
-let startX = 0;
-let endX = 0;
+  const slider = document.querySelector(".services-slider");
+  let startX = 0;
+  let endX = 0;
 
-slider.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
 
-slider.addEventListener("touchmove", (e) => {
-  endX = e.touches[0].clientX;
-});
+  slider.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  });
 
-slider.addEventListener("touchend", () => {
-  const diff = startX - endX;
+  slider.addEventListener("touchend", () => {
+    const diff = startX - endX;
 
-  if (Math.abs(diff) > 50) {
-    if (diff > 0) {
-      // swiped left
-      isRTL ? showPrev() : showNext();
-    } else {
-      // swiped right
-      isRTL ? showNext() : showPrev();
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        // Swiped left
+        isRTL ? showPrev() : showNext();
+      } else {
+        // Swiped right
+        isRTL ? showNext() : showPrev();
+      }
     }
-  }
-});
+  });
 
 });
 </script>
