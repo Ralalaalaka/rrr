@@ -37,11 +37,27 @@
   text-decoration: none;
 }
 
-.qr-section img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  gap: 100px; /*انا اضفته*/
+.qr-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; /* space around QR */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  border-radius: 20px; /* rounded edges */
+  margin: 10px;
+
+    img {
+    width: 120px;
+    height: 120px;
+    //border-radius: 10px;
+    }
+}
+
+.qr-divider {
+  width: 2px;
+  background: white;
+  margin: 0 20px;
 }
 
 /* Small screens */
