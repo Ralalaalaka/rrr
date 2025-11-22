@@ -142,7 +142,8 @@ html[dir="rtl"] .rtl-btn {
 /* Phone view */
 @media #{$phone} {
   .services-slider-section {
-    padding: 10px 15px 20px;
+    padding: 10px 15px 20px; // padding under the dots to the top
+  }
 
   .service-image img {
     max-width: 100%;
