@@ -23,22 +23,19 @@ description: We've built an amazing team of developers, marketers, designers and
 </section>
 
 
-<section class="clients-page pad">
+      <section class="clients-section">
+            <h2 style="color:#0e385b; margin:10px;">
+              <strong data-i18n-key="clients.Texts.Section_Title">{{ site.data.clients.Texts.Section_Title.ar }}</strong>
+            </h2>
+            <!--<h3 style="color:#6d767d; margin:0 0 80px 0;">
+              <strong data-i18n-key="clients.Texts.Section_SubTitle">{{ site.data.clients.Texts.Section_SubTitle.ar }}</strong>
+            </h3>-->
 
-      <h2 style="color:#0e385b; margin:10px;">
-        <strong data-i18n-key="clients.Texts.Section_Title">{{ site.data.clients.Texts.Section_Title.ar }}</strong>
-      </h2>
-      <!--<h3 style="color:#6d767d; margin:0 0 80px 0;">
-        <strong data-i18n-key="clients.Texts.Section_SubTitle">{{ site.data.clients.Texts.Section_SubTitle.ar }}</strong>
-      </h3>-->
-
-    <div class="clients-preview-grid">
-      {% for client in site.data.clients.Clients %}
-        <div class="client-box">
-          <img src="{{ client.logo }}" alt="{{ client.name }}">
-        </div>
-      {% endfor %}
-    </div>
-
-</section>
+        <div class="clients-preview-grid">
+          {% for client in site.data.clients.Clients %}
+            <div class="client-box">
+              <img src="{{ client.logo }}" alt="{{ client.name }}">
+            </div>
+          {% endfor %}
+      </section>
 
