@@ -30,19 +30,19 @@ Clients:
   
   - name: "Ready Burger"
     view: true ##to view in the main page in the section or not 
-    logo: "images/clients/ReadyBurger.png" 
+    logo: "images/clients/Google.png" 
     
   - name: "Saja Coffee"
     view: true ##to view in the main page in the section or not 
-    logo: "images/clients/SajaCoffee.png"
+    logo: "images/clients/LogoTest.png"
 
   - name: "Barbeque Aldira"
     view: true ##to view in the main page in the section or not 
-    logo: "images/clients/BarbequeAldira.png"
+    logo: "images/clients/Square.png"
   
   - name: "Ready Burger"
     view: true ##to view in the main page in the section or not 
-    logo: "images/clients/ReadyBurger.png" 
+    logo: "images/clients/Tall.png" 
     
   - name: "Saja Coffee"
     view: true ##to view in the main page in the section or not 
