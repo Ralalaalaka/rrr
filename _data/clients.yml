@@ -38,7 +38,7 @@ Clients:
 
   - name: "Barbeque Aldira"
     view: true ##to view in the main page in the section or not 
-    logo: "images/clients/Square.png"
+    logo: "images/clients/Sqaure.png"
   
   - name: "Ready Burger"
     view: true ##to view in the main page in the section or not 

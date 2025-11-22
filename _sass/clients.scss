@@ -5,6 +5,7 @@
 .clients-section {
   padding: 60px 10% 80px;
   text-align: center;
+
 }
 
 /* ============================================================
@@ -13,7 +14,7 @@
 
 .clients-preview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-items: center;
   align-items: center;
   overflow: hidden;
@@ -24,7 +25,8 @@
 
   @media #{$phone} {
     padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+
   }
 }
 
@@ -52,6 +54,10 @@
 
   @media #{$phone} {
     padding: 10px;           // mobile padding
+
+        img {
+      max-width: 70%;        // logos smaller inside the box
+      max-height: 70%;
   }
 }
 
