@@ -33,12 +33,11 @@ description: We've built an amazing team of developers, marketers, designers and
       </h3>
 
     <div class="clients-preview-grid">
-    {% assign visible_clients = site.data.clients.Clients | where: "view", true %}
-    {% for client in visible_clients %}
-      <div class="client-box">
-        <img src="{{ client.logo }}" alt="{{ client.name }}">
-      </div>
-    {% endfor %}
+      {% for client in site.data.clients.Clients %}
+        <div class="client-box">
+          <img src="{{ client.logo }}" alt="{{ client.name }}">
+        </div>
+      {% endfor %}
     </div>
 
 </section>
