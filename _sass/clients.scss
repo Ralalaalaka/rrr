@@ -11,7 +11,7 @@
 
 .clients-preview-grid {
   display: grid;
-  //grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit);
   //gap: 0;                      // use borders instead of gap
   justify-items: center;
   align-items: center;
@@ -82,7 +82,7 @@
 
 .clients-view-more {
   text-align: center;
-  margin-top: 20px;
+  //margin-top: 20px;
 }
 
 .view-more-btn {
