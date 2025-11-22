@@ -1,4 +1,6 @@
-/* Clients Section */
+/* ============================================================
+   Clients Grid (Homepage + Page)
+   ============================================================ */
 
 .clients-grid,
 .clients-preview-grid {
@@ -7,8 +9,21 @@
   gap: 30px;
   justify-items: center;
   align-items: center;
+
+  border: 1px solid #eaeaea;     // light gray border
+  border-radius: 8px;
+  padding: 0;                    // mobile default
+  background: #fff;
 }
 
+@media (min-width: 992px) {
+  .clients-grid,
+  .clients-preview-grid {
+    padding: 40px;              // desktop padding
+  }
+}
+
+/* Each logo box */
 .client-box {
   width: 160px;
   height: 100px;
@@ -25,60 +40,9 @@
   object-fit: contain;
 }
 
-.clients-grid,
-.clients-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
-
-  border: 1px solid #eaeaea;   // very light gray border
-  border-radius: 8px;
-  padding: 0;                  // mobile default
-}
-
-
-
-
-/* Clients Page */
-
-.clients-section {
-  position: relative;
-  padding-bottom: 80px;
-}
-
-.clients-preview-grid {
-  max-height: 260px;      // controls how many rows show on homepage
-  overflow: hidden;
-}
-
-.clients-gradient {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 80px;
-  height: 120px;
-  background: linear-gradient(
-    rgba(255,255,255,0),
-    rgba(255,255,255,1)
-  );
-}
-
-.clients-view-more {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.view-more-btn {
-  padding: 12px 30px;
-  background: #0e385b;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* ============================================================
+   Homepage Clients Section
+   ============================================================ */
 
 .clients-section {
   position: relative;
@@ -102,6 +66,7 @@
   );
 }
 
+/* View More Button */
 .clients-view-more {
   text-align: center;
   margin-top: 20px;
@@ -114,7 +79,7 @@
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .view-more-btn:hover {
