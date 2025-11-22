@@ -15,6 +15,10 @@ Texts:
     ar: "فريقنا هنا لدعمكم والإجابة على استفساراتكم"
     en: "Our team is here to support you and answer all your inquiries"
 
+  View_More:
+    ar: "عرض المزيد ..."
+    en: "View More ..."
+
 Clients:
   - name: "Ready Burger"
     view: true ##to view in the main page in the section or not 

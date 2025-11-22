@@ -60,12 +60,12 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 <!-- Clients -->
 
 <section class="clients-section">
-  <h2 style="color:#0e385b; margin:10px;">
-    <strong data-i18n-key="beneficiary.section_title_1">وورك هب يخدم الجميع</strong>
-  </h2>
-  <h3 style="color:#6d767d; margin:0 0 80px 0;">
-    <strong data-i18n-key="beneficiary.section_title_2">كل دور يستحق تجربة أسهل</strong>
-  </h3>
+      <h2 style="color:#0e385b; margin:10px;">
+        <strong data-i18n-key="clients.Texts.Section_Title">{{ site.data.clients.Texts.Section_Title.ar }}</strong>
+      </h2>
+      <h3 style="color:#6d767d; margin:0 0 30px 0;">
+        <strong data-i18n-key="clients.Texts.Section_SubTitle">{{ site.data.clients.Texts.Section_SubTitle.ar }}</strong>
+      </h3>
 
   <div class="clients-preview-grid">
     {% assign visible_clients = site.data.clients.Clients | where: "view", true %}
@@ -82,7 +82,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
   <!-- Button -->
   <div class="clients-view-more">
     <a href="{{ site.baseurl }}/clients/" class="view-more-btn">
-      <span data-i18n-key="clients.view_more">View more</span>
+      <span data-i18n-key="clients.Texts.View_More">{{ site.data.clients.Texts.View_More.ar }}</span>
     </a>
   </div>
 </section>
