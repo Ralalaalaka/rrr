@@ -31,11 +31,14 @@ description: We've built an amazing team of developers, marketers, designers and
               <strong data-i18n-key="clients.Texts.Section_SubTitle">{{ site.data.clients.Texts.Section_SubTitle.ar }}</strong>
             </h3>-->
 
-        <div class="clients-preview-grid">
-          {% for client in site.data.clients.Clients %}
-            <div class="client-box">
-              <img src="{{ client.logo }}" alt="{{ client.name }}">
-            </div>
-          {% endfor %}
+          <div class="clients-preview-grid">
+            {% for client in site.data.clients.Clients %}
+              {% if client.logo and client.logo != "" %}
+                <div class="client-box">
+                  <img src="{{ client.logo }}" alt="{{ client.name }}">
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
       </section>
 

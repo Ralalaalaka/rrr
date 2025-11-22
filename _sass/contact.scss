@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px; /* space around QR */
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.25); /* semi-transparent white */
   border-radius: 20px; /* rounded edges */
   margin: 10px;
 
@@ -55,7 +55,8 @@
 }
 
 .qr-divider {
-  width: 2px;
+  width: 2px;          /* thickness of the line */
+  height: 120px;        /* match QR code height */
   background: white;
   margin: 0 20px;
 }

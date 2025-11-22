@@ -49,10 +49,10 @@ Clients:
     logo: "images/clients/Tall.png" 
     
   - name: "Saja Coffee"
-    view: true ##to view in the main page in the section or not 
+    view:  
     logo: "images/clients/SajaCoffee.png"
 
   - name: "Barbeque Aldira"
-    view: true ##to view in the main page in the section or not 
+    view: 
     logo: "images/clients/BarbequeAldira.png"
   
