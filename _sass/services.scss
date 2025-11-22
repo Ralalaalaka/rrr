@@ -118,14 +118,21 @@
   }
 }
 
-
-html[dir="ltr"] .arrows-button.next {
-  transform: scaleX(-1);
+/* Default: hide both */
+.ltr-btn, .rtl-btn {
+  display: none;
 }
 
-html[dir="ltr"] .arrows-button.prev {
-  transform: scaleX(-1);
+/* LTR: show LTR buttons */
+html[dir="ltr"] .ltr-btn {
+  display: inline-flex;
 }
+
+/* RTL: show RTL buttons */
+html[dir="rtl"] .rtl-btn {
+  display: inline-flex;
+}
+
 
 
 

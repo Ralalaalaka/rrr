@@ -60,8 +60,12 @@ image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
     {% endfor %}
   </div>
 
-  <button class="arrows-button next">&#10094;</button>
-  <button class="arrows-button prev">&#10095;</button>
+<button class="arrows-button next ltr-btn">&#10094;</button>
+<button class="arrows-button prev ltr-btn">&#10095;</button>
+
+<button class="arrows-button next rtl-btn">&#10095;</button>
+<button class="arrows-button prev rtl-btn">&#10094;</button>
+
 
   <div class="dots" style="margin-top: 40px;">
     {% for service in site.data.services.services %}
