@@ -2,8 +2,7 @@ footer {
   background: #022c4e;
   color: #fff;
   padding: 10px 0;
-  z-index: 1000; //************************************999999999999999999999999 عشان الجوال اذا ضغطت الفوتر
-
+  z-index: 1000;
   a {
     color: #fff;
     text-decoration: none;
@@ -42,7 +41,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    order: 2; // mobile order
+    order: 2; 
 
     .footer-social-links {
       display: flex;
@@ -84,9 +83,8 @@ footer {
   /* CENTER */
   .footer-center {
     text-align: center;
-    order: 3; // mobile order
-    //margin-top: 2px; ///////////////////////
-    margin: 2px auto 0; /////////////////////
+    order: 3; 
+    margin: 2px auto 0; 
     
 
     .copyright {
@@ -97,7 +95,7 @@ footer {
       display: block;
       color: #fff;
       font-size: 1.2em;
-      font-family: "Arial", sans-serif; // stays as a symbol, not emoji
+      font-family: "Arial", sans-serif; 
     }
 
     .footer-heart svg {
@@ -115,7 +113,7 @@ footer {
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    order: 1; // mobile order
+    order: 1; 
 
     h5 a {
       &:hover {
@@ -124,7 +122,6 @@ footer {
     }
   }
 
-  // Laptops & above: reorder elements
   @media #{$mid-point} {
     .footer-left {
       order: 3;

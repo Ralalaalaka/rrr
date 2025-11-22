@@ -7,8 +7,8 @@
   flex-wrap: wrap;
   background: linear-gradient(90deg, #00b3b3, #003f61);
   border-radius: 1000px;
-  padding: 40px; /*it was 20*/
-  margin: 50px 10vw; /*انا اضفته*/
+  padding: 40px; 
+  margin: 50px 10vw; 
   box-shadow: 0 0px 10px rgba(0,0,0,0.1);
   gap: 20px;
   color: white;
@@ -42,15 +42,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px; /* space around QR */
-  background: rgba(255, 255, 255, 0.25); /* semi-transparent white */
-  border-radius: 20px; /* rounded edges */
+  padding: 15px; 
+  background: rgba(255, 255, 255, 0.25); 
+  border-radius: 20px; 
   margin: 10px;
 
     img {
     width: 120px;
     height: 120px;
-    //border-radius: 10px;
     }
 }
 

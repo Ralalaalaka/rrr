@@ -1,6 +1,4 @@
-/* ============================================================
-   Clients Section
-   ============================================================ */
+/* Clients Section */
 
 .clients-section {
   padding: 60px 10% 10%;
@@ -8,9 +6,7 @@
 
 }
 
-/* ============================================================
-   Clients Grid
-   ============================================================ */
+/* Clients Grid */
 
 .clients-preview-grid {
   display: grid;
@@ -18,9 +14,9 @@
   justify-items: center;
   align-items: center;
   overflow: hidden;
-  position: relative; // needed for gradient overlay
+  position: relative; 
   background: #fff;
-  gap: 0; // use borders instead of gap
+  gap: 0; 
   padding: 20px;
 
   @media #{$phone} {
@@ -30,67 +26,61 @@
   }
 }
 
-/* ============================================================
-   Each logo box
-   ============================================================ */
+/* Each logo box */
 
 .client-box {
   width: 100%;
-  aspect-ratio: 1 / 1;       // square cells
+  aspect-ratio: 1 / 1;   
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
   border: 1px solid #eaeaea;
-  box-sizing: border-box;    // include padding in width/height
-  padding: 20px;             // desktop padding
+  box-sizing: border-box;   
+  padding: 20px;            
 
   img {
-    max-width: 100%;         // scale down if needed
+    max-width: 100%;      
     max-height: 100%;
-    object-fit: contain;     // keep aspect ratio, fit inside box
+    object-fit: contain;   
     display: block;
   }
 
   @media #{$phone} {
-    padding: 10px;           // mobile padding
+    padding: 10px;         
 
         img {
-      max-width: 80%;        // logos smaller inside the box
+      max-width: 80%;       
       max-height: 80%;
   }
 }
 }
 
-/* ============================================================
-   Gradient overlay
-   ============================================================ */
+/* Gradient overlay */
 
 .clients-gradient {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50%;              // half of grid height
+  height: 50%;
   background: linear-gradient(
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 1)
   );
   z-index: 1;
-  pointer-events: none;     // allows clicks through the gradient
+  pointer-events: none;
 }
 
-/* ============================================================
-   View More Button
-   ============================================================ */
+/* View More Button */
 
 .clients-view-more {
   text-align: center;
 }
 
 .view-more-btn {
-  color: #0db6bd;
+  color: #0e385b;
   text-decoration: none;
   transition: 0.2s ease;
 

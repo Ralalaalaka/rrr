@@ -24,7 +24,7 @@ section {
 	padding: 60px 0;
 }
 
-.button.alt a { /*white clear button*/
+.button.alt a { 
 	border-radius: 100px;
 	background: rgba(255, 255, 255, 0.30);
 	border: 0.05px solid rgba(255, 255, 255, 1);
@@ -32,8 +32,8 @@ section {
 	font-weight: bold;
 	padding: 10px 60px;
 	
-	&:hover { /*white clear button*/
-		background: rgba(255, 255, 255, 0.50); /*it was #fff*/
+	&:hover { 
+		background: rgba(255, 255, 255, 0.50); 
 		color: #ffffff;
 	}
 }
@@ -79,14 +79,14 @@ header {
 
 		/* ✅ White buttons switch to light mode */
     	a.white {
-        background: none; // rgba(0,0,0,0.1) 
+        background: none; 
         border: none; 
-        color: #333; // #333 
+        color: #333; 
 
         @media #{$mid-point} { 
-        background: rgba(13, 182, 189, 0.08); // rgba(0,0,0,0.1)
+        background: rgba(13, 182, 189, 0.08); 
         border: 0.05px solid rgba(13, 182, 189, 0.50); 
-        color: #0e385b; // #333 
+        color: #0e385b; 
         } 
 
 			&:hover {
@@ -132,11 +132,11 @@ header {
 		display: inline-block;
 
 		img {
-			height: 20px; /*logo size on phone - it was 20*/
+			height: 20px;
 			width: auto;
 
         @media #{$mid-point} {
-          height: 25px; /*logo size on pc - it was 20*/
+          height: 25px;
         }
 		}
 	}
@@ -232,39 +232,6 @@ blockquote:before {
 	}
 }
 
-.editor-link {
- 	display: none;
-	margin-top: 0;
-	padding-top: 30px;
-	.btn {
-		border: 0;
-		border-radius: 2px;
-		width: 100%;
-		max-width: 500px;
-		box-sizing: border-box;
-		font-size: 2rem;
-		text-decoration: none;
-		padding: 10px 15px;
-		margin: 0;
-		font-size: 18px;
-		cursor: pointer;
-		background-color: #f7e064;
-		color: #333;
-		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
-
-		&:hover {
-			background-color: #f4d525;
-			color: #333;
-		}
-	}
-
-}
-
-.cms-editor-active .editor-link {
-	display: block;
-}
-
-
 
 
 
@@ -276,7 +243,7 @@ blockquote:before {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 50px 0; /*it was 80px*/
+  padding: 50px 0; 
   overflow: hidden;
 }
 
@@ -290,13 +257,12 @@ blockquote:before {
   background: linear-gradient(90deg,rgba(250, 250, 251, 0) 0%, rgba(250, 250, 251, 0.5) 3%, rgba(250, 250, 251, 1) 9%);
   border-radius: 0 1000px 1000px 0;
   width: 100%;
-  padding: 15px 80px; /*it was 60px 80px من هنا اتحكم بالبوكس الرمادي*/
+  padding: 15px 80px; 
   z-index: 2;
   gap: 50px;
   float: right;
 }
 
-/* Even sections: rounded on the left, aligned right */
 .info:nth-child(even) .container {
   flex-direction: row-reverse;
   border-radius: 1000px 0 0 1000px;
@@ -307,7 +273,6 @@ blockquote:before {
 }
 
 
-/* Text and image */
 .info .text {
   flex: 1;
   color: #012d50;
@@ -380,9 +345,7 @@ blockquote:before {
 
 
 
-/* ========================================================= */
 /* === Banner & Benefits Section حق المزايا === */
-/* ========================================================= */
 
 .banner {
   background: 
@@ -423,7 +386,6 @@ blockquote:before {
     }
   }
 
-  /* ✅ Responsive (mobile layout) */
   @media #{$phone} {
     padding: 60px 20px;
     text-align: center;
@@ -442,7 +404,6 @@ blockquote:before {
 
 
 
-/* ✅ Light gray background with icons/text grid */
 .benefits {
   background: #f7f7f7;
   padding: 60px 10%;
@@ -453,7 +414,7 @@ blockquote:before {
 
     img {
       width: 60px;
-      margin-top: 15px; /*it was margin-bottom*/
+      margin-top: 15px; 
     }
 
     h3 {
@@ -465,7 +426,6 @@ blockquote:before {
     }
   }
 
-  /* ✅ For small screens: 2 per row */
   @media #{$phone} { 
     .benefits-container {
       grid-template-columns: repeat(1, 1fr);
@@ -494,8 +454,8 @@ blockquote:before {
 /* Base card */
 .card {
   position: absolute;
-  width: 350px;   /* was 260px */
-  height: 430px;  /* was 340px */
+  width: 350px;   
+  height: 430px; 
   border-radius: 30px;
   overflow: hidden;
   opacity: 0;
@@ -521,12 +481,12 @@ blockquote:before {
 
 /* left & right visible */
 .card.left {
-  transform: translateX(-390px) scale(0.9); /*it was -320*/
+  transform: translateX(-390px) scale(0.9); 
   opacity: 0.9;
   z-index: 2;
 }
 .card.right {
-  transform: translateX(390px) scale(0.9); /*it was -320*/
+  transform: translateX(390px) scale(0.9); 
   opacity: 0.9;
   z-index: 2;
 }
@@ -551,9 +511,7 @@ blockquote:before {
   border-radius: 30px;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(244, 252, 252, 0.84) 100%);
   z-index: 4; 
-    /* ADD THESE */
-  /*display: flex;*/
-  flex-direction: column; /* stack h3 above p */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
 }
@@ -572,7 +530,6 @@ blockquote:before {
      color: #022c4e;
 	 text-align: start;
 	 margin: 0 15px 15px 15px;
-	 /*padding: 0 10px 10px 10px;*/
 }
 
 
@@ -584,8 +541,6 @@ blockquote:before {
 .card.active .info h3 { display: block; }
 .card.active .info p { display: block; }
 
-
-/* Dots navigation */
 
 
 .dots {
