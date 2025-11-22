@@ -21,7 +21,7 @@
   //border: 1px solid #eaeaea;
   border-radius: 8px;
   background: #fff;
-  padding: 60px;
+  padding: 20px 60px 60px;
 
   @media #{$phone} {
     padding: 20px;
@@ -37,6 +37,7 @@
   align-items: center;
   background: #ffffff;
   border: 1px solid #eaeaea;
+  padding: 10px; ///////////
 
   img {
     max-height: 60px;
