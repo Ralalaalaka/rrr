@@ -35,7 +35,7 @@ description: We've built an amazing team of developers, marketers, designers and
             {% for client in site.data.clients.Clients %}
               {% if client.logo and client.logo != "" %}
                 <div class="client-box">
-                  <img src="{{ client.logo }}" alt="{{ client.name }}">
+                  <img src="{{ site.baseurl }}/{{ client.logo }}" alt="{{ client.name }}">
                 </div>
               {% endif %}
             {% endfor %}
