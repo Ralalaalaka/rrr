@@ -14,7 +14,7 @@
   border: 1px solid #eaeaea;
   border-radius: 8px;
   background: #fff;
-  padding: 0;
+  padding: 0 60px;
 
   @media #{$phone} {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
