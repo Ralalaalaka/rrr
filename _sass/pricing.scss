@@ -79,7 +79,6 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      //border-radius: 100px;
       width: max-content;
       gap: 1rem;
 
@@ -160,7 +159,7 @@
     content: "";
     position: absolute;
     inset-inline-start: 0;
-    top: 0.15rem;         // aligns vertically with the h3
+    top: 0.2rem;         // aligns vertically with the h3
     width: 1rem;
     height: 1rem;
     background-image: $check-plans;
@@ -168,6 +167,10 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 5;          // make sure it shows
+
+    @media #{$phone} {
+      top: 0.15rem; 
+    }
   } 
 
   /* ARROW BUTTON */
@@ -287,15 +290,14 @@
       background: none;          // ✅ transparent background for column A
       border: 1px solid #d9d9d9;
       border-right: none;
-      //border-left: none; //************************************77777777777777777777777777
       vertical-align: middle;
       text-align: start;
       color: #6d767d;
 
-          &[dir="ltr"] { //************************************99999999999999999999
-            border-left: none; //////////added
+          &[dir="ltr"] { 
+            border-left: none; 
             border-right: 1px solid #d9d9d9;
-      } //////////added
+      } 
     }
 
     /* Plan check columns (B, C, D...) */
