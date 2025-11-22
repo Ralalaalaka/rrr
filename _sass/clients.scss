@@ -1,49 +1,65 @@
 /* ============================================================
-   Clients Section
+   Clients Grid (Homepage + Page)
    ============================================================ */
 
+
 .clients-section {
-  padding: 60px 10% 80px;
+  padding: 60px 10% 80px; /*Same as the benefits section*/
   text-align: center;
 }
 
+
 .clients-preview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0;                      // use borders instead of gap
   justify-items: center;
   align-items: center;
+  max-height: 260px;
   overflow: hidden;
-  position: relative;
+  position: relative;           // needed for gradient overlay
+  //border: 1px solid #eaeaea;
+  //border-radius: 8px;
   background: #fff;
-  padding: 20px;
+  padding: 20px 60px;
 
-  @media #{$phone} {
-    padding: 10px;
-  }
+ // @media #{$phone} {
+  //  padding: 20px;
+  //}
 }
 
 /* Each logo box */
 .client-box {
   width: 100%;
-  aspect-ratio: 1 / 1;      // makes the box a perfect square
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
-  padding: 20px;
+  border: 1px solid #eaeaea;
+  padding: 30px; ///////////
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 70px;
+    max-width: 70px;
     object-fit: contain;
   }
 
-  @media #{$phone} {
-    padding: 10px;
-  }
+      @media #{$phone} {
+      padding: 10px;
+
+        img {
+      max-height: 50px;
+      max-width: 50px;
+        }
+    }
 }
 
-/* Gradient overlay */
+
+/* ============================================================
+   Gradient overlay
+   ============================================================ */
+
 .clients-gradient {
   position: absolute;
   left: 0;
@@ -55,17 +71,27 @@
     rgba(255,255,255,1)
   );
   z-index: 1;
-  pointer-events: none;
+  pointer-events: none; // allows clicks through the gradient
 }
 
-/* View More Button */
+
+
+/* ============================================================
+   View More Button
+   ============================================================ */
+
 .clients-view-more {
   text-align: center;
+  //margin-top: 20px;
 }
 
 .view-more-btn {
+  //padding: 12px 30px;
+  //background: #0e385b;
   color: #0db6bd;
+  //border-radius: 6px;
   text-decoration: none;
+  //font-weight: bold;
   transition: 0.2s ease;
 
   &:hover {
